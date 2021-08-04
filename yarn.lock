@@ -1150,6 +1150,11 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
+kjua@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/kjua/-/kjua-0.9.0.tgz#88603607318d67c231e9a5770c4bed4639e03310"
+  integrity sha512-Wmh5k6hpl+wiYkcEIx0/Ocj1DOxacw/myh/SQ3NbY0RWD4360CXaaAJkdeeV+moqf7fxvACYK95LXQ8vtLWKxA==
+
 loader-utils@1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
@@ -1520,7 +1525,7 @@ process@0.11.10, process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-prop-types@15.7.2, prop-types@^15.5.8:
+prop-types@15.7.2, prop-types@^15.5.8, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -1555,6 +1560,11 @@ punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+qr.js@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
+  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
 
 querystring-es3@0.2.1, querystring-es3@^0.2.0:
   version "0.2.1"
@@ -1634,6 +1644,13 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-kjua@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-kjua/-/react-kjua-0.0.2.tgz#a564e1551ec2213b1bbe9d3068d63f9f443bfbf6"
+  integrity sha512-uYsCpVKBG+iP+Xy+B1h1cXMGVUirh87zVU4WXplC8cIkLNI+kGxeihpBhVJuShVFqra9uGKBQAKXEarleCEZLQ==
+  dependencies:
+    kjua "^0.9.0"
+
 react-motion@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
@@ -1642,6 +1659,14 @@ react-motion@^0.5.2:
     performance-now "^0.2.0"
     prop-types "^15.5.8"
     raf "^3.1.0"
+
+react-qr-code@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-qr-code/-/react-qr-code-2.0.1.tgz#9b7cbdb0fcbdc4bd04f27c62fe865ac6306ece5e"
+  integrity sha512-Qoe05Qkl1U7PsbhvOjhA/XSIKXDX3oX/uR1mWTrwBsi+aRJvMfPCRgWZJZLJazFFqsQAuMFyaI+UCh/Lhue+xQ==
+  dependencies:
+    prop-types "^15.7.2"
+    qr.js "0.0.0"
 
 react-refresh@0.8.3:
   version "0.8.3"
