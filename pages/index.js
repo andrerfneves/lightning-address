@@ -694,6 +694,7 @@ export default function Home() {
         <meta property="og:title" content="The Lightning Address" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://lightningaddress.com" />
+        <meta property="og:description" content="An Internet Identifier that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. Like an email address, but for money." />
         <meta property="og:image" content="https://i.imgur.com/uwHlWPC.png" />
       </Head>
       <Wrapper>
