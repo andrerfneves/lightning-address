@@ -155,13 +155,13 @@ const LicenseLink = styled.a`
 
 const BenefitsModule = styled.div`
   display: flex;
-  background: #fafafa;
   min-height: 700px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 120px 0 120px 0;
-  border: 8px solid #EA5455;
+  background: #fafafa;
+  border-bottom: 1px solid #eaeaea;
 `;
 
 const BenefitsTitle = styled.div`
@@ -197,18 +197,19 @@ const BenefitsCard = styled.div`
   width: 250px;
   padding: 20px;
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
   min-height: 300px;
   border-radius: 7px;
   align-items: center;
   flex-direction: column;
+  background: #fff;
   border: 1px solid #eaeaea;
-  transition: all 0.15s ease-in-out;
+  transition: box-shadow .2s ease;
 
   &:hover {
     border: 1px solid #ccc;
-    transform: scale(1.02);
-    transition: all 0.15s ease-in-out;
+    transition: box-shadow .2s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   }
 `;
 
@@ -220,16 +221,18 @@ const BenefitsCardTitle = styled.div`
   font-size: 1.125em;
 `;
 
-const BenefitsCardImage = styled.img``;
+const BenefitsCardImage = styled.img`
+  max-width: 100%;
+`;
 
 const BenefitsCardDescription = styled.div`
   color: #111;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
+  text-align: center;
+  padding: 0 10px;
 `;
-
-const BenefitsCardLink = styled.div``;
 
 const PathsModule = styled.div`
   display: flex;
@@ -239,7 +242,6 @@ const PathsModule = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 120px 0 120px 0;
-  border: 8px solid #43AA8B;
 `;
 
 const PathsTitle = styled.div`
@@ -282,12 +284,13 @@ const PathsCard = styled.div`
   flex-direction: column;
   background: #f3f3f3;
   border: 1px solid #eaeaea;
-  transition: all 0.15s ease-in-out;
+  transition: box-shadow .2s ease;
+  margin-top: 50px;
 
   &:hover {
     border: 1px solid #ccc;
-    transform: scale(1.02);
-    transition: all 0.15s ease-in-out;
+    transition: box-shadow .2s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   }
 `;
 
@@ -300,7 +303,9 @@ const PathsCardTitle = styled.div`
   margin: 12px 0;
 `;
 
-const PathsCardImage = styled.img``;
+const PathsCardImage = styled.img`
+  max-width: 100%;
+`;
 
 const PathsCardDescription = styled.div`
   font-size: 14px;
@@ -310,7 +315,204 @@ const PathsCardDescription = styled.div`
   color: #111;
 `;
 
-const PathsCardLink = styled.div``;
+const PathsCardButton = styled.a`
+  color: ${({ isSecondary }) => isSecondary ? '#696969' : '#fff' };
+  background-color: ${({ isSecondary }) => isSecondary ? '#fff' : '#0070f3' };
+  height: 2.81rem;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0 3.5rem;
+  margin: 25px 0 0 0;
+  border-radius: 7px;
+  line-height: 2.8rem;
+  box-shadow: ${({ isSecondary }) => isSecondary ? '0 4px 14px 0 rgb(0 0 0 / 10%)' : '0 4px 14px 0 rgb(0 118 255 / 39%)' };
+  ;
+
+  &:hover {
+    background-color: ${({ isSecondary }) => isSecondary ? 'rgba(255,255,255,0.9)' : 'rgba(0,118,255,0.9)' };
+    box-shadow: ${({ isSecondary }) => isSecondary ? '0 6px 20px rgb(93 93 93 / 23%)' : '0 6px 20px rgb(0 118 255 / 23%)' };
+  }
+`;
+
+const ProvidersModule = styled.div`
+  display: flex;
+  min-height: 700px;
+  background: #fafafa;
+  border-top: 1px solid #eaeaea;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0 120px 0;
+`;
+
+const ProvidersInner = styled.div`
+  display: flex;
+  max-width: 1000px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+const ProvidersLeft = styled.div`
+  flex: 1;
+  padding-right: 10px;
+`;
+
+const ProvidersRight = styled.div`
+  flex: 1;
+`;
+
+const ProvidersRightInner = styled.div`
+  padding-left: 100px;
+`;
+
+const ProvidersTitle = styled.div`
+  margin: 0 auto;
+  font-size: 30px;
+  max-width: 500px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  text-align: left;
+`;
+
+const ProvidersDescription = styled.div`
+  color: #666666;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 800px;
+  text-align: left;
+  letter-spacing: -1px;
+  margin: 20px auto 0 auto;
+`;
+
+const ProvidersDescriptionSmall = styled(ProvidersDescription)`
+  font-size: 18px;
+`;
+
+const ProvidersEmailButton = styled.div`
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding: 0 1.5rem;
+  margin: 15px 0 0 0;
+  line-height: 2.8rem;
+  border-radius: 7px;
+  box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+
+  &:hover {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
+  }
+`;
+
+const ProvidersEmailButtonImage = styled.img`
+  max-width: 60%;
+  margin-left: -10px;
+`;
+
+const ProvidersEmailButtonText = styled.div`
+  flex: 1;
+  color: #696969;
+  font-weight: 600;
+  font-size: 20px;
+`;
+
+const ProvidersCardGrid = styled.div`
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
+const ProvidersCard = styled.div`
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  margin-top: 30px;
+  min-height: 300px;
+  border-radius: 7px;
+  align-items: center;
+  flex-direction: column;
+  background: #f3f3f3;
+  border: 1px solid #eaeaea;
+  transition: box-shadow .2s ease;
+  margin-top: 50px;
+
+  &:hover {
+    border: 1px solid #ccc;
+    /* border: 1px solid transparent; */
+    transition: box-shadow .2s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  }
+`;
+
+const ProvidersCardTitle = styled.div`
+  font-size: 1.125em;
+  line-height: 1.4;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+  margin: 12px 0;
+`;
+
+const ProvidersCardImage = styled.img`
+  max-width: 100%;
+`;
+
+const ProvidersCardDescription = styled.div`
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: center;
+  color: #111;
+`;
+
+const ProvidersCardLink = styled.div``;
+
+const ProviderCardZBD = styled.div`
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0px 30px 60px rgb(0 0 0 / 12%);
+  border-radius: 6px;
+  width: 425px;
+  height: 42px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+`;
+
+const ProviderSignUpButton = styled.div`
+  color: #fff;
+  height: 2.81rem;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 3.5rem;
+  margin: 0 15px 0 0;
+  border-radius: 7px;
+  line-height: 2.8rem;
+  background-color: #0070f3;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+
+  &:hover {
+    background: rgba(0,118,255,0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+  }
+`;
+
+const ZEBEDEEImage = styled.img`
+  width: 120px;
+`;
 
 const Footer = styled.div`
   background-color: #f3f3f3;
@@ -438,40 +640,49 @@ const FOOTER = [
   },
 ]
 
-
 const BENEFITS = [
   {
-    title: 'So cool',
-    description: 'Oh boy',
-    image: 'https://via.placeholder.com/150'
+    title: 'No more QR codes',
+    description: 'Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
+    image: '/images/qrcode.svg'
   },
   {
-    title: 'So cool',
-    description: 'Oh boy',
-    image: 'https://via.placeholder.com/150'
+    title: 'Cross-provider support',
+    description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
+    image: '/images/data.svg'
   },
   {
-    title: 'So cool',
-    description: 'Oh boy',
-    image: 'https://via.placeholder.com/150'
+    title: 'Interoperable',
+    description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around sending of Lightning invoices between apps and services.',
+    image: '/images/bitcoin3.svg'
   },
 ];
 
 const IMPLEMENTATIONS = [
   {
     title: 'Service Provider',
-    description: 'Like your preferred email service, let a service provider handle all of the behind-the-scenes for your Lightning Address.',
-    image: 'https://via.placeholder.com/150'
+    description: 'Create an account with one of the supported providers to get started immediately. Like your preferred email service, the provider handles all of the nuts-and-bolts behinds the scenes and is the easiest way to get started with your Lightning Address.',
+    image: '/images/data4.svg',
+    linkText: 'Get Started',
+    link: 'https://google.com',
+    isSecondary: false
   },
   {
-    title: 'Bridge',
-    description: 'Oh boy',
-    image: 'https://via.placeholder.com/150'
+    title: 'Bridge Server',
+    description: 'If you already run a Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some DNS settings to the Bridge Server, and you will be setup in minutes.',
+    image: '/images/data3.svg',
+    linkText: 'Start Setup',
+    link: 'https://google.com',
+    isSecondary: true
   },
   {
-    title: 'Self-Hosted',
-    description: 'Oh boy',
-    image: 'https://via.placeholder.com/150'
+    title: 'Do-It-Yourself',
+    description: 'You can do everything on your own. This is just a set of simple protocol instructions. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, Lightning Addresses for you.',
+    description: 'You can do everything on your own. This is just a set of simple protocol instructions. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, Lightning Addresses for you.',
+    image: '/images/data2.svg',
+    linkText: 'Read More',
+    link: 'https://google.com',
+    isSecondary: true
   },
 ];
 
@@ -490,9 +701,11 @@ export default function Home() {
             <FixedTextPart>satoshi@</FixedTextPart>
             <TextLoop interval={2000}>
               <LoopedTextPart>zbd.gg</LoopedTextPart>
+              <LoopedTextPart>example.com</LoopedTextPart>
               <LoopedTextPart>lntxbot.com</LoopedTextPart>
-              <LoopedTextPart>coinos.io</LoopedTextPart>
               <LoopedTextPart>your.domain</LoopedTextPart>
+              <LoopedTextPart>zebedee.io</LoopedTextPart>
+              <LoopedTextPart>coinos.io</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
           <CTAWrapper>
@@ -506,7 +719,7 @@ export default function Home() {
         </HeroWrapper>
         <BenefitsModule>
           <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
-          <BenefitsDescription>Lightning Addresses are nothing more than a set of properties to allow for Lightning Network invoices to be shared behind the scenes, invisible to the end user. There are many ways to get started, with varying degree of complexity depending on your persona type.</BenefitsDescription>
+          <BenefitsDescription>Lightning Addresses dramatically simplify the experience of sending and receiving money over the Lightning Network. No more QR codes scanning. No more sharing of invoices. It even allows for payments to be easily performed across different service providers.</BenefitsDescription>
           <BenefitsCardGrid>
             {(BENEFITS || []).map((benefit) => (
               <BenefitsCard>
@@ -522,8 +735,8 @@ export default function Home() {
           </BenefitsCardGrid>
         </BenefitsModule>
         <PathsModule>
-          <PathsTitle>Choose your preferred path</PathsTitle>
-          <PathsDescription>Lightning Addresses are nothing more than a set of properties to allow for Lightning Network invoices to be shared behind the scenes, invisible to the end user. There are many ways to get started, with varying degree of complexity depending on your persona type.</PathsDescription>
+          <PathsTitle>How do I get my Lightning Address?</PathsTitle>
+          <PathsDescription>You have a few options in order to obtain your Lightning Address. You can choose to sign up for a service provider (just like an email server e.g. Gmail or Outlook) that will take care of all the complexities for you. You can roll your own setup/server that handles requests to/from your Lightning Network node (DIY). Or you can rely on a `Bridge` server that provides an easy plug-n-play solution if you already have a Lightning node.</PathsDescription>
           <PathsCardGrid>
             {(IMPLEMENTATIONS || []).map((benefit) => (
               <PathsCard>
@@ -534,10 +747,47 @@ export default function Home() {
                 <PathsCardDescription>
                   {benefit.description}
                 </PathsCardDescription>
+                <PathsCardButton target="_blank" href={benefit.link} isSecondary={benefit.isSecondary}>
+                  {benefit.linkText}
+                </PathsCardButton>
               </PathsCard>
             ))}
           </PathsCardGrid>
         </PathsModule>
+        <ProvidersModule>
+          <ProvidersInner>
+            <ProvidersLeft>
+              <ProvidersTitle>Supporting Providers</ProvidersTitle>
+              <ProvidersDescription>
+                Below is a list of the Bitcoin Lightning Network providers supporting Lightning Addresses. To get started and claim your Lightning Address now, create an account in on of the options below.
+              </ProvidersDescription>
+              <ProviderCardZBD>
+                <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginLeft: '10px' }} />
+                <ProviderSignUpButton href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
+              </ProviderCardZBD>
+              <ProviderCardZBD>
+                <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" />
+                <ProviderSignUpButton href="https://lnbits.com">Create Account</ProviderSignUpButton>
+              </ProviderCardZBD>
+              <ProviderCardZBD>
+                <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" />
+                <ProviderSignUpButton href="https://coinos.io">Sign Up</ProviderSignUpButton>
+              </ProviderCardZBD>
+            </ProvidersLeft>
+            <ProvidersRight>
+              <ProvidersRightInner>
+                <ProvidersTitle>My favorite app doesn't support Lightning Address yet. What can I do?</ProvidersTitle>
+                <ProvidersDescriptionSmall>
+                  The best thing to do is to get in touch with the app/service/wallet company and ask them to learn about Lightning Addresses and implement support for it. To make it easier, we created a template email you can send to your favorite provider.
+                </ProvidersDescriptionSmall>
+                <ProvidersEmailButton onClick={() => window.open(`mailto:provider@example.com?subject=Support Lightning Address&body=Hey, why don't you support Lightning Address yet? Check it at lightningaddress.com`)}>
+                  <ProvidersEmailButtonImage src={'/images/email.svg'} alt='Email' />
+                  <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
+                </ProvidersEmailButton>
+              </ProvidersRightInner>
+            </ProvidersRight>
+          </ProvidersInner>
+        </ProvidersModule>
         <Footer>
           <FooterInner>
             {(FOOTER || []).map(col => (
