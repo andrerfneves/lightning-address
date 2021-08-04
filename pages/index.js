@@ -691,6 +691,10 @@ export default function Home() {
     <>
       <Head>
         <title>The Lightning Address</title>
+        <meta property="og:title" content="The Lightning Address" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lightningaddress.com" />
+        <meta property="og:image" content="https://i.imgur.com/uwHlWPC.png" />
       </Head>
       <Wrapper>
         <HeroWrapper>
