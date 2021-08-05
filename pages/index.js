@@ -623,14 +623,14 @@ const FOOTER = [
     items: [
       {
         link: URL_INTERNET_IDENTIFIER,
-        title: 'Internet Identifiers'
+        title: 'Internet Identifier RFC'
       },
       {
         link: 'https://github.com/andrerfneves/lightning-address',
         title: 'Code Repository'
       },
       {
-        link: 'https://github.com/andrerfneves/lightning-address/blob/master/DOCUMENTATION.md',
+        link: 'https://github.com/andrerfneves/lightning-address/blob/master/README.md',
         title: 'Documentation'
       },
       {
@@ -669,9 +669,19 @@ const FOOTER = [
 
 const BENEFITS = [
   {
-    title: 'No more QR codes',
-    description: 'Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
+    title: 'Skip the QR codes',
+    description: () => <>Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to <b>pay me at user@domain.com</b> and be done with it.</>,
     image: '/images/qrcode.svg'
+  },
+  {
+    title: 'Dynamic properties',
+    description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
+    image: '/images/bitcoin1.svg'
+  },
+  {
+    title: 'Messaging support',
+    description: 'Lightning Addresses are primarily payment identifiers, but they also accept comments. Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
+    image: '/images/comments.svg'
   },
   {
     title: 'Cross-provider support',
@@ -684,19 +694,9 @@ const BENEFITS = [
     image: '/images/bitcoin3.svg'
   },
   {
-    title: 'Messaging support',
-    description: 'Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
-    image: '/images/comments.svg'
-  },
-  {
-    title: 'Ease of Use',
-    description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
-    image: '/images/email.svg'
-  },
-  {
     title: 'Familiar',
     description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around sending of Lightning invoices between apps and services.',
-    image: '/images/bitcoin3.svg'
+    image: '/images/bitcoin2.svg'
   },
 ];
 
@@ -713,7 +713,7 @@ const IMPLEMENTATIONS = [
     title: 'Bridge Server',
     description: 'If you already run a Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some DNS settings to the Bridge Server, and you will be setup in minutes.',
     image: '/images/data3.svg',
-    linkText: 'Start Setup',
+    linkText: 'Quick Setup',
     link: 'https://github.com/andrerfneves/lightning-address/blob/master/BRIDGE.md',
     isSecondary: true
   },
@@ -776,7 +776,11 @@ export default function Home() {
                   {benefit.title}
                 </BenefitsCardTitle>
                 <BenefitsCardDescription>
-                  {benefit.description}
+                  {(typeof benefit.description === 'string') ? (
+                    benefit.description
+                  ) : (
+                    benefit.description()
+                  )}
                 </BenefitsCardDescription>
               </BenefitsCard>
             ))}
@@ -815,6 +819,10 @@ export default function Home() {
                 <ProviderSignUpButton href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
               </ProviderCardZBD>
               <ProviderCardZBD>
+                <ZEBEDEEImage src={'/images/coinos.png'} alt="LNTXBot" />
+                <ProviderSignUpButton href="http://lntxbot.fiatjaf.com/">Open Telegram</ProviderSignUpButton>
+              </ProviderCardZBD>
+              <ProviderCardZBD>
                 <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" />
                 <ProviderSignUpButton href="https://lnbits.com">Create Account</ProviderSignUpButton>
               </ProviderCardZBD>
@@ -827,7 +835,7 @@ export default function Home() {
               <ProvidersRightInner>
                 <ProvidersTitle>My favorite app doesn't support Lightning Address yet. What can I do?</ProvidersTitle>
                 <ProvidersDescriptionSmall>
-                  The best thing to do is to get in touch with the app/service/wallet company and ask them to learn about Lightning Addresses and implement support for it. To make it easier, we created a template email you can send to your favorite provider.
+                  The best thing to do is to get in touch with the developer company and ask them to learn about Lightning Addresses and implement support for it. To make it easier, we created an email template you can send to your favorite provider.
                 </ProvidersDescriptionSmall>
                 <ProvidersEmailButton onClick={() => window.open(`mailto:provider@example.com?subject=Support Lightning Address&body=Hey, why don't you support Lightning Address yet? Check it at lightningaddress.com`)}>
                   <ProvidersEmailButtonImage src={'/images/email.svg'} alt='Email' />
