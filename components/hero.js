@@ -212,6 +212,7 @@ export const Hero = () => (
         <LoopedTextPart>lntxbot.com</LoopedTextPart>
         <LoopedTextPart>your.domain</LoopedTextPart>
         <LoopedTextPart>zebedee.io</LoopedTextPart>
+        <LoopedTextPart>lnbits.com</LoopedTextPart>
         <LoopedTextPart>coinos.io</LoopedTextPart>
       </TextLoop>
     </LoopWrapper>
