@@ -8,7 +8,6 @@
 
 The Lightning Address is an [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1) that allows anyone to send you Bitcoin over the Lightning Network. No scanning of QR codes or pasting invoices necessary.
 
-
 For more information check out the website: [lightningaddress.com](https://lightningaddress.com)
 
 ## Developers
@@ -17,7 +16,7 @@ If you are a developer aiming to introduce support for Lightning Addresses in yo
 
 ## Bridge Server
 
-If you don't want to roll out an entire HTTP server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? Check the [Bridge Server](./BRIDGE.md) for a plug-n-play solution.
+If you don't want to roll out an entire HTTP / LNURL server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? Check the [Bridge Server](./BRIDGE.md) for a plug-n-play solution.
 
 ## TLDR
 
@@ -31,14 +30,13 @@ Contributions are welcome, for both the lightningaddress.com website as well as 
 
 ## Donations
 
-If this project is important to you, consider donating for the contributors, creators, and developers pushing this initiative forward.
-
+If this project is important to you, consider donating to the contributors, creators, and developers pushing this initiative forward.
 
 **Lightning Address:** lnaddress@zbd.gg
 
-**LNURL Pay Code:** `lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtmyxpnrycenv3sj6efcxvmz6dpcxpsj6cnx8p3j6e34vs6kyvfkxajrve3c3svx0h`
+**LNURL Pay Code:** `lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk`
 
 **QR Code:**
 
-![](https://i.imgur.com/wmgNKmU.jpg)
+![](https://i.imgur.com/0d5bDyX.png)
 
