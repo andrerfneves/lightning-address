@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { URL_INTERNET_IDENTIFIER  } from '../constants';
 import { media } from '../utils';
 
-const DONATION_QR_CODE = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxtmyxpnrycenv3sj6efcxvmz6dpcxpsj6cnx8p3j6e34vs6kyvfkxajrve3c3svx0h';
+const DONATION_QR_CODE = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk';
 
 const FOOTER = [
   {
@@ -36,6 +36,10 @@ const FOOTER = [
         title: 'Specification'
       },
       {
+        link: 'https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md',
+        title: 'LNURL Pay Specification'
+      },
+      {
         link: 'https://github.com/fiatjaf/awesome-lnurl#wallets',
         title: 'Wallets Supported'
       },
@@ -46,11 +50,23 @@ const FOOTER = [
     ]
   },
   {
-    title: 'Others',
+    title: 'Providers',
     items: [
       {
-        link: 'https://google.com',
-        title: 'Name here'
+        link: 'https://zebedee.io/wallet',
+        title: 'ZEBEDEE Wallet'
+      },
+      {
+        link: 'https://lntxbot.fiatjaf.com/',
+        title: 'LNTXBOT Telegram'
+      },
+      {
+        link: 'https://lnbits.com',
+        title: 'LNBits'
+      },
+      {
+        link: 'https://coinos.io',
+        title: 'CoinOS'
       },
     ]
   },
@@ -69,7 +85,7 @@ const InnerWrapper = styled.div`
   flex-direction: column;
 
   ${media.tablet`
-    max-width: 800px;
+    max-width: 900px;
     flex-direction: row;
     padding: 80px 0 100px 0;
   `}
@@ -159,10 +175,12 @@ export const Footer = () => (
       <Bottom>
         <BottomInner>
           <BottomQR>
-            <QRCode
-              size={100}
-              value={DONATION_QR_CODE}
-            />
+            <a href={`lightning:${DONATION_QR_CODE}`}>
+              <QRCode
+                size={100}
+                value={DONATION_QR_CODE}
+              />
+            </a>
           </BottomQR>
           <BottomLogo>The Lightning Address</BottomLogo>
           <BottomMadeBy>Made with ♥ by Bitcoiners</BottomMadeBy>
