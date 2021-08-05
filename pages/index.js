@@ -684,17 +684,17 @@ const BENEFITS = [
     image: '/images/bitcoin3.svg'
   },
   {
-    title: 'No more QR codes',
+    title: 'Messaging support',
     description: 'Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
-    image: '/images/qrcode.svg'
+    image: '/images/comments.svg'
   },
   {
-    title: 'Cross-provider support',
+    title: 'Ease of Use',
     description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
-    image: '/images/data.svg'
+    image: '/images/email.svg'
   },
   {
-    title: 'Interoperable',
+    title: 'Familiar',
     description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around sending of Lightning invoices between apps and services.',
     image: '/images/bitcoin3.svg'
   },
@@ -770,7 +770,7 @@ export default function Home() {
           <BenefitsDescription>Lightning Addresses dramatically simplify the experience of sending and receiving money over the Lightning Network. No more QR codes scanning. No more sharing of invoices. It even allows for payments to be easily performed across different service providers.</BenefitsDescription>
           <BenefitsCardGrid>
             {(BENEFITS || []).map((benefit) => (
-              <BenefitsCard>
+              <BenefitsCard key={benefit.title}>
                 <BenefitsCardImage src={benefit.image} alt={benefit.title} />
                 <BenefitsCardTitle>
                   {benefit.title}
@@ -788,7 +788,7 @@ export default function Home() {
           <PathsDescription>You have a few options in order to obtain your Lightning Address. You can choose to sign up for a service provider (just like an email server e.g. Gmail or Outlook) that will take care of all the complexities for you. You can roll your own setup/server that handles requests to/from your Lightning Network node (DIY). Or you can rely on a `Bridge` server that provides an easy plug-n-play solution if you already have a Lightning node.</PathsDescription>
           <PathsCardGrid>
             {(IMPLEMENTATIONS || []).map((benefit) => (
-              <PathsCard>
+              <PathsCard key={benefit.title}>
                 <PathsCardImage src={benefit.image} alt={benefit.title} />
                 <PathsCardTitle>
                   {benefit.title}
@@ -840,12 +840,12 @@ export default function Home() {
         <Footer>
           <FooterInner>
             {(FOOTER || []).map(col => (
-              <FooterColumn>
+              <FooterColumn key={col.title}>
                 <FooterColumnTitle>
                   {col.title}
                 </FooterColumnTitle>
                 {(col.items || []).map(item => (
-                  <FooterColumnItem href={item.link} target="_blank">
+                  <FooterColumnItem key={item.link} href={item.link} target="_blank">
                     {item.title}
                   </FooterColumnItem>
                 ))}
