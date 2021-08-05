@@ -131,12 +131,13 @@ const CTAPrimary = styled.div`
   }
 `;
 
-const CTASecondary = styled.div`
+const CTASecondary = styled.a`
   color: #696969;
   cursor: pointer;
   height: 2.81rem;
   background: #fff;
   padding: 0 3.5rem;
+  text-decoration: none;
   margin: 0 0 0 15px;
   line-height: 2.8rem;
   border-radius: 7px;
@@ -213,15 +214,17 @@ const BenefitsCardGrid = styled.div`
   display: grid;
   grid-row-gap: 10px;
   grid-column-gap: 20px;
-  grid-template-rows: 1fr;
+  grid-template-rows: 2fr;
   grid-template-columns: repeat(3, 1fr);
+  padding: 50px 0 0 0;
 `;
 
 const BenefitsCard = styled.div`
   width: 250px;
   padding: 20px;
   display: flex;
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
   min-height: 300px;
   border-radius: 7px;
   align-items: center;
@@ -680,6 +683,21 @@ const BENEFITS = [
     description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around sending of Lightning invoices between apps and services.',
     image: '/images/bitcoin3.svg'
   },
+  {
+    title: 'No more QR codes',
+    description: 'Gone are the days that you needed to send your friend a Lightning Network invoice in order to receive a payment. Tell them to `pay me at user@domain.com` and be done with it.',
+    image: '/images/qrcode.svg'
+  },
+  {
+    title: 'Cross-provider support',
+    description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
+    image: '/images/data.svg'
+  },
+  {
+    title: 'Interoperable',
+    description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around sending of Lightning invoices between apps and services.',
+    image: '/images/bitcoin3.svg'
+  },
 ];
 
 const IMPLEMENTATIONS = [
@@ -696,7 +714,7 @@ const IMPLEMENTATIONS = [
     description: 'If you already run a Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some DNS settings to the Bridge Server, and you will be setup in minutes.',
     image: '/images/data3.svg',
     linkText: 'Start Setup',
-    link: 'https://github.com/andrerfneves/lightning-address/blob/master/DOCUMENTATION.md',
+    link: 'https://github.com/andrerfneves/lightning-address/blob/master/BRIDGE.md',
     isSecondary: true
   },
   {
@@ -739,11 +757,11 @@ export default function Home() {
           </LoopWrapper>
           <CTAWrapper>
             <CTAPrimary>Start Exploring</CTAPrimary>
-            <CTASecondary>Documentation</CTASecondary>
+            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Documentation</CTASecondary>
           </CTAWrapper>
           <LicenseWrapper>
             <LicenseText>License: MIT</LicenseText>
-            <LicenseLink href='https://github.com/andrerfneves/lightning-address' target='_blank'>GitHub</LicenseLink>
+            <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
           </LicenseWrapper>
         </HeroWrapper>
         <BenefitsModule>
