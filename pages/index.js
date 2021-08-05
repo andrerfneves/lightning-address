@@ -39,6 +39,30 @@ const HeroIntro = styled.p`
   background: rgba(0,118,255,0.1);
 `;
 
+const PathsIntro = styled.p`
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 8px 12px;
+  margin: 0 auto 20px auto;
+  max-width: 900px;
+  color: #0070f3;
+  background: rgba(0,118,255,0.1);
+`;
+
+const BenefitsIntro = styled.p`
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 8px 12px;
+  margin: 0 auto 20px auto;
+  max-width: 900px;
+  color: #0070f3;
+  background: rgba(0,118,255,0.1);
+`;
+
 const HeroDescription = styled.p`
   color: #666666;
   font-size: 20px;
@@ -672,7 +696,7 @@ const IMPLEMENTATIONS = [
     description: 'If you already run a Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some DNS settings to the Bridge Server, and you will be setup in minutes.',
     image: '/images/data3.svg',
     linkText: 'Start Setup',
-    link: 'https://google.com',
+    link: 'https://github.com/andrerfneves/lightning-address/blob/master/DOCUMENTATION.md',
     isSecondary: true
   },
   {
@@ -723,6 +747,7 @@ export default function Home() {
           </LicenseWrapper>
         </HeroWrapper>
         <BenefitsModule>
+          <BenefitsIntro>Features</BenefitsIntro>
           <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
           <BenefitsDescription>Lightning Addresses dramatically simplify the experience of sending and receiving money over the Lightning Network. No more QR codes scanning. No more sharing of invoices. It even allows for payments to be easily performed across different service providers.</BenefitsDescription>
           <BenefitsCardGrid>
@@ -740,6 +765,7 @@ export default function Home() {
           </BenefitsCardGrid>
         </BenefitsModule>
         <PathsModule>
+          <PathsIntro>Getting Started</PathsIntro>
           <PathsTitle>How do I get my Lightning Address?</PathsTitle>
           <PathsDescription>You have a few options in order to obtain your Lightning Address. You can choose to sign up for a service provider (just like an email server e.g. Gmail or Outlook) that will take care of all the complexities for you. You can roll your own setup/server that handles requests to/from your Lightning Network node (DIY). Or you can rely on a `Bridge` server that provides an easy plug-n-play solution if you already have a Lightning node.</PathsDescription>
           <PathsCardGrid>
