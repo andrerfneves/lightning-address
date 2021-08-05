@@ -1,22 +1,29 @@
+![](https://i.imgur.com/uwHlWPC.png)
+
 # Lightning Address
 
-![](https://i.imgur.com/uwHlWPC.png)
+### **Like an email address, but for money.**
 
 ## General Information
 
 The Lightning Address is an [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1) that allows anyone to send you Bitcoin over the Lightning Network. No scanning of QR codes or pasting invoices necessary.
 
-Lightning Addresses are like email addresses, but for your money.
 
 For more information check out the website: [lightningaddress.com](https://lightningaddress.com)
 
 ## Developers
 
-If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, or service, we recommend
+If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, check the [DIY](./DIY.md) section.
 
-## Documentation
+## Bridge Server
 
-To learn more about how the Lightning Address protocol works check out the [DOCUMENTATION](./DOCUMENTATION.md).
+If you don't want to roll out an entire HTTP server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? Check the [Bridge Server](./BRIDGE.md) for a plug-n-play solution.
+
+## TLDR
+
+Here's a quick primer on how Lightning Address works and how it relies on the [LNURL Pay protocol](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md).
+
+![](https://i.imgur.com/4agivbH.png)
 
 ## Contributions
 
@@ -26,7 +33,6 @@ Contributions are welcome, for both the lightningaddress.com website as well as 
 
 If this project is important to you, consider donating for the contributors, creators, and developers pushing this initiative forward.
 
-TODO: create a zbd.gg for lightning address account
 
 **Lightning Address:** lnaddress@zbd.gg
 

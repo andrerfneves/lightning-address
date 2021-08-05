@@ -6,6 +6,8 @@
 
 Simple plug-n-play server for supporting [Lightning Address](https://lightningaddress.com) protocol.
 
+> At the end of this flow you will be able to receive payments at `any_name@domain.com`.
+
 ## General
 
 A server that allows you to receive payments at `yourname@yourdomain.com` noncustodially. The Bridge Server serves the necessary JSON and then uses RPC calls to connect to your node and fetch invoices on demand.
