@@ -23,7 +23,7 @@ const ProvidersInner = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  ${media.tablet`
+  ${media.largeTablet`
     max-width: 1000px;
     flex-direction: row;
   `}
@@ -32,7 +32,7 @@ const ProvidersInner = styled.div`
 const ProvidersLeft = styled.div`
   padding-bottom: 60px;
 
-  ${media.tablet`
+  ${media.largeTablet`
     flex: 1;
     padding-bottom: 0;
     padding-right: 10px;
@@ -40,13 +40,13 @@ const ProvidersLeft = styled.div`
 `;
 
 const ProvidersRight = styled.div`
-  ${media.tablet`
+  ${media.largeTablet`
     flex: 1;
   `}
 `;
 
 const ProvidersRightInner = styled.div`
-  ${media.tablet`
+  ${media.largeTablet`
     padding-left: 100px;
   `}
 `;
@@ -61,9 +61,12 @@ const ProvidersTitle = styled.div`
   text-align: center;
   letter-spacing: -1px;
 
+  ${media.largeTablet`
+    text-align: left;
+  `}
+
   ${media.tablet`
     padding: 0;
-    text-align: left;
   `}
 `;
 
@@ -78,10 +81,13 @@ const ProvidersDescription = styled.div`
   letter-spacing: -0.5px;
   margin: 20px auto 40px auto;
 
+  ${media.largeTablet`
+    text-align: left;
+  `}
+
   ${media.tablet`
     padding: 0;
     font-size: 20px;
-    text-align: left;
     line-height: 1.6;
     letter-spacing: -1px;
     margin: 20px auto 0 auto;
@@ -132,7 +138,7 @@ const ProvidersEmailButtonText = styled.div`
 `;
 
 const ProviderCard = styled.div`
-  margin: 20px;
+  margin: 20px auto 20px auto;
   display: flex;
   padding: 16px;
   min-height: 100px;
@@ -153,7 +159,7 @@ const ProviderCard = styled.div`
   `}
 `;
 
-const ProviderSignUpButton = styled.div`
+const ProviderSignUpButton = styled.a`
   color: #fff;
   width: 140px;
   height: 2.81rem;
@@ -163,6 +169,7 @@ const ProviderSignUpButton = styled.div`
   border-radius: 7px;
   margin: 15px 0 0 0;
   line-height: 2.8rem;
+  text-decoration: none;
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
 
@@ -192,19 +199,19 @@ export const Providers = () => (
         </ProvidersDescription>
         <ProviderCard>
           <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginLeft: '10px' }} />
-          <ProviderSignUpButton href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ZEBEDEEImage src={'/images/lntxbot.png'} alt="LNTXBot" style={{ marginLeft: '15px' }}  />
-          <ProviderSignUpButton href="http://lntxbot.fiatjaf.com/">Open Telegram</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="http://lntxbot.fiatjaf.com/">Open Telegram</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" />
-          <ProviderSignUpButton href="https://lnbits.com">Create Account</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://lnbits.com">Create Account</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" />
-          <ProviderSignUpButton href="https://coinos.io">Sign Up</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://coinos.io">Sign Up</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>

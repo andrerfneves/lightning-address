@@ -130,6 +130,7 @@ const CTAPrimary = styled.a`
   height: 2.81rem;
   cursor: pointer;
   padding: 0 3.5rem;
+  text-align: center;
   margin: 0 0 10px 0;
   border-radius: 7px;
   line-height: 2.8rem;

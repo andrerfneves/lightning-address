@@ -151,7 +151,7 @@ const IMPLEMENTATIONS = [
     description: 'Create an account with one of the supported providers to get started immediately. Like your preferred email service, the provider handles all of the nuts-and-bolts behinds the scenes and is the easiest way to get started with your Lightning Address.',
     image: '/images/data4.svg',
     linkText: 'Get Started',
-    link: 'https://google.com',
+    link: '#providers',
     isSecondary: false
   },
   {
