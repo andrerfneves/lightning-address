@@ -1,5 +1,7 @@
 import TextLoop from 'react-text-loop';
 import styled from 'styled-components';
+import { PureComponent } from 'react';
+import Fade from 'react-reveal/Fade';
 
 import { URL_INTERNET_IDENTIFIER  } from '../constants';
 import { media } from '../utils';
@@ -199,31 +201,63 @@ const LicenseLink = styled.a`
   }
 `;
 
-export const Hero = () => (
-  <Wrapper>
-    <Intro>Introducing</Intro>
-    <Title>The Lightning Address</Title>
-    <Description>
-      An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. Like an email address, but for money.
-      </Description>
-    <LoopWrapper>
-      <FixedTextPart>satoshi@</FixedTextPart>
-      <TextLoop interval={2000}>
-        <LoopedTextPart>zbd.gg</LoopedTextPart>
-        <LoopedTextPart>lntxbot.com</LoopedTextPart>
-        <LoopedTextPart>your.domain</LoopedTextPart>
-        <LoopedTextPart>zebedee.io</LoopedTextPart>
-        <LoopedTextPart>lnbits.com</LoopedTextPart>
-        <LoopedTextPart>coinos.io</LoopedTextPart>
-      </TextLoop>
-    </LoopWrapper>
-    <CTAWrapper>
-      <CTAPrimary href="#providers">Get Started</CTAPrimary>
-      <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Documentation</CTASecondary>
-    </CTAWrapper>
-    <LicenseWrapper>
-      <LicenseText>License: MIT</LicenseText>
-      <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
-    </LicenseWrapper>
-  </Wrapper>
-)
+export class Hero extends PureComponent {
+  state = {
+    showCTAs: false,
+    showIntro: false,
+    showLightningAddr: false,
+  };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState(() => ({ showIntro: true }));
+    }, 500);
+
+    setTimeout(() => {
+      this.setState(() => ({ showLightningAddr: true }));
+    }, 1100);
+
+    setTimeout(() => {
+      this.setState(() => ({ showCTAs: true }));
+    }, 1700);
+  }
+
+  render() {
+    const { showIntro, showLightningAddr, showCTAs } = this.state;
+
+    return (
+      <Wrapper>
+        <Fade bottom cascade when={showIntro}>
+          <Intro>Introducing</Intro>
+          <Title>The Lightning Address</Title>
+        </Fade>
+        <Fade bottom when={showLightningAddr}>
+          <Description>
+            An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. Like an email address, but for money.
+          </Description>
+          <LoopWrapper>
+            <FixedTextPart>satoshi@</FixedTextPart>
+            <TextLoop interval={2000} delay={1600}>
+              <LoopedTextPart>zbd.gg</LoopedTextPart>
+              <LoopedTextPart>lntxbot.com</LoopedTextPart>
+              <LoopedTextPart>your.domain</LoopedTextPart>
+              <LoopedTextPart>zebedee.io</LoopedTextPart>
+              <LoopedTextPart>lnbits.com</LoopedTextPart>
+              <LoopedTextPart>coinos.io</LoopedTextPart>
+            </TextLoop>
+          </LoopWrapper>
+        </Fade>
+        <Fade bottom when={showCTAs}>
+          <CTAWrapper>
+            <CTAPrimary href="#providers">Get Started</CTAPrimary>
+            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Documentation</CTASecondary>
+          </CTAWrapper>
+          <LicenseWrapper>
+            <LicenseText>License: MIT</LicenseText>
+            <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
+          </LicenseWrapper>
+        </Fade>
+      </Wrapper>
+    )
+  }
+}
