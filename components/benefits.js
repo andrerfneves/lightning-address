@@ -130,7 +130,7 @@ const BenefitsCardDescription = styled.div`
 `;
 
 const BenefitsIntro = styled.p`
-  color: #0070f3;
+  color: #26a717;
   font-size: 14px;
   line-height: 1.6;
   max-width: 900px;
@@ -138,7 +138,7 @@ const BenefitsIntro = styled.p`
   padding: 8px 12px;
   border-radius: 7px;
   margin: 0 auto 20px auto;
-  background: rgba(0,118,255,0.1);
+  background: rgba(10,117,14,0.12);
 
   ${media.tablet`
     font-size: 18px;
@@ -180,7 +180,7 @@ const BENEFITS = [
 
 export const Benefits = () => (
   <BenefitsModule>
-    <BenefitsIntro>Features</BenefitsIntro>
+    <BenefitsIntro>Users</BenefitsIntro>
     <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
     <BenefitsDescription>Lightning Addresses dramatically simplify the experience of sending and receiving money over the Lightning Network. No more QR codes scanning. No more sharing of invoices. It even allows for payments to be easily performed across different service providers.</BenefitsDescription>
     <BenefitsCardGrid>

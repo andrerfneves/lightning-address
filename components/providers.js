@@ -189,13 +189,18 @@ const ZEBEDEEImage = styled.img`
   align-self: center;
 `;
 
+const Bold = styled.span`
+  font-weight: 600;
+  letter-spacing: -0.5px;
+`;
+
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
       <ProvidersLeft>
-        <ProvidersTitle>Supporting Providers</ProvidersTitle>
+        <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
-          Below is a list of the Bitcoin Lightning Network providers supporting Lightning Addresses. To get started and claim your Lightning Address now, create an account in on of the options below.
+          To get your own Lightning Address and start sending and receiving payments to <Bold>user@address.com</Bold>, choose from one of the options below.
         </ProvidersDescription>
         <ProviderCard>
           <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginLeft: '10px' }} />
@@ -216,11 +221,14 @@ export const Providers = () => (
       </ProvidersLeft>
       <ProvidersRight>
         <ProvidersRightInner>
-          <ProvidersTitle>My favorite app doesn't support Lightning Address yet. What can I do?</ProvidersTitle>
+          <ProvidersTitle>Your app doesn't support Lightning Addresses yet?</ProvidersTitle>
           <ProvidersDescriptionSmall>
-            The best thing to do is to get in touch with the developer company and ask them to learn about Lightning Addresses and implement support for it. To make it easier, we created an email template you can send to your favorite provider.
+            If your favorite Bitcoin app doesn't yet support Lightning Address, get in touch with the developer company and ask them to learn about how the protocol can help their users.
+            <br />
+            <br />
+            To make things easier, we created an email template you can send with just a click.
           </ProvidersDescriptionSmall>
-          <ProvidersEmailButton onClick={() => window.open(`mailto:provider@example.com?subject=Support Lightning Address&body=Hey, why don't you support Lightning Address yet? Check it at lightningaddress.com`)}>
+          <ProvidersEmailButton onClick={() => window.open(`mailto:ENTER_DEVELOPER_EMAIL_HERE?subject=Introducing Lightning Address&body=Hi there,\n\n I just learnt about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email address. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`)}>
             <ProvidersEmailButtonImage src={'/images/email.svg'} alt='Email' />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>

@@ -131,7 +131,8 @@ const CTAPrimary = styled.a`
   color: #fff;
   height: 2.81rem;
   cursor: pointer;
-  padding: 0 3.5rem;
+  padding: 0;
+  width: 260px;
   text-align: center;
   margin: 0 0 10px 0;
   border-radius: 7px;
@@ -155,7 +156,9 @@ const CTASecondary = styled.a`
   cursor: pointer;
   height: 2.81rem;
   background: #fff;
-  padding: 0 3.5rem;
+  width: 260px;
+  text-align: center;
+  padding: 0;
   margin: 10px 0 0 0;
   text-decoration: none;
   line-height: 2.8rem;
@@ -201,6 +204,11 @@ const LicenseLink = styled.a`
   }
 `;
 
+const Bold = styled.span`
+  font-weight: 600;
+  letter-spacing: -0.5px;
+`;
+
 export class Hero extends PureComponent {
   state = {
     showCTAs: false,
@@ -233,7 +241,7 @@ export class Hero extends PureComponent {
         </Fade>
         <Fade bottom when={showLightningAddr}>
           <Description>
-            An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. Like an email address, but for money.
+            An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. <Bold>It's like an email address, but for your money</Bold>.
           </Description>
           <LoopWrapper>
             <FixedTextPart>satoshi@</FixedTextPart>
@@ -249,8 +257,8 @@ export class Hero extends PureComponent {
         </Fade>
         <Fade bottom when={showCTAs}>
           <CTAWrapper>
-            <CTAPrimary href="#providers">Get Started</CTAPrimary>
-            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Documentation</CTASecondary>
+            <CTAPrimary href="#providers">Get My Lightning Address</CTAPrimary>
+            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Read Documentation</CTASecondary>
           </CTAWrapper>
           <LicenseWrapper>
             <LicenseText>License: MIT</LicenseText>

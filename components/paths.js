@@ -130,7 +130,7 @@ const PathsCardButton = styled.a`
 `;
 
 const PathsIntro = styled.p`
-  color: #0070f3;
+  color: #f38800;
   font-size: 14px;
   line-height: 1.6;
   max-width: 900px;
@@ -138,7 +138,7 @@ const PathsIntro = styled.p`
   padding: 8px 12px;
   border-radius: 7px;
   margin: 0 auto 20px auto;
-  background: rgba(0,118,255,0.1);
+  background: rgba(255,97,0,0.1);
 
   ${media.tablet`
     font-size: 18px;
@@ -175,7 +175,7 @@ const IMPLEMENTATIONS = [
 
 export const Paths = () => (
   <PathsModule>
-    <PathsIntro>Getting Started</PathsIntro>
+    <PathsIntro>Developers</PathsIntro>
     <PathsTitle>How do I get my Lightning Address?</PathsTitle>
     <PathsDescription>You have a few options in order to obtain your Lightning Address. You can choose to sign up for a service provider (just like an email server e.g. Gmail or Outlook) that will take care of all the complexities for you. You can roll your own setup/server that handles requests to/from your Lightning Network node (DIY). Or you can rely on a `Bridge` server that provides an easy plug-n-play solution if you already have a Lightning node.</PathsDescription>
     <PathsCardGrid>
