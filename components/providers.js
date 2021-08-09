@@ -135,6 +135,14 @@ const ProvidersEmailButtonText = styled.div`
   color: #696969;
   font-size: 20px;
   font-weight: 600;
+  line-height: 1.2;
+  padding-top: 5px;
+  padding-left: 10px;
+
+  ${media.tablet`
+    padding-top: 0;
+    padding-left: 0;
+  `}
 `;
 
 const ProviderCard = styled.div`
@@ -194,28 +202,59 @@ const Bold = styled.span`
   letter-spacing: -0.5px;
 `;
 
+const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  ${media.tablet`
+    padding-right: 15px;
+  `}
+`;
+
+const DomainURL = styled.div`
+  padding-top: 2px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #a5a5a5;
+`;
+
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
       <ProvidersLeft>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
-          To get your own Lightning Address and start sending and receiving payments to <Bold>user@address.com</Bold>, choose from one of the options below.
+          Start receiving payments to <Bold>you@address.com</Bold> now. Choose from one of the apps and services that already support Lightning Address below and you'll be set up in seconds.
         </ProvidersDescription>
         <ProviderCard>
-          <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginLeft: '10px' }} />
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
+            <DomainURL>you@zbd.gg</DomainURL>
+          </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
-          <ZEBEDEEImage src={'/images/lntxbot.png'} alt="LNTXBot" style={{ marginLeft: '15px' }}  />
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/lntxbot.png'} alt="LNTXBot" style={{ marginBottom: '-5px' }} />
+            <DomainURL>you@lntxbot.com</DomainURL>
+          </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="http://lntxbot.fiatjaf.com/">Open Telegram</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
-          <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" />
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" style={{ marginTop: '-5px', marginBottom: '-15px' }} />
+            <DomainURL>you@lnbits.com</DomainURL>
+          </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://lnbits.com">Create Account</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
-          <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" />
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
+            <DomainURL>you@coinos.io</DomainURL>
+          </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://coinos.io">Sign Up</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>

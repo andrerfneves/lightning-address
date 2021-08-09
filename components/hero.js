@@ -103,17 +103,14 @@ const LoopedTextPart = styled.span`
 `;
 
 const Link = styled.a`
-  color: #000;
-  padding: 4px;
-  font-weight: 600;
+  color: #666666;
+  font-weight: 400;
   text-decoration: none;
   letter-spacing: -0.5px;
 
   &:hover {
     color: #0070f3;
-    border-radius: 7px;
     border-color: transparent;
-    background: rgba(0,118,255,0.1);
   }
 `;
 
@@ -241,10 +238,10 @@ export class Hero extends PureComponent {
         </Fade>
         <Fade bottom when={showLightningAddr}>
           <Description>
-            An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. <Bold>It's like an email address, but for your money</Bold>.
+            <Bold>Like an email address, but for your money!</Bold> An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that lets anyone send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices.
           </Description>
           <LoopWrapper>
-            <FixedTextPart>satoshi@</FixedTextPart>
+            <FixedTextPart>you@</FixedTextPart>
             <TextLoop interval={2000} delay={1600}>
               <LoopedTextPart>zbd.gg</LoopedTextPart>
               <LoopedTextPart>lntxbot.com</LoopedTextPart>

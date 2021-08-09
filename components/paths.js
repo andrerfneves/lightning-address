@@ -147,25 +147,24 @@ const PathsIntro = styled.p`
 
 const IMPLEMENTATIONS = [
   {
-    title: 'Service Provider',
-    description: 'Create an account with one of the supported providers to get started immediately. Like your preferred email service, the provider handles all of the nuts-and-bolts behinds the scenes and is the easiest way to get started with your Lightning Address.',
+    title: 'Apps & Services',
+    description: 'Create an account with one of the apps that support Lightning Address and get started immediately. Just like how Gmail is your email server, the app handles all of the payment infrastructure and is the easiest way to get a Lightning Address.',
     image: '/images/data4.svg',
     linkText: 'Get Started',
     link: '#providers',
     isSecondary: false
   },
   {
-    title: 'Bridge Server',
-    description: 'If you already run a Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some DNS settings to the Bridge Server, and you will be setup in minutes.',
+    title: 'Bridge Servers',
+    description: 'If you already run a Bitcoin Lightning Network node and want a quick plug-n-play solution to getting your Lightning Address, this option is for you. Simply point some domain DNS settings to the Bridge Server, and you will be setup in minutes.',
     image: '/images/data3.svg',
     linkText: 'Quick Setup',
     link: 'https://github.com/andrerfneves/lightning-address/blob/master/BRIDGE.md',
     isSecondary: true
   },
   {
-    title: 'Do-It-Yourself',
-    description: 'You can do everything on your own. This is just a set of simple protocol instructions. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, Lightning Addresses for you.',
-    description: 'You can do everything on your own. This is just a set of simple protocol instructions. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, Lightning Addresses for you.',
+    title: 'Self-Hosted',
+    description: 'Lightning Address is just a set of simple protocol instructions, you can roll everything on your own. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, this option is for you.',
     image: '/images/data2.svg',
     linkText: 'Read More',
     link: 'https://google.com',
@@ -175,9 +174,9 @@ const IMPLEMENTATIONS = [
 
 export const Paths = () => (
   <PathsModule>
-    <PathsIntro>Developers</PathsIntro>
-    <PathsTitle>How do I get my Lightning Address?</PathsTitle>
-    <PathsDescription>You have a few options in order to obtain your Lightning Address. You can choose to sign up for a service provider (just like an email server e.g. Gmail or Outlook) that will take care of all the complexities for you. You can roll your own setup/server that handles requests to/from your Lightning Network node (DIY). Or you can rely on a `Bridge` server that provides an easy plug-n-play solution if you already have a Lightning node.</PathsDescription>
+    <PathsIntro>Developers & Shadowy Coders</PathsIntro>
+    <PathsTitle>How do Lightning Addresses work?</PathsTitle>
+    <PathsDescription>You can choose to sign up for a service just like an email server (Gmail or Outlook), which will take care of all the payments behind-the-scenes for you. You can roll your own server that handles the connection between your Lightning Address and your Lightning node. Or you can rely on a `Bridge` server that provides an easy plug-n-play solution.</PathsDescription>
     <PathsCardGrid>
       {(IMPLEMENTATIONS || []).map((benefit) => (
         <PathsCard key={benefit.title}>

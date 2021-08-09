@@ -145,44 +145,80 @@ const BenefitsIntro = styled.p`
   `}
 `;
 
+
+const CTAWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 10px auto;
+
+  ${media.tablet`
+    margin: 40px auto 0 auto;
+    flex-direction: row;
+  `}
+`;
+
+const CTAPrimary = styled.a`
+  color: #fff;
+  height: 2.81rem;
+  cursor: pointer;
+  padding: 0;
+  width: 260px;
+  text-align: center;
+  margin: 0 0 10px 0;
+  border-radius: 7px;
+  line-height: 2.8rem;
+  text-decoration: none;
+  background-color: #0070f3;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+
+  &:hover {
+    background: rgba(0,118,255,0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+  }
+
+  ${media.tablet`
+    margin: 0 15px 0 0;
+  `}
+`;
+
 const BENEFITS = [
   {
-    title: 'No QR codes',
-    description: () => <>Gone are the days that you needed to send your friend a Bitcoin Lightning invoice QR in order to receive a payment. Now you can just tell them to <b>pay me at user@domain.com</b> and be done with it.</>,
+    title: 'Skip QR codes',
+    description: () => <>Gone are the days that you needed to send your friend a Lightning invoice QR code in order to receive a payment. Now you can just text them to <b>"pay me at user@domain.com"</b> and go about your day.</>,
     image: '/images/qrcode.svg'
   },
   {
-    title: 'Dynamic properties',
-    description: 'With Lightning Addresses you are able enjoy payments of any kind, any amount, with or without messages. These underlying properties can change, but your Address always stays the same. A true internet payment identifier.',
-    image: '/images/bitcoin1.svg'
-  },
-  {
-    title: 'Messaging support',
-    description: 'Lightning Addresses are primarily payment identifiers, but depending on your provider they also accept comments attached to those payments. Programmable money is now as simple to transfer as programmable data.',
+    title: 'Attach Comments',
+    description: 'Payments to your Lightning Address can also contain attached messages. Whether it is a donation message, a comment from a fan, or a friend\'s joke, messages always improve the experience.',
     image: '/images/comments.svg'
   },
   {
-    title: 'Cross-provider support',
-    description: 'Remove the boundaries that exist between service providers. Send money from provider A to provider B to your self-hosted C without hassle. Your Lightning Address is your global boundless payment identifier.',
+    title: 'Open All Networks',
+    description: 'You can finally send money to that friend who uses that other app. From Service A to App B to User C to Platform D, Lightning Addresses set your money free -- a global boundless payment identifier for anyone and everyone.',
     image: '/images/data.svg'
   },
   {
-    title: 'Interoperable',
-    description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Lightning-enabled services. The aim of LNURL is to improve user-experience around Lightning payments between apps and services.',
-    image: '/images/bitcoin3.svg'
+    title: 'Set Custom Properties',
+    description: 'Enjoy payments from anyone anywhere, for any amount, with or without attached comments. Set minimums-&-maximums, images, and descriptions. Properties can change, but your Lightning Address stays the same.',
+    image: '/images/bitcoin1.svg'
   },
   {
-    title: 'User Experience',
-    description: 'Everyone is used to sending emails these days. Now those same addresses can technically be used for payments. Lightning Addresses provide a familiar user experience allowing virtually anyone to join and participate.',
+    title: 'Familiar Experience',
+    description: 'Like an email address but for your email! You can now have the exact same flow to send money as you have when sending an email message to a friend. A familiar user experience allowing everyone to participate.',
     image: '/images/bitcoin2.svg'
+  },
+  {
+    title: 'Be Interoperable',
+    description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Bitcoin Lightning-enabled services. The aim of LNURL is to improve user-experience around payments between apps and services.',
+    image: '/images/bitcoin3.svg'
   },
 ];
 
 export const Benefits = () => (
   <BenefitsModule>
-    <BenefitsIntro>Users</BenefitsIntro>
+    <BenefitsIntro>Users & Enthusiasts</BenefitsIntro>
     <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
-    <BenefitsDescription>Lightning Addresses dramatically simplify the experience of sending and receiving money over the Lightning Network. No more QR codes scanning. No more sharing of invoices. It even allows for payments to be easily performed across different service providers.</BenefitsDescription>
+    <BenefitsDescription>The Lightning Address makes it simple to send and receive money over the Bitcoin Lightning Network. No more scanning of QR codes, no more sharing of payment requests. <br />Send money like you send emails -- instantly and abundantly.</BenefitsDescription>
     <BenefitsCardGrid>
       {(BENEFITS || []).map((benefit) => (
         <BenefitsCard key={benefit.title}>
@@ -200,5 +236,8 @@ export const Benefits = () => (
         </BenefitsCard>
       ))}
     </BenefitsCardGrid>
+    <CTAWrapper>
+      <CTAPrimary href="#providers">Get My Lightning Address</CTAPrimary>
+    </CTAWrapper>
   </BenefitsModule>
 )

@@ -32,7 +32,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="An Internet Identifier that allows anyone to send you Bitcoin over the Lightning Network. No scanning QR codes or pasting invoices. Like an email address, but for money."
+          content="Like an email address, but for your money. An Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices."
         />
         <meta
           property="og:image"
