@@ -204,7 +204,7 @@ const BENEFITS = [
   },
   {
     title: 'Familiar Experience',
-    description: 'Like an email address but for your email! You can now have the exact same flow to send money as you have when sending an email message to a friend. A familiar user experience allowing everyone to participate.',
+    description: 'Like an email address but for your money! You can now have the exact same flow to send money as you have when sending an email message to a friend. A familiar user experience allowing everyone to participate.',
     image: '/images/bitcoin2.svg'
   },
   {

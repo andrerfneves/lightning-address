@@ -167,7 +167,7 @@ const IMPLEMENTATIONS = [
     description: 'Lightning Address is just a set of simple protocol instructions, you can roll everything on your own. Whether you are a service provider looking to support Lightning Addresses or a user that wants to host your own setup, this option is for you.',
     image: '/images/data2.svg',
     linkText: 'Read More',
-    link: 'https://google.com',
+    link: 'https://github.com/andrerfneves/lightning-address/blob/master/DIY.md',
     isSecondary: true
   },
 ];

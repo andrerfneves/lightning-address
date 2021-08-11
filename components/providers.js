@@ -180,9 +180,10 @@ const ProviderSignUpButton = styled.a`
   text-decoration: none;
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  opacity: ${({ isDisabled }) => isDisabled ? '0.5' : '1'};
 
   &:hover {
-    background: rgba(0,118,255,0.9);
+    background: ${({ isDisabled }) => isDisabled ? '#0070f3' : 'rgba(0,118,255,0.9)'};
     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
   }
 
@@ -255,7 +256,7 @@ export const Providers = () => (
             <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
             <DomainURL>you@coinos.io</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://coinos.io">Sign Up</ProviderSignUpButton>
+          <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
