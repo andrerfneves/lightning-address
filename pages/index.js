@@ -36,7 +36,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://i.imgur.com/uwHlWPC.png"
+          content="https://i.imgur.com/Plc0Dam.png"
         />
       </Head>
       <Wrapper>
