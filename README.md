@@ -12,7 +12,7 @@ For more information check out the website: [lightningaddress.com](https://light
 
 ## Developers
 
-If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, check the [DIY](./DIY.md) section.
+If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, check the [DIY](./DIY.md) section. [REQUIREMENTS](./REQUIREMENTS.md) has information on requirements (for both sending app and receiving domain).
 
 ## Bridge Server
 
