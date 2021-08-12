@@ -5,6 +5,9 @@
 Requirements for using the [Lightning Address](https://lightningaddress.com) protocol.
 
 
+## Reserved keywords / user names
+* `index` holds an optional list of usernames for this domain
+
 ## Sending app
 
 For the app sending payments to user@example.org, the following requirements apply:
@@ -52,6 +55,10 @@ The webhook will contain a JSON object like the one below:
   "amount:": 12345
 }
 ```
+
+If you want an index of users:
+
+* Add a plaintext file `index` in the lnurlp folder, with one user per line. Comments allowed using #-characters.
 
 > NOTE: Amount is in millisatoshis. The webhook is dispatched when an invoice is generated, not when it is paid, since we don't know when (or if) it was paid.
 
