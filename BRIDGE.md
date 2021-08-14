@@ -37,7 +37,7 @@ Considering you own the `domain.com` domain, you need to set up these DNS record
 
 * TXT `_kind`.domain.com -> lnd
 * TXT `_host`.domain.com -> http(s)://`your-ip-or-whatever.com`
-* TXT `_macaroon`.domain.com -> `macaroon_as_base64`
+* TXT `_macaroon`.domain.com -> `macaroon_as_base64` (use an invoice macaroon, this is publicly visible!)
 
 ### Optional extras:
 
