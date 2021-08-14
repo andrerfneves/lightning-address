@@ -24,6 +24,10 @@ Here's a quick primer on how Lightning Address works and how it relies on the [L
 
 ![](https://i.imgur.com/DIV5q8q.png)
 
+## Diagrams
+
+All illustrative and informative diagrams are available under the [DIAGRAMS](./diagrams/README.md) folder.
+
 ## Contributions
 
 Contributions are welcome, for both the lightningaddress.com website as well as the Lightning Address protocol itself. Please submit a PR here or on the core [LNURL RFC repository](https://github.com/fiatjaf/lnurl-rfc).
