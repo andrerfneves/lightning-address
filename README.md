@@ -2,7 +2,7 @@
 
 # Lightning Address
 
-### **Like an email address, but for money.**
+### **Like an email address, but for your money.**
 
 ## General Information
 
@@ -22,7 +22,7 @@ If you don't want to roll out an entire HTTP / LNURL server on your own setup/in
 
 Here's a quick primer on how Lightning Address works and how it relies on the [LNURL Pay protocol](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md).
 
-![](https://i.imgur.com/4agivbH.png)
+![](https://i.imgur.com/DIV5q8q.png)
 
 ## Contributions
 
