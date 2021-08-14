@@ -13,7 +13,7 @@ This document outlines the overall path to serving your own HTTP server with sup
 
 Sending to a Lightning Address is essentially just doing some string transformations and making a GET request to retrieve a LNURL Pay callback payload. Below is a diagram explaining it:
 
-![](https://i.imgur.com/4agivbH.png)
+![](https://i.imgur.com/DIV5q8q.png)
 
 After receiving the LNURL Pay payload, the rest of the flow is the exact same as the LNURL Pay flow, there's virtually no difference. Again, Lightning Addresses are essentially another way of sharing how a user can obtain another user's LNURL Pay details.
 

@@ -1,76 +1,28 @@
-*[Upstream document](https://lightningaddr.fiatjaf.com/)*
-
 ![](https://i.imgur.com/uwHlWPC.png)
 
-# `lightningaddr` Bridge Server
+# Bridge Server
 
-Simple plug-n-play server for supporting [Lightning Address](https://lightningaddress.com) protocol.
+At its core, a Lightning Address Bridge Server is a simple HTTP server that has one primary function: provide the LNURL Pay payload information necessary to allow payments to a Lightning Address to reach a specific Lightning node. There are a few ways to connect to a bridge server:
 
-> At the end of this flow you will be able to receive payments at `any_name@domain.com`.
+## `bridgeaddr`
 
-## General
+The [`bridgeaddr`](https://bridgeaddr.fiatjaf.com/) server tool is a simple server that allows you to receive Lightning payments at `yourname@yourdomain.com` in a non-custodial fashion. It is compatible with the following Lightning backends:
 
-A server that allows you to receive payments at `yourname@yourdomain.com` noncustodially. The Bridge Server serves the necessary JSON and then uses RPC calls to connect to your node and fetch invoices on demand.
+* Sparko
+* LND
+* LNPay
+* LNBits
 
-**You don't have to do anything besides buying a domain and setting up some DNS records. HTTPS will be provided automatically for you.**
+This server will serve the necessary JSON and then use RPC calls to connect to your node and fetch invoices on demand. You don't have to do anything besides buying a domain and setting up some DNS records. HTTPS will be provided automatically for you.
 
-## Supported Lightning Backends
+If you already have a domain name and a Lightning node and are ready to get started, head on over to the [`bridgeaddr`](https://bridgeaddr.fiatjaf.com/) documentation page to set it up. You can also run `bridgeaddr` server yourself by going to the [GitHub repository](https://github.com/fiatjaf/bridgeaddr).
 
-At the moment `lightningaddr` supports the following Lightning Network backends:
+## Satdress
 
-* [Sparko](https://github.com/fiatjaf/sparko)
-* [LND](https://github.com/lightningnetwork/lnd)
+![](https://user-images.githubusercontent.com/2574011/129462071-49797997-f39a-4e8f-a378-5c9a9818adca.png)
 
-## Setup Guide
+If you'd like to host a Bridge Server on your own infrastructure to allow for you (and anyone else you would like to give access to) to connect your Lightning Address to a Lightning node, you can use [Satdress](https://github.com/fiatjaf/satdress). Satdress is a federated lightning addresses server.
 
-Considering you own the `domain.com` domain, you need to set up these DNS records:
+Similar to `bridgeaddr` you can simply enter a few parameters on DNS and quickly connect your non-custodial Lightning node to a Lightning Address. It's a Simple plug-n-play server for supporting [Lightning Address](https://lightningaddress.com) protocol.
 
-* A domain.com -> `5.2.67.89`
-
-### To use with `c-lightning` and `Sparko`:
-
-* TXT `_kind`.domain.com -> sparko
-* TXT `_host`.domain.com -> http(s)://`your-ip-or-whatever.com`/rpc
-* TXT `_key`.domain.com -> `key_with_permission_to_method_invoicewithdescriptionhash`
-
-### To use with LND:
-
-* TXT `_kind`.domain.com -> lnd
-* TXT `_host`.domain.com -> http(s)://`your-ip-or-whatever.com`
-* TXT `_macaroon`.domain.com -> `macaroon_as_base64` (use an invoice macaroon, this is publicly visible!)
-
-### Optional extras:
-
-If you want to specify a description for the Lightning Address payment screen:
-
-* TXT `_description`.domain.com -> free text
-
-If you want to specify an image for the Lightning Address payment screen:
-
-* TXT `_image`.domain.com -> https://url.to/image
-
-If you want to receive comments through the Lightning Address:
-
-* TXT `_webhook`.domain.com -> https://url.to/receive/webhook
-
-The webhook will contain a JSON object like the one below:
-
-```json
-{
-  "comment": "...",
-  "pr": "lnbc....",
-  "amount:": 12345
-}
-```
-
-> NOTE: Amount is in millisatoshis. The webhook is dispatched when an invoice is generated, not when it is paid, since we don't know when (or if) it was paid.
-
-If you use a self-signed certificate and want that to be checked:
-
-* TXT `_cert`.domain.com -> -----BEGIN CERTIFICATE----- MIQT...TQIM -----END CERTIFICATE-----
-
-If you want to reuse the domain root to redirect to elsewhere (maybe to the www subdomain?):
-
-TXT `_redirect`.domain.com -> https://www.domain.com/
-
-# Now you can receive payments at `any_name@domain.com`.
+Satdress also has a simple web-facing user interface to provide an easy-to-use form to connect nodes to addresses.

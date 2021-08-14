@@ -14,9 +14,9 @@ For more information check out the website: [lightningaddress.com](https://light
 
 If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, check the [DIY](./DIY.md) section.
 
-## Bridge Server
+## Bridge Servers
 
-If you don't want to roll out an entire HTTP / LNURL server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? Check the [Bridge Server](./BRIDGE.md) for a plug-n-play solution.
+If you don't want to roll out an entire HTTP / LNURL server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? You can use a Bridge Server to ensure your Lightning Node can properly receive payments from your Lightning Address. Check the [Bridge Server](./BRIDGE.md) instructions for a plug-n-play solution.
 
 ## TLDR
 
