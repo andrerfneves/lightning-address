@@ -17,6 +17,8 @@ Sending to a Lightning Address is essentially just doing some string transformat
 
 After receiving the LNURL Pay payload, the rest of the flow is the exact same as the LNURL Pay flow, there's virtually no difference. Again, Lightning Addresses are essentially another way of sharing how a user can obtain another user's LNURL Pay details.
 
+Requirement: HTTPS is expected to be used, since this is sensitive data, where MITM impacts actual money.
+
 ### Receiving
 
 In order to support receiving to a Lightning Address on your own infrastructure/domain setup, you will need a  handful of things outlined below.
@@ -25,6 +27,7 @@ In order to support receiving to a Lightning Address on your own infrastructure/
   * [LNURL Pay support](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md)
     * [Internet Identifier metadata support](https://github.com/fiatjaf/lnurl-rfc/blob/luds/16.md)
     * [Commenting support](https://github.com/fiatjaf/lnurl-rfc/blob/luds/12.md) (Optional)
+  * HTTPS security
 * Lightning Network node
   * Used to create BOLT11 invoices for LNURL Pay flow
 * Domain
