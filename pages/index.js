@@ -39,7 +39,6 @@ export default function Home() {
           content="https://i.imgur.com/Plc0Dam.png"
         />
 
-        {/* Twitter Tags */}
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@andreneves">
         <meta name="twitter:creator" content="@andreneves">
@@ -47,7 +46,6 @@ export default function Home() {
         <meta name="twitter:description" content="Like an email address, but for your money. An Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices.">
         <meta name="twitter:image" content="https://i.imgur.com/Plc0Dam.png">
 
-        {/* Plausible */}
         <script defer data-domain="lightningaddress.com" src="https://plausible.io/js/plausible.js" />
       </Head>
       <Wrapper>
