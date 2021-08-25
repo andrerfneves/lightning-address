@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Head from 'next/head';
 
+import { Community } from '../components/community';
 import { Providers } from '../components/providers';
 import { Benefits } from '../components/benefits';
 import { Footer } from '../components/footer';
@@ -43,7 +44,7 @@ export default function Home() {
         <meta name="twitter:site" content="@andreneves" />
         <meta name="twitter:creator" content="@andreneves" />
         <meta name="twitter:title" content="The Lightning Address" />
-        <meta name="twitter:description" content="Like an email address, but for your money. An Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices." />
+        <meta name="twitter:description" content="Like an email address, but for your Bitcoin. A massively simpler way for anyone to send you Bitcoin instantly on the Lightning Network. No scanning QR codes or pasting invoices." />
         <meta name="twitter:image" content="https://i.imgur.com/Plc0Dam.png" />
 
         <script defer data-domain="lightningaddress.com" src="https://plausible.io/js/plausible.js" />
@@ -53,6 +54,7 @@ export default function Home() {
         <Benefits />
         <Paths />
         <Providers />
+        <Community />
         <Footer />
       </Wrapper>
     </>

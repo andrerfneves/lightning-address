@@ -69,8 +69,8 @@ const Description = styled.p`
     padding: 0;
     font-size: 20px;
     padding: 0 30px;
-    max-width: 800px;
-    line-height: 1.6;
+    max-width: 500px;
+    line-height: 1.4;
     letter-spacing: -1px;
   `}
 `;
@@ -202,7 +202,11 @@ const LicenseLink = styled.a`
 `;
 
 const Bold = styled.span`
+  margin: 0;
+  padding: 0;
+  display: block;
   font-weight: 600;
+  padding-bottom: 5px;
   letter-spacing: -0.5px;
 `;
 
@@ -238,23 +242,22 @@ export class Hero extends PureComponent {
         </Fade>
         <Fade bottom when={showLightningAddr}>
           <Description>
-            <Bold>Like an email address, but for your money!</Bold> An <Link href={URL_INTERNET_IDENTIFIER}>Internet Identifier</Link> that lets anyone send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices.
+            <Bold>Like an email address, but for your Bitcoin!</Bold> A massively simpler way for anyone to send you Bitcoin instantly on the Lightning Network.
           </Description>
           <LoopWrapper>
             <FixedTextPart>you@</FixedTextPart>
             <TextLoop interval={2000} delay={1600}>
+              <LoopedTextPart>your.domain</LoopedTextPart>
               <LoopedTextPart>zbd.gg</LoopedTextPart>
               <LoopedTextPart>lntxbot.com</LoopedTextPart>
-              <LoopedTextPart>your.domain</LoopedTextPart>
               <LoopedTextPart>zebedee.io</LoopedTextPart>
-              <LoopedTextPart>lnbits.com</LoopedTextPart>
               <LoopedTextPart>coinos.io</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
         <Fade bottom when={showCTAs}>
           <CTAWrapper>
-            <CTAPrimary href="#providers">Get My Lightning Address</CTAPrimary>
+            <CTAPrimary href="#providers">Get a Lightning Address</CTAPrimary>
             <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Read Documentation</CTASecondary>
           </CTAWrapper>
           <LicenseWrapper>

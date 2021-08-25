@@ -183,34 +183,19 @@ const CTAPrimary = styled.a`
 
 const BENEFITS = [
   {
-    title: 'Skip QR codes',
-    description: () => <>Gone are the days that you needed to send your friend a Lightning invoice QR code in order to receive a payment. Now you can just text them to <b>"pay me at user@domain.com"</b> and go about your day.</>,
-    image: '/images/qrcode.svg'
-  },
-  {
-    title: 'Attach Comments',
-    description: 'Payments to your Lightning Address can also contain attached messages. Whether it is a donation message, a comment from a fan, or a friend\'s joke, messages always improve the experience.',
-    image: '/images/comments.svg'
-  },
-  {
-    title: 'Open All Networks',
-    description: 'You can finally send money to that friend who uses that other app. From Service A to App B to User C to Platform D, Lightning Addresses set your money free -- a global boundless payment identifier for anyone and everyone.',
-    image: '/images/data.svg'
-  },
-  {
-    title: 'Set Custom Properties',
-    description: 'Enjoy payments from anyone anywhere, for any amount, with or without attached comments. Set minimums-&-maximums, images, and descriptions. Properties can change, but your Lightning Address stays the same.',
-    image: '/images/bitcoin1.svg'
-  },
-  {
-    title: 'Familiar Experience',
-    description: 'Like an email address but for your money! You can now have the exact same flow to send money as you have when sending an email message to a friend. A familiar user experience allowing everyone to participate.',
+    title: 'Easy and familiar',
+    description: 'No more requesting invoices and scanning QR codes to send your friends Bitcoin. If you can send an email, you can send a transaction to a Lightning Address.',
     image: '/images/bitcoin2.svg'
   },
   {
-    title: 'Be Interoperable',
-    description: 'Lightning Address builds upon the LNURL Protocol which is widely adopted in Bitcoin Lightning-enabled services. The aim of LNURL is to improve user-experience around payments between apps and services.',
-    image: '/images/bitcoin3.svg'
+    title: 'Extended functionality',
+    description: 'Set minimum and maximum payment sizes to accept, add images and comments to your transactions and more features that weren\'t possible before.',
+    image: '/images/comments.svg'
+  },
+  {
+    title: 'Sets your money free',
+    description: 'Your friend uses a different app or wallet? No problem! This is a new standard designed to break the barriers between Lightning providers. We all speak Bitcoin.',
+    image: '/images/data.svg'
   },
 ];
 
@@ -218,7 +203,7 @@ export const Benefits = () => (
   <BenefitsModule>
     <BenefitsIntro>Users & Enthusiasts</BenefitsIntro>
     <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
-    <BenefitsDescription>The Lightning Address makes it simple to send and receive money over the Bitcoin Lightning Network. No more scanning of QR codes, no more sharing of payment requests. <br />Send money like you send emails -- instantly and abundantly.</BenefitsDescription>
+    <BenefitsDescription>We created the Lightning Address protocol to empower everyone to send money like we send emails — instantly and abundantly. Coupled with the Lightning Network’s ability to send Bitcoin instantly and with (almost) no fees, we’re ushering in a new standard for how value moves around the world.</BenefitsDescription>
     <BenefitsCardGrid>
       {(BENEFITS || []).map((benefit) => (
         <BenefitsCard key={benefit.title}>
@@ -237,7 +222,7 @@ export const Benefits = () => (
       ))}
     </BenefitsCardGrid>
     <CTAWrapper>
-      <CTAPrimary href="#providers">Get My Lightning Address</CTAPrimary>
+      <CTAPrimary href="#providers">Get a Lightning Address</CTAPrimary>
     </CTAWrapper>
   </BenefitsModule>
 )

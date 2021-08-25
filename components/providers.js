@@ -172,7 +172,8 @@ const ProviderSignUpButton = styled.a`
   width: 140px;
   height: 2.81rem;
   cursor: pointer;
-  padding: 0 3.5rem;
+  min-width: 220px;
+  padding: 0 0.5rem;
   text-align: center;
   border-radius: 7px;
   margin: 15px 0 0 0;
@@ -188,13 +189,18 @@ const ProviderSignUpButton = styled.a`
   }
 
   ${media.tablet`
-    width: 120px;
+    min-width: 220px;
     margin: 0 15px 0 0;
   `}
 `;
 
 const ZEBEDEEImage = styled.img`
   width: 130px;
+  align-self: center;
+`;
+
+const BTCPayImage = styled.img`
+  width: 100px;
   align-self: center;
 `;
 
@@ -228,14 +234,14 @@ export const Providers = () => (
       <ProvidersLeft>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
-          Start receiving payments to <Bold>you@address.com</Bold> now. Choose from one of the apps and services that already support Lightning Address below and you'll be set up in seconds.
+          Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
         </ProvidersDescription>
         <ProviderCard>
           <ImageWrapper>
             <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
             <DomainURL>you@zbd.gg</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download App</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -246,10 +252,10 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <ZEBEDEEImage src={'/images/lnbits.png'} alt="LNBits" style={{ marginTop: '-5px', marginBottom: '-15px' }} />
-            <DomainURL>you@lnbits.com</DomainURL>
+            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" />
+            <DomainURL>you@yourbtcpay.server</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://lnbits.com">Create Account</ProviderSignUpButton>
+          <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -263,12 +269,12 @@ export const Providers = () => (
         <ProvidersRightInner>
           <ProvidersTitle>Your app doesn't support Lightning Addresses yet?</ProvidersTitle>
           <ProvidersDescriptionSmall>
-            If your favorite Bitcoin app doesn't yet support Lightning Address, get in touch with the developer company and ask them to learn about how the protocol can help their users.
+            If your favorite Bitcoin app doesn't support Lightning Addresses yet, get in touch with the developer company and ask them to learn about how the protocol can help their users.
             <br />
             <br />
             To make things easier, we created an email template you can send with just a click.
           </ProvidersDescriptionSmall>
-          <ProvidersEmailButton onClick={() => window.open(`mailto:ENTER_DEVELOPER_EMAIL_HERE?subject=Introducing Lightning Address&body=Hi there,\n\n I just learnt about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email address. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`)}>
+          <ProvidersEmailButton onClick={() => window.open(`mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`)}>
             <ProvidersEmailButtonImage src={'/images/email.svg'} alt='Email' />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>
