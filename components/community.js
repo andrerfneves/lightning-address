@@ -70,11 +70,13 @@ const CommunityIntro = styled.p`
 
 const CommunityInner = styled.div`
   display: flex;
+  margin-top: 40px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
   ${media.largeTablet`
+    margin-top: 80px;
     max-width: 1000px;
     flex-direction: row;
   `}
