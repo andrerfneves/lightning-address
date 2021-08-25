@@ -307,16 +307,16 @@ const WALLETS = [
     url: 'https://zebedee.io/wallet',
   },
   {
-    name: 'SBW',
-    image: '/images/sbw.png',
-    downloadText: 'Download Wallet',
-    url: 'https://lightning-wallet.com',
-  },
-  {
     name: 'Blixt',
     image: '/images/blixt.png',
     downloadText: 'Download Wallet',
     url: 'https://blixtwallet.github.io/',
+  },
+  {
+    name: 'SBW',
+    image: '/images/sbw.png',
+    downloadText: 'Download Wallet',
+    url: 'https://lightning-wallet.com',
   },
   {
     name: 'LNBits',
@@ -329,15 +329,15 @@ const WALLETS = [
 export const Community = () => (
   <CommunityModule>
     <CommunityIntro>Community Bridge Servers and Wallets</CommunityIntro>
-    <CommunityTitle>Integrates as fast as Lightning</CommunityTitle>
+    <CommunityTitle>Community</CommunityTitle>
     <CommunityDescription>
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
     </CommunityDescription>
     <CommunityInner>
       <CommunityLeft>
-        <CommunitySectionTitle>Get a Lightning Address now!</CommunitySectionTitle>
+        <CommunitySectionTitle>Transact with a Lightning Address today!</CommunitySectionTitle>
         <CommunityDescriptionSmall>
-          Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
+          The Lightning Network wallets listed below have full support for transacting with Lightning Addresses. Download them to get started sending Bitcoin as easily as you send emails.
         </CommunityDescriptionSmall>
         {WALLETS.map(wallet => (
           <CommunityCard key={wallet.name}>
@@ -355,7 +355,7 @@ export const Community = () => (
       </CommunityLeft>
       <CommunityRight>
         <CommunityRightInner>
-          <CommunitySectionTitle>Get a Lightning Address now!</CommunitySectionTitle>
+          <CommunitySectionTitle>Connect your Lightning Network node backend to a Lightning Address noncustodially!</CommunitySectionTitle>
           <CommunityDescriptionSmall>
             Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
           </CommunityDescriptionSmall>

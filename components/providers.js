@@ -252,15 +252,15 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" />
-            <DomainURL>you@yourbtcpay.server</DomainURL>
+            <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
+            <DomainURL>you@coinos.io</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://coinos.io">Open Coinos</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
-            <DomainURL>you@coinos.io</DomainURL>
+            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" />
+            <DomainURL>you@yourbtcpay.server</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
         </ProviderCard>
