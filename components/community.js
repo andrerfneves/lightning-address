@@ -408,7 +408,7 @@ export const Community = () => (
           </CommunityCard>
         ))}
         <CTAWrapper>
-          <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets" target="_blank">
+          <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported" target="_blank">
             View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
