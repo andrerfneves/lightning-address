@@ -432,8 +432,8 @@ export const Community = () => (
           </CommunityDescriptionSmall>
           <CommunityVerticalListWrapper>
             {BRIDGE_SERVERS.map(item => (
-              <VerticalLinkWrapper>
-                <VerticalLink key={item.urlText} href={item.urlLink} target="_blank">
+              <VerticalLinkWrapper key={item.urlText}>
+                <VerticalLink href={item.urlLink} target="_blank">
                   {item.urlText}
                 </VerticalLink>
                 <VerticalLinkDescription>
