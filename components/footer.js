@@ -11,46 +11,54 @@ const FOOTER = [
     title: 'Resources',
     items: [
       {
-        link: URL_INTERNET_IDENTIFIER,
-        title: 'Internet Identifier RFC'
+        link: 'https://github.com/andrerfneves/lightning-address/blob/master/README.md',
+        title: 'Dev Documentation'
       },
       {
         link: 'https://github.com/andrerfneves/lightning-address',
         title: 'Code Repository'
       },
       {
-        link: 'https://github.com/andrerfneves/lightning-address/blob/master/README.md',
-        title: 'Documentation'
+        link: 'https://lightningdecoder.com',
+        title: 'Lightning Address Decoder'
       },
       {
-        link: 'https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md',
-        title: 'License'
+        link: URL_INTERNET_IDENTIFIER,
+        title: 'Internet Identifier RFC'
       },
-    ]
-  },
-  {
-    title: 'LNURL Protocol',
-    items: [
       {
         link: 'https://github.com/fiatjaf/lnurl-rfc',
-        title: 'Specification'
-      },
-      {
-        link: 'https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md',
-        title: 'LNURL Pay Specification'
-      },
-      {
-        link: 'https://github.com/fiatjaf/awesome-lnurl#wallets',
-        title: 'Wallets Supported'
-      },
-      {
-        link: 'https://github.com/fiatjaf/awesome-lnurl',
-        title: 'Awesome LNURL'
+        title: 'LNURL RFC'
       },
     ]
   },
   {
-    title: 'Providers',
+    title: 'Sending',
+    items: [
+      {
+        link: 'https://blixtwallet.com/',
+        title: 'Blixt Wallet'
+      },
+      {
+        link: 'https://lightning-wallet.com/',
+        title: 'Simple Bitcoin Wallet'
+      },
+      {
+        link: 'https://lntxbot.fiatjaf.com/',
+        title: 'LNTXBOT Telegram Bot'
+      },
+      {
+        link: 'https://zebedee.io/wallet',
+        title: 'ZEBEDEE Wallet'
+      },
+      {
+        link: 'https://lnbits.com',
+        title: 'LNBits'
+      },
+    ]
+  },
+  {
+    title: 'Receiving',
     items: [
       {
         link: 'https://zebedee.io/wallet',
@@ -58,15 +66,15 @@ const FOOTER = [
       },
       {
         link: 'https://lntxbot.fiatjaf.com/',
-        title: 'LNTXBOT Telegram'
-      },
-      {
-        link: 'https://lnbits.com',
-        title: 'LNBits'
+        title: 'LNTXBOT Telegram Bot'
       },
       {
         link: 'https://coinos.io',
         title: 'CoinOS'
+      },
+      {
+        link: 'https://github.com/fiatjaf/satdress',
+        title: 'Satdress'
       },
     ]
   },
@@ -81,13 +89,14 @@ const Wrapper = styled.div`
 const InnerWrapper = styled.div`
   display: flex;
   margin: 0 auto;
-  padding: 20px 30px 30px 30px;
   flex-direction: column;
+  padding: 20px 30px 30px 30px;
 
   ${media.tablet`
     max-width: 900px;
     flex-direction: row;
     padding: 80px 0 100px 0;
+    justify-content: space-between;
   `}
 `;
 
@@ -96,7 +105,7 @@ const Column = styled.div`
   flex-direction: column;
 
   ${media.tablet`
-    width: 200px;
+    width: 230px;
   `}
 `;
 
@@ -157,21 +166,32 @@ const BottomQR = styled.div`
   border: 1px solid #ddd;
 `;
 
+const Menus = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${media.tablet`
+    flex-direction: row;
+  `}
+`;
+
 export const Footer = () => (
   <Wrapper>
     <InnerWrapper>
-      {(FOOTER || []).map(col => (
-        <Column key={col.title}>
-          <ColumnTitle>
-            {col.title}
-          </ColumnTitle>
-          {(col.items || []).map(item => (
-            <ColumnItem key={item.link} href={item.link} target="_blank">
-              {item.title}
-            </ColumnItem>
-          ))}
-        </Column>
-      ))}
+      <Menus>
+        {(FOOTER || []).map(col => (
+          <Column key={col.title}>
+            <ColumnTitle>
+              {col.title}
+            </ColumnTitle>
+            {(col.items || []).map(item => (
+              <ColumnItem key={item.link} href={item.link} target="_blank">
+                {item.title}
+              </ColumnItem>
+            ))}
+          </Column>
+        ))}
+      </Menus>
       <Bottom>
         <BottomInner>
           <BottomQR>

@@ -152,15 +152,17 @@ const IMPLEMENTATIONS = [
     image: '/images/data4.svg',
     linkText: 'Get Started',
     link: '#providers',
-    isSecondary: false
+    isSecondary: false,
+    isInternal: true,
   },
   {
     title: 'Bridge Servers',
     description: 'If you already run a Bitcoin Lightning Network node and want a plug-n-play solution, this option is for you. Simply point some configuration settings to one of the growing list of community-supported Bridge Servers and get set up in minutes.',
     image: '/images/data3.svg',
     linkText: 'Quick Setup',
-    link: 'https://github.com/andrerfneves/lightning-address/blob/master/BRIDGE.md',
-    isSecondary: true
+    link: '#community',
+    isSecondary: true,
+    isInternal: true,
   },
   {
     title: 'Self-Hosted',
@@ -168,7 +170,8 @@ const IMPLEMENTATIONS = [
     image: '/images/data2.svg',
     linkText: 'Learn More',
     link: 'https://github.com/andrerfneves/lightning-address/blob/master/DIY.md',
-    isSecondary: true
+    isSecondary: true,
+    isInternal: false,
   },
 ];
 
@@ -189,7 +192,7 @@ export const Paths = () => (
           <PathsCardDescription>
             {benefit.description}
           </PathsCardDescription>
-          <PathsCardButton target="_blank" href={benefit.link} isSecondary={benefit.isSecondary}>
+          <PathsCardButton target={benefit.isInternal ? '' : '_blank'} href={benefit.link} isSecondary={benefit.isSecondary}>
             {benefit.linkText}
           </PathsCardButton>
         </PathsCard>

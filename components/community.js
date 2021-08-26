@@ -170,24 +170,18 @@ const ImageWrapper = styled.div`
   `}
 `;
 
-const CommunityListWrapper = styled.ul`
-  list-style: none;
-  margin-bottom: 2rem;
-`;
+const CommunityListWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 
-const CommunityListItem = styled.li`
-  color: #666666;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 0.35rem;
-
-  &:before {
-    content: "-";
-    color: #666666;
-    margin-left: -25px;
-    position: absolute;
-    display: inline-block;
-  }
+  ${media.tablet`
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  `}
 `;
 
 const CommunitySectionTitle = styled.div`
@@ -197,35 +191,66 @@ const CommunitySectionTitle = styled.div`
   max-width: 500px;
   font-weight: 800;
   line-height: 1.3;
-  text-align: left;
+  text-align: center;
 
   ${media.tablet`
     padding: 0;
+    text-align: left;
     font-size: 24px;
     letter-spacing: -0.5px;
   `}
 `;
 
 const Link = styled.a`
-  color: #222222;
-  cursor: pointer;
-  font-weight: 600;
+  color: #0070f3;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 7px;
   text-decoration: none;
+  margin: 10px 10px 0 0;
+  background: rgba(0,118,255,0.1);
+
+  ${media.tablet`
+    font-size: 14px;
+    max-width: 900px;
+    line-height: 1.6;
+  `}
 
   &:hover {
-    color: #0070f3;
+    background: rgba(0,118,255,0.2);
   }
 `;
 
-const LinkDescription = styled.span`
-  padding-left: 5px;
-  word-break: break-word;
+const VerticalLink = styled.a`
+  color: #0070f3;
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 22px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 7px;
+  text-decoration: none;
+  margin: 10px 10px 0 0;
+  background: rgba(0,118,255,0.1);
+
+  ${media.tablet`
+    font-size: 14px;
+    line-height: 1.6;
+  `}
+
+  &:hover {
+    background: rgba(0,118,255,0.2);
+  }
 `;
 
 const CommunityDescriptionSmall = styled(CommunityDescription)`
-  text-align: left;
+  text-align: center;
 
   ${media.tablet`
+    text-align: left;
     font-size: 18px;
   `}
 `;
@@ -247,7 +272,7 @@ const CTASecondary = styled.a`
   cursor: pointer;
   height: 2.81rem;
   background: #fff;
-  width: 300px;
+  width: 280px;
   text-align: center;
   padding: 0;
   margin: 10px 0 0 0;
@@ -266,36 +291,70 @@ const CTASecondary = styled.a`
   `}
 `;
 
-const BRIDGE_SERVERS = [
+const CommunityVerticalListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const VerticalLinkWrapper = styled.div`
+  display: flex;
+  padding: 0 20px;
+  padding-top: 10px;
+  align-items: center;
+  flex-direction: column;
+
+  ${media.tablet`
+    flex-direction: row;
+    align-items: flex-start;
+  `}
+`;
+
+const VerticalLinkDescription = styled(CommunityDescriptionSmall)`
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  padding-top: 10px;
+  letter-spacing: 0;
+  padding-left: 10px;
+
+  ${media.tablet`
+    font-size: 14px;
+  `}
+`;
+
+const SATDRESS_SERVERS = [
   {
     urlLink: 'https://payaddress.co',
-    urlText: 'PayAddress.co',
-    description: 'a something something',
+    urlText: '@payaddress.co',
   },
   {
     urlLink: 'https://bitmia.com',
-    urlText: 'Bitmia.com',
-    description: 'a something something',
+    urlText: '@bitmia.com',
   },
   {
     urlLink: 'https://tinytip.me',
-    urlText: 'TinyTip.me',
-    description: 'a something something',
+    urlText: '@tinytip.me',
   },
   {
     urlLink: 'https://paymentlink.xyz',
-    urlText: 'PaymentLink.xyz',
-    description: 'a something something',
+    urlText: '@paymentlink.xyz',
   },
   {
     urlLink: 'https://ln.fitti.io/',
-    urlText: 'LN.Fitti.io',
-    description: 'a something something',
+    urlText: '@ln.fitti.io',
+  },
+];
+
+const BRIDGE_SERVERS = [
+  {
+    urlLink: 'https://github.com/fiatjaf/satdress/',
+    urlText: 'Satdress',
+    description: 'Federated Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.',
   },
   {
     urlLink: 'https://bridgeaddr.fiatjaf.com/',
     urlText: 'BridgeAddr',
-    description: 'a server that allows you to receive payments at yourname@yourdomain.com noncustodially.',
+    description: 'Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.',
   },
 ];
 
@@ -324,20 +383,20 @@ const WALLETS = [
     downloadText: 'Open LNBits',
     url: 'https://lnbits.com/',
   },
-]
+];
 
 export const Community = () => (
-  <CommunityModule>
-    <CommunityIntro>Community Bridge Servers and Wallets</CommunityIntro>
-    <CommunityTitle>Community</CommunityTitle>
+  <CommunityModule id="community">
+    <CommunityIntro>Community Efforts & Tools</CommunityIntro>
+    <CommunityTitle>Noncustodial Bridge Servers</CommunityTitle>
     <CommunityDescription>
-      We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
+      The Lightning Address standard continues to be adopted by community participants and companies in the industry. From mobile and desktop wallet support, to federated Lightning Address bridge servers anyone can self-host, it's never been easier to transact Bitcoin.
     </CommunityDescription>
     <CommunityInner>
       <CommunityLeft>
         <CommunitySectionTitle>Transact with a Lightning Address today!</CommunitySectionTitle>
         <CommunityDescriptionSmall>
-          The Lightning Network wallets listed below have full support for transacting with Lightning Addresses. Download them to get started sending Bitcoin as easily as you send emails.
+          The wallets listed below already have support for transacting with Lightning Addresses. Download them to get started sending Bitcoin as easily as you send emails.
         </CommunityDescriptionSmall>
         {WALLETS.map(wallet => (
           <CommunityCard key={wallet.name}>
@@ -349,28 +408,39 @@ export const Community = () => (
         ))}
         <CTAWrapper>
           <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets" target="_blank">
-            View list of all supported Wallets
+            View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
       </CommunityLeft>
       <CommunityRight>
         <CommunityRightInner>
-          <CommunitySectionTitle>Connect your Lightning Network node backend to a Lightning Address noncustodially!</CommunitySectionTitle>
+          <CommunitySectionTitle>Want a different domain for your Lightning Address?</CommunitySectionTitle>
           <CommunityDescriptionSmall>
-            Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
+            Use one of the community-supported Lightning Address servers below to connect your Lightning backend to a Lightning Address noncustodially!
           </CommunityDescriptionSmall>
           <CommunityListWrapper>
-            {BRIDGE_SERVERS.map(item => (
-              <CommunityListItem key={item.urlText}>
-                <Link href={item.urlLink} target="_blank">
-                  {item.urlText}
-                </Link>
-                <LinkDescription>
-                  - {item.description}
-                </LinkDescription>
-              </CommunityListItem>
+            {SATDRESS_SERVERS.map(item => (
+              <Link key={item.urlText} href={item.urlLink} target="_blank">
+                {item.urlText}
+              </Link>
             ))}
           </CommunityListWrapper>
+          <br />
+          <CommunityDescriptionSmall>
+            Additional resources for using and supporting Lightning Addresses:
+          </CommunityDescriptionSmall>
+          <CommunityVerticalListWrapper>
+            {BRIDGE_SERVERS.map(item => (
+              <VerticalLinkWrapper>
+                <VerticalLink key={item.urlText} href={item.urlLink} target="_blank">
+                  {item.urlText}
+                </VerticalLink>
+                <VerticalLinkDescription>
+                  {item.description}
+                </VerticalLinkDescription>
+              </VerticalLinkWrapper>
+            ))}
+          </CommunityVerticalListWrapper>
         </CommunityRightInner>
       </CommunityRight>
     </CommunityInner>

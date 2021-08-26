@@ -189,7 +189,7 @@ const BENEFITS = [
   },
   {
     title: 'Extended functionality',
-    description: 'Set minimum and maximum payment sizes to accept, add images and comments to your transactions and more features that weren\'t possible before.',
+    description: 'Set minimum and maximum payment sizes to accept, add images and comments to your transactions, and more features that weren\'t possible before.',
     image: '/images/comments.svg'
   },
   {
