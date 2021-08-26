@@ -304,6 +304,7 @@ const VerticalLinkWrapper = styled.div`
   flex-direction: column;
 
   ${media.tablet`
+    padding: 0;
     flex-direction: row;
     align-items: flex-start;
   `}
