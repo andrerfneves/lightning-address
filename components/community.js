@@ -357,6 +357,11 @@ const BRIDGE_SERVERS = [
     urlText: 'BridgeAddr',
     description: 'Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.',
   },
+  {
+    urlLink: 'https://github.com/Dolu89/ligess/',
+    urlText: 'Ligess',
+    description: 'Personnal Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.',
+  },
 ];
 
 const WALLETS = [
