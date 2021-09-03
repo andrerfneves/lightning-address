@@ -76,6 +76,10 @@ const FOOTER = [
         link: 'https://github.com/fiatjaf/satdress',
         title: 'Satdress'
       },
+      {
+        link: 'https://github.com/dolu89/ligess',
+        title: 'Ligess'
+      },
     ]
   },
 ];
