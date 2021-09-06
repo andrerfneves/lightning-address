@@ -36,8 +36,20 @@ const FOOTER = [
     title: 'Sending',
     items: [
       {
+        link: 'https://zebedee.io/wallet',
+        title: 'ZEBEDEE Wallet'
+      },
+      {
+        link: 'https://bluewallet.io/',
+        title: 'BlueWallet'
+      },
+      {
         link: 'https://blixtwallet.com/',
         title: 'Blixt Wallet'
+      },
+      {
+        link: 'https://phoenix.acinq.co/',
+        title: 'Phoenix'
       },
       {
         link: 'https://lightning-wallet.com/',
@@ -46,10 +58,6 @@ const FOOTER = [
       {
         link: 'https://lntxbot.fiatjaf.com/',
         title: 'LNTXBOT Telegram Bot'
-      },
-      {
-        link: 'https://zebedee.io/wallet',
-        title: 'ZEBEDEE Wallet'
       },
       {
         link: 'https://lnbits.com',
