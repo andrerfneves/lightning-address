@@ -329,21 +329,26 @@ const SATDRESS_SERVERS = [
     urlText: '@payaddress.co',
   },
   {
-    urlLink: 'https://bitmia.com',
-    urlText: '@bitmia.com',
+    urlLink: 'https://btcadresse.de',
+    urlText: '@btcadresse.de',
   },
   {
-    urlLink: 'https://tinytip.me',
-    urlText: '@tinytip.me',
+    urlLink: 'https://ln.fitti.io/',
+    urlText: '@ln.fitti.io',
+  },
+  {
+    urlLink: 'https://bitmia.com',
+    urlText: '@bitmia.com',
   },
   {
     urlLink: 'https://paymentlink.xyz',
     urlText: '@paymentlink.xyz',
   },
   {
-    urlLink: 'https://ln.fitti.io/',
-    urlText: '@ln.fitti.io',
+    urlLink: 'https://tinytip.me',
+    urlText: '@tinytip.me',
   },
+
 ];
 
 const BRIDGE_SERVERS = [
@@ -360,7 +365,7 @@ const BRIDGE_SERVERS = [
   {
     urlLink: 'https://github.com/Dolu89/ligess/',
     urlText: 'Ligess',
-    description: 'Personnal Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.',
+    description: 'Personal Lightning Address server to self-host payments to you@yourdomain.com.',
   },
 ];
 
@@ -382,6 +387,28 @@ const WALLETS = [
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',
     url: 'https://lightning-wallet.com',
+  },
+  {
+    name: 'BlueWallet',
+    image: '/images/bluewallet.svg',
+    downloadText: 'Download Wallet',
+    url: 'https://bluewallet.io',
+    imageStyle: {
+      width: '88px',
+      marginTop: '3px',
+    }
+  },
+  {
+    name: 'Phoenix',
+    image: '/images/phoenix.png',
+    downloadText: 'Download Wallet',
+    url: 'https://phoenix.acinq.co/',
+  },
+  {
+    name: 'LNBits',
+    image: '/images/lntxbot.png',
+    downloadText: 'Open LNTXBot',
+    url: 'https://t.me/lntxbot/',
   },
   {
     name: 'LNBits',

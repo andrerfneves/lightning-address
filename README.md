@@ -26,13 +26,14 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | :---                                                              | :-------: | :-----:   |
 | [Bipa](https://bipa.app)                                          |           |           |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
-| [BlueWallet](https://bluewallet.io/)                              | ☑️         |           |
+| [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Breez](https://breez.technology/)                                |           |           |
 | [coinos](https://coinos.io/)                                      | WIP       | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
+| [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
-| [Phoenix](https://phoenix.acinq.co/)                              |           |           |
+| [Phoenix](https://phoenix.acinq.co/)                              |     ☑️     |   ----    |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             |           |           |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             |           |           |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
@@ -40,7 +41,6 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [SBW](https://lightning-wallet.com/)                              | ☑️         | ----      |
 | [ZEBEDEE](https://zebedee.io/wallet) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/wallet))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            | WIP       | ----      |
-| [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 
 ## TLDR
 
