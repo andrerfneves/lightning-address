@@ -26,7 +26,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | :---                                                              | :-------: | :-----:   |
 | [Bipa](https://bipa.app)                                          |           |           |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
-| [BlueWallet](https://bluewallet.io/)                              |           |           |
+| [BlueWallet](https://bluewallet.io/)                              | ☑️         |           |
 | [Breez](https://breez.technology/)                                |           |           |
 | [coinos](https://coinos.io/)                                      | WIP       | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
