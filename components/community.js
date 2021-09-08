@@ -367,6 +367,11 @@ const BRIDGE_SERVERS = [
     urlText: 'Ligess',
     description: 'Personal Lightning Address server to self-host payments to you@yourdomain.com.',
   },
+  {
+    urlLink: 'https://github.com/bumi/lnme',
+    urlText: 'LnMe',
+    description: 'Self-hosted Lightning Address server and personal payment page.',
+  },
 ];
 
 const WALLETS = [

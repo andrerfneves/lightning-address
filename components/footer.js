@@ -88,6 +88,10 @@ const FOOTER = [
         link: 'https://github.com/dolu89/ligess',
         title: 'Ligess'
       },
+      {
+        link: 'https://github.com/bumi/lnme',
+        title: 'LnMe'
+      },
     ]
   },
 ];
