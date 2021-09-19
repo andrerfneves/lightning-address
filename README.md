@@ -24,23 +24,21 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 
 | Wallet                                                            | Sending   | Receiving |
 | :---                                                              | :-------: | :-----:   |
-| [Bipa](https://bipa.app)                                          |           |           |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
-| [Breez](https://breez.technology/)                                |           |           |
+| [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [coinos](https://coinos.io/)                                      | WIP       | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
-| [Phoenix](https://phoenix.acinq.co/)                              |     ☑️     |   ----    |
+| [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             |           |           |
-| [Wallet of Satoshi](https://www.walletofsatoshi.com/)             |           |           |
+| [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ----    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
-| [Strike](https://strike.me/)                                      |           |           |
-| [SBW](https://lightning-wallet.com/)                              | ☑️         | ----      |
+| [SBW](https://lightning-wallet.com/)                              | ☑️         |   ----    |
 | [ZEBEDEE](https://zebedee.io/wallet) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/wallet))  | ☑️         | ☑️       |
-| [Zeus](https://github.com/ZeusLN/zeus)                            | WIP       | ----      |
+| [Zeus](https://github.com/ZeusLN/zeus)                            | WIP       |   ----    |
 
 ## TLDR
 
@@ -64,11 +62,4 @@ Contributions are welcome, for both the lightningaddress.com website as well as 
 
 If this project is important to you, consider donating to the contributors, creators, and developers pushing this initiative forward.
 
-**Lightning Address:** lnaddress@zbd.gg
-
-**LNURL Pay Code:** `lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk`
-
-**QR Code:**
-
-![](https://i.imgur.com/0d5bDyX.png)
-
+**Lightning Address:** lnaddress@zbd.gg / foxp2zeb@ln.tips
