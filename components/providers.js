@@ -266,7 +266,7 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <ZEBEDEEImage src={'/images/lightningtipbot.svg'} alt="@LightningTipBot" style={{ marginBottom: '-8px' }} />
+            <ZEBEDEEImage src={'/images/lightningtipbot.svg'} alt="@LightningTipBot" style={{ marginBottom: '-3px' }} />
             <DomainURL>you@ln.tips</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
