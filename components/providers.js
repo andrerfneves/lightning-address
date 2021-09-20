@@ -265,6 +265,13 @@ export const Providers = () => (
           <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
+        <ProviderCard>
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/lightningtipbot.svg'} alt="@LightningTipBot" style={{ marginBottom: '-5px' }} />
+            <DomainURL>you@ln.tips</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
+        </ProviderCard>      
       <ProvidersRight>
         <ProvidersRightInner>
           <ProvidersTitle>Your app doesn't support Lightning Addresses yet?</ProvidersTitle>
