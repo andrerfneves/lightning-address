@@ -63,6 +63,10 @@ const FOOTER = [
         link: 'https://lnbits.com',
         title: 'LNBits'
       },
+      {
+        link: 't.me/LightningTipBot',
+        title: '@LightningTipBot'
+      },      
     ]
   },
   {
@@ -92,6 +96,10 @@ const FOOTER = [
         link: 'https://github.com/bumi/lnme',
         title: 'LnMe'
       },
+      {
+        link: 't.me/LightningTipBot',
+        title: '@LightningTipBot'
+      },         
     ]
   },
 ];

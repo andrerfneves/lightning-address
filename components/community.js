@@ -410,7 +410,7 @@ const WALLETS = [
     url: 'https://phoenix.acinq.co/',
   },
   {
-    name: 'LNBits',
+    name: 'LNTXBot',
     image: '/images/lntxbot.png',
     downloadText: 'Open LNTXBot',
     url: 'https://t.me/lntxbot/',
@@ -421,6 +421,12 @@ const WALLETS = [
     downloadText: 'Open LNBits',
     url: 'https://lnbits.com/',
   },
+  {
+    name: '@LightningTipBot',
+    image: '/images/lightningtipbot.svg',
+    downloadText: 'Open @LightningTipBot',
+    url: 'https://t.me/LightningTipBot',
+  },  
 ];
 
 export const Community = () => (
