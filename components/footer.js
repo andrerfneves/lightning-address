@@ -64,7 +64,7 @@ const FOOTER = [
         title: 'LNBits'
       },
       {
-        link: 't.me/LightningTipBot',
+        link: 'https://t.me/LightningTipBot',
         title: '@LightningTipBot'
       },      
     ]
@@ -97,7 +97,7 @@ const FOOTER = [
         title: 'LnMe'
       },
       {
-        link: 't.me/LightningTipBot',
+        link: 'https://t.me/LightningTipBot',
         title: '@LightningTipBot'
       },         
     ]
