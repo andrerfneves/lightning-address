@@ -382,16 +382,34 @@ const WALLETS = [
     url: 'https://zebedee.io/wallet',
   },
   {
-    name: 'Blixt',
-    image: '/images/blixt.png',
+    name: 'Breez',
+    image: '/images/breez.png',
     downloadText: 'Download Wallet',
-    url: 'https://blixtwallet.github.io/',
+    url: 'https://breez.technology',
+    imageStyle: {
+      width: '95px',
+    }
   },
   {
     name: 'SBW',
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',
     url: 'https://lightning-wallet.com',
+  },
+  {
+    name: 'Wallet of Satoshi',
+    image: '/images/wos.svg',
+    downloadText: 'Download Wallet',
+    url: 'https://walletofsatoshi.com',
+    imageStyle: {
+      width: '115px',
+    }
+  },
+  {
+    name: 'Blixt',
+    image: '/images/blixt.png',
+    downloadText: 'Download Wallet',
+    url: 'https://blixtwallet.github.io/',
   },
   {
     name: 'BlueWallet',
@@ -426,7 +444,7 @@ const WALLETS = [
     image: '/images/lightningtipbot.svg',
     downloadText: 'Open @LightningTipBot',
     url: 'https://t.me/LightningTipBot',
-  },  
+  },
 ];
 
 export const Community = () => (
