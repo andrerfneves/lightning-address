@@ -245,6 +245,20 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <BTCPayImage src={'/images/bitrefill.svg'} alt="Bitrefill" style={{ width: '125px' }} />
+            <DomainURL>you@bitrefill.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://bitrefill.com/">Open Bitrefill</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" style={{ width: '95px' }} />
+            <DomainURL>you@yourbtcpay.server</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://btcpayserver.org/">Open BTCPay Server</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <ZEBEDEEImage src={'/images/lntxbot.png'} alt="LNTXBot" style={{ marginBottom: '-5px' }} />
             <DomainURL>you@lntxbot.com</DomainURL>
           </ImageWrapper>
@@ -263,13 +277,6 @@ export const Providers = () => (
             <DomainURL>you@ln.tips</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" style={{ width: '95px' }} />
-            <DomainURL>you@yourbtcpay.server</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton isDisabled>Coming Soon</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
