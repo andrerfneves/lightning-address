@@ -278,6 +278,13 @@ export const Providers = () => (
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
         </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <ZEBEDEEImage src={'/images/fastbitcoins.svg'} alt="FastBitcoins" style={{ width: '130px' }} />
+            <DomainURL>you@fbtc.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://fastbitcoins.com">Open FastBitcoins</ProviderSignUpButton>
+        </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
         <ProvidersRightInner>
