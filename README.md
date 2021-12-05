@@ -39,6 +39,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [SBW](https://lightning-wallet.com/)                              | ☑️         |   ----    |
 | [ZEBEDEE](https://zebedee.io/wallet) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/wallet))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
+| [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
 
 ## TLDR
 

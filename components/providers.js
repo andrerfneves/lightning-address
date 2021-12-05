@@ -204,6 +204,11 @@ const BTCPayImage = styled.img`
   align-self: center;
 `;
 
+const AlbyImage = styled.img`
+  width: 50px;
+  border-radius: 5%;
+`;
+
 const Bold = styled.span`
   font-weight: 600;
   letter-spacing: -0.5px;
@@ -298,6 +303,13 @@ export const Providers = () => (
             <DomainURL>you@ln.tips</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <AlbyImage src={'/images/alby.png'} alt="Alby" />
+            <DomainURL>you@getalby.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
