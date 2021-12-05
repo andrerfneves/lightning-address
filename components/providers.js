@@ -238,7 +238,7 @@ export const Providers = () => (
         </ProvidersDescription>
         <ProviderCard>
           <ImageWrapper>
-            <ZEBEDEEImage src={'/images/zebedee.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
+            <ZEBEDEEImage src={'/images/zbd.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
             <DomainURL>you@zbd.gg</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download Wallet</ProviderSignUpButton>
@@ -266,6 +266,27 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <BTCPayImage src={'/images/lnmarkets.svg'} alt="LNMarkets" style={{ width: '70px' }} />
+            <DomainURL>you@lnmarkets.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LNMarkets</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/coincorner.svg'} alt="Coincorner" style={{ width: '130px' }} />
+            <DomainURL>you@coincorner.io</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://coincorner.com/">Open Coincorner</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/fastbitcoins.png'} alt="FastBitcoins" style={{ width: '125px' }} />
+            <DomainURL>you@fastbitcoins.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://fastbitcoins.com/">Open FastBitcoins</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
             <DomainURL>you@coinos.io</DomainURL>
           </ImageWrapper>
@@ -277,6 +298,27 @@ export const Providers = () => (
             <DomainURL>you@ln.tips</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/noah.svg'} alt="Noah" style={{ width: '115px' }} />
+            <DomainURL>you@noah.io</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton isDisabled target="_blank" href="https://noah.com">Coming Soon</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/bitnob2.png'} alt="Bitnob" style={{ width: '115px' }} />
+            <DomainURL>you@bitnob.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton isDisabled target="_blank" href="https://bitnob.com">Coming Soon</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/bipa.png'} alt="Bipa" style={{ width: '45px' }} />
+            <DomainURL>you@bipa.app</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton isDisabled target="_blank" href="https://bipa.app">Coming Soon</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>

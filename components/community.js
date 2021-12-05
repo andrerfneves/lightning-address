@@ -377,7 +377,7 @@ const BRIDGE_SERVERS = [
 const WALLETS = [
   {
     name: 'ZEBEDEE',
-    image: '/images/zebedee.svg',
+    image: '/images/zbd.svg',
     downloadText: 'Download Wallet',
     url: 'https://zebedee.io/wallet',
   },
