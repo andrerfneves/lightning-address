@@ -348,11 +348,6 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://tinytip.me',
     urlText: '@tinytip.me',
   },
-  {
-    urlLink: 'https://getalby.com',
-    urlText: '@getalby.com',
-  },
-
 ];
 
 const BRIDGE_SERVERS = [
