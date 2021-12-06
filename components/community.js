@@ -347,6 +347,7 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://tinytip.me',
     urlText: '@tinytip.me',
+    
   },
 ];
 
