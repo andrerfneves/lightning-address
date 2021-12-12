@@ -253,6 +253,10 @@ export class Hero extends PureComponent {
               <LoopedTextPart>zebedee.io</LoopedTextPart>
               <LoopedTextPart>coinos.io</LoopedTextPart>
               <LoopedTextPart>ln.tips</LoopedTextPart>
+              <LoopedTextPart>coincorner.io</LoopedTextPart>
+              <LoopedTextPart>bitrefill.me</LoopedTextPart>
+              <LoopedTextPart>fbtc.me</LoopedTextPart>
+              <LoopedTextPart>lnmarkets.com</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>

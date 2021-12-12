@@ -281,7 +281,7 @@ export const Providers = () => (
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/fastbitcoins.png'} alt="FastBitcoins" style={{ width: '125px' }} />
-            <DomainURL>you@fastbitcoins.com</DomainURL>
+            <DomainURL>you@fbtc.me</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://fastbitcoins.com/">Open FastBitcoins</ProviderSignUpButton>
         </ProviderCard>

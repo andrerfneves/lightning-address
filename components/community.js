@@ -349,6 +349,14 @@ const SATDRESS_SERVERS = [
     urlText: '@tinytip.me',
     
   },
+  {
+    urlLink: 'https://sats.pm',
+    urlText: '@sats.pm',
+  },
+  {
+    urlLink: 'https://lnpay.cz',
+    urlText: '@lnpay.cz',
+  },
 ];
 
 const BRIDGE_SERVERS = [
