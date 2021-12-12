@@ -66,7 +66,11 @@ const FOOTER = [
       {
         link: 'https://t.me/LightningTipBot',
         title: '@LightningTipBot'
-      },      
+      },
+      {
+        link: 'https://getalby.com',
+        title: 'Alby'
+      },
     ]
   },
   {
@@ -99,7 +103,11 @@ const FOOTER = [
       {
         link: 'https://t.me/LightningTipBot',
         title: '@LightningTipBot'
-      },         
+      },
+      {
+        link: 'https://getalby.com',
+        title: 'Alby'
+      },      
     ]
   },
 ];

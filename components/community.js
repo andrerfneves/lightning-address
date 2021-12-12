@@ -347,6 +347,7 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://tinytip.me',
     urlText: '@tinytip.me',
+    
   },
   {
     urlLink: 'https://sats.pm',
@@ -356,7 +357,6 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
   },
-
 ];
 
 const BRIDGE_SERVERS = [
@@ -452,6 +452,16 @@ const WALLETS = [
     image: '/images/lightningtipbot.svg',
     downloadText: 'Open @LightningTipBot',
     url: 'https://t.me/LightningTipBot',
+  },
+  {
+    name: 'Alby',
+    image: '/images/alby.png',
+    downloadText: 'Open Alby',
+    url: 'https://getalby.com',
+    imageStyle: {
+      width: '50px',
+      borderRadius: '5%',
+    },
   },
 ];
 
