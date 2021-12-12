@@ -352,6 +352,10 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://sats.pm',
     urlText: '@sats.pm',
   },
+  {
+    urlLink: 'https://lnpay.cz',
+    urlText: '@lnpay.cz',
+  },
 
 ];
 
