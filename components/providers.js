@@ -301,6 +301,13 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <ZEBEDEEImage src={'/images/bitcoinbeach.png'} alt="@Bitcoinbeach" style={{ width: '45px' }} />
+            <DomainURL>you@ln.bitcoinbeach.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach/">Download Wallet</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <BTCPayImage src={'/images/noah.svg'} alt="Noah" style={{ width: '115px' }} />
             <DomainURL>you@noah.io</DomainURL>
           </ImageWrapper>
