@@ -245,17 +245,17 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <BTCPayImage src={'/images/bitrefill.svg'} alt="Bitrefill" style={{ width: '125px' }} />
-            <DomainURL>you@bitrefill.me</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://bitrefill.com/">Open Bitrefill</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
             <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" style={{ width: '95px' }} />
             <DomainURL>you@yourbtcpay.server</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://btcpayserver.org/">Open BTCPay Server</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/bitrefill.svg'} alt="Bitrefill" style={{ width: '125px' }} />
+            <DomainURL>you@bitrefill.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://bitrefill.com/">Open Bitrefill</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -277,6 +277,13 @@ export const Providers = () => (
             <DomainURL>you@coincorner.io</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://coincorner.com/">Open Coincorner</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/bipa.png'} alt="Bipa" style={{ width: '45px' }} />
+            <DomainURL>you@bipa.app</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://bipa.app">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -319,13 +326,6 @@ export const Providers = () => (
             <DomainURL>you@bitnob.com</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton isDisabled target="_blank" href="https://bitnob.com">Coming Soon</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/bipa.png'} alt="Bipa" style={{ width: '45px' }} />
-            <DomainURL>you@bipa.app</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://bipa.app">Coming Soon</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
