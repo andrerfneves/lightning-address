@@ -30,7 +30,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
-| [coinos](https://coinos.io/)                                      | WIP       | ☑️         |
+| [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
