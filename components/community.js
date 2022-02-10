@@ -347,7 +347,6 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://tinytip.me',
     urlText: '@tinytip.me',
-    
   },
   {
     urlLink: 'https://sats.pm',
@@ -356,6 +355,10 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
+  },
+  {
+    urlLink: 'https://getalby.com',
+    urlText: '@getalby.com',
   },
 ];
 
