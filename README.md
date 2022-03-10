@@ -25,12 +25,12 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | Wallet                                                            | Sending   | Receiving |
 | :---                                                              | :-------: | :-----:   |
 | [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
-| [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | ☑️         |   ----    |
+| [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | WIP       | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
-| [coinos](https://coinos.io/)                                      | WIP       | ☑️         |
+| [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
@@ -42,6 +42,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Zap](https://www.zaphq.io/)                                      |           |           |
 | [ZEBEDEE](https://zebedee.io/wallet) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/wallet))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
+| [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
 
 ## TLDR
 
