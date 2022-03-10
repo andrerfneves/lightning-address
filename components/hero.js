@@ -257,6 +257,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>bitrefill.me</LoopedTextPart>
               <LoopedTextPart>fbtc.me</LoopedTextPart>
               <LoopedTextPart>lnmarkets.com</LoopedTextPart>
+  						<LoopedTextPart>getalby.com</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
