@@ -205,8 +205,14 @@ const BTCPayImage = styled.img`
 `;
 
 const AlbyImage = styled.img`
-  width: 50px;
+  width: 44px;
+  padding-bottom: 2px;
   border-radius: 5%;
+`;
+
+const WoSImage = styled.img`
+  width: 105px;
+  padding-bottom: 3px;
 `;
 
 const Bold = styled.span`
@@ -327,7 +333,7 @@ export const Providers = () => (
 				</ProviderCard>
         <ProviderCard>
 					<ImageWrapper>
-						<AlbyImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
+						<WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
 						<DomainURL>you@walletofsatoshi.com</DomainURL>
 					</ImageWrapper>
 					<ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
