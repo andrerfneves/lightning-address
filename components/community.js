@@ -360,6 +360,22 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://getalby.com',
     urlText: '@getalby.com',
   },
+  {
+    urlLink: 'https://lnaddress.me/',
+    urlText: '@lnaddress.me',
+  },
+  {
+    urlLink: 'https://lnaddress.me/',
+    urlText: '@lnaddress.net',
+  },
+  {
+    urlLink: 'https://lnaddress.me/',
+    urlText: '@lightning.by',
+  },
+  {
+    urlLink: 'https://lnaddress.me/',
+    urlText: '@lightning.re',
+  },
 ];
 
 const BRIDGE_SERVERS = [
