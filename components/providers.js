@@ -246,7 +246,7 @@ export const Providers = () => (
             <ZEBEDEEImage src={'/images/zbd.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
             <DomainURL>you@zbd.gg</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://zebedee.io/wallet">Download Wallet</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://zebedee.io/app">Download App</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -324,6 +324,13 @@ export const Providers = () => (
 						<DomainURL>you@getalby.com</DomainURL>
 					</ImageWrapper>
 					<ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
+				</ProviderCard>
+        <ProviderCard>
+					<ImageWrapper>
+						<AlbyImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
+						<DomainURL>you@walletofsatoshi.com</DomainURL>
+					</ImageWrapper>
+					<ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
 				</ProviderCard>
         <ProviderCard>
           <ImageWrapper>

@@ -36,8 +36,8 @@ const FOOTER = [
     title: 'Sending',
     items: [
       {
-        link: 'https://zebedee.io/wallet',
-        title: 'ZEBEDEE Wallet'
+        link: 'https://zebedee.io/app',
+        title: 'ZEBEDEE App'
       },
       {
         link: 'https://bluewallet.io/',
@@ -77,8 +77,8 @@ const FOOTER = [
     title: 'Receiving',
     items: [
       {
-        link: 'https://zebedee.io/wallet',
-        title: 'ZEBEDEE Wallet'
+        link: 'https://zebedee.io/app',
+        title: 'ZEBEDEE App'
       },
       {
         link: 'https://lntxbot.fiatjaf.com/',

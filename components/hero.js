@@ -258,6 +258,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>fbtc.me</LoopedTextPart>
               <LoopedTextPart>lnmarkets.com</LoopedTextPart>
   						<LoopedTextPart>getalby.com</LoopedTextPart>
+  						<LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>

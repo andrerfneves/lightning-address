@@ -405,8 +405,8 @@ const WALLETS = [
   {
     name: 'ZEBEDEE',
     image: '/images/zbd.svg',
-    downloadText: 'Download Wallet',
-    url: 'https://zebedee.io/wallet',
+    downloadText: 'Download App',
+    url: 'https://zebedee.io/app',
   },
   {
     name: 'Breez',
