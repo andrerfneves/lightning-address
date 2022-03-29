@@ -305,6 +305,13 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <BTCPayImage src={'/images/sparkwallet.png'} alt="Spark Wallet" style={{ width: '125px' }} />
+            <DomainURL>you@sparkwallet.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://sparkwallet.io/">Open Spark Wallet</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
             <DomainURL>you@coinos.io</DomainURL>
           </ImageWrapper>
@@ -324,20 +331,20 @@ export const Providers = () => (
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach/">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
-			  <ProviderCard>
-					<ImageWrapper>
-						<AlbyImage src={'/images/alby.png'} alt="Alby" />
-						<DomainURL>you@getalby.com</DomainURL>
-					</ImageWrapper>
-					<ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
-				</ProviderCard>
         <ProviderCard>
-					<ImageWrapper>
-						<WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
-						<DomainURL>you@walletofsatoshi.com</DomainURL>
-					</ImageWrapper>
-					<ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
-				</ProviderCard>
+          <ImageWrapper>
+            <AlbyImage src={'/images/alby.png'} alt="Alby" />
+            <DomainURL>you@getalby.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
+            <DomainURL>you@walletofsatoshi.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
+        </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/noah.svg'} alt="Noah" style={{ width: '115px' }} />
@@ -370,4 +377,4 @@ export const Providers = () => (
       </ProvidersRight>
     </ProvidersInner>
   </ProvidersModule>
-)
+);
