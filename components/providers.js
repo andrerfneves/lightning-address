@@ -305,7 +305,7 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <BTCPayImage src={'/images/sparkwallet.png'} alt="Spark Wallet" style={{ width: '125px' }} />
+            <BTCPayImage src={'/images/sparkwallet.svg'} alt="Spark Wallet" style={{ width: '125px' }} />
             <DomainURL>you@sparkwallet.me</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton target="_blank" href="https://sparkwallet.io/">Open Spark Wallet</ProviderSignUpButton>
