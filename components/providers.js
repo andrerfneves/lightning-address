@@ -341,7 +341,7 @@ export const Providers = () => (
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/noah.png'} alt="Noah" style={{ width: '115px' }} />
-            <DomainURL>you@noah.io</DomainURL>
+            <DomainURL>you@noah.com</DomainURL>
           </ImageWrapper>
           <ProviderSignUpButton isDisabled target="_blank" href="https://noah.com">Coming Soon</ProviderSignUpButton>
         </ProviderCard>
