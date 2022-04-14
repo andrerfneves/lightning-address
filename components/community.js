@@ -376,6 +376,10 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
   },
+  {
+    urlLink: 'https://lnmarkets.com/',
+    urlText: '@lnmarkets.com',
+  },
 ];
 
 const BRIDGE_SERVERS = [
