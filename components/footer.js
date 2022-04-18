@@ -1,7 +1,7 @@
 import QRCode from 'react-qr-code';
 import styled from 'styled-components';
 
-import { URL_INTERNET_IDENTIFIER  } from '../constants';
+import { URL_INTERNET_IDENTIFIER } from '../constants';
 import { media } from '../utils';
 
 const DONATION_QR_CODE = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk';
@@ -48,6 +48,10 @@ const FOOTER = [
         title: 'Blixt Wallet'
       },
       {
+        link: 'https://sparkwallet.io/',
+        title: 'Spark Wallet'
+      },
+      {
         link: 'https://phoenix.acinq.co/',
         title: 'Phoenix'
       },
@@ -89,6 +93,10 @@ const FOOTER = [
         title: 'CoinOS'
       },
       {
+        link: 'https://sparkwallet.io/',
+        title: 'Spark Wallet'
+      },
+      {
         link: 'https://github.com/fiatjaf/satdress',
         title: 'Satdress'
       },
@@ -107,7 +115,7 @@ const FOOTER = [
       {
         link: 'https://getalby.com',
         title: 'Alby'
-      },      
+      },
     ]
   },
 ];
@@ -240,4 +248,4 @@ export const Footer = () => (
       </Bottom>
     </InnerWrapper>
   </Wrapper>
-)
+);

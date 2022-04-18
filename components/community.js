@@ -449,6 +449,15 @@ const WALLETS = [
     }
   },
   {
+    name: 'Spark Wallet',
+    image: '/images/sparkwallet.svg',
+    downloadText: 'Download Wallet',
+    url: 'https://sparkwallet.io',
+    imageStyle: {
+      width: '115px',
+    }
+  },
+  {
     name: 'Phoenix',
     image: '/images/phoenix.png',
     downloadText: 'Download Wallet',
@@ -544,4 +553,4 @@ export const Community = () => (
       </CommunityRight>
     </CommunityInner>
   </CommunityModule>
-)
+);

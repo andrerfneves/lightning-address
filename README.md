@@ -37,6 +37,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [SBW](https://lightning-wallet.com/)                              | ☑️         |   ----    |
+| [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
