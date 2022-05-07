@@ -31,6 +31,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
+| [Fountain](https://fountain.fm)                                   | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
