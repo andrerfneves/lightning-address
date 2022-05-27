@@ -25,7 +25,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | Wallet                                                            | Sending   | Receiving |
 | :---                                                              | :-------: | :-----:   |
 | [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
-| [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | WIP       | ☑️         |
+| [Bitcoin Beach](https://galoy.io/bitcoin-beach-wallet/)           | WIP       | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
@@ -36,7 +36,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
-| [SBW](https://lightning-wallet.com/)                              | ☑️         |   ----    |
+| [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
