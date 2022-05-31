@@ -329,7 +329,7 @@ export const Providers = () => (
             <ZEBEDEEImage src={'/images/bitcoinbeach.png'} alt="@Bitcoinbeach" style={{ width: '45px' }} />
             <DomainURL>you@ln.bitcoinbeach.com</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach/">Download Wallet</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach-wallet/">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
