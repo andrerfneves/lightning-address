@@ -376,6 +376,10 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
   },
+  {
+    urlLink: 'https://sats4.me/',
+    urlText: '@sats4.me',
+  },
 ];
 
 const BRIDGE_SERVERS = [
