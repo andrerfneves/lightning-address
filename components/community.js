@@ -377,6 +377,10 @@ const SATDRESS_SERVERS = [
     urlText: '@lightning.re',
   },
   {
+    urlLink: 'https://sats4.me/',
+    urlText: '@sats4.me',
+  },
+  {
     urlLink: 'https://lnmarkets.com/',
     urlText: '@lnmarkets.com',
   },
