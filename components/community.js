@@ -421,7 +421,7 @@ const WALLETS = [
     name: 'SBW',
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',
-    url: 'https://lightning-wallet.com',
+    url: 'https://sbw.app/',
   },
   {
     name: 'Wallet of Satoshi',
