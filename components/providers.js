@@ -277,10 +277,10 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <BTCPayImage src={'/images/lnmarkets.svg'} alt="LNMarkets" style={{ width: '70px' }} />
+            <BTCPayImage src={'/images/lnmarkets.png'} alt="LNMarkets" style={{ width: '125px' }} />
             <DomainURL>you@lnmarkets.com</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LNMarkets</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LN Markets</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -355,9 +355,9 @@ export const Providers = () => (
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/bitnob2.png'} alt="Bitnob" style={{ width: '115px' }} />
-            <DomainURL>you@bitnob.com</DomainURL>
+            <DomainURL>you@bitnob.io</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://bitnob.com">Coming Soon</ProviderSignUpButton>
+          <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>

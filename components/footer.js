@@ -79,6 +79,10 @@ const FOOTER = [
         link: 'https://getalby.com',
         title: 'Alby'
       },
+      {
+        link: 'https://lnmarkets.com',
+        title: 'LN Markets'
+      },
     ]
   },
   {
@@ -119,6 +123,10 @@ const FOOTER = [
       {
         link: 'https://getalby.com',
         title: 'Alby'
+      },
+      {
+        link: 'https://lnmarkets.com',
+        title: 'LN Markets'
       },
     ]
   },

@@ -380,6 +380,10 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://sats4.me/',
     urlText: '@sats4.me',
   },
+  {
+    urlLink: 'https://lnmarkets.com/',
+    urlText: '@lnmarkets.com',
+  },
 ];
 
 const BRIDGE_SERVERS = [
@@ -425,7 +429,7 @@ const WALLETS = [
     name: 'SBW',
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',
-    url: 'https://lightning-wallet.com',
+    url: 'https://sbw.app/',
   },
   {
     name: 'Wallet of Satoshi',

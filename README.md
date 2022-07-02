@@ -25,6 +25,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | Wallet                                                            | Sending   | Receiving |
 | :---                                                              | :-------: | :-----:   |
 | [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
+| [Bitnob](https://bitnob.com)                                  | ☑️         | ☑️         |
 | [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | WIP       | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
@@ -36,12 +37,12 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
-| [SBW](https://lightning-wallet.com/)                              | ☑️         |   ----    |
+| [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
-| [ZEBEDEE](https://zebedee.io/wallet) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/wallet))  | ☑️         | ☑️       |
+| [ZEBEDEE App](https://zebedee.io/app) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/app))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
 | [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
 
