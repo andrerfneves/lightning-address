@@ -305,6 +305,13 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <BTCPayImage src={'/images/sparkwallet.svg'} alt="Spark Wallet" style={{ width: '125px' }} />
+            <DomainURL>you@sparkwallet.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://sparkwallet.io/">Open Spark Wallet</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
             <DomainURL>you@coinos.io</DomainURL>
           </ImageWrapper>
@@ -322,22 +329,22 @@ export const Providers = () => (
             <ZEBEDEEImage src={'/images/bitcoinbeach.png'} alt="@Bitcoinbeach" style={{ width: '45px' }} />
             <DomainURL>you@ln.bitcoinbeach.com</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach/">Download Wallet</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach-wallet/">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
-			  <ProviderCard>
-					<ImageWrapper>
-						<AlbyImage src={'/images/alby.png'} alt="Alby" />
-						<DomainURL>you@getalby.com</DomainURL>
-					</ImageWrapper>
-					<ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
-				</ProviderCard>
         <ProviderCard>
-					<ImageWrapper>
-						<WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
-						<DomainURL>you@walletofsatoshi.com</DomainURL>
-					</ImageWrapper>
-					<ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
-				</ProviderCard>
+          <ImageWrapper>
+            <AlbyImage src={'/images/alby.png'} alt="Alby" />
+            <DomainURL>you@getalby.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
+            <DomainURL>you@walletofsatoshi.com</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
+        </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/noah.png'} alt="Noah" style={{ width: '115px' }} />
@@ -348,9 +355,9 @@ export const Providers = () => (
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/bitnob2.png'} alt="Bitnob" style={{ width: '115px' }} />
-            <DomainURL>you@bitnob.com</DomainURL>
+            <DomainURL>you@bitnob.io</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://bitnob.com">Coming Soon</ProviderSignUpButton>
+          <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
@@ -370,4 +377,4 @@ export const Providers = () => (
       </ProvidersRight>
     </ProvidersInner>
   </ProvidersModule>
-)
+);

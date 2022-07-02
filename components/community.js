@@ -425,7 +425,7 @@ const WALLETS = [
     name: 'SBW',
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',
-    url: 'https://lightning-wallet.com',
+    url: 'https://sbw.app/',
   },
   {
     name: 'Wallet of Satoshi',
@@ -450,6 +450,15 @@ const WALLETS = [
     imageStyle: {
       width: '88px',
       marginTop: '3px',
+    }
+  },
+  {
+    name: 'Spark Wallet',
+    image: '/images/sparkwallet.svg',
+    downloadText: 'Download Wallet',
+    url: 'https://sparkwallet.io',
+    imageStyle: {
+      width: '115px',
     }
   },
   {
@@ -548,4 +557,4 @@ export const Community = () => (
       </CommunityRight>
     </CommunityInner>
   </CommunityModule>
-)
+);
