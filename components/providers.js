@@ -329,7 +329,7 @@ export const Providers = () => (
             <ZEBEDEEImage src={'/images/bitcoinbeach.png'} alt="@Bitcoinbeach" style={{ width: '45px' }} />
             <DomainURL>you@ln.bitcoinbeach.com</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach/">Download Wallet</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach-wallet/">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
@@ -355,9 +355,9 @@ export const Providers = () => (
         <ProviderCard>
           <ImageWrapper>
             <BTCPayImage src={'/images/bitnob2.png'} alt="Bitnob" style={{ width: '115px' }} />
-            <DomainURL>you@bitnob.com</DomainURL>
+            <DomainURL>you@bitnob.io</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://bitnob.com">Coming Soon</ProviderSignUpButton>
+          <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>

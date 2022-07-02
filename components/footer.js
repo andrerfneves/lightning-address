@@ -40,6 +40,10 @@ const FOOTER = [
         title: 'ZEBEDEE App'
       },
       {
+        link: 'https://breez.technology/',
+        title: 'Breez'
+      },
+      {
         link: 'https://bluewallet.io/',
         title: 'BlueWallet'
       },
