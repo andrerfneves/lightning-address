@@ -277,10 +277,10 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
-            <BTCPayImage src={'/images/lnmarkets.svg'} alt="LNMarkets" style={{ width: '70px' }} />
+            <BTCPayImage src={'/images/lnmarkets.png'} alt="LNMarkets" style={{ width: '125px' }} />
             <DomainURL>you@lnmarkets.com</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LNMarkets</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LN Markets</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
