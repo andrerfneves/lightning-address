@@ -36,6 +36,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
+| [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
