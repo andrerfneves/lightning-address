@@ -83,6 +83,10 @@ const FOOTER = [
         link: 'https://lnmarkets.com',
         title: 'LN Markets'
       },
+      {
+        link: 'https://8333.mobi/',
+        title: 'Machankura'
+      },
     ]
   },
   {
@@ -127,6 +131,10 @@ const FOOTER = [
       {
         link: 'https://lnmarkets.com',
         title: 'LN Markets'
+      },
+      {
+        link: 'https://8333.mobi/',
+        title: 'Machankura'
       },
     ]
   },

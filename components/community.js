@@ -499,6 +499,16 @@ const WALLETS = [
       borderRadius: '5%',
     },
   },
+  {
+    name: 'Machankura',
+    image: '/images/machankura.png',
+    downloadText: 'Dial Machankura',
+    url: 'https://8333.mobi',
+    imageStyle: {
+      width: '50px',
+      height: '50px'
+    }
+  },
 ];
 
 export const Community = () => (

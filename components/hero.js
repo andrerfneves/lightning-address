@@ -260,6 +260,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>getalby.com</LoopedTextPart>
               <LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
               <LoopedTextPart>sparkwallet.me</LoopedTextPart>
+              <LoopedTextPart>8333.mobi</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
