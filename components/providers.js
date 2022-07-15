@@ -360,6 +360,13 @@ export const Providers = () => (
           <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
       </ProvidersLeft>
+      <ProviderCard>
+        <ImageWrapper>
+          <BTCPayImage src={'/images/bottlepay.png'} alt="Bottlepay" style={{ width: '125px' }} />
+          <DomainURL>you@bottlepay.me</DomainURL>
+        </ImageWrapper>
+        <ProviderSignUpButton isDisabled target="_blank" href="https://bottlepay.com">Coming Soon</ProviderSignUpButton>
+      </ProviderCard>
       <ProvidersRight>
         <ProvidersRightInner>
           <ProvidersTitle>Your app doesn't support Lightning Addresses yet?</ProvidersTitle>
