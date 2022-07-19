@@ -359,6 +359,13 @@ export const Providers = () => (
           </ImageWrapper>
           <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
         </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
+            <BTCPayImage src={'/images/bottlepay.png'} alt="Bottlepay" style={{ width: '125px' }} />
+            <DomainURL>you@bottlepay.me</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton isDisabled target="_blank" href="https://bottlepay.com">Coming Soon</ProviderSignUpButton>
+        </ProviderCard>
       </ProvidersLeft>
       <ProvidersRight>
         <ProvidersRightInner>
