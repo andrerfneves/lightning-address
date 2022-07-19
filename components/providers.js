@@ -305,6 +305,13 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <FountainImage src={'/images/fountain.png'} alt="Fountain" />
+            <DomainURL>you@fountain.fm</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://fountain.fm">Open Fountain</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <BTCPayImage src={'/images/sparkwallet.svg'} alt="Spark Wallet" style={{ width: '125px' }} />
             <DomainURL>you@sparkwallet.me</DomainURL>
           </ImageWrapper>
