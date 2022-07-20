@@ -333,6 +333,10 @@ const SATDRESS_SERVERS = [
     urlText: '@sats.pm',
   },
   {
+    urlLink: 'https://sendsats.lol',
+    urlText: '@sendsats.lol',
+  },
+  {
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
   },
