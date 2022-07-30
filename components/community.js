@@ -333,10 +333,6 @@ const SATDRESS_SERVERS = [
     urlText: '@btcadresse.de',
   },
   {
-    urlLink: 'https://ln.fitti.io/',
-    urlText: '@ln.fitti.io',
-  },
-  {
     urlLink: 'https://bitmia.com',
     urlText: '@bitmia.com',
   },
