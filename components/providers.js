@@ -199,6 +199,11 @@ const ZEBEDEEImage = styled.img`
   align-self: center;
 `;
 
+const StackerNewsImage = styled.img`
+  width: 130px;
+  align-self: center;
+`;
+
 const BTCPayImage = styled.img`
   width: 100px;
   align-self: center;
