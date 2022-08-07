@@ -264,7 +264,7 @@ export const Providers = () => (
             <StackerNewsImage src={'/images/Stacker News.png'} alt="Stacker News" style={{ width: '125px' }} />
             <DomainURL>you@stacker.news</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://zebedee.io/app">Download App</ProviderSignUpButton>
+          <ProviderSignUpButton target="_blank" href="https://stacker.news">Open Stacker News</ProviderSignUpButton>
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
