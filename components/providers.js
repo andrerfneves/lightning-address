@@ -256,6 +256,13 @@ export const Providers = () => (
         </ProviderCard>
         <ProviderCard>
           <ImageWrapper>
+            <StackerNewsImage src={'/images/Stacker News.png'} alt="Stacker News" style={{ width: '125px' }} />
+            <DomainURL>you@stacker.news</DomainURL>
+          </ImageWrapper>
+          <ProviderSignUpButton target="_blank" href="https://zebedee.io/app">Download App</ProviderSignUpButton>
+        </ProviderCard>
+        <ProviderCard>
+          <ImageWrapper>
             <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" style={{ width: '95px' }} />
             <DomainURL>you@yourbtcpay.server</DomainURL>
           </ImageWrapper>
