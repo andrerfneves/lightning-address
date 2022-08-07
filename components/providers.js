@@ -200,7 +200,7 @@ const ZEBEDEEImage = styled.img`
 `;
 
 const StackerNewsImage = styled.img`
-  width: 130px;
+  width: 125px;
   align-self: center;
 `;
 
