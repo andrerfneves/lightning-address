@@ -241,7 +241,7 @@ const PROVIDERS = [
     image: '/images/lntxbot.png',
     imageStyle: { width: '130px', marginBottom: '-5px' },
     lightningAddressDomain: 'lntxbot.com',
-    url: 'http://lntxbot.fiatjaf.com/',
+    url: 'https://lntxbot.com/',
     buttonText: 'Open Telegram',
   },
   {

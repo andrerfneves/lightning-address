@@ -34,7 +34,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
-| [@lntxbot](https://t.me/lntxbot)                                  | ☑️         | ☑️         |
+| [@lntxbot](https://lntxbot.com/)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
