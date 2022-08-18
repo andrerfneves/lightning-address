@@ -128,6 +128,10 @@ const FOOTER = [
         link: 'https://lnmarkets.com',
         title: 'LN Markets'
       },
+      {
+        link: 'https://getmash.com',
+        title: 'Mash'
+      },
     ]
   },
 ];
