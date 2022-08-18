@@ -32,10 +32,12 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Bottlepay](https://bottlepay.com/)                               | WIP       | WIP       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
+| [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
 | [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
+| [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
@@ -46,8 +48,6 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Zap](https://www.zaphq.io/)                                      |           |           |
 | [ZEBEDEE App](https://zebedee.io/app) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/app))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
-| [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
-| [Mash](https://getmash.com/)                                      | ----      |   ☑️    |
 
 ## TLDR
 
