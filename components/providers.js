@@ -194,32 +194,6 @@ const ProviderSignUpButton = styled.a`
   `}
 `;
 
-const ZEBEDEEImage = styled.img`
-  width: 130px;
-  align-self: center;
-`;
-
-const BTCPayImage = styled.img`
-  width: 100px;
-  align-self: center;
-`;
-
-const AlbyImage = styled.img`
-  width: 44px;
-  padding-bottom: 2px;
-  border-radius: 5%;
-`;
-
-const WoSImage = styled.img`
-  width: 105px;
-  padding-bottom: 3px;
-`;
-
-const Bold = styled.span`
-  font-weight: 600;
-  letter-spacing: -0.5px;
-`;
-
 const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -239,6 +213,148 @@ const DomainURL = styled.div`
   color: #a5a5a5;
 `;
 
+const PROVIDERS = [
+  {
+    name: 'ZEBEDEE',
+    image: '/images/zbd.svg',
+    imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },
+    lightningAddressDomain: 'zbd.gg',
+    url: 'https://zebedee.io/app',
+    buttonText: 'Download App',
+  },
+  {
+    name: 'BTCPay Server',
+    image: '/images/btcpay.svg',
+    imageStyle: { width: '95px' },
+    lightningAddressDomain: 'yourbtcpay.server',
+    url: 'https://btcpayserver.org/',
+  },
+  {
+    name: 'Bitrefill',
+    image: '/images/bitrefill.svg',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'bitrefill.me',
+    url: 'https://bitrefill.com/',
+  },
+  {
+    name: 'LNTXBot',
+    image: '/images/lntxbot.png',
+    imageStyle: { width: '130px', marginBottom: '-5px' },
+    lightningAddressDomain: 'lntxbot.com',
+    url: 'http://lntxbot.fiatjaf.com/',
+    buttonText: 'Open Telegram',
+  },
+  {
+    name: 'LNMarkets',
+    image: '/images/lnmarkets.png',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'lnmarkets.com',
+    url: 'https://lnmarkets.com/',
+    buttonText: 'Open LN Markets',
+  },
+  {
+    name: 'Coincorner',
+    image: '/images/coincorner.svg',
+    imageStyle: { width: '130px' },
+    lightningAddressDomain: 'coincorner.io',
+    url: 'https://coincorner.com/',
+  },
+  {
+    name: 'Bipa',
+    image: '/images/bipa.png',
+    imageStyle: { width: '45px' },
+    lightningAddressDomain: 'bipa.app',
+    url: 'https://bipa.app',
+    buttonText: 'Download Wallet',
+  },
+  {
+    name: 'FastBitcoins',
+    image: '/images/fastbitcoins.png',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'fbtc.me',
+    url: 'https://fastbitcoins.com/',
+  },
+  {
+    name: 'Spark Wallet',
+    image: '/images/sparkwallet.svg',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'sparkwallet.me',
+    url: 'https://sparkwallet.io/',
+  },
+  {
+    name: 'coinos',
+    image: '/images/coinos.png',
+    imageStyle: { width: '130px', marginBottom: '-8px' },
+    lightningAddressDomain: 'coinos.io',
+    url: 'https://coinos.io',
+    buttonText: 'Open Coinos',
+  },
+  {
+    name: '@LightningTipBot',
+    image: '/images/lightningtipbot.svg',
+    imageStyle: { width: '115px' },
+    lightningAddressDomain: 'ln.tips',
+    url: 'https://t.me/LightningTipBot',
+    buttonText: 'Open Telegram',
+  },
+  {
+    name: '@Bitcoinbeach',
+    image: '/images/bitcoinbeach.png',
+    imageStyle: { width: '45px' },
+    lightningAddressDomain: 'ln.bitcoinbeach.com',
+    url: 'https://galoy.io/bitcoin-beach-wallet/',
+    buttonText: 'Download Wallet',
+  },
+  {
+    name: 'Alby',
+    image: '/images/alby.png',
+    imageStyle: { width: '44px', paddingBottom: '2px', borderRadius: '5%' },
+    lightningAddressDomain: 'getalby.com',
+    url: 'https://getalby.com',
+  },
+  {
+    name: 'Wallet of Satoshi',
+    image: '/images/wos.svg',
+    imageStyle: { width: '105px', paddingBottom: '3px' },
+    lightningAddressDomain: 'walletofsatoshi.com',
+    url: 'https://walletofsatoshi.com',
+    buttonText: 'Download Wallet',
+  },
+  {
+    name: 'Noah',
+    image: '/images/noah.png',
+    imageStyle: { width: '115px' },
+    lightningAddressDomain: 'noah.com',
+    url: 'https://noah.com',
+    buttonText: 'Coming Soon',
+    comingSoon: true,
+  },
+  {
+    name: 'Bitnob',
+    image: '/images/bitnob2.png',
+    imageStyle: { width: '115px' },
+    lightningAddressDomain: 'bitnob.io',
+    url: 'https://bitnob.com',
+    buttonText: 'Download Wallet',
+  },
+  {
+    name: 'Bottlepay',
+    image: '/images/bottlepay.png',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'bottlepay.me',
+    url: 'https://bottlepay.com',
+    buttonText: 'Coming Soon',
+    comingSoon: true,
+  },
+  {
+    name: 'Mash',
+    image: '/images/mash.svg',
+    imageStyle: { width: '125px', marginBottom: '5px' },
+    lightningAddressDomain: 'getmash.cash',
+    url: 'https://getmash.com',
+  },
+];
+
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
@@ -247,125 +363,21 @@ export const Providers = () => (
         <ProvidersDescription>
           Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
         </ProvidersDescription>
-        <ProviderCard>
+        {PROVIDERS.map(provider => (
+          <ProviderCard key={provider.name}>
           <ImageWrapper>
-            <ZEBEDEEImage src={'/images/zbd.svg'} alt="ZEBEDEE" style={{ marginTop: '10px', marginBottom: '3px' }} />
-            <DomainURL>you@zbd.gg</DomainURL>
+            <img src={provider.image} alt={provider.name} style={provider.imageStyle || {}} />
+            <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
           </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://zebedee.io/app">Download App</ProviderSignUpButton>
+          <ProviderSignUpButton
+            isDisabled={provider.comingSoon || false}
+            target="_blank"
+            href={provider.url}
+          >
+            {provider.buttonText || `Open ${provider.name}`}
+          </ProviderSignUpButton>
         </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/btcpay.svg'} alt="BTCPay Server" style={{ width: '95px' }} />
-            <DomainURL>you@yourbtcpay.server</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://btcpayserver.org/">Open BTCPay Server</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/bitrefill.svg'} alt="Bitrefill" style={{ width: '125px' }} />
-            <DomainURL>you@bitrefill.me</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://bitrefill.com/">Open Bitrefill</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <ZEBEDEEImage src={'/images/lntxbot.png'} alt="LNTXBot" style={{ marginBottom: '-5px' }} />
-            <DomainURL>you@lntxbot.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="http://lntxbot.fiatjaf.com/">Open Telegram</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/lnmarkets.png'} alt="LNMarkets" style={{ width: '125px' }} />
-            <DomainURL>you@lnmarkets.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://lnmarkets.com/">Open LN Markets</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/coincorner.svg'} alt="Coincorner" style={{ width: '130px' }} />
-            <DomainURL>you@coincorner.io</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://coincorner.com/">Open Coincorner</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/bipa.png'} alt="Bipa" style={{ width: '45px' }} />
-            <DomainURL>you@bipa.app</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://bipa.app">Download Wallet</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/fastbitcoins.png'} alt="FastBitcoins" style={{ width: '125px' }} />
-            <DomainURL>you@fbtc.me</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://fastbitcoins.com/">Open FastBitcoins</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/sparkwallet.svg'} alt="Spark Wallet" style={{ width: '125px' }} />
-            <DomainURL>you@sparkwallet.me</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://sparkwallet.io/">Open Spark Wallet</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <ZEBEDEEImage src={'/images/coinos.png'} alt="coinos" style={{ marginBottom: '-8px' }} />
-            <DomainURL>you@coinos.io</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://coinos.io">Open Coinos</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <ZEBEDEEImage src={'/images/lightningtipbot.svg'} alt="@LightningTipBot" style={{ width: '115px' }} />
-            <DomainURL>you@ln.tips</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://t.me/LightningTipBot">Open Telegram</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <ZEBEDEEImage src={'/images/bitcoinbeach.png'} alt="@Bitcoinbeach" style={{ width: '45px' }} />
-            <DomainURL>you@ln.bitcoinbeach.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://galoy.io/bitcoin-beach-wallet/">Download Wallet</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <AlbyImage src={'/images/alby.png'} alt="Alby" />
-            <DomainURL>you@getalby.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://getalby.com">Open Alby</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <WoSImage src={'/images/wos.svg'} alt="Wallet of Satoshi" />
-            <DomainURL>you@walletofsatoshi.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton target="_blank" href="https://walletofsatoshi.com">Download Wallet</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/noah.png'} alt="Noah" style={{ width: '115px' }} />
-            <DomainURL>you@noah.com</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://noah.com">Coming Soon</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/bitnob2.png'} alt="Bitnob" style={{ width: '115px' }} />
-            <DomainURL>you@bitnob.io</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton  target="_blank" href="https://bitnob.com">Download Wallet</ProviderSignUpButton>
-        </ProviderCard>
-        <ProviderCard>
-          <ImageWrapper>
-            <BTCPayImage src={'/images/bottlepay.png'} alt="Bottlepay" style={{ width: '125px' }} />
-            <DomainURL>you@bottlepay.me</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton isDisabled target="_blank" href="https://bottlepay.com">Coming Soon</ProviderSignUpButton>
-        </ProviderCard>
+        ))}
       </ProvidersLeft>
       <ProvidersRight>
         <ProvidersRightInner>

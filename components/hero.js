@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { PureComponent } from 'react';
 import Fade from 'react-reveal/Fade';
 
-import { URL_INTERNET_IDENTIFIER } from '../constants';
 import { media } from '../utils';
 
 const Wrapper = styled.div`
@@ -260,6 +259,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>getalby.com</LoopedTextPart>
               <LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
               <LoopedTextPart>sparkwallet.me</LoopedTextPart>
+              <LoopedTextPart>getmash.cash</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
