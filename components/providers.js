@@ -365,18 +365,18 @@ export const Providers = () => (
         </ProvidersDescription>
         {PROVIDERS.map(provider => (
           <ProviderCard key={provider.name}>
-          <ImageWrapper>
-            <img src={provider.image} alt={provider.name} style={provider.imageStyle || {}} />
-            <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
-          </ImageWrapper>
-          <ProviderSignUpButton
-            isDisabled={provider.comingSoon || false}
-            target="_blank"
-            href={provider.url}
-          >
-            {provider.buttonText || `Open ${provider.name}`}
-          </ProviderSignUpButton>
-        </ProviderCard>
+            <ImageWrapper>
+              <img src={provider.image} alt={provider.name} style={provider.imageStyle || {}} />
+              <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
+            </ImageWrapper>
+            <ProviderSignUpButton
+              isDisabled={provider.comingSoon || false}
+              target="_blank"
+              href={provider.url}
+            >
+              {provider.buttonText || `Open ${provider.name}`}
+            </ProviderSignUpButton>
+          </ProviderCard>
         ))}
       </ProvidersLeft>
       <ProvidersRight>
