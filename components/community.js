@@ -353,6 +353,10 @@ const SATDRESS_SERVERS = [
     urlText: '@lnpay.cz',
   },
   {
+    urlLink: 'https://lnbitcoin.cz',
+    urlText: '@lnbitcoin.cz',
+  },
+  {
     urlLink: 'https://getalby.com',
     urlText: '@getalby.com',
   },
