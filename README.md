@@ -38,6 +38,8 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
 | [Muun](https://muun.com/)                                         |           |           |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
+| [Pouch Lite](https://pouch.ph/lite)                               | ☑️         |   ☑️       |
+| [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
