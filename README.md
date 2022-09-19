@@ -26,7 +26,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | :---                                                              | :-------: | :-----:   |
 | [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
 | [Bitnob](https://bitnob.com)                                  | ☑️         | ☑️         |
-| [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | ☑️       | ☑️         |
+| [Bitcoin Beach](https://bbw.sv/)                                  | ☑️         | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Bottlepay](https://bottlepay.com/)                               | WIP       | WIP       |
