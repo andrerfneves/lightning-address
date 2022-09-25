@@ -407,6 +407,11 @@ const BRIDGE_SERVERS = [
     urlText: 'LnMe',
     description: 'Self-hosted Lightning Address server and personal payment page.',
   },
+  {
+    urlLink: 'https://github.com/Bashy/phplightningaddress',
+    urlText: 'PHP Lightning Address',
+    description: 'Lightning Address on your domain just by hosting a php script.',
+  },
 ];
 
 const WALLETS = [
