@@ -333,28 +333,16 @@ const SATDRESS_SERVERS = [
     urlText: '@btcadresse.de',
   },
   {
-    urlLink: 'https://bitmia.com',
-    urlText: '@bitmia.com',
-  },
-  {
-    urlLink: 'https://paymentlink.xyz',
-    urlText: '@paymentlink.xyz',
-  },
-  {
-    urlLink: 'https://tinytip.me',
-    urlText: '@tinytip.me',
-  },
-  {
     urlLink: 'https://sats.pm',
     urlText: '@sats.pm',
   },
   {
-    urlLink: 'https://lnpay.cz',
-    urlText: '@lnpay.cz',
+    urlLink: 'https://sendsats.lol',
+    urlText: '@sendsats.lol',
   },
   {
-    urlLink: 'https://getalby.com',
-    urlText: '@getalby.com',
+    urlLink: 'https://lnpay.cz',
+    urlText: '@lnpay.cz',
   },
   {
     urlLink: 'https://lnaddress.com',
@@ -377,13 +365,9 @@ const SATDRESS_SERVERS = [
     urlText: '@lightning.re',
   },
   {
-    urlLink: 'https://sats4.me/',
-    urlText: '@sats4.me',
-  },
-  {
-    urlLink: 'https://lnmarkets.com/',
-    urlText: '@lnmarkets.com',
-  },
+    urlLink: 'https://ln.fitti.io/',
+    urlText: '@ln.fitti.io',
+  }
 ];
 
 const BRIDGE_SERVERS = [
