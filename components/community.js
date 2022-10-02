@@ -460,7 +460,7 @@ const WALLETS = [
     name: 'LNTXBot',
     image: '/images/lntxbot.png',
     downloadText: 'Open LNTXBot',
-    url: 'https://t.me/lntxbot/',
+    url: 'https://lntxbot.com/',
   },
   {
     name: 'LNBits',
