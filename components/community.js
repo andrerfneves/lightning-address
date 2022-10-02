@@ -333,10 +333,6 @@ const SATDRESS_SERVERS = [
     urlText: '@btcadresse.de',
   },
   {
-    urlLink: 'https://ln.fitti.io/',
-    urlText: '@ln.fitti.io',
-  },
-  {
     urlLink: 'https://bitmia.com',
     urlText: '@bitmia.com',
   },
@@ -359,6 +355,10 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://getalby.com',
     urlText: '@getalby.com',
+  },
+  {
+    urlLink: 'https://lnaddress.com',
+    urlText: '@lnaddress.com',
   },
   {
     urlLink: 'https://lnaddress.me/',
@@ -498,6 +498,16 @@ const WALLETS = [
       width: '50px',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'Machankura',
+    image: '/images/machankura.png',
+    downloadText: 'Dial Machankura',
+    url: 'https://8333.mobi',
+    imageStyle: {
+      width: '50px',
+      height: '50px'
+    }
   },
 ];
 
