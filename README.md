@@ -29,6 +29,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | WIP       | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
+| [Bottlepay](https://bottlepay.com/)                               | WIP       | WIP       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
@@ -41,6 +42,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
+| [Voltpay App](https://voltpay.app)                                | ☑️         |   ☑️    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
 | [ZEBEDEE App](https://zebedee.io/app) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/app))  | ☑️         | ☑️       |
@@ -60,6 +62,7 @@ All illustrative and informative diagrams are available under the [DIAGRAMS](./d
 ### Videos & Podcasts
 
 - [Introducing The Lightning Address](https://www.youtube.com/watch?v=G97yzYcyoug) - a recorded presentation on the explanations of why Lightning Address was created and the problems this protocol aims to solve
+- [How To Set Up A Lightning Address Directly To Your Node] (https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
 
 ## Contributions
 
