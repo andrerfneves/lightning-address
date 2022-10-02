@@ -357,7 +357,7 @@ const SATDRESS_SERVERS = [
     urlText: '@getalby.com',
   },
   {
-    urlLink: 'lnaddress.com',
+    urlLink: 'https://lnaddress.com',
     urlText: '@lnaddress.com',
   },
   {
