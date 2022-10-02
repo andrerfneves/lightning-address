@@ -26,20 +26,24 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | :---                                                              | :-------: | :-----:   |
 | [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
 | [Bitnob](https://bitnob.com)                                  | ☑️         | ☑️         |
-| [Bitcoin Beach](https://galoy.io/bitcoin-beach/)             | WIP       | ☑️         |
+| [Bitcoin Beach](https://bbw.sv/)                                  | ☑️         | ☑️         |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Bottlepay](https://bottlepay.com/)                               | WIP       | WIP       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
+| [CoinCorner](https://www.coincorner.com/)                         |  ☑️        |   ☑️    |
 | [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
 | [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️         | ☑️         |
 | [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
+| [Machankura](https://8333.mobi/)                                  | ☑️         | ☑️         |
 | [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
 | [Muun](https://muun.com/)                                         |           |           |
+| [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
+| [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
@@ -48,6 +52,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Zap](https://www.zaphq.io/)                                      |           |           |
 | [ZEBEDEE App](https://zebedee.io/app) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/app))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
+
 
 ## TLDR
 
@@ -62,6 +67,7 @@ All illustrative and informative diagrams are available under the [DIAGRAMS](./d
 ### Videos & Podcasts
 
 - [Introducing The Lightning Address](https://www.youtube.com/watch?v=G97yzYcyoug) - a recorded presentation on the explanations of why Lightning Address was created and the problems this protocol aims to solve
+- [How To Set Up A Lightning Address Directly To Your Node] (https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
 
 ## Contributions
 

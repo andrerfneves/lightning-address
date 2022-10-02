@@ -333,31 +333,19 @@ const SATDRESS_SERVERS = [
     urlText: '@btcadresse.de',
   },
   {
-    urlLink: 'https://bitmia.com',
-    urlText: '@bitmia.com',
-  },
-  {
-    urlLink: 'https://paymentlink.xyz',
-    urlText: '@paymentlink.xyz',
-  },
-  {
-    urlLink: 'https://tinytip.me',
-    urlText: '@tinytip.me',
-  },
-  {
     urlLink: 'https://sats.pm',
     urlText: '@sats.pm',
+  },
+  {
+    urlLink: 'https://lnbitcoin.cz',
+    urlText: '@lnbitcoin.cz',
   },
   {
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
   },
   {
-    urlLink: 'https://getalby.com',
-    urlText: '@getalby.com',
-  },
-  {
-    urlLink: 'lnaddress.com',
+    urlLink: 'https://lnaddress.com',
     urlText: '@lnaddress.com',
   },
   {
@@ -375,14 +363,6 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
-  },
-  {
-    urlLink: 'https://sats4.me/',
-    urlText: '@sats4.me',
-  },
-  {
-    urlLink: 'https://lnmarkets.com/',
-    urlText: '@lnmarkets.com',
   },
 ];
 
@@ -406,6 +386,11 @@ const BRIDGE_SERVERS = [
     urlLink: 'https://github.com/bumi/lnme',
     urlText: 'LnMe',
     description: 'Self-hosted Lightning Address server and personal payment page.',
+  },
+  {
+    urlLink: 'https://github.com/Bashy/phplightningaddress',
+    urlText: 'PHP Lightning Address',
+    description: 'Lightning Address on your domain just by hosting a php script.',
   },
 ];
 
@@ -498,6 +483,16 @@ const WALLETS = [
       width: '50px',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'Machankura',
+    image: '/images/machankura.png',
+    downloadText: 'Dial Machankura',
+    url: 'https://8333.mobi',
+    imageStyle: {
+      width: '50px',
+      height: '50px'
+    }
   },
 ];
 

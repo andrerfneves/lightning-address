@@ -347,6 +347,15 @@ const PROVIDERS = [
     comingSoon: true,
   },
   {
+    name: 'Machankura',
+    image: '/images/machankura.png',
+    imageStyle: { width: '45px' },
+    lightningAddressDomain: '8333.mobi',
+    url: 'https://8333.mobi',
+    buttonText: 'Dial Machankura',
+    comingSoon: false,
+  },
+  {
     name: 'Mash',
     image: '/images/mash.svg',
     imageStyle: { width: '125px', marginBottom: '5px' },
