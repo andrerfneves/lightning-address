@@ -329,6 +329,10 @@ const SATDRESS_SERVERS = [
     urlText: '@payaddress.co',
   },
   {
+    urlLink: 'https://btcadresse.de',
+    urlText: '@btcadresse.de',
+  },
+  {
     urlLink: 'https://sats.pm',
     urlText: '@sats.pm',
   },
@@ -339,6 +343,10 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
+  },
+  {
+    urlLink: 'https://lnaddress.com',
+    urlText: '@lnaddress.com',
   },
   {
     urlLink: 'https://lnaddress.me/',
@@ -474,6 +482,16 @@ const WALLETS = [
       width: '50px',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'Machankura',
+    image: '/images/machankura.png',
+    downloadText: 'Dial Machankura',
+    url: 'https://8333.mobi',
+    imageStyle: {
+      width: '50px',
+      height: '50px'
+    }
   },
 ];
 
