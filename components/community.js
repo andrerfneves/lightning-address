@@ -337,8 +337,8 @@ const SATDRESS_SERVERS = [
     urlText: '@sats.pm',
   },
   {
-    urlLink: 'https://sendsats.lol',
-    urlText: '@sendsats.lol',
+    urlLink: 'https://lnbitcoin.cz',
+    urlText: '@lnbitcoin.cz',
   },
   {
     urlLink: 'https://lnpay.cz',
@@ -364,10 +364,6 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
   },
-  {
-    urlLink: 'https://ln.fitti.io/',
-    urlText: '@ln.fitti.io',
-  }
 ];
 
 const BRIDGE_SERVERS = [
