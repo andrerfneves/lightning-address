@@ -362,6 +362,13 @@ const PROVIDERS = [
     lightningAddressDomain: 'getmash.cash',
     url: 'https://getmash.com',
   },
+  {
+    name: 'STARBACKR',
+    image: '/images/starbackr.png',
+    imageStyle: { width: '130px'},
+    lightningAddressDomain: 'starbackr.me',
+    url: 'https://app.starbackr.com',
+  }
 ];
 
 export const Providers = () => (
