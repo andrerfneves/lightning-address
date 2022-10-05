@@ -29,7 +29,7 @@ const FOOTER = [
       {
         link: 'https://github.com/fiatjaf/lnurl-rfc',
         title: 'LNURL RFC'
-      },
+      }
     ]
   },
   {
@@ -87,6 +87,10 @@ const FOOTER = [
         link: 'https://8333.mobi/',
         title: 'Machankura'
       },
+      {
+        link: 'https://app.starbackr.com/',
+        title: 'STARBACKR'
+      }
     ]
   },
   {
@@ -139,6 +143,10 @@ const FOOTER = [
       {
         link: 'https://8333.mobi/',
         title: 'Machankura'
+      },
+      {
+        link: 'https://app.starbackr.com/',
+        title: 'STARBACKR'
       },
     ]
   },
