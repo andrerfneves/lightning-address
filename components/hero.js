@@ -261,6 +261,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>sparkwallet.me</LoopedTextPart>
               <LoopedTextPart>getmash.cash</LoopedTextPart>
               <LoopedTextPart>8333.mobi</LoopedTextPart>
+              <LoopedTextPart>starbackr.me</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>

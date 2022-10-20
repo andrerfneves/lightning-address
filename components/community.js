@@ -494,6 +494,16 @@ const WALLETS = [
       height: '50px'
     }
   },
+  {
+    name: 'STARBACKR',
+    image: '/images/starbackr.png',
+    downloadText: 'Open STARBACKR',
+    url: 'https://app.starbackr.com',
+    imageStyle: {
+      width: '130px',
+      borderRadius: '5%',
+    },
+  }
 ];
 
 export const Community = () => (
