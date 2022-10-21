@@ -364,6 +364,14 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
   },
+  {
+    urlLink: 'https://satspay.to/',
+    urlText: '@satspay.to',
+  },
+  {
+    urlLink: 'https://sats.rs/',
+    urlText: '@sats.rs',
+  },
 ];
 
 const BRIDGE_SERVERS = [
@@ -391,6 +399,11 @@ const BRIDGE_SERVERS = [
     urlLink: 'https://github.com/Bashy/phplightningaddress',
     urlText: 'PHP Lightning Address',
     description: 'Lightning Address on your domain just by hosting a php script.',
+  },
+  {
+    urlLink: 'https://github.com/bernii/sataddress-rs/',
+    urlText: 'Sataddress',
+    description: 'Rust implementation of Federated Lightning Address (based on original satdress)',
   },
 ];
 
