@@ -375,7 +375,7 @@ const PROVIDERS = [
     imageStyle: { width: '130px'},
     lightningAddressDomain: 'bookmark.org',
     url: 'https://bookmark.org',
-  },
+  }
 ];
 
 export const Providers = () => (
