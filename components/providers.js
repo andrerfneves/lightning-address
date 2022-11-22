@@ -368,7 +368,14 @@ const PROVIDERS = [
     imageStyle: { width: '130px'},
     lightningAddressDomain: 'starbackr.me',
     url: 'https://app.starbackr.com',
-  }
+  },
+  {
+    name: 'Bookmark.org',
+    image: '/images/bookmark.png',
+    imageStyle: { width: '130px'},
+    lightningAddressDomain: 'bookmark.org',
+    url: 'https://bookmark.org',
+  },
 ];
 
 export const Providers = () => (
