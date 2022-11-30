@@ -262,6 +262,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>getmash.cash</LoopedTextPart>
               <LoopedTextPart>8333.mobi</LoopedTextPart>
               <LoopedTextPart>starbackr.me</LoopedTextPart>
+              <LoopedTextPart>lifpay.me</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>

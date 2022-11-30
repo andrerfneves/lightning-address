@@ -90,7 +90,11 @@ const FOOTER = [
       {
         link: 'https://app.starbackr.com/',
         title: 'STARBACKR'
-      }
+      },
+      {
+        link: 'https://lifpay.me/',
+        title: 'LifPay'
+      },
     ]
   },
   {
@@ -147,6 +151,10 @@ const FOOTER = [
       {
         link: 'https://app.starbackr.com/',
         title: 'STARBACKR'
+      },
+      {
+        link: 'https://lifpay.me/',
+        title: 'LifPay'
       },
     ]
   },
