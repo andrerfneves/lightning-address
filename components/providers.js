@@ -368,6 +368,13 @@ const PROVIDERS = [
     imageStyle: { width: '130px'},
     lightningAddressDomain: 'starbackr.me',
     url: 'https://app.starbackr.com',
+  },
+  {
+    name: 'LifPay',
+    image: '/images/lifpay.png',
+    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
+    lightningAddressDomain: 'lifpay.me',
+    url: 'https://lifpay.me',
   }
 ];
 
