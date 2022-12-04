@@ -503,6 +503,17 @@ const WALLETS = [
       width: '130px',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'LifPay',
+    image: '/images/lifpay.png',
+    downloadText: 'Download Wallet',
+    url: 'https://lifpay.me/en/download/',
+    imageStyle: {
+      width: '45px',
+      backgroundColor: 'black',
+      borderRadius: '5%',
+    },
   }
 ];
 
