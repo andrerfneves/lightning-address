@@ -95,6 +95,10 @@ const FOOTER = [
         link: 'https://lifpay.me/',
         title: 'LifPay'
       },
+      {
+        link: 'https://vipsats.app/',
+        title: 'Satoshi Lightning'
+      },
     ]
   },
   {
@@ -155,6 +159,10 @@ const FOOTER = [
       {
         link: 'https://lifpay.me/',
         title: 'LifPay'
+      },
+      {
+        link: 'https://vipsats.app',
+        title: 'Satoshi Lightning'
       },
     ]
   },
