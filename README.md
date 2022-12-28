@@ -45,6 +45,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
+| [Satoshi Lightning](https://vipsats.app)                          | ☑️         |   ☑️       |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
