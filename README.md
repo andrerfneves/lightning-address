@@ -42,6 +42,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Machankura](https://8333.mobi/)                                  | ☑️         | ☑️         |
 | [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
 | [Muun](https://muun.com/)                                         |           |           |
+| [NOAH](https://app.noah.com/)                                     | ☑️         | ☑️         |
 | [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
