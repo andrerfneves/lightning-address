@@ -263,6 +263,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>8333.mobi</LoopedTextPart>
               <LoopedTextPart>starbackr.me</LoopedTextPart>
               <LoopedTextPart>lifpay.me</LoopedTextPart>
+              <LoopedTextPart>vipsats.app</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
