@@ -343,7 +343,7 @@ const PROVIDERS = [
     imageStyle: { width: '125px' },
     lightningAddressDomain: 'bottlepay.me',
     url: 'https://bottlepay.com',
-    buttonText: 'Download Wallet'
+    buttonText: 'Download Wallet',
   },
   {
     name: 'Machankura',
