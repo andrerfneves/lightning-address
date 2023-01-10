@@ -364,6 +364,14 @@ const SATDRESS_SERVERS = [
     urlLink: 'https://lnaddress.me/',
     urlText: '@lightning.re',
   },
+  {
+    urlLink: 'https://satspay.to/',
+    urlText: '@satspay.to',
+  },
+  {
+    urlLink: 'https://sats.rs/',
+    urlText: '@sats.rs',
+  },
 ];
 
 const BRIDGE_SERVERS = [
@@ -391,6 +399,11 @@ const BRIDGE_SERVERS = [
     urlLink: 'https://github.com/Bashy/phplightningaddress',
     urlText: 'PHP Lightning Address',
     description: 'Lightning Address on your domain just by hosting a php script.',
+  },
+  {
+    urlLink: 'https://github.com/bernii/sataddress-rs/',
+    urlText: 'Sataddress',
+    description: 'Rust implementation of Federated Lightning Address (based on original satdress)',
   },
 ];
 
@@ -509,6 +522,17 @@ const WALLETS = [
     image: '/images/lifpay.png',
     downloadText: 'Download Wallet',
     url: 'https://lifpay.me/en/download/',
+    imageStyle: {
+      width: '45px',
+      backgroundColor: 'black',
+      borderRadius: '5%',
+    },
+  },
+  {
+    name: 'Satoshi Wallet',
+    image: 'https://vipsats.app/img/satoshi.png',
+    downloadText: 'Download Satoshi',
+    url: 'https://vipsats.app',
     imageStyle: {
       width: '45px',
       backgroundColor: 'black',

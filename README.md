@@ -30,7 +30,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️         |
-| [Bottlepay](https://bottlepay.com/)                               | WIP       | WIP       |
+| [Bottlepay](https://bottlepay.com/)                               | ☑️       | ☑️       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [CoinCorner](https://www.coincorner.com/)                         |  ☑️        |   ☑️    |
@@ -43,9 +43,11 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Machankura](https://8333.mobi/)                                  | ☑️         | ☑️         |
 | [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
 | [Muun](https://muun.com/)                                         |           |           |
+| [NOAH](https://app.noah.com/)                                     | ☑️         | ☑️         |
 | [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
+| [Satoshi Lightning](https://vipsats.app)                          | ☑️         |   ☑️       |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
@@ -69,7 +71,7 @@ All illustrative and informative diagrams are available under the [DIAGRAMS](./d
 ### Videos & Podcasts
 
 - [Introducing The Lightning Address](https://www.youtube.com/watch?v=G97yzYcyoug) - a recorded presentation on the explanations of why Lightning Address was created and the problems this protocol aims to solve
-- [How To Set Up A Lightning Address Directly To Your Node] (https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
+- [How To Set Up A Lightning Address Directly To Your Node](https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
 
 ## Contributions
 

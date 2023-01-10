@@ -324,10 +324,10 @@ const PROVIDERS = [
     name: 'Noah',
     image: '/images/noah.png',
     imageStyle: { width: '115px' },
-    lightningAddressDomain: 'noah.com',
-    url: 'https://noah.com',
-    buttonText: 'Coming Soon',
-    comingSoon: true,
+    lightningAddressDomain: 'noah.me',
+    url: 'https://app.noah.com',
+    buttonText: 'Claim Address',
+    comingSoon: false,
   },
   {
     name: 'Bitnob',
@@ -343,8 +343,7 @@ const PROVIDERS = [
     imageStyle: { width: '125px' },
     lightningAddressDomain: 'bottlepay.me',
     url: 'https://bottlepay.com',
-    buttonText: 'Coming Soon',
-    comingSoon: true,
+    buttonText: 'Download Wallet',
   },
   {
     name: 'Machankura',
@@ -382,6 +381,13 @@ const PROVIDERS = [
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
     lightningAddressDomain: 'lifpay.me',
     url: 'https://lifpay.me',
+  },
+  {
+    name: 'Satoshi Lightning',
+    image: 'https://vipsats.app/img/satoshi.png',
+    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
+    lightningAddressDomain: 'vipsats.app',
+    url: 'https://vipsats.app',
   }
 ];
 
