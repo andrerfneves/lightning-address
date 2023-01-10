@@ -514,6 +514,17 @@ const WALLETS = [
       backgroundColor: 'black',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'Satoshi Wallet',
+    image: 'https://vipsats.app/img/satoshi.png',
+    downloadText: 'Download Satoshi',
+    url: 'https://vipsats.app',
+    imageStyle: {
+      width: '45px',
+      backgroundColor: 'black',
+      borderRadius: '5%',
+    },
   }
 ];
 
