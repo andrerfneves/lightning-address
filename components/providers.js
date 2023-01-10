@@ -374,6 +374,13 @@ const PROVIDERS = [
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
     lightningAddressDomain: 'lifpay.me',
     url: 'https://lifpay.me',
+  },
+  {
+    name: 'Satoshi Lightning',
+    image: 'https://vipsats.app/img/satoshi.png',
+    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
+    lightningAddressDomain: 'vipsats.app',
+    url: 'https://vipsats.app',
   }
 ];
 
