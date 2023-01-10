@@ -69,7 +69,7 @@ All illustrative and informative diagrams are available under the [DIAGRAMS](./d
 ### Videos & Podcasts
 
 - [Introducing The Lightning Address](https://www.youtube.com/watch?v=G97yzYcyoug) - a recorded presentation on the explanations of why Lightning Address was created and the problems this protocol aims to solve
-- [How To Set Up A Lightning Address Directly To Your Node] (https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
+- [How To Set Up A Lightning Address Directly To Your Node](https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
 
 ## Contributions
 
