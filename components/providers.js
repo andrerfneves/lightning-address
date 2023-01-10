@@ -369,6 +369,13 @@ const PROVIDERS = [
     url: 'https://app.starbackr.com',
   },
   {
+    name: 'Bookmark.org',
+    image: '/images/bookmark.png',
+    imageStyle: { width: '130px'},
+    lightningAddressDomain: 'bookmark.org',
+    url: 'https://bookmark.org',
+  },
+  {
     name: 'LifPay',
     image: '/images/lifpay.png',
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
