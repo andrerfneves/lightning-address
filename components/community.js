@@ -538,6 +538,16 @@ const WALLETS = [
       backgroundColor: 'black',
       borderRadius: '5%',
     },
+  },
+  {
+    name: 'BitcoLi Wallet',
+    image: 'https://bitcoli.com/img/lightningaddress-com/logo.png',
+    downloadText: 'Download BitcoLi',
+    url: 'https://bitcoli.com',
+    imageStyle: {
+      width: '45px',
+      borderRadius: '5%',
+    },    
   }
 ];
 
