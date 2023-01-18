@@ -388,6 +388,13 @@ const PROVIDERS = [
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
     lightningAddressDomain: 'vipsats.app',
     url: 'https://vipsats.app',
+  },
+  {
+    name: 'BitcoLi wallet',
+    image: 'https://bitcoli.com/img/logo-40.png',
+    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
+    lightningAddressDomain: 'bitcoli.com',
+    url: 'https://bitcoli.com',
   }
 ];
 
