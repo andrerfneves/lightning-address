@@ -395,6 +395,13 @@ const PROVIDERS = [
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
     lightningAddressDomain: 'bitcoli.com',
     url: 'https://bitcoli.com',
+  },
+  {
+    name: 'Stacker News',
+    image: '/images/stackernews.png',
+    imageStyle: { width: '125px', backgroundColor: 'black', borderRadius: '5%' },
+    lightningAddressDomain: 'stacker.news',
+    url: 'https://stacker.news',
   }
 ];
 
