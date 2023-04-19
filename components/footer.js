@@ -64,10 +64,6 @@ const FOOTER = [
         title: 'Simple Bitcoin Wallet'
       },
       {
-        link: 'https://lntxbot.com/',
-        title: 'LNTXBOT Telegram Bot'
-      },
-      {
         link: 'https://lnbits.com',
         title: 'LNBits'
       },
@@ -107,10 +103,6 @@ const FOOTER = [
       {
         link: 'https://zbd.gg',
         title: 'ZEBEDEE App'
-      },
-      {
-        link: 'https://lntxbot.com/',
-        title: 'LNTXBOT Telegram Bot'
       },
       {
         link: 'https://coinos.io',

@@ -470,12 +470,6 @@ const WALLETS = [
     url: 'https://phoenix.acinq.co/',
   },
   {
-    name: 'LNTXBot',
-    image: '/images/lntxbot.png',
-    downloadText: 'Open LNTXBot',
-    url: 'https://lntxbot.com/',
-  },
-  {
     name: 'LNBits',
     image: '/images/lnbits.png',
     downloadText: 'Open LNBits',

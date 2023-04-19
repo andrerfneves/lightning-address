@@ -237,14 +237,6 @@ const PROVIDERS = [
     url: 'https://bitrefill.com/',
   },
   {
-    name: 'LNTXBot',
-    image: '/images/lntxbot.png',
-    imageStyle: { width: '130px', marginBottom: '-5px' },
-    lightningAddressDomain: 'lntxbot.com',
-    url: 'https://lntxbot.com/',
-    buttonText: 'Open Telegram',
-  },
-  {
     name: 'LNMarkets',
     image: '/images/lnmarkets.png',
     imageStyle: { width: '125px' },
