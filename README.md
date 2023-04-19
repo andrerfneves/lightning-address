@@ -56,7 +56,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Voltpay App](https://voltpay.app)                                | ☑️         |   ☑️    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
-| [ZEBEDEE App](https://zebedee.io/app) (and [Bots](https://zebedee.io/bots/), and [Extensions](https://zebedee.io/app))  | ☑️         | ☑️       |
+| [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
 
 

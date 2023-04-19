@@ -412,7 +412,7 @@ const WALLETS = [
     name: 'ZEBEDEE',
     image: '/images/zbd.svg',
     downloadText: 'Download App',
-    url: 'https://zebedee.io/app',
+    url: 'https://zbd.gg',
   },
   {
     name: 'Breez',

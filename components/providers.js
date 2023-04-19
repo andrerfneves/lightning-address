@@ -219,7 +219,7 @@ const PROVIDERS = [
     image: '/images/zbd.svg',
     imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },
     lightningAddressDomain: 'zbd.gg',
-    url: 'https://zebedee.io/app',
+    url: 'https://zbd.gg',
     buttonText: 'Download App',
   },
   {

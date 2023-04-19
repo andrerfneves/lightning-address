@@ -36,7 +36,7 @@ const FOOTER = [
     title: 'Sending',
     items: [
       {
-        link: 'https://zebedee.io/app',
+        link: 'https://zbd.gg',
         title: 'ZEBEDEE App'
       },
       {
@@ -105,7 +105,7 @@ const FOOTER = [
     title: 'Receiving',
     items: [
       {
-        link: 'https://zebedee.io/app',
+        link: 'https://zbd.gg',
         title: 'ZEBEDEE App'
       },
       {

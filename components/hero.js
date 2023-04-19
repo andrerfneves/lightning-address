@@ -248,7 +248,6 @@ export class Hero extends PureComponent {
             <TextLoop interval={2000} delay={1600}>
               <LoopedTextPart>your.domain</LoopedTextPart>
               <LoopedTextPart>zbd.gg</LoopedTextPart>
-              <LoopedTextPart>lntxbot.com</LoopedTextPart>
               <LoopedTextPart>zebedee.io</LoopedTextPart>
               <LoopedTextPart>coinos.io</LoopedTextPart>
               <LoopedTextPart>ln.tips</LoopedTextPart>
