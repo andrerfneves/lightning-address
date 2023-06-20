@@ -290,11 +290,11 @@ const PROVIDERS = [
     buttonText: 'Open Telegram',
   },
   {
-    name: '@Bitcoinbeach',
-    image: '/images/bitcoinbeach.png',
-    imageStyle: { width: '45px' },
-    lightningAddressDomain: 'ln.bitcoinbeach.com',
-    url: 'https://galoy.io/bitcoin-beach-wallet/',
+    name: 'Blink',
+    image: '/images/blink.png',
+    imageStyle: { width: '115px' },
+    lightningAddressDomain: 'blink.sv',
+    url: 'https://blink.sv',
     buttonText: 'Download Wallet',
   },
   {
