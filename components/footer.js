@@ -98,7 +98,7 @@ const FOOTER = [
       {
         link: 'https://blink.sv',
         title: 'Blink'
-      },
+      }
     ]
   },
   {
@@ -163,7 +163,7 @@ const FOOTER = [
       {
         link: 'https://blink.sv',
         title: 'Blink'
-      },
+      }
     ]
   },
 ];
