@@ -542,6 +542,16 @@ const WALLETS = [
       width: '45px',
       borderRadius: '5%',
     },    
+  },
+  {
+    name: 'Blink',
+    image: '/images/blink.png',
+    downloadText: 'Download Wallet',
+    url: 'https://blink.sv',
+    imageStyle: {
+      width: '115px',
+      borderRadius: '5%',
+    },    
   }
 ];
 

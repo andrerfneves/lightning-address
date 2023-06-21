@@ -95,6 +95,10 @@ const FOOTER = [
         link: 'https://vipsats.app/',
         title: 'Satoshi Lightning'
       },
+      {
+        link: 'https://blink.sv',
+        title: 'Blink'
+      }
     ]
   },
   {
@@ -156,6 +160,10 @@ const FOOTER = [
         link: 'https://vipsats.app',
         title: 'Satoshi Lightning'
       },
+      {
+        link: 'https://blink.sv',
+        title: 'Blink'
+      }
     ]
   },
 ];
