@@ -329,10 +329,6 @@ const SATDRESS_SERVERS = [
     urlText: '@payaddress.co',
   },
   {
-    urlLink: 'https://btcadresse.de',
-    urlText: '@btcadresse.de',
-  },
-  {
     urlLink: 'https://sats.pm',
     urlText: '@sats.pm',
   },
@@ -343,10 +339,6 @@ const SATDRESS_SERVERS = [
   {
     urlLink: 'https://lnpay.cz',
     urlText: '@lnpay.cz',
-  },
-  {
-    urlLink: 'https://lnaddress.com',
-    urlText: '@lnaddress.com',
   },
   {
     urlLink: 'https://lnaddress.me/',
