@@ -248,18 +248,14 @@ export class Hero extends PureComponent {
             <TextLoop interval={2000} delay={1600}>
               <LoopedTextPart>your.domain</LoopedTextPart>
               <LoopedTextPart>zbd.gg</LoopedTextPart>
-              <LoopedTextPart>zebedee.io</LoopedTextPart>
-              <LoopedTextPart>coinos.io</LoopedTextPart>
+              <LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
+              <LoopedTextPart>getmash.cash</LoopedTextPart>
+              <LoopedTextPart>bitrefill.me</LoopedTextPart>
+              <LoopedTextPart>getalby.com</LoopedTextPart>
+              <LoopedTextPart>8333.mobi</LoopedTextPart>
               <LoopedTextPart>ln.tips</LoopedTextPart>
               <LoopedTextPart>coincorner.io</LoopedTextPart>
-              <LoopedTextPart>bitrefill.me</LoopedTextPart>
-              <LoopedTextPart>fbtc.me</LoopedTextPart>
               <LoopedTextPart>lnmarkets.com</LoopedTextPart>
-              <LoopedTextPart>getalby.com</LoopedTextPart>
-              <LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
-              <LoopedTextPart>sparkwallet.me</LoopedTextPart>
-              <LoopedTextPart>getmash.cash</LoopedTextPart>
-              <LoopedTextPart>8333.mobi</LoopedTextPart>
               <LoopedTextPart>starbackr.me</LoopedTextPart>
               <LoopedTextPart>lifpay.me</LoopedTextPart>
               <LoopedTextPart>vipsats.app</LoopedTextPart>

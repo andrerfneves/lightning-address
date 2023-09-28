@@ -215,7 +215,7 @@ const DomainURL = styled.div`
 
 const PROVIDERS = [
   {
-    name: 'ZEBEDEE',
+    name: 'ZBD',
     image: '/images/zbd.svg',
     imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },
     lightningAddressDomain: 'zbd.gg',
@@ -252,36 +252,6 @@ const PROVIDERS = [
     url: 'https://coincorner.com/',
   },
   {
-    name: 'Bipa',
-    image: '/images/bipa.png',
-    imageStyle: { width: '45px' },
-    lightningAddressDomain: 'bipa.app',
-    url: 'https://bipa.app',
-    buttonText: 'Download Wallet',
-  },
-  {
-    name: 'FastBitcoins',
-    image: '/images/fastbitcoins.png',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'fbtc.me',
-    url: 'https://fastbitcoins.com/',
-  },
-  {
-    name: 'Spark Wallet',
-    image: '/images/sparkwallet.svg',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'sparkwallet.me',
-    url: 'https://sparkwallet.io/',
-  },
-  {
-    name: 'coinos',
-    image: '/images/coinos.png',
-    imageStyle: { width: '130px', marginBottom: '-8px' },
-    lightningAddressDomain: 'coinos.io',
-    url: 'https://coinos.io',
-    buttonText: 'Open Coinos',
-  },
-  {
     name: '@LightningTipBot',
     image: '/images/lightningtipbot.svg',
     imageStyle: { width: '115px' },
@@ -313,13 +283,26 @@ const PROVIDERS = [
     buttonText: 'Download Wallet',
   },
   {
-    name: 'Noah',
-    image: '/images/noah.png',
-    imageStyle: { width: '115px' },
-    lightningAddressDomain: 'noah.me',
-    url: 'https://app.noah.com',
-    buttonText: 'Claim Address',
-    comingSoon: false,
+    name: 'Bipa',
+    image: '/images/bipa.png',
+    imageStyle: { width: '45px' },
+    lightningAddressDomain: 'bipa.app',
+    url: 'https://bipa.app',
+    buttonText: 'Download Wallet',
+  },
+  {
+    name: 'Stacker News',
+    image: '/images/stackernews.png',
+    imageStyle: { width: '125px', backgroundColor: 'black', borderRadius: '5%' },
+    lightningAddressDomain: 'stacker.news',
+    url: 'https://stacker.news',
+  },
+  {
+    name: 'FastBitcoins',
+    image: '/images/fastbitcoins.png',
+    imageStyle: { width: '125px' },
+    lightningAddressDomain: 'fbtc.me',
+    url: 'https://fastbitcoins.com/',
   },
   {
     name: 'Bitnob',
@@ -327,14 +310,6 @@ const PROVIDERS = [
     imageStyle: { width: '115px' },
     lightningAddressDomain: 'bitnob.io',
     url: 'https://bitnob.com',
-    buttonText: 'Download Wallet',
-  },
-  {
-    name: 'Bottlepay',
-    image: '/images/bottlepay.png',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'bottlepay.me',
-    url: 'https://bottlepay.com',
     buttonText: 'Download Wallet',
   },
   {
@@ -352,13 +327,6 @@ const PROVIDERS = [
     imageStyle: { width: '125px', marginBottom: '5px' },
     lightningAddressDomain: 'getmash.cash',
     url: 'https://getmash.com',
-  },
-  {
-    name: 'STARBACKR',
-    image: '/images/starbackr.png',
-    imageStyle: { width: '130px'},
-    lightningAddressDomain: 'starbackr.me',
-    url: 'https://app.starbackr.com',
   },
   {
     name: 'Bookmark.org',
@@ -387,13 +355,6 @@ const PROVIDERS = [
     imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
     lightningAddressDomain: 'bitcoli.com',
     url: 'https://bitcoli.com',
-  },
-  {
-    name: 'Stacker News',
-    image: '/images/stackernews.png',
-    imageStyle: { width: '125px', backgroundColor: 'black', borderRadius: '5%' },
-    lightningAddressDomain: 'stacker.news',
-    url: 'https://stacker.news',
   }
 ];
 

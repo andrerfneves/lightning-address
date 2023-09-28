@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && next",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && next start"
   },
   "dependencies": {
     "next": "^11.1.0",

@@ -32,12 +32,10 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️         |
-| [Bottlepay](https://bottlepay.com/)                               | ☑️       | ☑️       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [CoinCorner](https://www.coincorner.com/)                         |  ☑️        |   ☑️    |
 | [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
-| [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
 | [LifPay](https://lifpay.me/)                                      | ☑️         | ☑️         |
 | [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️         | ☑️         |
@@ -57,7 +55,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Voltpay App](https://voltpay.app)                                | ☑️         |   ☑️    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [Zap](https://www.zaphq.io/)                                      |           |           |
-| [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️         | ☑️       |
+| [ZBD App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
 
 

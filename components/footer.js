@@ -106,15 +106,7 @@ const FOOTER = [
     items: [
       {
         link: 'https://zbd.gg',
-        title: 'ZEBEDEE App'
-      },
-      {
-        link: 'https://coinos.io',
-        title: 'CoinOS'
-      },
-      {
-        link: 'https://sparkwallet.io/',
-        title: 'Spark Wallet'
+        title: 'ZBD App'
       },
       {
         link: 'https://github.com/fiatjaf/satdress',
@@ -147,10 +139,6 @@ const FOOTER = [
       {
         link: 'https://8333.mobi/',
         title: 'Machankura'
-      },
-      {
-        link: 'https://app.starbackr.com/',
-        title: 'STARBACKR'
       },
       {
         link: 'https://lifpay.me/',
