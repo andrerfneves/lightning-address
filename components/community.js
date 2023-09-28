@@ -416,6 +416,13 @@ const WALLETS = [
     }
   },
   {
+    name: 'Mash',
+    image: '/images/mash.svg',
+    downloadText: 'Download Wallet',
+    url: 'https://mash.com/consumer-experience/',
+    imageStyle: { width: '125px', marginBottom: '5px' },
+  },
+  {
     name: 'SBW',
     image: '/images/sbw.png',
     downloadText: 'Download Wallet',

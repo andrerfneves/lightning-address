@@ -326,7 +326,7 @@ const PROVIDERS = [
     image: '/images/mash.svg',
     imageStyle: { width: '125px', marginBottom: '5px' },
     lightningAddressDomain: 'getmash.cash',
-    url: 'https://getmash.com',
+    url: 'https://mash.com/consumer-experience/',
   },
   {
     name: 'Bookmark.org',
