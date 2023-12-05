@@ -52,7 +52,8 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Satoshi Lightning](https://vipsats.app)                          | ☑️         |   ☑️       |
 | [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
 | [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
-| [Stacker News](https://stacker.news/)                             | ----      |   ☑️       |
+| [Stacker News](https://stacker.news/)                             | ----        |   ☑️       |
+| [Strike](https://strike.me)                                       | ☑️         |   ☑️      
 | [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
 | [Voltpay App](https://voltpay.app)                                | ☑️         |   ☑️    |
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
