@@ -245,6 +245,14 @@ const PROVIDERS = [
     buttonText: 'Open LN Markets',
   },
   {
+    name: 'Strike',
+    image: '/images/STRIKE.PNG',
+    imageStyle: { width: '130px' },
+    lightningAddressDomain: 'strike.me',
+    url: 'https://strike.me/',
+    buttonText: 'Download Strike',
+  },
+  {
     name: 'Coincorner',
     image: '/images/coincorner.svg',
     imageStyle: { width: '130px' },
