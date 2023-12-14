@@ -246,7 +246,7 @@ const PROVIDERS = [
   },
   {
     name: 'Strike',
-    image: '/images/STRIKE.PNG',
+    image: '/images/STRIKE.png',
     imageStyle: { width: '130px' },
     lightningAddressDomain: 'strike.me',
     url: 'https://strike.me/',
