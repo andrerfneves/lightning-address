@@ -215,6 +215,14 @@ const DomainURL = styled.div`
 
 const PROVIDERS = [
   {
+    name: 'Bridge Wallet',
+    image: '/images/logo_mtpelerin.svg',
+    imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },
+    lightningAddressDomain: 'ln.mtpelerin.com',
+    url: 'https://www.mtpelerin.com/buy-crypto?bsc=CHF&bdc=sat&bsa=100&dnet=lightning_mainnet',
+    buttonText: 'Open Mt Pelerin',
+  },
+  {
     name: 'ZEBEDEE',
     image: '/images/zbd.svg',
     imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },

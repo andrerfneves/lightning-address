@@ -34,6 +34,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️         |
 | [Bottlepay](https://bottlepay.com/)                               | ☑️       | ☑️       |
 | [Breez](https://breez.technology/)                                | ☑️         |   ----    |
+| [Bridge Wallet](https://www.mtpelerin.com/buy-crypto?bsc=CHF&bdc=sat&bsa=100&dnet=lightning_mainnet)                                      | ☑️         | ☑️         |
 | [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
 | [CoinCorner](https://www.coincorner.com/)                         |  ☑️        |   ☑️    |
 | [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
