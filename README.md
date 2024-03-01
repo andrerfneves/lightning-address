@@ -45,6 +45,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Machankura](https://8333.mobi/)                                  | ☑️         | ☑️         |
 | [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
 | [Muun](https://muun.com/)                                         |           |           |
+| [NiceHash](https://www.nicehash.com/)                                  | ☑️         | ☑️         |
 | [NOAH](https://app.noah.com/)                                     | ☑️         | ☑️         |
 | [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
@@ -60,7 +61,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
 | [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️         | ☑️       |
 | [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
-| [NiceHash](https://www.nicehash.com/)                                  | ☑️         | ☑️         |
+
 
 
 ## TLDR
