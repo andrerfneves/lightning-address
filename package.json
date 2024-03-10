@@ -1,4 +1,6 @@
 {
+  "name": "lightning-address",
+  "description": "lightningaddress.com",
   "private": true,
   "scripts": {
     "dev": "next",
