@@ -1,170 +1,159 @@
-import QRCode from 'react-qr-code';
-import styled from 'styled-components';
+import QRCode from "react-qr-code";
+import styled from "styled-components";
 
-import { URL_INTERNET_IDENTIFIER } from '../constants';
-import { media } from '../utils';
+import { URL_INTERNET_IDENTIFIER } from "../constants";
+import { media } from "../utils";
 
-const DONATION_QR_CODE = 'lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk';
+const DONATION_QR_CODE =
+  "lnurl1dp68gurn8ghj7ctsdyh85etzv4jx2efwd9hj7a3s9aex2ut4v4ehgttnw3shg6tr943ksctjvajhxteevy6rgd3jx9jz6vpkxc6j6dp5v43z6wfkv9nz6efsxc6nxdpnxyckyef4xl00sk";
 
 const FOOTER = [
   {
-    title: 'Resources',
+    title: "Resources",
     items: [
       {
-        link: 'https://github.com/andrerfneves/lightning-address/blob/master/README.md',
-        title: 'Dev Documentation'
+        link: "https://github.com/andrerfneves/lightning-address/blob/master/README.md",
+        title: "Dev Documentation",
       },
       {
-        link: 'https://github.com/andrerfneves/lightning-address',
-        title: 'Code Repository'
+        link: "https://github.com/andrerfneves/lightning-address",
+        title: "Code Repository",
       },
       {
-        link: 'https://lightningdecoder.com',
-        title: 'Lightning Address Decoder'
+        link: "https://lightningdecoder.com",
+        title: "Lightning Address Decoder",
       },
       {
         link: URL_INTERNET_IDENTIFIER,
-        title: 'Internet Identifier RFC'
+        title: "Internet Identifier RFC",
       },
       {
-        link: 'https://github.com/fiatjaf/lnurl-rfc',
-        title: 'LNURL RFC'
-      }
-    ]
+        link: "https://github.com/fiatjaf/lnurl-rfc",
+        title: "LNURL RFC",
+      },
+    ],
   },
   {
-    title: 'Sending',
+    title: "Sending",
     items: [
       {
-        link: 'https://zbd.gg',
-        title: 'ZEBEDEE App'
+        link: "https://zbd.gg",
+        title: "ZBD App",
       },
       {
-        link: 'https://breez.technology/',
-        title: 'Breez'
+        link: "https://breez.technology/",
+        title: "Breez",
       },
       {
-        link: 'https://bluewallet.io/',
-        title: 'BlueWallet'
+        link: "https://bluewallet.io/",
+        title: "BlueWallet",
       },
       {
-        link: 'https://blixtwallet.com/',
-        title: 'Blixt Wallet'
+        link: "https://blixtwallet.com/",
+        title: "Blixt Wallet",
       },
       {
-        link: 'https://sparkwallet.io/',
-        title: 'Spark Wallet'
+        link: "https://sparkwallet.io/",
+        title: "Spark Wallet",
       },
       {
-        link: 'https://phoenix.acinq.co/',
-        title: 'Phoenix'
+        link: "https://phoenix.acinq.co/",
+        title: "Phoenix",
       },
       {
-        link: 'https://lightning-wallet.com/',
-        title: 'Simple Bitcoin Wallet'
+        link: "https://lnbits.com",
+        title: "LNBits",
       },
       {
-        link: 'https://lnbits.com',
-        title: 'LNBits'
+        link: "https://t.me/LightningTipBot",
+        title: "@LightningTipBot",
       },
       {
-        link: 'https://t.me/LightningTipBot',
-        title: '@LightningTipBot'
+        link: "https://getalby.com",
+        title: "Alby",
       },
       {
-        link: 'https://getalby.com',
-        title: 'Alby'
+        link: "https://lnmarkets.com",
+        title: "LN Markets",
       },
       {
-        link: 'https://lnmarkets.com',
-        title: 'LN Markets'
+        link: "https://8333.mobi/",
+        title: "Machankura",
       },
       {
-        link: 'https://8333.mobi/',
-        title: 'Machankura'
+        link: "https://lifpay.me/",
+        title: "LifPay",
       },
       {
-        link: 'https://app.starbackr.com/',
-        title: 'STARBACKR'
+        link: "https://vipsats.app/",
+        title: "Satoshi Lightning",
       },
       {
-        link: 'https://lifpay.me/',
-        title: 'LifPay'
+        link: "https://blink.sv",
+        title: "Blink",
       },
-      {
-        link: 'https://vipsats.app/',
-        title: 'Satoshi Lightning'
-      },
-      {
-        link: 'https://blink.sv',
-        title: 'Blink'
-      }
-    ]
+    ],
   },
   {
-    title: 'Receiving',
+    title: "Receiving",
     items: [
       {
-        link: 'https://zbd.gg',
-        title: 'ZEBEDEE App'
+        link: "https://zbd.gg",
+        title: "ZBD App",
       },
       {
-        link: 'https://coinos.io',
-        title: 'CoinOS'
+        link: "https://coinos.io",
+        title: "CoinOS",
       },
       {
-        link: 'https://sparkwallet.io/',
-        title: 'Spark Wallet'
+        link: "https://sparkwallet.io/",
+        title: "Spark Wallet",
       },
       {
-        link: 'https://github.com/fiatjaf/satdress',
-        title: 'Satdress'
+        link: "https://github.com/fiatjaf/satdress",
+        title: "Satdress",
       },
       {
-        link: 'https://github.com/dolu89/ligess',
-        title: 'Ligess'
+        link: "https://github.com/dolu89/ligess",
+        title: "Ligess",
       },
       {
-        link: 'https://github.com/bumi/lnme',
-        title: 'LnMe'
+        link: "https://github.com/bumi/lnme",
+        title: "LnMe",
       },
       {
-        link: 'https://t.me/LightningTipBot',
-        title: '@LightningTipBot'
+        link: "https://t.me/LightningTipBot",
+        title: "@LightningTipBot",
       },
       {
-        link: 'https://getalby.com',
-        title: 'Alby'
+        link: "https://getalby.com",
+        title: "Alby",
       },
       {
-        link: 'https://lnmarkets.com',
-        title: 'LN Markets'
+        link: "https://lnmarkets.com",
+        title: "LN Markets",
       },
       {
-        link: 'https://getmash.com',
-        title: 'Mash'
+        link: "https://getmash.com",
+        title: "Mash",
       },
       {
-        link: 'https://8333.mobi/',
-        title: 'Machankura'
+        link: "https://8333.mobi/",
+        title: "Machankura",
       },
       {
-        link: 'https://app.starbackr.com/',
-        title: 'STARBACKR'
+        link: "https://lifpay.me/",
+        title: "LifPay",
       },
       {
-        link: 'https://lifpay.me/',
-        title: 'LifPay'
+        link: "https://vipsats.app",
+        title: "Satoshi Lightning",
       },
       {
-        link: 'https://vipsats.app',
-        title: 'Satoshi Lightning'
+        link: "https://blink.sv",
+        title: "Blink",
       },
-      {
-        link: 'https://blink.sv',
-        title: 'Blink'
-      }
-    ]
+    ],
   },
 ];
 
@@ -267,12 +256,10 @@ export const Footer = () => (
   <Wrapper>
     <InnerWrapper>
       <Menus>
-        {(FOOTER || []).map(col => (
+        {(FOOTER || []).map((col) => (
           <Column key={col.title}>
-            <ColumnTitle>
-              {col.title}
-            </ColumnTitle>
-            {(col.items || []).map(item => (
+            <ColumnTitle>{col.title}</ColumnTitle>
+            {(col.items || []).map((item) => (
               <ColumnItem key={item.link} href={item.link} target="_blank">
                 {item.title}
               </ColumnItem>
@@ -284,10 +271,7 @@ export const Footer = () => (
         <BottomInner>
           <BottomQR>
             <a href={`lightning:${DONATION_QR_CODE}`}>
-              <QRCode
-                size={100}
-                value={DONATION_QR_CODE}
-              />
+              <QRCode size={100} value={DONATION_QR_CODE} />
             </a>
           </BottomQR>
           <BottomLogo>The Lightning Address</BottomLogo>

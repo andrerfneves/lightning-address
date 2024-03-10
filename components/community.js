@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { media } from '../utils';
+import { media } from "../utils";
 
 const CommunityModule = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ const CommunityIntro = styled.p`
   padding: 8px 12px;
   border-radius: 7px;
   margin: 0 auto 20px auto;
-  background: rgba(255,97,0,0.1);
+  background: rgba(255, 97, 0, 0.1);
 
   ${media.tablet`
     font-size: 18px;
@@ -140,10 +140,11 @@ const CommunitySignUpButton = styled.a`
   text-decoration: none;
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  opacity: ${({ isDisabled }) => isDisabled ? '0.5' : '1'};
+  opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
 
   &:hover {
-    background: ${({ isDisabled }) => isDisabled ? '#0070f3' : 'rgba(0,118,255,0.9)'};
+    background: ${({ isDisabled }) =>
+      isDisabled ? "#0070f3" : "rgba(0,118,255,0.9)"};
     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
   }
 
@@ -210,7 +211,7 @@ const Link = styled.a`
   border-radius: 7px;
   text-decoration: none;
   margin: 10px 10px 0 0;
-  background: rgba(0,118,255,0.1);
+  background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
     font-size: 14px;
@@ -219,7 +220,7 @@ const Link = styled.a`
   `}
 
   &:hover {
-    background: rgba(0,118,255,0.2);
+    background: rgba(0, 118, 255, 0.2);
   }
 `;
 
@@ -234,7 +235,7 @@ const VerticalLink = styled.a`
   border-radius: 7px;
   text-decoration: none;
   margin: 10px 10px 0 0;
-  background: rgba(0,118,255,0.1);
+  background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
     font-size: 14px;
@@ -242,7 +243,7 @@ const VerticalLink = styled.a`
   `}
 
   &:hover {
-    background: rgba(0,118,255,0.2);
+    background: rgba(0, 118, 255, 0.2);
   }
 `;
 
@@ -282,7 +283,7 @@ const CTASecondary = styled.a`
   box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
 
   &:hover {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
   }
 
@@ -325,233 +326,223 @@ const VerticalLinkDescription = styled(CommunityDescriptionSmall)`
 
 const SATDRESS_SERVERS = [
   {
-    urlLink: 'https://payaddress.co',
-    urlText: '@payaddress.co',
+    urlLink: "https://payaddress.co",
+    urlText: "@payaddress.co",
   },
   {
-    urlLink: 'https://sats.pm',
-    urlText: '@sats.pm',
+    urlLink: "https://sats.pm",
+    urlText: "@sats.pm",
   },
   {
-    urlLink: 'https://lnbitcoin.cz',
-    urlText: '@lnbitcoin.cz',
+    urlLink: "https://lnbitcoin.cz",
+    urlText: "@lnbitcoin.cz",
   },
   {
-    urlLink: 'https://lnpay.cz',
-    urlText: '@lnpay.cz',
+    urlLink: "https://lnpay.cz",
+    urlText: "@lnpay.cz",
   },
   {
-    urlLink: 'https://lnaddress.me/',
-    urlText: '@lnaddress.me',
+    urlLink: "https://lnaddress.me/",
+    urlText: "@lnaddress.me",
   },
   {
-    urlLink: 'https://lnaddress.me/',
-    urlText: '@lnaddress.net',
+    urlLink: "https://lnaddress.me/",
+    urlText: "@lnaddress.net",
   },
   {
-    urlLink: 'https://lnaddress.me/',
-    urlText: '@lightning.by',
+    urlLink: "https://lnaddress.me/",
+    urlText: "@lightning.by",
   },
   {
-    urlLink: 'https://lnaddress.me/',
-    urlText: '@lightning.re',
+    urlLink: "https://lnaddress.me/",
+    urlText: "@lightning.re",
   },
   {
-    urlLink: 'https://satspay.to/',
-    urlText: '@satspay.to',
+    urlLink: "https://satspay.to/",
+    urlText: "@satspay.to",
   },
   {
-    urlLink: 'https://sats.rs/',
-    urlText: '@sats.rs',
+    urlLink: "https://sats.rs/",
+    urlText: "@sats.rs",
   },
 ];
 
 const BRIDGE_SERVERS = [
   {
-    urlLink: 'https://github.com/fiatjaf/satdress/',
-    urlText: 'Satdress',
-    description: 'Federated Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.',
+    urlLink: "https://github.com/fiatjaf/satdress/",
+    urlText: "Satdress",
+    description:
+      "Federated Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.",
   },
   {
-    urlLink: 'https://bridgeaddr.fiatjaf.com/',
-    urlText: 'BridgeAddr',
-    description: 'Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.',
+    urlLink: "https://bridgeaddr.fiatjaf.com/",
+    urlText: "BridgeAddr",
+    description:
+      "Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.",
   },
   {
-    urlLink: 'https://github.com/Dolu89/ligess/',
-    urlText: 'Ligess',
-    description: 'Personal Lightning Address server to self-host payments to you@yourdomain.com.',
+    urlLink: "https://github.com/Dolu89/ligess/",
+    urlText: "Ligess",
+    description:
+      "Personal Lightning Address server to self-host payments to you@yourdomain.com.",
   },
   {
-    urlLink: 'https://github.com/bumi/lnme',
-    urlText: 'LnMe',
-    description: 'Self-hosted Lightning Address server and personal payment page.',
+    urlLink: "https://github.com/bumi/lnme",
+    urlText: "LnMe",
+    description:
+      "Self-hosted Lightning Address server and personal payment page.",
   },
   {
-    urlLink: 'https://github.com/Bashy/phplightningaddress',
-    urlText: 'PHP Lightning Address',
-    description: 'Lightning Address on your domain just by hosting a php script.',
+    urlLink: "https://github.com/Bashy/phplightningaddress",
+    urlText: "PHP Lightning Address",
+    description:
+      "Lightning Address on your domain just by hosting a php script.",
   },
   {
-    urlLink: 'https://github.com/bernii/sataddress-rs/',
-    urlText: 'Sataddress',
-    description: 'Rust implementation of Federated Lightning Address (based on original satdress)',
+    urlLink: "https://github.com/bernii/sataddress-rs/",
+    urlText: "Sataddress",
+    description:
+      "Rust implementation of Federated Lightning Address (based on original satdress)",
   },
 ];
 
 const WALLETS = [
   {
-    name: 'ZEBEDEE',
-    image: '/images/zbd.svg',
-    downloadText: 'Download App',
-    url: 'https://zbd.gg',
+    name: "ZBD",
+    image: "/images/zbd.svg",
+    downloadText: "Download App",
+    url: "https://zbd.gg",
   },
   {
-    name: 'Breez',
-    image: '/images/breez.png',
-    downloadText: 'Download Wallet',
-    url: 'https://breez.technology',
+    name: "Breez",
+    image: "/images/breez.png",
+    downloadText: "Download Wallet",
+    url: "https://breez.technology",
     imageStyle: {
-      width: '95px',
-    }
-  },
-  {
-    name: 'Mash',
-    image: '/images/mash.svg',
-    downloadText: 'Download Wallet',
-    url: 'https://mash.com/consumer-experience/',
-    imageStyle: { width: '125px', marginBottom: '5px' },
-  },
-  {
-    name: 'SBW',
-    image: '/images/sbw.png',
-    downloadText: 'Download Wallet',
-    url: 'https://sbw.app/',
-  },
-  {
-    name: 'Wallet of Satoshi',
-    image: '/images/wos.svg',
-    downloadText: 'Download Wallet',
-    url: 'https://walletofsatoshi.com',
-    imageStyle: {
-      width: '115px',
-    }
-  },
-  {
-    name: 'Blixt',
-    image: '/images/blixt.png',
-    downloadText: 'Download Wallet',
-    url: 'https://blixtwallet.github.io/',
-  },
-  {
-    name: 'BlueWallet',
-    image: '/images/bluewallet.svg',
-    downloadText: 'Download Wallet',
-    url: 'https://bluewallet.io',
-    imageStyle: {
-      width: '88px',
-      marginTop: '3px',
-    }
-  },
-  {
-    name: 'Spark Wallet',
-    image: '/images/sparkwallet.svg',
-    downloadText: 'Download Wallet',
-    url: 'https://sparkwallet.io',
-    imageStyle: {
-      width: '115px',
-    }
-  },
-  {
-    name: 'Phoenix',
-    image: '/images/phoenix.png',
-    downloadText: 'Download Wallet',
-    url: 'https://phoenix.acinq.co/',
-  },
-  {
-    name: 'LNBits',
-    image: '/images/lnbits.png',
-    downloadText: 'Open LNBits',
-    url: 'https://lnbits.com/',
-  },
-  {
-    name: '@LightningTipBot',
-    image: '/images/lightningtipbot.svg',
-    downloadText: 'Open @LightningTipBot',
-    url: 'https://t.me/LightningTipBot',
-  },
-  {
-    name: 'Alby',
-    image: '/images/alby.png',
-    downloadText: 'Open Alby',
-    url: 'https://getalby.com',
-    imageStyle: {
-      width: '50px',
-      borderRadius: '5%',
+      width: "95px",
     },
   },
   {
-    name: 'Machankura',
-    image: '/images/machankura.png',
-    downloadText: 'Dial Machankura',
-    url: 'https://8333.mobi',
-    imageStyle: {
-      width: '50px',
-      height: '50px'
-    }
+    name: "Mash",
+    image: "/images/mash.svg",
+    downloadText: "Download Wallet",
+    url: "https://mash.com/consumer-experience/",
+    imageStyle: { width: "125px", marginBottom: "5px" },
   },
   {
-    name: 'STARBACKR',
-    image: '/images/starbackr.png',
-    downloadText: 'Open STARBACKR',
-    url: 'https://app.starbackr.com',
+    name: "Wallet of Satoshi",
+    image: "/images/wos.svg",
+    downloadText: "Download Wallet",
+    url: "https://walletofsatoshi.com",
     imageStyle: {
-      width: '130px',
-      borderRadius: '5%',
+      width: "115px",
     },
   },
   {
-    name: 'LifPay',
-    image: '/images/lifpay.png',
-    downloadText: 'Download Wallet',
-    url: 'https://lifpay.me/en/download/',
+    name: "Blixt",
+    image: "/images/blixt.png",
+    downloadText: "Download Wallet",
+    url: "https://blixtwallet.github.io/",
+  },
+  {
+    name: "BlueWallet",
+    image: "/images/bluewallet.svg",
+    downloadText: "Download Wallet",
+    url: "https://bluewallet.io",
     imageStyle: {
-      width: '45px',
-      backgroundColor: 'black',
-      borderRadius: '5%',
+      width: "88px",
+      marginTop: "3px",
     },
   },
   {
-    name: 'Satoshi Wallet',
-    image: 'https://vipsats.app/img/satoshi.png',
-    downloadText: 'Download Satoshi',
-    url: 'https://vipsats.app',
+    name: "Spark Wallet",
+    image: "/images/sparkwallet.svg",
+    downloadText: "Download Wallet",
+    url: "https://sparkwallet.io",
     imageStyle: {
-      width: '45px',
-      backgroundColor: 'black',
-      borderRadius: '5%',
+      width: "115px",
     },
   },
   {
-    name: 'BitcoLi Wallet',
-    image: 'https://bitcoli.com/img/lightningaddress-com/logo.png',
-    downloadText: 'Download BitcoLi',
-    url: 'https://bitcoli.com',
-    imageStyle: {
-      width: '45px',
-      borderRadius: '5%',
-    },    
+    name: "Phoenix",
+    image: "/images/phoenix.png",
+    downloadText: "Download Wallet",
+    url: "https://phoenix.acinq.co/",
   },
   {
-    name: 'Blink',
-    image: '/images/blink.png',
-    downloadText: 'Download Wallet',
-    url: 'https://blink.sv',
+    name: "LNBits",
+    image: "/images/lnbits.png",
+    downloadText: "Open LNBits",
+    url: "https://lnbits.com/",
+  },
+  {
+    name: "@LightningTipBot",
+    image: "/images/lightningtipbot.svg",
+    downloadText: "Open @LightningTipBot",
+    url: "https://t.me/LightningTipBot",
+  },
+  {
+    name: "Alby",
+    image: "/images/alby.png",
+    downloadText: "Open Alby",
+    url: "https://getalby.com",
     imageStyle: {
-      width: '115px',
-      borderRadius: '5%',
-    },    
-  }
+      width: "50px",
+      borderRadius: "5%",
+    },
+  },
+  {
+    name: "Machankura",
+    image: "/images/machankura.png",
+    downloadText: "Dial Machankura",
+    url: "https://8333.mobi",
+    imageStyle: {
+      width: "50px",
+      height: "50px",
+    },
+  },
+  {
+    name: "LifPay",
+    image: "/images/lifpay.png",
+    downloadText: "Download Wallet",
+    url: "https://lifpay.me/en/download/",
+    imageStyle: {
+      width: "45px",
+      backgroundColor: "black",
+      borderRadius: "5%",
+    },
+  },
+  {
+    name: "Satoshi Wallet",
+    image: "https://vipsats.app/img/satoshi.png",
+    downloadText: "Download Satoshi",
+    url: "https://vipsats.app",
+    imageStyle: {
+      width: "45px",
+      backgroundColor: "black",
+      borderRadius: "5%",
+    },
+  },
+  {
+    name: "BitcoLi Wallet",
+    image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
+    downloadText: "Download BitcoLi",
+    url: "https://bitcoli.com",
+    imageStyle: {
+      width: "45px",
+      borderRadius: "5%",
+    },
+  },
+  {
+    name: "Blink",
+    image: "/images/blink.png",
+    downloadText: "Download Wallet",
+    url: "https://blink.sv",
+    imageStyle: {
+      width: "115px",
+      borderRadius: "5%",
+    },
+  },
 ];
 
 export const Community = () => (
@@ -559,36 +550,56 @@ export const Community = () => (
     <CommunityIntro>Community Efforts & Tools</CommunityIntro>
     <CommunityTitle>Noncustodial Bridge Servers</CommunityTitle>
     <CommunityDescription>
-      The Lightning Address standard continues to be adopted by community participants and companies in the industry. From mobile and desktop wallet support, to federated Lightning Address bridge servers anyone can self-host, it's never been easier to transact Bitcoin.
+      The Lightning Address standard continues to be adopted by community
+      participants and companies in the industry. From mobile and desktop wallet
+      support, to federated Lightning Address bridge servers anyone can
+      self-host, it's never been easier to transact Bitcoin.
     </CommunityDescription>
     <CommunityInner>
       <CommunityLeft>
-        <CommunitySectionTitle>Transact with a Lightning Address today!</CommunitySectionTitle>
+        <CommunitySectionTitle>
+          Transact with a Lightning Address today!
+        </CommunitySectionTitle>
         <CommunityDescriptionSmall>
-          The wallets listed below already have support for transacting with Lightning Addresses. Download them to get started sending Bitcoin as easily as you send emails.
+          The wallets listed below already have support for transacting with
+          Lightning Addresses. Download them to get started sending Bitcoin as
+          easily as you send emails.
         </CommunityDescriptionSmall>
-        {WALLETS.map(wallet => (
+        {WALLETS.map((wallet) => (
           <CommunityCard key={wallet.name}>
             <ImageWrapper>
-              <Image src={wallet.image} alt={wallet.name} style={wallet.imageStyle || {}} />
+              <Image
+                src={wallet.image}
+                alt={wallet.name}
+                style={wallet.imageStyle || {}}
+              />
             </ImageWrapper>
-            <CommunitySignUpButton target="_blank" href={wallet.url}>{wallet.downloadText}</CommunitySignUpButton>
+            <CommunitySignUpButton target="_blank" href={wallet.url}>
+              {wallet.downloadText}
+            </CommunitySignUpButton>
           </CommunityCard>
         ))}
         <CTAWrapper>
-          <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported" target="_blank">
+          <CTASecondary
+            href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported"
+            target="_blank"
+          >
             View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
       </CommunityLeft>
       <CommunityRight>
         <CommunityRightInner>
-          <CommunitySectionTitle>Want a different domain for your Lightning Address?</CommunitySectionTitle>
+          <CommunitySectionTitle>
+            Want a different domain for your Lightning Address?
+          </CommunitySectionTitle>
           <CommunityDescriptionSmall>
-            Use one of the community-supported Lightning Address servers below to connect your Lightning backend to a Lightning Address noncustodially!
+            Use one of the community-supported Lightning Address servers below
+            to connect your Lightning backend to a Lightning Address
+            noncustodially!
           </CommunityDescriptionSmall>
           <CommunityListWrapper>
-            {SATDRESS_SERVERS.map(item => (
+            {SATDRESS_SERVERS.map((item) => (
               <Link key={item.urlText} href={item.urlLink} target="_blank">
                 {item.urlText}
               </Link>
@@ -599,7 +610,7 @@ export const Community = () => (
             Additional resources for using and supporting Lightning Addresses:
           </CommunityDescriptionSmall>
           <CommunityVerticalListWrapper>
-            {BRIDGE_SERVERS.map(item => (
+            {BRIDGE_SERVERS.map((item) => (
               <VerticalLinkWrapper key={item.urlText}>
                 <VerticalLink href={item.urlLink} target="_blank">
                   {item.urlText}

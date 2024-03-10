@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { media } from '../utils';
+import { media } from "../utils";
 
 const ProvidersModule = styled.div`
   display: flex;
@@ -115,7 +115,7 @@ const ProvidersEmailButton = styled.div`
   box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
 
   &:hover {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
   }
 
@@ -181,10 +181,11 @@ const ProviderSignUpButton = styled.a`
   text-decoration: none;
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  opacity: ${({ isDisabled }) => isDisabled ? '0.5' : '1'};
+  opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
 
   &:hover {
-    background: ${({ isDisabled }) => isDisabled ? '#0070f3' : 'rgba(0,118,255,0.9)'};
+    background: ${({ isDisabled }) =>
+      isDisabled ? "#0070f3" : "rgba(0,118,255,0.9)"};
     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
   }
 
@@ -215,194 +216,192 @@ const DomainURL = styled.div`
 
 const PROVIDERS = [
   {
-    name: 'ZEBEDEE',
-    image: '/images/zbd.svg',
-    imageStyle: { width: '130px', marginTop: '10px', marginBottom: '3px' },
-    lightningAddressDomain: 'zbd.gg',
-    url: 'https://zbd.gg',
-    buttonText: 'Download App',
+    name: "ZEBEDEE",
+    image: "/images/zbd.svg",
+    imageStyle: { width: "130px", marginTop: "10px", marginBottom: "3px" },
+    lightningAddressDomain: "zbd.gg",
+    url: "https://zbd.gg",
+    buttonText: "Download App",
   },
   {
-    name: 'BTCPay Server',
-    image: '/images/btcpay.svg',
-    imageStyle: { width: '95px' },
-    lightningAddressDomain: 'yourbtcpay.server',
-    url: 'https://btcpayserver.org/',
+    name: "BTCPay Server",
+    image: "/images/btcpay.svg",
+    imageStyle: { width: "95px" },
+    lightningAddressDomain: "yourbtcpay.server",
+    url: "https://btcpayserver.org/",
   },
   {
-    name: 'Bitrefill',
-    image: '/images/bitrefill.svg',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'bitrefill.me',
-    url: 'https://bitrefill.com/',
+    name: "Bitrefill",
+    image: "/images/bitrefill.svg",
+    imageStyle: { width: "125px" },
+    lightningAddressDomain: "bitrefill.me",
+    url: "https://bitrefill.com/",
   },
   {
-    name: 'LNMarkets',
-    image: '/images/lnmarkets.png',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'lnmarkets.com',
-    url: 'https://lnmarkets.com/',
-    buttonText: 'Open LN Markets',
+    name: "LNMarkets",
+    image: "/images/lnmarkets.png",
+    imageStyle: { width: "125px" },
+    lightningAddressDomain: "lnmarkets.com",
+    url: "https://lnmarkets.com/",
+    buttonText: "Open LN Markets",
   },
   {
-    name: 'Strike',
-    image: '/images/STRIKE.png',
-    imageStyle: { width: '130px' },
-    lightningAddressDomain: 'strike.me',
-    url: 'https://strike.me/',
-    buttonText: 'Download Strike',
+    name: "Strike",
+    image: "/images/STRIKE.png",
+    imageStyle: { width: "130px" },
+    lightningAddressDomain: "strike.me",
+    url: "https://strike.me/",
+    buttonText: "Download Strike",
   },
   {
-    name: 'Coincorner',
-    image: '/images/coincorner.svg',
-    imageStyle: { width: '130px' },
-    lightningAddressDomain: 'coincorner.io',
-    url: 'https://coincorner.com/',
+    name: "Coincorner",
+    image: "/images/coincorner.svg",
+    imageStyle: { width: "130px" },
+    lightningAddressDomain: "coincorner.io",
+    url: "https://coincorner.com/",
   },
   {
-    name: 'Bipa',
-    image: '/images/bipa.png',
-    imageStyle: { width: '45px' },
-    lightningAddressDomain: 'bipa.app',
-    url: 'https://bipa.app',
-    buttonText: 'Download Wallet',
+    name: "Bipa",
+    image: "/images/bipa.png",
+    imageStyle: { width: "45px" },
+    lightningAddressDomain: "bipa.app",
+    url: "https://bipa.app",
+    buttonText: "Download Wallet",
   },
   {
-    name: 'FastBitcoins',
-    image: '/images/fastbitcoins.png',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'fbtc.me',
-    url: 'https://fastbitcoins.com/',
+    name: "FastBitcoins",
+    image: "/images/fastbitcoins.png",
+    imageStyle: { width: "125px" },
+    lightningAddressDomain: "fbtc.me",
+    url: "https://fastbitcoins.com/",
   },
   {
-    name: 'Spark Wallet',
-    image: '/images/sparkwallet.svg',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'sparkwallet.me',
-    url: 'https://sparkwallet.io/',
+    name: "Spark Wallet",
+    image: "/images/sparkwallet.svg",
+    imageStyle: { width: "125px" },
+    lightningAddressDomain: "sparkwallet.me",
+    url: "https://sparkwallet.io/",
   },
   {
-    name: 'coinos',
-    image: '/images/coinos.png',
-    imageStyle: { width: '130px', marginBottom: '-8px' },
-    lightningAddressDomain: 'coinos.io',
-    url: 'https://coinos.io',
-    buttonText: 'Open Coinos',
+    name: "coinos",
+    image: "/images/coinos.png",
+    imageStyle: { width: "130px", marginBottom: "-8px" },
+    lightningAddressDomain: "coinos.io",
+    url: "https://coinos.io",
+    buttonText: "Open Coinos",
   },
   {
-    name: '@LightningTipBot',
-    image: '/images/lightningtipbot.svg',
-    imageStyle: { width: '115px' },
-    lightningAddressDomain: 'ln.tips',
-    url: 'https://t.me/LightningTipBot',
-    buttonText: 'Open Telegram',
+    name: "@LightningTipBot",
+    image: "/images/lightningtipbot.svg",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "ln.tips",
+    url: "https://t.me/LightningTipBot",
+    buttonText: "Open Telegram",
   },
   {
-    name: 'Blink',
-    image: '/images/blink.png',
-    imageStyle: { width: '115px' },
-    lightningAddressDomain: 'blink.sv',
-    url: 'https://blink.sv',
-    buttonText: 'Download Wallet',
+    name: "Blink",
+    image: "/images/blink.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "blink.sv",
+    url: "https://blink.sv",
+    buttonText: "Download Wallet",
   },
   {
-    name: 'Alby',
-    image: '/images/alby.png',
-    imageStyle: { width: '44px', paddingBottom: '2px', borderRadius: '5%' },
-    lightningAddressDomain: 'getalby.com',
-    url: 'https://getalby.com',
+    name: "Alby",
+    image: "/images/alby.png",
+    imageStyle: { width: "44px", paddingBottom: "2px", borderRadius: "5%" },
+    lightningAddressDomain: "getalby.com",
+    url: "https://getalby.com",
   },
   {
-    name: 'Wallet of Satoshi',
-    image: '/images/wos.svg',
-    imageStyle: { width: '105px', paddingBottom: '3px' },
-    lightningAddressDomain: 'walletofsatoshi.com',
-    url: 'https://walletofsatoshi.com',
-    buttonText: 'Download Wallet',
+    name: "Wallet of Satoshi",
+    image: "/images/wos.svg",
+    imageStyle: { width: "105px", paddingBottom: "3px" },
+    lightningAddressDomain: "walletofsatoshi.com",
+    url: "https://walletofsatoshi.com",
+    buttonText: "Download Wallet",
   },
   {
-    name: 'Noah',
-    image: '/images/noah.png',
-    imageStyle: { width: '115px' },
-    lightningAddressDomain: 'noah.me',
-    url: 'https://app.noah.com',
-    buttonText: 'Claim Address',
+    name: "Noah",
+    image: "/images/noah.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "noah.me",
+    url: "https://app.noah.com",
+    buttonText: "Claim Address",
     comingSoon: false,
   },
   {
-    name: 'Bitnob',
-    image: '/images/bitnob2.png',
-    imageStyle: { width: '115px' },
-    lightningAddressDomain: 'bitnob.io',
-    url: 'https://bitnob.com',
-    buttonText: 'Download Wallet',
+    name: "Bitnob",
+    image: "/images/bitnob2.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "bitnob.io",
+    url: "https://bitnob.com",
+    buttonText: "Download Wallet",
   },
   {
-    name: 'Bottlepay',
-    image: '/images/bottlepay.png',
-    imageStyle: { width: '125px' },
-    lightningAddressDomain: 'bottlepay.me',
-    url: 'https://bottlepay.com',
-    buttonText: 'Download Wallet',
-  },
-  {
-    name: 'Machankura',
-    image: '/images/machankura.png',
-    imageStyle: { width: '45px' },
-    lightningAddressDomain: '8333.mobi',
-    url: 'https://8333.mobi',
-    buttonText: 'Dial Machankura',
+    name: "Machankura",
+    image: "/images/machankura.png",
+    imageStyle: { width: "45px" },
+    lightningAddressDomain: "8333.mobi",
+    url: "https://8333.mobi",
+    buttonText: "Dial Machankura",
     comingSoon: false,
   },
   {
-    name: 'Mash',
-    image: '/images/mash.svg',
-    imageStyle: { width: '125px', marginBottom: '5px' },
-    lightningAddressDomain: 'getmash.cash',
-    url: 'https://mash.com/consumer-experience/',
+    name: "Mash",
+    image: "/images/mash.svg",
+    imageStyle: { width: "125px", marginBottom: "5px" },
+    lightningAddressDomain: "getmash.cash",
+    url: "https://mash.com/consumer-experience/",
   },
   {
-    name: 'STARBACKR',
-    image: '/images/starbackr.png',
-    imageStyle: { width: '130px'},
-    lightningAddressDomain: 'starbackr.me',
-    url: 'https://app.starbackr.com',
+    name: "Bookmark.org",
+    image: "/images/bookmark.png",
+    imageStyle: { width: "130px" },
+    lightningAddressDomain: "bookmark.org",
+    url: "https://bookmark.org",
   },
   {
-    name: 'Bookmark.org',
-    image: '/images/bookmark.png',
-    imageStyle: { width: '130px'},
-    lightningAddressDomain: 'bookmark.org',
-    url: 'https://bookmark.org',
+    name: "LifPay",
+    image: "/images/lifpay.png",
+    imageStyle: { width: "45px", backgroundColor: "black", borderRadius: "5%" },
+    lightningAddressDomain: "lifpay.me",
+    url: "https://lifpay.me",
   },
   {
-    name: 'LifPay',
-    image: '/images/lifpay.png',
-    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
-    lightningAddressDomain: 'lifpay.me',
-    url: 'https://lifpay.me',
+    name: "Satoshi Lightning",
+    image: "https://vipsats.app/img/satoshi.png",
+    imageStyle: { width: "45px", backgroundColor: "black", borderRadius: "5%" },
+    lightningAddressDomain: "vipsats.app",
+    url: "https://vipsats.app",
   },
   {
-    name: 'Satoshi Lightning',
-    image: 'https://vipsats.app/img/satoshi.png',
-    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
-    lightningAddressDomain: 'vipsats.app',
-    url: 'https://vipsats.app',
+    name: "BitcoLi wallet",
+    image: "https://bitcoli.com/img/logo-40.png",
+    imageStyle: { width: "45px", backgroundColor: "black", borderRadius: "5%" },
+    lightningAddressDomain: "bitcoli.com",
+    url: "https://bitcoli.com",
   },
   {
-    name: 'BitcoLi wallet',
-    image: 'https://bitcoli.com/img/logo-40.png',
-    imageStyle: { width: '45px', backgroundColor: 'black', borderRadius: '5%'},
-    lightningAddressDomain: 'bitcoli.com',
-    url: 'https://bitcoli.com',
+    name: "Stacker News",
+    image: "/images/stackernews.png",
+    imageStyle: {
+      width: "125px",
+      backgroundColor: "black",
+      borderRadius: "5%",
+    },
+    lightningAddressDomain: "stacker.news",
+    url: "https://stacker.news",
   },
   {
-    name: 'Stacker News',
-    image: '/images/stackernews.png',
-    imageStyle: { width: '125px', backgroundColor: 'black', borderRadius: '5%' },
-    lightningAddressDomain: 'stacker.news',
-    url: 'https://stacker.news',
-  }
+    name: "NiceHash",
+    image: "/images/nicehash.png",
+    imageStyle: {
+      width: "125px",
+    },
+    lightningAddressDomain: "nicehash.com",
+    url: "https://nicehash.com",
+  },
 ];
 
 export const Providers = () => (
@@ -411,12 +410,17 @@ export const Providers = () => (
       <ProvidersLeft>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
-          Get your own Lightning Address now by using one of the apps and services that already support it. You’ll be set up in seconds!
+          Get your own Lightning Address now by using one of the apps and
+          services that already support it. You’ll be set up in seconds!
         </ProvidersDescription>
-        {PROVIDERS.map(provider => (
+        {PROVIDERS.map((provider) => (
           <ProviderCard key={provider.name}>
             <ImageWrapper>
-              <img src={provider.image} alt={provider.name} style={provider.imageStyle || {}} />
+              <img
+                src={provider.image}
+                alt={provider.name}
+                style={provider.imageStyle || {}}
+              />
               <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
             </ImageWrapper>
             <ProviderSignUpButton
@@ -431,15 +435,26 @@ export const Providers = () => (
       </ProvidersLeft>
       <ProvidersRight>
         <ProvidersRightInner>
-          <ProvidersTitle>Your app doesn't support Lightning Addresses yet?</ProvidersTitle>
+          <ProvidersTitle>
+            Your app doesn't support Lightning Addresses yet?
+          </ProvidersTitle>
           <ProvidersDescriptionSmall>
-            If your favorite Bitcoin app doesn't support Lightning Addresses yet, get in touch with the developer company and ask them to learn about how the protocol can help their users.
+            If your favorite Bitcoin app doesn't support Lightning Addresses
+            yet, get in touch with the developer company and ask them to learn
+            about how the protocol can help their users.
             <br />
             <br />
-            To make things easier, we created an email template you can send with just a click.
+            To make things easier, we created an email template you can send
+            with just a click.
           </ProvidersDescriptionSmall>
-          <ProvidersEmailButton onClick={() => window.open(`mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`)}>
-            <ProvidersEmailButtonImage src={'/images/email.svg'} alt='Email' />
+          <ProvidersEmailButton
+            onClick={() =>
+              window.open(
+                `mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`,
+              )
+            }
+          >
+            <ProvidersEmailButtonImage src={"/images/email.svg"} alt="Email" />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>
         </ProvidersRightInner>
