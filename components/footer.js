@@ -92,6 +92,10 @@ const FOOTER = [
         link: "https://blink.sv",
         title: "Blink",
       },
+      {
+        link: "https://www.bytefederal.com/bytewallet",
+        title: "ByteWallet",
+      },
     ],
   },
   {
@@ -152,6 +156,10 @@ const FOOTER = [
       {
         link: "https://blink.sv",
         title: "Blink",
+      },
+      {
+        link: "https://www.bytefederal.com/bytewallet",
+        title: "ByteWallet",
       },
     ],
   },

@@ -402,6 +402,14 @@ const PROVIDERS = [
     lightningAddressDomain: "nicehash.com",
     url: "https://nicehash.com",
   },
+  {
+    name: "ByteFederal",
+    image: "/images/bytefederal.png",
+    imageStyle: { width: "145px;"},
+    lightningAddressDomain: "bf.cash",
+    url: "https://www.bytefederal.com/bytewallet",
+    buttonText: "Download App",
+  },
 ];
 
 export const Providers = () => (

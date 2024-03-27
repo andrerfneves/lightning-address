@@ -543,6 +543,13 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "ByteFederal",
+    image: "/images/bytefederal.png",
+    imageStyle: { width: "145px;"},
+    downloadText: "Download Wallet",
+    url: "https://www.bytefederal.com/bytewallet",
+  },
 ];
 
 export const Community = () => (
