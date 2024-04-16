@@ -29,6 +29,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Bitnob](https://bitnob.com)                                      | ☑️         | ☑️         |
 | [Blink (Bitcoin Beach Wallet)](https://blink.sv/)                 | ☑️         | ☑️         |
 | [BitcoLi wallet](https://bitcoli.com/)                            | ☑️         | ☑️         |
+| [Bitkit](https://bitkit.to/)                                      | ☑️         | ----       |
 | [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
 | [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
 | [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️         |
