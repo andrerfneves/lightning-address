@@ -92,6 +92,10 @@ const FOOTER = [
         link: "https://blink.sv",
         title: "Blink",
       },
+      {
+        link: "https://app.lawalleta.ar",
+        title: "LaWallet",
+      },
     ],
   },
   {
@@ -152,6 +156,10 @@ const FOOTER = [
       {
         link: "https://blink.sv",
         title: "Blink",
+      },
+      {
+        link: "https://app.lawalleta.ar",
+        title: "LaWallet",
       },
     ],
   },
