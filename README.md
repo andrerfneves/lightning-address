@@ -23,44 +23,44 @@ If you don't want to roll out an entire HTTP / LNURL server on your own setup/in
 _Bitcoin Lightning wallets that support sending and receiving to **Lightning Addresses**_.
 
 | Wallet                                                            | Sending   | Receiving |
-| :---                                                              | :-------: | :-----:   |
-| [Alby](https://getalby.com)                                       |  ☑️        |   ☑️       |
-| [BitBanana](https://bitbanana.app)                                | ☑️         |   ----    |
-| [Bitnob](https://bitnob.com)                                      | ☑️         | ☑️         |
-| [Blink (Bitcoin Beach Wallet)](https://blink.sv/)                 | ☑️         | ☑️         |
-| [BitcoLi wallet](https://bitcoli.com/)                            | ☑️         | ☑️         |
-| [Blixt](https://blixtwallet.github.io/)                           | ☑️         | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
-| [BlueWallet](https://bluewallet.io/)                              | ☑️         |   ----    |
-| [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️         |
-| [Bottlepay](https://bottlepay.com/)                               | ☑️       | ☑️       |
-| [Breez](https://breez.technology/)                                | ☑️         |   ----    |
-| [BTCPay](https://btcpayserver.org/)                               | ☑️         | ☑️        |
-| [CoinCorner](https://www.coincorner.com/)                         |  ☑️        |   ☑️    |
-| [CoinKit](https://coinkit.de/)                                    |  ☑️        |   ☑️    |
-| [coinos](https://coinos.io/)                                      | ☑️         | ☑️         |
-| [LifPay](https://lifpay.me/)                                      | ☑️         | ☑️         |
-| [LNbits](https://lnbits.org/)                                     | ☑️         | WIP       |
-| [@lntxbot](https://lntxbot.com/)                                  | ☑️         | ☑️         |
-| [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️         | ☑️         |
-| [Machankura](https://8333.mobi/)                                  | ☑️         | ☑️         |
-| [Mash](https://getmash.com/)                                      | ----      |   ☑️       |
-| [Muun](https://muun.com/)                                         |           |           |
-| [NOAH](https://app.noah.com/)                                     | ☑️         | ☑️         |
-| [Oak Node](https://oak-node.net)                                  | ☑️         |   ----    |
-| [Phoenix](https://phoenix.acinq.co/)                              | ☑️         |   ----    |
-| [Pouch.ph](https://pouch.ph/)                                     | ☑️         |   ☑️       |
-| [Satoshi Lightning](https://vipsats.app)                          | ☑️         |   ☑️       |
-| [SBW](https://sbw.app/)                                           | ☑️         |   ----    |
-| [Spark Wallet](https://sparkwallet.io/)                           |  ☑️        |   ☑️       |
-| [Speed Wallet](https://www.speed.app/)                           |  ☑️        |   ☑️       |
-| [Stacker News](https://stacker.news/)                             | ----      |   ☑️       |
-| [Strike](https://strike.me/)                                      | ☑️         |   ☑️       |
-| [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️         |   ----    |
-| [Voltpay App](https://voltpay.app)                                | ☑️         |   ☑️    |
-| [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️         |   ☑️    |
-| [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️         | ☑️       |
-| [Zeus](https://github.com/ZeusLN/zeus)                            |  ☑️        |   ----    |
-| [LaWallet](https://app.lawallet.ar)                               | ☑️         |   ☑️       |
+| :---                                                              | :-------: | :-------: |
+| [Alby](https://getalby.com)                                       | ☑️        | ☑️        |
+| [BitBanana](https://bitbanana.app)                                | ☑️        | ----      |
+| [Bitnob](https://bitnob.com)                                      | ☑️        | ☑️        |
+| [Blink (Bitcoin Beach Wallet)](https://blink.sv/)                 | ☑️        | ☑️        |
+| [BitcoLi wallet](https://bitcoli.com/)                            | ☑️        | ☑️        |
+| [Blixt](https://blixtwallet.github.io/)                           | ☑️        | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
+| [BlueWallet](https://bluewallet.io/)                              | ☑️        | ----      |
+| [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️        |
+| [Bottlepay](https://bottlepay.com/)                               | ☑️        | ☑️        |
+| [Breez](https://breez.technology/)                                | ☑️        | ----      |
+| [BTCPay](https://btcpayserver.org/)                               | ☑️        | ☑️        |
+| [CoinCorner](https://www.coincorner.com/)                         | ☑️        | ☑️        |
+| [CoinKit](https://coinkit.de/)                                    | ☑️        | ☑️        |
+| [coinos](https://coinos.io/)                                      | ☑️        | ☑️        |
+| [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
+| [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
+| [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
+| [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️   | ☑️        |
+| [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
+| [Mash](https://getmash.com/)                                      | ----      | ☑️        |
+| [Muun](https://muun.com/)                                         | ----      | ----      |
+| [NOAH](https://app.noah.com/)                                     | ☑️        | ☑️        |
+| [Oak Node](https://oak-node.net)                                  | ☑️        | ----      |
+| [Phoenix](https://phoenix.acinq.co/)                              | ☑️        | ----      |
+| [Pouch.ph](https://pouch.ph/)                                     | ☑️        | ☑️        |
+| [Satoshi Lightning](https://vipsats.app)                          | ☑️        | ☑️        |
+| [SBW](https://sbw.app/)                                           | ☑️        | ----      |
+| [Spark Wallet](https://sparkwallet.io/)                           | ☑️        | ☑️        |
+| [Speed Wallet](https://www.speed.app/)                            | ☑️        | ☑️        |
+| [Stacker News](https://stacker.news/)                             | ----      | ☑️        |
+| [Strike](https://strike.me/)                                      | ☑️        | ☑️        |
+| [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️        | ----      |
+| [Voltpay App](https://voltpay.app)                                | ☑️        | ☑️        |
+| [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️        | ☑️        |
+| [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️        | ☑️        |
+| [Zeus](https://github.com/ZeusLN/zeus)                            | ☑️        | ----      |
+| [LaWallet](https://app.lawallet.ar)                               | ☑️        | ☑️        |
 
 ## TLDR
 
