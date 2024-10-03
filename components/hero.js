@@ -1,9 +1,9 @@
-import TextLoop from "react-text-loop";
-import styled from "styled-components";
-import { PureComponent } from "react";
-import Fade from "react-reveal/Fade";
+import TextLoop from 'react-text-loop';
+import styled from 'styled-components';
+import { PureComponent } from 'react';
+import Fade from 'react-reveal/Fade';
 
-import { media } from "../utils";
+import { media } from '../utils';
 
 const Wrapper = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ const Intro = styled.p`
   padding: 8px 12px;
   border-radius: 7px;
   margin: 0 auto 20px auto;
-  background: rgba(0, 118, 255, 0.1);
+  background: rgba(0,118,255,0.1);
 
   ${media.tablet`
     font-size: 18px;
@@ -138,7 +138,7 @@ const CTAPrimary = styled.a`
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
 
   &:hover {
-    background: rgba(0, 118, 255, 0.9);
+    background: rgba(0,118,255,0.9);
     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
   }
 
@@ -162,7 +162,7 @@ const CTASecondary = styled.a`
   box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
     box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
   }
 
@@ -196,7 +196,7 @@ const LicenseLink = styled.a`
 
   &:hover {
     color: #0070f3;
-    background: rgba(0, 118, 255, 0.1);
+    background: rgba(0,118,255,0.1);
   }
 `;
 
@@ -241,9 +241,7 @@ export class Hero extends PureComponent {
         </Fade>
         <Fade bottom when={showLightningAddr}>
           <Description>
-            <Bold>Like an email address, but for your Bitcoin!</Bold> A
-            massively simpler way for anyone to send you Bitcoin instantly on
-            the Lightning Network.
+            <Bold>Like an email address, but for your Bitcoin!</Bold> A massively simpler way for anyone to send you Bitcoin instantly on the Lightning Network.
           </Description>
           <LoopWrapper>
             <FixedTextPart>you@</FixedTextPart>
@@ -272,21 +270,11 @@ export class Hero extends PureComponent {
         <Fade bottom when={showCTAs}>
           <CTAWrapper>
             <CTAPrimary href="#providers">Get a Lightning Address</CTAPrimary>
-            <CTASecondary
-              href="https://github.com/andrerfneves/lightning-address/blob/master/README.md"
-              target="_blank"
-            >
-              Read Documentation
-            </CTASecondary>
+            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Read Documentation</CTASecondary>
           </CTAWrapper>
           <LicenseWrapper>
             <LicenseText>License: MIT</LicenseText>
-            <LicenseLink
-              href="https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md"
-              target="_blank"
-            >
-              GitHub
-            </LicenseLink>
+            <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
           </LicenseWrapper>
         </Fade>
       </Wrapper>
