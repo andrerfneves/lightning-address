@@ -543,6 +543,16 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "Numeraire",
+    image: "/images/numeraire.png",
+    downloadText: "Open Numeraire",
+    url: "https://numeraire.tech/account",
+    imageStyle: {
+      width: "115px",
+      borderRadius: "5%",
+    },
+  },
 ];
 
 export const Community = () => (
