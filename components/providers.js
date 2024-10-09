@@ -402,6 +402,17 @@ const PROVIDERS = [
     lightningAddressDomain: "nicehash.com",
     url: "https://nicehash.com",
   },
+  {
+    name: "LaWallet",
+    image: "/images/lawallet.png",
+    imageStyle: {
+      width: "125px",
+      borderRadius: "5%",
+      marginBottom: "2px",
+    },
+    lightningAddressDomain: "lawallet.ar",
+    url: "https://app.lawallet.ar/signup",
+  },
 ];
 
 export const Providers = () => (

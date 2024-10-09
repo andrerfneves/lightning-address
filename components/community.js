@@ -543,6 +543,17 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "LaWallet",
+    image: "/images/lawallet.png",
+    downloadText: "Open LaWallet",
+    url: "https://app.lawallet.ar",
+    imageStyle: {
+      width: "125px",
+      borderRadius: "5%",
+      marginBottom: "2px",
+    },
+  },
 ];
 
 export const Community = () => (
