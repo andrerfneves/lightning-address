@@ -93,6 +93,10 @@ const FOOTER = [
         title: "Blink",
       },
       {
+        link: "https://app.lawallet.ar",
+        title: "LaWallet",
+      },
+      {
         link: "https://numeraire.tech",
         title: "Numeraire",
       },
@@ -156,6 +160,10 @@ const FOOTER = [
       {
         link: "https://blink.sv",
         title: "Blink",
+      },
+      {
+        link: "https://app.lawallet.ar",
+        title: "LaWallet",
       },
       {
         link: "https://numeraire.tech",
