@@ -419,7 +419,7 @@ const PROVIDERS = [
     imageStyle: { width: "115px" },
     lightningAddressDomain: "numeraire.tech",
     url: "https://numeraire.tech/account",
-  },
+  }
 ];
 
 export const Providers = () => (
@@ -468,7 +468,7 @@ export const Providers = () => (
           <ProvidersEmailButton
             onClick={() =>
               window.open(
-                `mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`
+                `mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`,
               )
             }
           >
