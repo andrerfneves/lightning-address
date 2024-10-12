@@ -96,6 +96,10 @@ const FOOTER = [
         link: "https://app.lawallet.ar",
         title: "LaWallet",
       },
+      {
+        link: "https://numeraire.tech",
+        title: "Numeraire",
+      },
     ],
   },
   {
@@ -160,6 +164,10 @@ const FOOTER = [
       {
         link: "https://app.lawallet.ar",
         title: "LaWallet",
+      },
+      {
+        link: "https://numeraire.tech",
+        title: "Numeraire",
       },
     ],
   },

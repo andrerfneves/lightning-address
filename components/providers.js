@@ -413,6 +413,13 @@ const PROVIDERS = [
     lightningAddressDomain: "lawallet.ar",
     url: "https://app.lawallet.ar/signup",
   },
+  {
+    name: "Numeraire",
+    image: "/images/numeraire.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "numeraire.tech",
+    url: "https://numeraire.tech/account",
+  }
 ];
 
 export const Providers = () => (
