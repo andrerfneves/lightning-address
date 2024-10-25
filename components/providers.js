@@ -419,6 +419,13 @@ const PROVIDERS = [
     imageStyle: { width: "115px" },
     lightningAddressDomain: "numeraire.tech",
     url: "https://numeraire.tech/account",
+  },
+  {
+    name: "Tran$end App",
+    image: "/images/transend.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "transend.me",
+    url: "https://dash.transend.me/dash",
   }
 ];
 
