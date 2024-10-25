@@ -564,6 +564,16 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "Tran$end",
+    image: "/images/transend.png",
+    downloadText: "Open Tran$end",
+    url: "https://dash.transend.me/dash",
+    imageStyle: {
+      width: "115px",
+      borderRadius: "5%",
+    },
+  },
 ];
 
 export const Community = () => (
