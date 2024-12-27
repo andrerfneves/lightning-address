@@ -421,11 +421,11 @@ const PROVIDERS = [
     url: "https://numeraire.tech/account",
   },
   {
-    name: "Tran$end App",
-    image: "/images/transend.png",
+    name: "Melt Finance",
+    image: "/images/meltfinance.png",
     imageStyle: { width: "115px" },
-    lightningAddressDomain: "transend.me",
-    url: "https://dash.transend.me/dash",
+    lightningAddressDomain: "meltfi.top",
+    url: "https://app.meltfinance.org",
   }
 ];
 
