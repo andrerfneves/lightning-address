@@ -101,8 +101,8 @@ const FOOTER = [
         title: "Numeraire",
       },
       {
-        link: "https://transend.me",
-        title: "Tran$end",
+        link: "https://meltfinance.org",
+        title: "Melt Finance",
       },
     ],
   },
@@ -174,8 +174,8 @@ const FOOTER = [
         title: "Numeraire",
       },
       {
-        link: "https://transend.me",
-        title: "Tran$end",
+        link: "https://meltfinance.org",
+        title: "Melt Finance",
       },
     ],
   },
