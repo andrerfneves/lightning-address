@@ -565,10 +565,10 @@ const WALLETS = [
     },
   },
   {
-    name: "Tran$end",
-    image: "/images/transend.png",
-    downloadText: "Open Tran$end",
-    url: "https://dash.transend.me/dash",
+    name: "Melt Finance",
+    image: "/images/meltfinance.png",
+    downloadText: "Open MeltFi",
+    url: "https://app.meltfinance.org",
     imageStyle: {
       width: "115px",
       borderRadius: "5%",
