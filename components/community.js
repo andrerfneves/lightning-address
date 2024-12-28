@@ -564,6 +564,16 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "Melt Finance",
+    image: "/images/meltfinance.png",
+    downloadText: "Open MeltFi",
+    url: "https://app.meltfinance.org",
+    imageStyle: {
+      width: "115px",
+      borderRadius: "5%",
+    },
+  },
 ];
 
 export const Community = () => (

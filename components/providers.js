@@ -419,6 +419,13 @@ const PROVIDERS = [
     imageStyle: { width: "115px" },
     lightningAddressDomain: "numeraire.tech",
     url: "https://numeraire.tech/account",
+  },
+  {
+    name: "Melt Finance",
+    image: "/images/meltfinance.png",
+    imageStyle: { width: "115px" },
+    lightningAddressDomain: "meltfi.top",
+    url: "https://app.meltfinance.org",
   }
 ];
 

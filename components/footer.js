@@ -100,6 +100,10 @@ const FOOTER = [
         link: "https://numeraire.tech",
         title: "Numeraire",
       },
+      {
+        link: "https://meltfinance.org",
+        title: "Melt Finance",
+      },
     ],
   },
   {
@@ -168,6 +172,10 @@ const FOOTER = [
       {
         link: "https://numeraire.tech",
         title: "Numeraire",
+      },
+      {
+        link: "https://meltfinance.org",
+        title: "Melt Finance",
       },
     ],
   },

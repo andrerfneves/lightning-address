@@ -265,6 +265,7 @@ export class Hero extends PureComponent {
               <LoopedTextPart>vipsats.app</LoopedTextPart>
               <LoopedTextPart>lawallet.ar</LoopedTextPart>
               <LoopedTextPart>numeraire.tech</LoopedTextPart>
+              <LoopedTextPart>meltfinance.org</LoopedTextPart>
             </TextLoop>
           </LoopWrapper>
         </Fade>
