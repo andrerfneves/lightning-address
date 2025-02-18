@@ -330,10 +330,6 @@ const SATDRESS_SERVERS = [
     urlText: "@payaddress.co",
   },
   {
-    urlLink: "https://sats.pm",
-    urlText: "@sats.pm",
-  },
-  {
     urlLink: "https://lnbitcoin.cz",
     urlText: "@lnbitcoin.cz",
   },
