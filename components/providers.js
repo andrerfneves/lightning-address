@@ -419,6 +419,14 @@ const PROVIDERS = [
     imageStyle: { width: "115px" },
     lightningAddressDomain: "numeraire.tech",
     url: "https://numeraire.tech/account",
+  },
+  {
+    name: "Piggy",
+    image: "/images/piggy.png",
+    imageStyle: { width: "130px" },
+    lightningAddressDomain: "pig.gy",
+    url: "https://pig.gy",
+    buttonText: "Get a Piggy",
   }
 ];
 
