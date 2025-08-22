@@ -427,7 +427,7 @@ const PROVIDERS = [
     lightningAddressDomain: "sparkmoneybot.com",
     url: "https://t.me/sparkmoneybot",
     buttonText: "Open Telegram",
-  },
+  }
 ];
 
 export const Providers = () => (
