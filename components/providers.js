@@ -419,7 +419,15 @@ const PROVIDERS = [
     imageStyle: { width: "115px" },
     lightningAddressDomain: "numeraire.tech",
     url: "https://numeraire.tech/account",
-  }
+  },
+  {
+    name: "@SparkMoneyBot",
+    image: "/images/smbicon192.png",
+    imageStyle: { width: "192px" },
+    lightningAddressDomain: "sparkmoneybot.com",
+    url: "https://t.me/sparkmoneybot",
+    buttonText: "Open Telegram",
+  },
 ];
 
 export const Providers = () => (
