@@ -49,6 +49,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Numeraire](https://numeraire.tech/)                              | ☑️         | ☑️         |
 | [Oak Node](https://oak-node.net)                                  | ☑️        | ----      |
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️        | ----      |
+| [Piggy](https://pig.gy/)                                          | ☑️        | ☑️        |
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️        | ☑️        |
 | [Satoshi Lightning](https://vipsats.app)                          | ☑️        | ☑️        |
 | [SBW](https://sbw.app/)                                           | ☑️        | ----      |

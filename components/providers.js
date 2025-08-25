@@ -427,6 +427,14 @@ const PROVIDERS = [
     lightningAddressDomain: "sparkmoneybot.com",
     url: "https://t.me/sparkmoneybot",
     buttonText: "Open Telegram",
+  },
+  {
+    name: "Piggy",
+    image: "/images/piggy.png",
+    imageStyle: { width: "130px" },
+    lightningAddressDomain: "pig.gy",
+    url: "https://pig.gy",
+    buttonText: "Get a Piggy",
   }
 ];
 
