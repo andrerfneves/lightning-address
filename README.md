@@ -53,6 +53,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️        | ☑️        |
 | [Satoshi Lightning](https://vipsats.app)                          | ☑️        | ☑️        |
 | [SBW](https://sbw.app/)                                           | ☑️        | ----      |
+| [Spark Money Bot](https://sparkmoneybot.com/)                     | WIP       | ☑️        |
 | [Spark Wallet](https://sparkwallet.io/)                           | ☑️        | ☑️        |
 | [Speed Wallet](https://www.speed.app/)                            | ☑️        | ☑️        |
 | [Stacker News](https://stacker.news/)                             | ----      | ☑️        |

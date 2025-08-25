@@ -421,6 +421,14 @@ const PROVIDERS = [
     url: "https://numeraire.tech/account",
   },
   {
+    name: "@SparkMoneyBot",
+    image: "/images/smbicon192.png",
+    imageStyle: { width: "192px" },
+    lightningAddressDomain: "sparkmoneybot.com",
+    url: "https://t.me/sparkmoneybot",
+    buttonText: "Open Telegram",
+  },
+  {
     name: "Piggy",
     image: "/images/piggy.png",
     imageStyle: { width: "130px" },
