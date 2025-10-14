@@ -65,10 +65,6 @@ const FOOTER = [
         title: "LNBits",
       },
       {
-        link: "https://t.me/LightningTipBot",
-        title: "@LightningTipBot",
-      },
-      {
         link: "https://getalby.com",
         title: "Alby",
       },
@@ -132,10 +128,6 @@ const FOOTER = [
       {
         link: "https://github.com/bumi/lnme",
         title: "LnMe",
-      },
-      {
-        link: "https://t.me/LightningTipBot",
-        title: "@LightningTipBot",
       },
       {
         link: "https://getalby.com",

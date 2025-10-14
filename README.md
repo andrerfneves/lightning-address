@@ -41,7 +41,6 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
 | [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
-| [@LightningTipBot](https://github.com/LightningTipBot/LightningTipBot) | ☑️   | ☑️        |
 | [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
 | [Mash](https://getmash.com/)                                      | ----      | ☑️        |
 | [Muun](https://muun.com/)                                         | ----      | ----      |
