@@ -476,12 +476,6 @@ const WALLETS = [
     url: "https://lnbits.com/",
   },
   {
-    name: "@LightningTipBot",
-    image: "/images/lightningtipbot.svg",
-    downloadText: "Open @LightningTipBot",
-    url: "https://t.me/LightningTipBot",
-  },
-  {
     name: "Alby",
     image: "/images/alby.png",
     downloadText: "Open Alby",

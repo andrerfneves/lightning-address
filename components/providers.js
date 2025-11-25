@@ -291,14 +291,6 @@ const PROVIDERS = [
     buttonText: "Open Coinos",
   },
   {
-    name: "@LightningTipBot",
-    image: "/images/lightningtipbot.svg",
-    imageStyle: { width: "115px" },
-    lightningAddressDomain: "ln.tips",
-    url: "https://t.me/LightningTipBot",
-    buttonText: "Open Telegram",
-  },
-  {
     name: "Blink",
     image: "/images/blink.png",
     imageStyle: { width: "115px" },
