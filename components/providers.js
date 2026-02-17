@@ -300,8 +300,8 @@ const PROVIDERS = [
   },
   {
     name: "Alby",
-    image: "/images/alby.png",
-    imageStyle: { width: "44px", paddingBottom: "2px", borderRadius: "5%" },
+    image: "/images/alby.svg",
+    imageStyle: { width: "100px" },
     lightningAddressDomain: "getalby.com",
     url: "https://getalby.com",
   },

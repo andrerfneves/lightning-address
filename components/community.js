@@ -477,12 +477,11 @@ const WALLETS = [
   },
   {
     name: "Alby",
-    image: "/images/alby.png",
+    image: "/images/alby.svg",
     downloadText: "Open Alby",
     url: "https://getalby.com",
     imageStyle: {
-      width: "50px",
-      borderRadius: "5%",
+      width: "105px",
     },
   },
   {
