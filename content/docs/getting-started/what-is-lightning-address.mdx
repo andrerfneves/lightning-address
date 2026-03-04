@@ -1,0 +1,43 @@
+# What is Lightning Address?
+
+Lightning Address is an [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1) that allows anyone to send you Bitcoin over the Lightning Network.
+
+**Like an email address, but for Bitcoin.**
+
+Instead of scanning QR codes or pasting long invoices, you can simply share an address like `user@zbd.gg` and receive instant Bitcoin payments from anywhere in the world.
+
+## The Problem
+
+Traditional Lightning payments require:
+1. Generating a new invoice for each payment
+2. Communicating that invoice to the sender (usually via QR code)
+3. The sender scanning or pasting the invoice
+4. Completing the payment before the invoice expires
+
+This works, but it's not very user-friendly. You can't just tell someone "send Bitcoin to me" without going through this dance.
+
+## The Solution
+
+Lightning Address (LUD-16) builds on top of LNURL-pay to provide a simple, human-readable identifier that:
+
+- **Never expires** — your address stays the same forever
+- **Works everywhere** — any LNURL-compatible wallet can pay it
+- **Is memorable** — just like an email address
+- **Supports metadata** — comments, sender info, and more
+
+## Example
+
+With a Lightning Address like `andre@zbd.gg`:
+
+1. Open any Lightning wallet that supports Lightning Address
+2. Paste `andre@zbd.gg` as the recipient
+3. Enter the amount you want to send
+4. Hit send
+
+That's it. No QR codes, no invoice generation, no expiration worries.
+
+## Who Created It?
+
+Lightning Address was created by [Andre Neves](https://twitter.com/andreneves) and is maintained as an open protocol. The specification lives at [github.com/andrerfneves/lightning-address](https://github.com/andrerfneves/lightning-address).
+
+The protocol is supported by [ZBD](https://zbd.gg) as the primary steward, but is fully open and implemented by dozens of wallets and services worldwide.

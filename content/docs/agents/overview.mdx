@@ -1,0 +1,152 @@
+# Lightning Address for Agents & AI
+
+Lightning Address is the payment primitive for the agentic web. Its simplicity and programmability make it the ideal way for AI agents to send and receive Bitcoin.
+
+## Why Agents Love Lightning Address
+
+### Static and Deterministic
+
+Unlike traditional Lightning invoices that expire and require interactive generation, a Lightning Address is:
+
+- **Permanent** — `agent@company.ai` always works
+- **No state** — no invoice lifecycle to manage
+- **Predictable** — same input, same result
+
+### One HTTP Call to Pay
+
+Paying a Lightning Address requires just two HTTP requests:
+
+```typescript
+// 1. Get payment parameters
+const params = await fetch('https://domain.com/.well-known/lnurlp/user');
+
+// 2. Get invoice and pay
+const invoice = await fetch(params.callback + '?amount=1000');
+await payInvoice(invoice.pr);
+```
+
+No WebSocket connections, no polling, no complex state management.
+
+### Human-Readable and Machine-Addressable
+
+Agents can work with addresses that humans can also understand:
+
+```
+research-agent@company.ai
+api-credits@service.com
+bounty-fund@project.org
+```
+
+This makes debugging, auditing, and configuration straightforward.
+
+## Capabilities for Agents
+
+### Comments (LUD-12)
+
+Attach context and intent to every payment:
+
+```typescript
+await payLightningAddress('service@api.com', 50000, {
+  comment: 'API call: summarize-document, request-id: abc123'
+});
+```
+
+### Sender Identity (LUD-18)
+
+Identify the paying agent for accountability:
+
+```typescript
+await payLightningAddress('creator@platform.com', 10000, {
+  payerData: {
+    name: 'Research Agent v2.1',
+    identifier: 'research@mycompany.ai'
+  }
+});
+```
+
+### Payment Verification (LUD-21)
+
+Get cryptographic proof of settlement:
+
+```typescript
+const result = await payLightningAddress('service@api.com', 100000);
+const proof = await verifyPayment(result.paymentHash);
+
+if (proof.settled) {
+  // Proceed with confidence
+}
+```
+
+### Payment Rail Discovery (LUD-25)
+
+Let agents automatically select the optimal payment rail:
+
+```typescript
+const options = await fetch('/.well-known/pay-options/service');
+const bestRail = selectOptimalRail(options, {
+  priority: 'speed',
+  maxFee: 100
+});
+```
+
+## Agent Payment Patterns
+
+### Pay-Per-Use APIs
+
+```typescript
+async function callPaidAPI(endpoint: string, data: object) {
+  // Get the cost
+  const cost = await fetch(`${endpoint}/cost`, {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+
+  // Pay the Lightning Address
+  const payment = await payLightningAddress(
+    cost.lightningAddress,
+    cost.amount,
+    { comment: `Request: ${cost.requestId}` }
+  );
+
+  // Make the API call with payment proof
+  return fetch(endpoint, {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'X-Payment-Hash': payment.hash }
+  });
+}
+```
+
+### Agent-to-Agent Payments
+
+```typescript
+// Agent A pays Agent B for a service
+await payLightningAddress('data-agent@service.ai', 25000, {
+  payerData: {
+    identifier: 'analysis-agent@company.ai'
+  },
+  comment: JSON.stringify({
+    task: 'fetch-market-data',
+    callback: 'https://company.ai/agent/callback'
+  })
+});
+```
+
+### Bounty and Reward Systems
+
+```typescript
+// Pay out bounty on task completion
+const bounty = await getBountyForTask(taskId);
+await payLightningAddress(bounty.claimant, bounty.amount, {
+  comment: `Bounty payout: Task #${taskId}`
+});
+```
+
+## Getting Started
+
+1. **Get an address** — Create a Lightning Address for your agent
+2. **Implement payments** — Use any LNURL library to pay addresses
+3. **Add identity** — Include payerData to identify your agent
+4. **Verify settlements** — Use LUD-21 for trustless confirmation
+
+See the [llms.txt](/docs/agents/llms-txt) documentation for machine-readable protocol specs.

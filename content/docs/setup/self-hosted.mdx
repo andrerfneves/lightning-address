@@ -1,0 +1,95 @@
+# Self-Hosted (DIY)
+
+Want to run your own Lightning Address on your domain? This guide walks you through setting up a self-hosted LNURL-pay server.
+
+## Requirements
+
+- A domain you control
+- A web server (or serverless platform)
+- A Lightning node or custodial account to receive payments
+
+## Basic Implementation
+
+Your server needs to handle two endpoints:
+
+### 1. The Well-Known Endpoint
+
+```
+GET https://yourdomain.com/.well-known/lnurlp/{username}
+```
+
+Return:
+
+```json
+{
+  "callback": "https://yourdomain.com/lnurlp/{username}/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay {username}@yourdomain.com\"]]",
+  "tag": "payRequest"
+}
+```
+
+### 2. The Callback Endpoint
+
+```
+GET https://yourdomain.com/lnurlp/{username}/callback?amount={msats}
+```
+
+When called, generate a Lightning invoice for the requested amount and return:
+
+```json
+{
+  "pr": "lnbc...",
+  "routes": []
+}
+```
+
+## Using LNbits
+
+[LNbits](https://lnbits.org) provides a ready-made LNURL-pay extension:
+
+1. Install LNbits on your server
+2. Enable the LNURLp extension
+3. Create a pay link for each user
+4. Point your `.well-known/lnurlp` to LNbits
+
+## Using BTCPay Server
+
+[BTCPay Server](https://btcpayserver.org) supports Lightning Address natively:
+
+1. Set up BTCPay Server with Lightning
+2. Enable LNURL in store settings
+3. Configure your domain's `.well-known` to point to BTCPay
+
+## Proxy Setup
+
+If you just need to redirect to another provider, create a simple proxy:
+
+```javascript
+// Example: Cloudflare Worker
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const username = url.pathname.split('/').pop();
+
+    // Proxy to your actual provider
+    const upstream = `https://provider.com/.well-known/lnurlp/${username}`;
+    return fetch(upstream);
+  }
+}
+```
+
+## Security Considerations
+
+- Always use HTTPS
+- Validate usernames to prevent injection
+- Rate limit requests
+- Consider authentication for invoice generation
+
+## Testing
+
+Use these tools to verify your setup:
+
+- [lnurl.fiatjaf.com](https://lnurl.fiatjaf.com) — LNURL decoder and tester
+- Any LNURL-compatible wallet — try sending yourself some sats

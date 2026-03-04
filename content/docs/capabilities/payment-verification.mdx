@@ -1,0 +1,99 @@
+# Payment Verification (LUD-21)
+
+Payment Verification provides cryptographic proof that a payment was settled. This enables non-custodial verification of Lightning payments.
+
+## Why It Matters
+
+Traditional Lightning payments require trust — when you pay someone, you get a preimage as proof, but verifying that the recipient actually received the funds requires trust in the payment processor. With Payment Verification:
+
+- **Trustless confirmation** — cryptographic proof the payment reached its destination
+- **Non-custodial verification** — verify without relying on a third party
+- **Agent-friendly** — perfect for autonomous systems that need settlement proof
+- **Dispute resolution** — undeniable evidence for commercial transactions
+
+## How It Works
+
+Payment Verification works by having the recipient server provide a verification endpoint that returns a cryptographic signature proving the payment was received.
+
+### Flow Overview
+
+1. Sender makes a payment and receives a preimage
+2. Sender requests verification from the recipient's server
+3. Server returns a signed message confirming receipt
+4. Sender can verify the signature independently
+
+### Server Response
+
+When responding to the LNURL request, include verification capability:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "tag": "payRequest",
+  "payerData": {
+    "name": { "mandatory": false },
+    "email": { "mandatory": false }
+  },
+  "nostrPubkey": "npub1...",
+  "allowsNostr": true
+}
+```
+
+### Verification Endpoint
+
+After payment, the sender can verify:
+
+```
+GET /lnurlp/user/verify/{payment_hash}
+```
+
+Response:
+
+```json
+{
+  "status": "OK",
+  "settled": true,
+  "preimage": "abc123...",
+  "signature": "...",
+  "pubkey": "..."
+}
+```
+
+## Use Cases
+
+### Agent Payments
+
+AI agents can verify payments programmatically:
+
+```typescript
+async function verifyPayment(domain: string, user: string, hash: string) {
+  const response = await fetch(
+    `https://${domain}/lnurlp/${user}/verify/${hash}`
+  );
+  const data = await response.json();
+
+  if (data.settled) {
+    // Verify signature against known pubkey
+    return verifySignature(data.signature, data.pubkey, hash);
+  }
+  return false;
+}
+```
+
+### E-commerce
+
+Online stores can confirm payment before shipping without trusting a payment processor.
+
+### Escrow Services
+
+Third parties can independently verify that both sides of a transaction completed.
+
+## Implementation Notes
+
+- The verification endpoint should be rate-limited
+- Signatures should use standard cryptographic schemes (secp256k1)
+- Payment data should be persisted for the verification window
+- Consider privacy implications of exposing payment hashes

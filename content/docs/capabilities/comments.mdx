@@ -1,0 +1,89 @@
+# Comments (LUD-12)
+
+Comments let senders attach a message to their payment. This is one of the most widely supported Lightning Address capabilities.
+
+## Why It Matters
+
+Without comments, payments are just numbers. With comments, they become conversations:
+
+- **Tips with gratitude** — "Loved your podcast episode!"
+- **Invoices with context** — "Payment for logo design"
+- **Donations with purpose** — "For the open source fund"
+- **Payments with instructions** — "Table 5, extra sauce"
+
+## How It Works
+
+### Server Response
+
+When your server responds to the initial LNURL request, include `commentAllowed`:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "tag": "payRequest",
+  "commentAllowed": 255
+}
+```
+
+The `commentAllowed` field specifies the maximum comment length in characters.
+
+### Callback Request
+
+When a sender includes a comment, it's passed as a query parameter:
+
+```
+GET /callback?amount=10000&comment=Thanks%20for%20the%20great%20content!
+```
+
+### Handling Comments
+
+Your server receives the comment and can:
+- Store it with the payment record
+- Display it in your dashboard
+- Forward it to a notification system
+- Include it in the invoice description
+
+## Implementation Example
+
+```typescript
+// Express.js example
+app.get('/lnurlp/:username/callback', async (req, res) => {
+  const { amount, comment } = req.query;
+  const username = req.params.username;
+
+  // Validate comment length
+  const maxCommentLength = 255;
+  if (comment && comment.length > maxCommentLength) {
+    return res.status(400).json({
+      status: 'ERROR',
+      reason: `Comment too long (max ${maxCommentLength} chars)`
+    });
+  }
+
+  // Generate invoice with comment in description
+  const description = comment
+    ? `Payment to ${username}: ${comment}`
+    : `Payment to ${username}`;
+
+  const invoice = await generateInvoice({
+    amount: parseInt(amount),
+    description
+  });
+
+  res.json({ pr: invoice });
+});
+```
+
+## Best Practices
+
+1. **Set reasonable limits** — 255 characters is common, but adjust based on your needs
+2. **Sanitize input** — Don't trust comment content blindly
+3. **Show comments** — Make it easy for recipients to see messages
+4. **Handle encoding** — Comments are URL-encoded
+
+## Wallet Support
+
+Most Lightning wallets support sending comments. The sender typically sees a text field when the recipient supports comments.

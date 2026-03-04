@@ -1,0 +1,122 @@
+# Success Actions (LUD-09)
+
+Success Actions let you trigger something after a payment completes — show a message, redirect to a URL, or deliver content.
+
+## Why It Matters
+
+Payments don't exist in isolation. After someone pays, you often want to:
+
+- **Show a thank you message**
+- **Redirect to a download**
+- **Display a confirmation code**
+- **Unlock content**
+
+Success Actions make this automatic and seamless.
+
+## Types of Success Actions
+
+### Message
+
+Display a plain text message to the payer:
+
+```json
+{
+  "pr": "lnbc...",
+  "successAction": {
+    "tag": "message",
+    "message": "Thanks for your support! Your donation helps keep us going."
+  }
+}
+```
+
+### URL
+
+Redirect or link the payer to a URL:
+
+```json
+{
+  "pr": "lnbc...",
+  "successAction": {
+    "tag": "url",
+    "description": "Your download is ready",
+    "url": "https://example.com/download/abc123"
+  }
+}
+```
+
+### AES (Encrypted Content)
+
+Deliver encrypted content that can only be decrypted after payment:
+
+```json
+{
+  "pr": "lnbc...",
+  "successAction": {
+    "tag": "aes",
+    "description": "Your secret message",
+    "ciphertext": "base64-encoded-encrypted-content",
+    "iv": "base64-encoded-iv"
+  }
+}
+```
+
+The preimage from the Lightning payment serves as the decryption key.
+
+## How It Works
+
+1. Sender requests an invoice from your callback
+2. Your server returns the invoice **and** a success action
+3. Sender pays the invoice
+4. Sender's wallet displays/executes the success action
+
+```json
+// Callback response with success action
+{
+  "pr": "lnbc100n1p3...",
+  "routes": [],
+  "successAction": {
+    "tag": "url",
+    "description": "Download your purchase",
+    "url": "https://shop.example.com/orders/12345/download"
+  }
+}
+```
+
+## Use Cases
+
+### Digital Downloads
+```json
+{
+  "successAction": {
+    "tag": "url",
+    "description": "Download your ebook",
+    "url": "https://store.com/download?token=xyz"
+  }
+}
+```
+
+### Confirmation Codes
+```json
+{
+  "successAction": {
+    "tag": "message",
+    "message": "Order confirmed! Reference: #12345"
+  }
+}
+```
+
+### Encrypted Secrets
+Perfect for selling secrets, passwords, or exclusive content where the payment itself unlocks access.
+
+## Implementation Tips
+
+1. **Generate unique URLs** — Don't reuse download links
+2. **Set expiration** — Time-limit access tokens
+3. **Track redemption** — Know when content is accessed
+4. **Handle wallet support** — Not all wallets display all action types
+
+## Security Notes
+
+- URLs should be one-time or expiring
+- AES encryption uses the payment preimage — ensure content is properly encrypted
+- Consider the UX when wallets don't support your action type

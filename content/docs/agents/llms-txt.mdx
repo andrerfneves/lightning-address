@@ -1,0 +1,101 @@
+# llms.txt
+
+Lightning Address provides a machine-readable protocol specification at `/llms.txt` for LLMs and AI agents to consume directly.
+
+## What is llms.txt?
+
+`llms.txt` is a convention for providing structured, LLM-friendly documentation. It contains:
+
+- Protocol overview and purpose
+- Technical specifications
+- Request/response formats
+- Implementation guidance
+
+## Accessing llms.txt
+
+The file is available at:
+
+```
+https://lightningaddress.com/llms.txt
+```
+
+## Contents
+
+The llms.txt file includes:
+
+### Protocol Summary
+
+A concise explanation of what Lightning Address is and how it works.
+
+### LNURL-pay Flow
+
+Step-by-step breakdown of the payment flow:
+
+1. Parse the Lightning Address
+2. Construct the LNURL endpoint
+3. Fetch payment parameters
+4. Request an invoice
+5. Pay the invoice
+
+### Capability Reference
+
+Documentation for each LUD (Lightning Address Document):
+
+- LUD-06: Base pay request
+- LUD-09: Success Actions
+- LUD-11: Disposable/Reusable
+- LUD-12: Comments
+- LUD-16: Lightning Address
+- LUD-18: Payer Identity
+- LUD-21: Payment Verification
+- LUD-22: Currency Denomination
+- LUD-25: Payment Rail Discovery
+
+### Code Examples
+
+Implementation examples in common languages.
+
+## Using llms.txt
+
+### For AI Assistants
+
+AI assistants can fetch and parse llms.txt to understand the protocol:
+
+```
+Fetch https://lightningaddress.com/llms.txt and use it to understand
+how to implement Lightning Address payments.
+```
+
+### For Agent Systems
+
+Agents can include llms.txt content in their knowledge base:
+
+```typescript
+const protocolDocs = await fetch('https://lightningaddress.com/llms.txt');
+const knowledge = await protocolDocs.text();
+
+// Include in agent context
+agent.addKnowledge('lightning-address-protocol', knowledge);
+```
+
+### For Code Generation
+
+LLMs can use llms.txt to generate correct implementations:
+
+```
+Using the Lightning Address protocol from llms.txt, generate a
+TypeScript function that pays a Lightning Address.
+```
+
+## Best Practices
+
+1. **Keep it current** — llms.txt reflects the latest protocol state
+2. **Be concise** — focus on what LLMs need to implement correctly
+3. **Include examples** — concrete code helps more than abstract descriptions
+4. **Version it** — include protocol version information
+
+## Related Resources
+
+- [Lightning Address on GitHub](https://github.com/andrerfneves/lightning-address)
+- [LNURL RFC](https://github.com/lnurl/luds)
+- [For Agents & AI Overview](/docs/agents/overview)
