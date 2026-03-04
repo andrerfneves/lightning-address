@@ -338,6 +338,10 @@ const SATDRESS_SERVERS = [
     urlText: "@lnpay.cz",
   },
   {
+    urlLink: "https://lnaddress.com",
+    urlText: "@lnaddress.com",
+  },
+  {
     urlLink: "https://lnaddress.me/",
     urlText: "@lnaddress.me",
   },
