@@ -1,7 +1,6 @@
-import TextLoop from 'react-text-loop';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
-import { PureComponent } from 'react';
-import Fade from 'react-reveal/Fade';
 
 import { media } from '../utils';
 
@@ -209,67 +208,103 @@ const Bold = styled.span`
   letter-spacing: -0.5px;
 `;
 
-export class Hero extends PureComponent {
-  state = {
-    showCTAs: false,
-    showIntro: false,
-    showLightningAddr: false,
-  };
+const DOMAINS = [
+  'your.domain',
+  'zbd.gg',
+  'zebedee.io',
+  'coinos.io',
+  'ln.tips',
+  'coincorner.io',
+  'bitrefill.me',
+  'fbtc.me',
+  'lnmarkets.com',
+  'getalby.com',
+  'walletofsatoshi.com',
+  'sparkwallet.me',
+  'getmash.cash',
+  '8333.mobi',
+  'starbackr.me',
+  'lifpay.me',
+  'vipsats.app',
+  'lawallet.ar',
+  'numeraire.tech',
+  'pig.gy',
+];
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState(() => ({ showIntro: true }));
-    }, 500);
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
-    setTimeout(() => {
-      this.setState(() => ({ showLightningAddr: true }));
-    }, 1100);
+export function Hero() {
+  const [showIntro, setShowIntro] = useState(false);
+  const [showLightningAddr, setShowLightningAddr] = useState(false);
+  const [showCTAs, setShowCTAs] = useState(false);
+  const [domainIndex, setDomainIndex] = useState(0);
 
-    setTimeout(() => {
-      this.setState(() => ({ showCTAs: true }));
-    }, 1700);
-  }
+  useEffect(() => {
+    const introTimer = setTimeout(() => setShowIntro(true), 500);
+    const addrTimer = setTimeout(() => setShowLightningAddr(true), 1100);
+    const ctaTimer = setTimeout(() => setShowCTAs(true), 1700);
 
-  render() {
-    const { showIntro, showLightningAddr, showCTAs } = this.state;
+    return () => {
+      clearTimeout(introTimer);
+      clearTimeout(addrTimer);
+      clearTimeout(ctaTimer);
+    };
+  }, []);
 
-    return (
-      <Wrapper>
-        <Fade bottom cascade when={showIntro}>
+  useEffect(() => {
+    if (!showLightningAddr) return;
+    const interval = setInterval(() => {
+      setDomainIndex((prev) => (prev + 1) % DOMAINS.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [showLightningAddr]);
+
+  return (
+    <Wrapper>
+      {showIntro && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUpVariants}
+        >
           <Intro>Introducing</Intro>
           <Title>The Lightning Address</Title>
-        </Fade>
-        <Fade bottom when={showLightningAddr}>
+        </motion.div>
+      )}
+      {showLightningAddr && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUpVariants}
+        >
           <Description>
             <Bold>Like an email address, but for your Bitcoin!</Bold> A massively simpler way for anyone to send you Bitcoin instantly on the Lightning Network.
           </Description>
           <LoopWrapper>
             <FixedTextPart>you@</FixedTextPart>
-            <TextLoop interval={2000} delay={1600}>
-              <LoopedTextPart>your.domain</LoopedTextPart>
-              <LoopedTextPart>zbd.gg</LoopedTextPart>
-              <LoopedTextPart>zebedee.io</LoopedTextPart>
-              <LoopedTextPart>coinos.io</LoopedTextPart>
-              <LoopedTextPart>ln.tips</LoopedTextPart>
-              <LoopedTextPart>coincorner.io</LoopedTextPart>
-              <LoopedTextPart>bitrefill.me</LoopedTextPart>
-              <LoopedTextPart>fbtc.me</LoopedTextPart>
-              <LoopedTextPart>lnmarkets.com</LoopedTextPart>
-              <LoopedTextPart>getalby.com</LoopedTextPart>
-              <LoopedTextPart>walletofsatoshi.com</LoopedTextPart>
-              <LoopedTextPart>sparkwallet.me</LoopedTextPart>
-              <LoopedTextPart>getmash.cash</LoopedTextPart>
-              <LoopedTextPart>8333.mobi</LoopedTextPart>
-              <LoopedTextPart>starbackr.me</LoopedTextPart>
-              <LoopedTextPart>lifpay.me</LoopedTextPart>
-              <LoopedTextPart>vipsats.app</LoopedTextPart>
-              <LoopedTextPart>lawallet.ar</LoopedTextPart>
-              <LoopedTextPart>numeraire.tech</LoopedTextPart>
-              <LoopedTextPart>pig.gy</LoopedTextPart>
-            </TextLoop>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={domainIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <LoopedTextPart>{DOMAINS[domainIndex]}</LoopedTextPart>
+              </motion.span>
+            </AnimatePresence>
           </LoopWrapper>
-        </Fade>
-        <Fade bottom when={showCTAs}>
+        </motion.div>
+      )}
+      {showCTAs && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUpVariants}
+        >
           <CTAWrapper>
             <CTAPrimary href="#providers">Get a Lightning Address</CTAPrimary>
             <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Read Documentation</CTASecondary>
@@ -278,8 +313,8 @@ export class Hero extends PureComponent {
             <LicenseText>License: MIT</LicenseText>
             <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
           </LicenseWrapper>
-        </Fade>
-      </Wrapper>
-    );
-  }
+        </motion.div>
+      )}
+    </Wrapper>
+  );
 }
