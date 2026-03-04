@@ -415,7 +415,7 @@ const PROVIDERS = [
   {
     name: "@SparkMoneyBot",
     image: "/images/smbicon192.png",
-    imageStyle: { width: "192px" },
+    imageStyle: { width: "45px" },
     lightningAddressDomain: "sparkmoneybot.com",
     url: "https://t.me/sparkmoneybot",
     buttonText: "Open Telegram",
