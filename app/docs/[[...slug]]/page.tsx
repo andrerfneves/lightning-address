@@ -2,37 +2,44 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { docsNav, getDocBySlug } from "@/lib/docs";
+import { DocsClientWrapper } from "./client";
 
-// Import all MDX content
+// Static MDX imports
+import WhatIsLightningAddress from "@/content/docs/getting-started/what-is-lightning-address.mdx";
+import HowItWorks from "@/content/docs/getting-started/how-it-works.mdx";
+import GetAnAddress from "@/content/docs/setup/get-an-address.mdx";
+import SelfHosted from "@/content/docs/setup/self-hosted.mdx";
+import BridgeServers from "@/content/docs/setup/bridge-servers.mdx";
+import Comments from "@/content/docs/capabilities/comments.mdx";
+import SuccessActions from "@/content/docs/capabilities/success-actions.mdx";
+import PaymentVerification from "@/content/docs/capabilities/payment-verification.mdx";
+import SenderIdentity from "@/content/docs/capabilities/sender-identity.mdx";
+import CurrencyDenomination from "@/content/docs/capabilities/currency-denomination.mdx";
+import ReusableRequests from "@/content/docs/capabilities/reusable-requests.mdx";
+import PaymentRailDiscovery from "@/content/docs/capabilities/payment-rail-discovery.mdx";
+import AgentsOverview from "@/content/docs/agents/overview.mdx";
+import LlmsTxt from "@/content/docs/agents/llms-txt.mdx";
+import ZbdGamertags from "@/content/docs/showcase/zbd-gamertags.mdx";
+import ApiDirectory from "@/content/docs/api/directory.mdx";
+
+// Map slugs to components
 const docs: Record<string, React.ComponentType> = {
-  "getting-started/what-is-lightning-address": require("@/content/docs/getting-started/what-is-lightning-address.mdx")
-    .default,
-  "getting-started/how-it-works": require("@/content/docs/getting-started/how-it-works.mdx")
-    .default,
-  "setup/get-an-address": require("@/content/docs/setup/get-an-address.mdx")
-    .default,
-  "setup/self-hosted": require("@/content/docs/setup/self-hosted.mdx").default,
-  "setup/bridge-servers": require("@/content/docs/setup/bridge-servers.mdx")
-    .default,
-  "capabilities/comments": require("@/content/docs/capabilities/comments.mdx")
-    .default,
-  "capabilities/success-actions": require("@/content/docs/capabilities/success-actions.mdx")
-    .default,
-  "capabilities/payment-verification": require("@/content/docs/capabilities/payment-verification.mdx")
-    .default,
-  "capabilities/sender-identity": require("@/content/docs/capabilities/sender-identity.mdx")
-    .default,
-  "capabilities/currency-denomination": require("@/content/docs/capabilities/currency-denomination.mdx")
-    .default,
-  "capabilities/reusable-requests": require("@/content/docs/capabilities/reusable-requests.mdx")
-    .default,
-  "capabilities/payment-rail-discovery": require("@/content/docs/capabilities/payment-rail-discovery.mdx")
-    .default,
-  "agents/overview": require("@/content/docs/agents/overview.mdx").default,
-  "agents/llms-txt": require("@/content/docs/agents/llms-txt.mdx").default,
-  "showcase/zbd-gamertags": require("@/content/docs/showcase/zbd-gamertags.mdx")
-    .default,
-  "api/directory": require("@/content/docs/api/directory.mdx").default,
+  "getting-started/what-is-lightning-address": WhatIsLightningAddress,
+  "getting-started/how-it-works": HowItWorks,
+  "setup/get-an-address": GetAnAddress,
+  "setup/self-hosted": SelfHosted,
+  "setup/bridge-servers": BridgeServers,
+  "capabilities/comments": Comments,
+  "capabilities/success-actions": SuccessActions,
+  "capabilities/payment-verification": PaymentVerification,
+  "capabilities/sender-identity": SenderIdentity,
+  "capabilities/currency-denomination": CurrencyDenomination,
+  "capabilities/reusable-requests": ReusableRequests,
+  "capabilities/payment-rail-discovery": PaymentRailDiscovery,
+  "agents/overview": AgentsOverview,
+  "agents/llms-txt": LlmsTxt,
+  "showcase/zbd-gamertags": ZbdGamertags,
+  "api/directory": ApiDirectory,
 };
 
 export default async function DocsPage({
@@ -42,30 +49,23 @@ export default async function DocsPage({
 }) {
   const { slug } = await params;
 
-  // Default to first doc
-  if (!slug || slug.length === 0) {
-    const Content = docs["getting-started/what-is-lightning-address"];
-    return (
-      <DocsLayout currentPath="/docs/getting-started/what-is-lightning-address">
-        <article className="prose prose-invert max-w-none">
-          <Content />
-        </article>
-      </DocsLayout>
-    );
-  }
+  // Default to first doc if no slug
+  const slugPath =
+    slug && slug.length > 0
+      ? slug.join("/")
+      : "getting-started/what-is-lightning-address";
 
-  const slugPath = slug.join("/");
   const Content = docs[slugPath];
+  const currentPath = `/docs/${slugPath}`;
+  const docInfo = slug ? getDocBySlug(slug) : null;
 
   if (!Content) {
     notFound();
   }
 
-  const docInfo = getDocBySlug(slug);
-
   return (
-    <DocsLayout currentPath={"/docs/" + slugPath}>
-      <article className="prose prose-invert max-w-none">
+    <DocsClientWrapper currentPath={currentPath}>
+      <article className="prose prose-invert prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-a:text-yellow-400 prose-a:no-underline hover:prose-a:underline prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-yellow-400 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-strong:text-foreground max-w-none">
         {docInfo && (
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 not-prose">
             <span>{docInfo.section}</span>
@@ -75,51 +75,7 @@ export default async function DocsPage({
         )}
         <Content />
       </article>
-    </DocsLayout>
-  );
-}
-
-function DocsLayout({
-  children,
-  currentPath,
-}: {
-  children: React.ReactNode;
-  currentPath: string;
-}) {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex gap-8">
-        {/* Sidebar */}
-        <aside className="hidden md:block w-64 shrink-0">
-          <nav className="sticky top-24 space-y-6">
-            {docsNav.map((section) => (
-              <div key={section.title}>
-                <h4 className="font-semibold text-sm mb-2">{section.title}</h4>
-                <ul className="space-y-1">
-                  {section.items.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className={`block text-sm py-1.5 px-3 rounded-md transition-colors ${
-                          currentPath === item.href
-                            ? "bg-yellow-400/10 text-yellow-400"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                        }`}
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
-        </aside>
-
-        {/* Content */}
-        <main className="flex-1 min-w-0 max-w-3xl">{children}</main>
-      </div>
-    </div>
+    </DocsClientWrapper>
   );
 }
 

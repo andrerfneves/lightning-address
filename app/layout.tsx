@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import { MobileNav } from "@/components/mobile-nav";
 
 export const metadata: Metadata = {
   title: "Lightning Address - The identity layer for Bitcoin payments",
@@ -22,6 +23,12 @@ export const metadata: Metadata = {
   },
 };
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/directory", label: "Directory" },
+  { href: "/docs", label: "Docs" },
+];
+
 export default function RootLayout({
   children,
 }: {
@@ -31,11 +38,13 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="min-h-screen bg-background text-foreground antialiased">
         <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <nav className="container mx-auto flex h-16 items-center justify-between px-4">
+          <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-xl font-bold">Lightning Address</span>
             </Link>
-            <div className="flex items-center gap-6">
+
+            {/* Desktop navigation */}
+            <div className="hidden md:flex items-center gap-6">
               <Link
                 href="/directory"
                 className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -57,11 +66,14 @@ export default function RootLayout({
                 GitHub
               </a>
             </div>
+
+            {/* Mobile navigation */}
+            <MobileNav links={navLinks} />
           </nav>
         </header>
         <main>{children}</main>
         <footer className="border-t border-border/40 py-8">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm text-muted-foreground">
               Supported by{" "}
               <a
