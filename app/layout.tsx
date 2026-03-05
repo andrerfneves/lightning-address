@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Chakra_Petch, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileNav } from "@/components/mobile-nav";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Footer50 } from "@/components/footer50";
 
 const fontSans = Chakra_Petch({
@@ -49,8 +51,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontMono.variable} min-h-screen bg-background text-foreground antialiased font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
         <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2">
@@ -81,8 +84,11 @@ export default function RootLayout({
               </a>
             </div>
 
-            {/* Mobile navigation */}
-            <MobileNav links={navLinks} />
+            {/* Theme toggle + Mobile navigation */}
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <MobileNav links={navLinks} />
+            </div>
           </nav>
         </header>
         <main>{children}</main>
@@ -106,6 +112,7 @@ export default function RootLayout({
           ]}
           brandName="Lightning Address"
         />
+        </ThemeProvider>
       </body>
     </html>
   );
