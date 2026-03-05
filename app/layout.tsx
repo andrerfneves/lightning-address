@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Chakra_Petch, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileNav } from "@/components/mobile-nav";
+
+const fontSans = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+});
+
+const fontMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   title: "Lightning Address - The identity layer for Bitcoin payments",
@@ -36,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className={`${fontSans.variable} ${fontMono.variable} min-h-screen bg-background text-foreground antialiased font-sans`}>
         <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
             <Link href="/" className="flex items-center gap-2">
