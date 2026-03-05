@@ -22,6 +22,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Integration8 } from "@/components/integration8";
+import { Integration13 } from "@/components/integration13";
 
 const heroWallets = [
   { id: "cashapp", name: "Cash App", domain: "cash.app", logo: null },
@@ -202,6 +204,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Wallet Compatibility Marquee */}
+      <Integration8 />
+
       {/* Capabilities Bento Grid */}
       <section className="py-16 sm:py-20 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,6 +253,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ecosystem Dock */}
+      <Integration13 />
 
       {/* Interactive Resolver */}
       <section className="py-16 sm:py-20 md:py-24">
