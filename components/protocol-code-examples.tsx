@@ -221,7 +221,7 @@ payment_info = resolve_lightning_address('user@zbd.gg')`,
       {
         language: "bash",
         filename: "resolve.sh",
-        icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/terminal-icon.svg",
+        icon: "https://cdn.simpleicons.org/gnubash/white",
         code: `# Resolve a Lightning Address using curl
 # Replace 'user' and 'zbd.gg' with actual values
 
@@ -300,7 +300,7 @@ options = get_pay_options('user@zbd.gg')`,
       {
         language: "bash",
         filename: "pay-options.sh",
-        icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/terminal-icon.svg",
+        icon: "https://cdn.simpleicons.org/gnubash/white",
         code: `# Discover payment rails via LUD-25 pay-options endpoint
 # This endpoint reveals all supported payment methods
 
@@ -400,7 +400,7 @@ invoice = request_invoice(
       {
         language: "bash",
         filename: "invoice.sh",
-        icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/terminal-icon.svg",
+        icon: "https://cdn.simpleicons.org/gnubash/white",
         code: `# Request an invoice from the LNURL-pay callback
 # Amount is in millisatoshis (1 sat = 1000 msat)
 
