@@ -24,6 +24,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Integration8 } from "@/components/integration8";
 import { Integration13 } from "@/components/integration13";
+import { Feature222 } from "@/components/feature222";
+import { CodeExample5 } from "@/components/code-example5";
 
 const heroWallets = [
   { id: "cashapp", name: "Cash App", domain: "cash.app", logo: null },
@@ -254,6 +256,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Showcase Section */}
+      <Feature222 title="Lightning Address in the wild" />
+
       {/* Ecosystem Dock */}
       <Integration13 />
 
@@ -406,6 +411,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Code Examples Section */}
+      <CodeExample5 />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Chakra_Petch, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { MobileNav } from "@/components/mobile-nav";
+import { Footer50 } from "@/components/footer50";
 
 const fontSans = Chakra_Petch({
   subsets: ["latin"],
@@ -85,21 +86,26 @@ export default function RootLayout({
           </nav>
         </header>
         <main>{children}</main>
-        <footer className="border-t border-border/40 py-8">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              Supported by{" "}
-              <a
-                href="https://zbd.gg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-foreground hover:underline"
-              >
-                ZBD
-              </a>
-            </p>
-          </div>
-        </footer>
+        <Footer50
+          heading="The open standard for Bitcoin payments"
+          description="Lightning Address is a free, open protocol. Anyone can implement it."
+          ctaText="Read the spec"
+          ctaHref="/docs"
+          navigation={[
+            { name: "Directory", href: "/directory" },
+            { name: "Docs", href: "/docs" },
+            { name: "GitHub", href: "https://github.com/andrerfneves/lightning-address" },
+            { name: "LUD-25 Draft", href: "/docs" },
+          ]}
+          social={[
+            { name: "GitHub", href: "https://github.com/andrerfneves/lightning-address" },
+            { name: "Twitter", href: "https://twitter.com/andreneves" },
+          ]}
+          legal={[
+            { name: "MIT License", href: "https://github.com/andrerfneves/lightning-address/blob/main/LICENSE.md" },
+          ]}
+          brandName="Lightning Address"
+        />
       </body>
     </html>
   );
