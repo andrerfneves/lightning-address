@@ -1,0 +1,87 @@
+# How It Works
+
+Lightning Address is built on top of LNURL-pay, which itself is built on the Lightning Network. Here's how the pieces fit together.
+
+## The Flow
+
+When someone sends Bitcoin to your Lightning Address:
+
+1. **Parse the address** — The sender's wallet splits `user@domain.com` into username and domain
+2. **Fetch metadata** — The wallet makes an HTTP request to `https://domain.com/.well-known/lnurlp/user`
+3. **Get payment params** — The server responds with min/max amounts, currency, and supported features
+4. **Generate invoice** — The wallet requests an invoice for the specific amount
+5. **Pay the invoice** — The sender's wallet pays the Lightning invoice as normal
+
+```
+Sender                             Receiver's Server
+  |                                       |
+  |  GET /.well-known/lnurlp/user        |
+  |-------------------------------------->|
+  |                                       |
+  |  { callback, minSendable, ... }       |
+  |<--------------------------------------|
+  |                                       |
+  |  GET callback?amount=1000             |
+  |-------------------------------------->|
+  |                                       |
+  |  { pr: "lnbc...", ... }               |
+  |<--------------------------------------|
+  |                                       |
+  |  Pay Lightning Invoice                |
+  |======================================>|
+```
+
+## Technical Details
+
+### The Well-Known Endpoint
+
+When a wallet encounters `user@domain.com`, it constructs this URL:
+
+```
+https://domain.com/.well-known/lnurlp/user
+```
+
+The server responds with a JSON payload:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "tag": "payRequest",
+  "commentAllowed": 255
+}
+```
+
+### The Callback
+
+When the sender specifies an amount, the wallet calls the callback URL:
+
+```
+GET https://domain.com/lnurlp/user/callback?amount=10000
+```
+
+The server responds with a Lightning invoice:
+
+```json
+{
+  "pr": "lnbc100n1p3...",
+  "routes": []
+}
+```
+
+### Payment
+
+The sender's wallet pays the invoice using standard Lightning Network protocols. The receiver gets the sats.
+
+## Why LNURL?
+
+LNURL provides the foundation that makes Lightning Address possible:
+
+- **Dynamic invoices** — Generate fresh invoices on demand
+- **Rich metadata** — Support comments, currencies, and verification
+- **Standard protocol** — Works across all compatible wallets
+- **Extensible** — New capabilities via LUD specifications
+
+Lightning Address (LUD-16) is essentially a human-friendly wrapper around LNURL-pay that uses DNS for discovery.

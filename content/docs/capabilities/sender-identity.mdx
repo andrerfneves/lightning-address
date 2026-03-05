@@ -1,0 +1,110 @@
+# Sender Identity (LUD-18)
+
+Sender Identity allows payers to optionally share information about themselves with the recipient. This enables richer payment experiences and agent attribution.
+
+## Why It Matters
+
+Anonymous payments are great for privacy, but sometimes you *want* the recipient to know who you are:
+
+- **Tipping with attribution** — let your favorite creator know who their supporters are
+- **Business payments** — attach your company or order info
+- **Agent identification** — AI agents can identify themselves for trust and accountability
+- **Receipts and records** — get proper receipts with your contact info
+
+## How It Works
+
+### Declaring Supported Fields
+
+When responding to the LNURL request, include a `payerData` object:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "tag": "payRequest",
+  "payerData": {
+    "name": { "mandatory": false },
+    "email": { "mandatory": false },
+    "identifier": { "mandatory": false }
+  }
+}
+```
+
+Each field can be marked as:
+- `mandatory: false` — optional, sender can choose to share
+- `mandatory: true` — required for the payment to proceed
+
+### Available Fields
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| `name` | Sender's name | "Alice Smith" |
+| `email` | Sender's email | "alice@example.com" |
+| `identifier` | Lightning Address | "alice@wallet.com" |
+| `pubkey` | Sender's pubkey | "npub1..." |
+
+### Callback with Payer Data
+
+When the sender includes their info, it's passed in the callback:
+
+```
+GET /callback?amount=10000&payerdata={"name":"Alice","identifier":"alice@wallet.com"}
+```
+
+The `payerdata` is URL-encoded JSON.
+
+## Implementation Example
+
+```typescript
+app.get('/lnurlp/:username/callback', async (req, res) => {
+  const { amount, payerdata } = req.query;
+
+  let senderInfo = null;
+  if (payerdata) {
+    try {
+      senderInfo = JSON.parse(decodeURIComponent(payerdata));
+    } catch (e) {
+      // Invalid payer data, continue without it
+    }
+  }
+
+  // Store sender info with the payment
+  const payment = await createPayment({
+    recipient: req.params.username,
+    amount: parseInt(amount),
+    senderName: senderInfo?.name,
+    senderEmail: senderInfo?.email,
+    senderAddress: senderInfo?.identifier
+  });
+
+  const invoice = await generateInvoice(payment);
+  res.json({ pr: invoice });
+});
+```
+
+## For AI Agents
+
+Sender Identity is particularly valuable for agents:
+
+```typescript
+// Agent identifies itself when making payments
+const payerData = {
+  name: "Research Agent v1.2",
+  identifier: "research-agent@mycompany.ai"
+};
+
+await payLightningAddress("creator@example.com", 1000, {
+  payerData
+});
+```
+
+This creates an audit trail and enables recipients to whitelist trusted agents.
+
+## Privacy Considerations
+
+- All fields are opt-in from the sender's perspective
+- Wallets should clearly show what data will be shared
+- Recipients should handle payer data responsibly
+- Consider GDPR and other privacy regulations

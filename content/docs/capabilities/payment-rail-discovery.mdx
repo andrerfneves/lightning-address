@@ -1,0 +1,140 @@
+# Payment Rail Discovery (LUD-25)
+
+Payment Rail Discovery enables recipients to advertise multiple payment protocols beyond BOLT11 Lightning — including BOLT12, Ark, Spark, Liquid, and on-chain Bitcoin.
+
+## Why It Matters
+
+The Bitcoin payment ecosystem is expanding:
+
+- **BOLT12** — improved privacy and reusability
+- **Ark** — scalable off-chain payments
+- **Spark** — instant settlement layer
+- **Liquid** — federated sidechain
+- **On-chain** — the base layer
+
+With Payment Rail Discovery, your Lightning Address becomes a unified payment endpoint that supports all these protocols.
+
+## How It Works
+
+### The pay-options Endpoint
+
+In addition to the standard `/.well-known/lnurlp/<user>` endpoint, servers can expose:
+
+```
+GET /.well-known/pay-options/<user>
+```
+
+This returns available payment rails:
+
+```json
+{
+  "options": [
+    {
+      "type": "bolt11",
+      "callback": "https://domain.com/lnurlp/user/callback"
+    },
+    {
+      "type": "bolt12",
+      "offer": "lno1..."
+    },
+    {
+      "type": "onchain",
+      "address": "bc1q..."
+    },
+    {
+      "type": "liquid",
+      "address": "VJL..."
+    }
+  ]
+}
+```
+
+### Option Types
+
+| Type | Description | Fields |
+|------|-------------|--------|
+| `bolt11` | Standard Lightning | `callback` |
+| `bolt12` | BOLT12 offers | `offer` |
+| `onchain` | Bitcoin on-chain | `address`, `bip21` |
+| `liquid` | Liquid Network | `address` |
+| `ark` | Ark protocol | `vtxo_address` |
+| `spark` | Spark protocol | `endpoint` |
+
+## Client Behavior
+
+Wallets implementing LUD-25 should:
+
+1. Check for `/.well-known/pay-options/<user>` first
+2. If available, present options to the user or auto-select based on preferences
+3. Fall back to standard LNURL-pay if not available
+
+```typescript
+async function resolveLightningAddress(address: string) {
+  const [user, domain] = address.split('@');
+
+  // Try pay-options first
+  try {
+    const payOptions = await fetch(
+      `https://${domain}/.well-known/pay-options/${user}`
+    );
+    if (payOptions.ok) {
+      return { type: 'multi-rail', data: await payOptions.json() };
+    }
+  } catch {}
+
+  // Fall back to standard LNURL-pay
+  const lnurl = await fetch(
+    `https://${domain}/.well-known/lnurlp/${user}`
+  );
+  return { type: 'lnurl', data: await lnurl.json() };
+}
+```
+
+## Implementation Example
+
+```typescript
+app.get('/.well-known/pay-options/:username', async (req, res) => {
+  const user = await getUser(req.params.username);
+
+  if (!user) {
+    return res.status(404).json({ status: 'ERROR', reason: 'User not found' });
+  }
+
+  const options = [];
+
+  // Always include BOLT11
+  options.push({
+    type: 'bolt11',
+    callback: `https://domain.com/lnurlp/${user.username}/callback`
+  });
+
+  // Add BOLT12 if user has an offer
+  if (user.bolt12Offer) {
+    options.push({
+      type: 'bolt12',
+      offer: user.bolt12Offer
+    });
+  }
+
+  // Add on-chain if user has a static address
+  if (user.bitcoinAddress) {
+    options.push({
+      type: 'onchain',
+      address: user.bitcoinAddress
+    });
+  }
+
+  res.json({ options });
+});
+```
+
+## The Future of Payments
+
+Payment Rail Discovery positions Lightning Address as the universal payment identifier:
+
+- **One address, many rails** — users share a single identifier
+- **Automatic optimization** — wallets can pick the best rail
+- **Future-proof** — new protocols can be added without changing addresses
+- **Agent-friendly** — programmatic rail selection for AI systems
+
+As new Bitcoin scaling solutions emerge, they can integrate with the Lightning Address ecosystem through this discovery mechanism.
