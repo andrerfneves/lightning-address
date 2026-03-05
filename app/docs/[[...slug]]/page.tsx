@@ -65,7 +65,7 @@ export default async function DocsPage({
 
   return (
     <DocsClientWrapper currentPath={currentPath}>
-      <article className="prose prose-invert prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-a:text-yellow-400 prose-a:no-underline hover:prose-a:underline prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-yellow-400 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-strong:text-foreground max-w-none">
+      <article className="prose dark:prose-invert prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-primary prose-code:before:content-none prose-code:after:content-none prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-strong:text-foreground max-w-none">
         {docInfo && (
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 not-prose">
             <span>{docInfo.section}</span>
