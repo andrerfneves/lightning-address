@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Marquee } from "@/components/ui/marquee";
 
-interface Integration8Props {
+interface WalletMarqueeProps {
   className?: string;
 }
 
@@ -24,7 +24,7 @@ const walletLogos = [
   { image: "/images/coincorner.svg", name: "CoinCorner" },
 ];
 
-const Integration8 = ({ className }: Integration8Props) => {
+const WalletMarquee = ({ className }: WalletMarqueeProps) => {
   return (
     <section className={cn("py-16 sm:py-20 md:py-24", className)}>
       <div className="container">
@@ -79,4 +79,4 @@ const Integration8 = ({ className }: Integration8Props) => {
   );
 };
 
-export { Integration8 };
+export { WalletMarquee };

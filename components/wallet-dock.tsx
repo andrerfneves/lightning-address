@@ -25,7 +25,7 @@ const walletIntegrations = [
   { title: "CoinCorner", src: "/images/coincorner.svg" },
 ];
 
-const Integration13 = () => {
+const WalletDock = () => {
   return (
     <section className="overflow-hidden py-16 sm:py-20 md:py-24 bg-muted/30">
       <div className="container flex w-full flex-col items-center justify-center px-4">
@@ -151,4 +151,4 @@ const DockIcon = ({
   );
 };
 
-export { Integration13 };
+export { WalletDock };

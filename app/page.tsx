@@ -22,10 +22,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Integration8 } from "@/components/integration8";
-import { Integration13 } from "@/components/integration13";
-import { Feature222 } from "@/components/feature222";
-import { CodeExample5 } from "@/components/code-example5";
+import { WalletMarquee } from "@/components/wallet-marquee";
+import { WalletDock } from "@/components/wallet-dock";
+import { UseCases } from "@/components/use-cases";
+import { ProtocolCodeExamples } from "@/components/protocol-code-examples";
 
 const heroWallets = [
   { id: "cashapp", name: "Cash App", domain: "cash.app", logo: null },
@@ -207,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* Wallet Compatibility Marquee */}
-      <Integration8 />
+      <WalletMarquee />
 
       {/* Capabilities Bento Grid */}
       <section className="py-16 sm:py-20 md:py-24 bg-muted/30">
@@ -257,10 +257,10 @@ export default function HomePage() {
       </section>
 
       {/* Showcase Section */}
-      <Feature222 title="Lightning Address in the wild" />
+      <UseCases title="Lightning Address in the wild" />
 
       {/* Ecosystem Dock */}
-      <Integration13 />
+      <WalletDock />
 
       {/* Interactive Resolver */}
       <section className="py-16 sm:py-20 md:py-24">
@@ -413,7 +413,7 @@ export default function HomePage() {
       </section>
 
       {/* Code Examples Section */}
-      <CodeExample5 />
+      <ProtocolCodeExamples />
     </div>
   );
 }

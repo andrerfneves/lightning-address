@@ -94,12 +94,12 @@ const Card = ({ link, gradient, title, stats }: CardData) => {
   );
 };
 
-interface Feature222Props {
+interface UseCasesProps {
   className?: string;
   title?: string;
 }
 
-const Feature222 = ({ className, title = "Lightning Address in the wild" }: Feature222Props) => {
+const UseCases = ({ className, title = "Lightning Address in the wild" }: UseCasesProps) => {
   return (
     <section className={cn("py-16 sm:py-20 md:py-24", className)}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,4 +121,4 @@ const Feature222 = ({ className, title = "Lightning Address in the wild" }: Feat
   );
 };
 
-export { Feature222 };
+export { UseCases };

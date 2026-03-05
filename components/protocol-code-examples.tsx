@@ -18,11 +18,11 @@ import {
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface CodeExample5Props {
+interface ProtocolCodeExamplesProps {
   className?: string;
 }
 
-const CodeExample5 = ({ className }: CodeExample5Props) => {
+const ProtocolCodeExamples = ({ className }: ProtocolCodeExamplesProps) => {
   const [selectedApi, setSelectedApi] = useState("resolve-address");
   const [selectedLanguage, setSelectedLanguage] = useState("javascript");
 
@@ -160,7 +160,7 @@ const CodeExample5 = ({ className }: CodeExample5Props) => {
   );
 };
 
-export { CodeExample5 };
+export { ProtocolCodeExamples };
 
 const apiExamples = [
   {

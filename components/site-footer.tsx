@@ -14,7 +14,7 @@ interface SocialItem {
   href: string;
 }
 
-interface Footer50Props {
+interface SiteFooterProps {
   heading?: string;
   description?: string;
   ctaText?: string;
@@ -26,7 +26,7 @@ interface Footer50Props {
   className?: string;
 }
 
-const Footer50 = ({
+const SiteFooter = ({
   heading = "Start your free trial today",
   description = "The fit-for-purpose tool for planning and building modern software products.",
   ctaText = "Get started",
@@ -45,7 +45,7 @@ const Footer50 = ({
   legal = [{ name: "Privacy Policy", href: "/privacy" }],
   brandName = "mainline",
   className,
-}: Footer50Props) => {
+}: SiteFooterProps) => {
   return (
     <footer
       className={cn("flex flex-col items-center gap-14 pt-28 lg:pt-32", className)}
@@ -125,4 +125,4 @@ const Footer50 = ({
   );
 };
 
-export { Footer50 };
+export { SiteFooter };

@@ -5,7 +5,7 @@ import "./globals.css";
 import { MobileNav } from "@/components/mobile-nav";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Footer50 } from "@/components/footer50";
+import { SiteFooter } from "@/components/site-footer";
 
 const fontSans = Chakra_Petch({
   subsets: ["latin"],
@@ -92,7 +92,7 @@ export default function RootLayout({
           </nav>
         </header>
         <main>{children}</main>
-        <Footer50
+        <SiteFooter
           heading="The open standard for Bitcoin payments"
           description="Lightning Address is a free, open protocol. Anyone can implement it."
           ctaText="Read the spec"
