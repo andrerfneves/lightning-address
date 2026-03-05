@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight } from "lucide-react";
-import { docsNav, getDocBySlug } from "@/lib/docs";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import { docsNav, getDocBySlug, getPrevNextPages } from "@/lib/docs";
 import { DocsClientWrapper } from "./client";
+import { Card, CardContent } from "@/components/ui/card";
 
 // Static MDX imports
 import WhatIsLightningAddress from "@/content/docs/getting-started/what-is-lightning-address.mdx";
@@ -58,6 +59,7 @@ export default async function DocsPage({
   const Content = docs[slugPath];
   const currentPath = `/docs/${slugPath}`;
   const docInfo = slug ? getDocBySlug(slug) : null;
+  const { prev, next } = getPrevNextPages(currentPath);
 
   if (!Content) {
     notFound();
@@ -75,6 +77,48 @@ export default async function DocsPage({
         )}
         <Content />
       </article>
+
+      {/* Prev/Next Navigation */}
+      {(prev || next) && (
+        <nav className="mt-12 flex flex-col sm:flex-row gap-4">
+          {prev ? (
+            <Link href={prev.href} className="flex-1">
+              <Card className="h-full transition-colors hover:bg-muted/50">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
+                    <ChevronLeft className="h-4 w-4" />
+                    <span>Previous</span>
+                  </div>
+                  <div className="font-medium">{prev.title}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {prev.section}
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ) : (
+            <div className="flex-1" />
+          )}
+          {next ? (
+            <Link href={next.href} className="flex-1">
+              <Card className="h-full transition-colors hover:bg-muted/50">
+                <CardContent className="p-4 text-right">
+                  <div className="flex items-center justify-end gap-2 text-sm text-muted-foreground mb-1">
+                    <span>Next</span>
+                    <ChevronRight className="h-4 w-4" />
+                  </div>
+                  <div className="font-medium">{next.title}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {next.section}
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ) : (
+            <div className="flex-1" />
+          )}
+        </nav>
+      )}
     </DocsClientWrapper>
   );
 }

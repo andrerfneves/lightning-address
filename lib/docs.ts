@@ -70,3 +70,38 @@ export function getDocBySlug(slug: string[]): { title: string; section: string }
 
   return null;
 }
+
+// Get flattened list of all doc pages in order
+export function getFlatDocsList(): Array<{ title: string; href: string; section: string }> {
+  const pages: Array<{ title: string; href: string; section: string }> = [];
+
+  for (const section of docsNav) {
+    for (const item of section.items) {
+      pages.push({
+        title: item.title,
+        href: item.href,
+        section: section.title,
+      });
+    }
+  }
+
+  return pages;
+}
+
+// Get prev/next pages for navigation
+export function getPrevNextPages(currentPath: string): {
+  prev: { title: string; href: string; section: string } | null;
+  next: { title: string; href: string; section: string } | null;
+} {
+  const pages = getFlatDocsList();
+  const currentIndex = pages.findIndex((page) => page.href === currentPath);
+
+  if (currentIndex === -1) {
+    return { prev: null, next: null };
+  }
+
+  return {
+    prev: currentIndex > 0 ? pages[currentIndex - 1] : null,
+    next: currentIndex < pages.length - 1 ? pages[currentIndex + 1] : null,
+  };
+}
