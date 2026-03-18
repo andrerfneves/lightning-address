@@ -51,6 +51,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Phoenix](https://phoenix.acinq.co/)                              | ☑️        | ----      |
 | [Piggy](https://pig.gy/)                                          | ☑️        | ☑️        |
 | [Pouch.ph](https://pouch.ph/)                                     | ☑️        | ☑️        |
+| [Rizful](https://rizful.com/)                                      | ☑️        | ☑️        |
 | [Satoshi Lightning](https://vipsats.app)                          | ☑️        | ☑️        |
 | [SBW](https://sbw.app/)                                           | ☑️        | ----      |
 | [Spark Money Bot](https://sparkmoneybot.com/)                     | WIP       | ☑️        |
