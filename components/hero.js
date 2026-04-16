@@ -7,6 +7,8 @@ import { media } from '../utils';
 const Wrapper = styled.div`
   display: flex;
   padding: 30px 0;
+  min-height: calc(100vh - 16px);
+  min-height: calc(100svh - 16px);
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -14,8 +16,8 @@ const Wrapper = styled.div`
 
   ${media.tablet`
     padding: 0;
-    min-height: 800px;
-    height: calc(100vh - 16px);
+    min-height: max(800px, calc(100vh - 16px));
+    min-height: max(800px, calc(100svh - 16px));
   `}
 `;
 
@@ -37,6 +39,9 @@ const Title = styled.h1`
 `;
 
 const Intro = styled.p`
+  display: inline-block;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
   color: #0070f3;
   font-size: 14px;
   line-height: 1.6;
@@ -51,6 +56,13 @@ const Intro = styled.p`
     max-width: 900px;
     line-height: 1.6;
   `}
+`;
+
+const HeroSection = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Description = styled.p`
@@ -266,17 +278,17 @@ export function Hero() {
   return (
     <Wrapper>
       {showIntro && (
-        <motion.div
+        <HeroSection
           initial="hidden"
           animate="visible"
           variants={fadeUpVariants}
         >
           <Intro>Introducing</Intro>
           <Title>The Lightning Address</Title>
-        </motion.div>
+        </HeroSection>
       )}
       {showLightningAddr && (
-        <motion.div
+        <HeroSection
           initial="hidden"
           animate="visible"
           variants={fadeUpVariants}
@@ -298,10 +310,10 @@ export function Hero() {
               </motion.span>
             </AnimatePresence>
           </LoopWrapper>
-        </motion.div>
+        </HeroSection>
       )}
       {showCTAs && (
-        <motion.div
+        <HeroSection
           initial="hidden"
           animate="visible"
           variants={fadeUpVariants}
@@ -314,7 +326,7 @@ export function Hero() {
             <LicenseText>License: MIT</LicenseText>
             <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
           </LicenseWrapper>
-        </motion.div>
+        </HeroSection>
       )}
     </Wrapper>
   );
