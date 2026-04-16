@@ -74,10 +74,11 @@ const Description = styled.p`
 `;
 
 const LoopWrapper = styled.div`
-  width: 200px;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
   padding: 8px;
   display: flex;
-  margin-top: 30px;
+  margin: 30px auto 0 auto;
   flex-direction: row;
   align-items: center;
   justify-content: center;
