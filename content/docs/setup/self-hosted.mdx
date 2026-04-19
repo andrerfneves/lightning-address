@@ -1,0 +1,135 @@
+# Self-Hosted (DIY)
+
+Want to run your own Lightning Address on your domain? This guide walks you through setting up a self-hosted LNURL-pay server.
+
+## Sending vs. receiving
+
+Lightning Address support is often split into two parts:
+
+- **Sending** — your wallet can pay `user@domain.com`
+- **Receiving** — your service or wallet can host a Lightning Address for users
+
+A wallet can support **sending** without supporting **receiving**. Receiving requires you to expose HTTP endpoints and generate invoices on demand.
+
+## Requirements
+
+To support receiving on your own infrastructure, you typically need:
+
+- A domain you control
+- A web server (or serverless platform)
+- HTTPS
+- A Lightning node or custodial account to receive payments
+- LNURL-pay support with Internet Identifier metadata
+
+Lightning Address is just another [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1), so it should look and behave like an email-style identifier.
+
+## Basic implementation
+
+Your server needs to handle two endpoints:
+
+### 1. The well-known endpoint
+
+```
+GET https://yourdomain.com/.well-known/lnurlp/{username}
+```
+
+Return:
+
+```json
+{
+  "callback": "https://yourdomain.com/lnurlp/{username}/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay {username}@yourdomain.com\"]]",
+  "tag": "payRequest"
+}
+```
+
+You can optionally declare richer capabilities here too, such as:
+
+- `commentAllowed` for comments
+- `payerData` for sender identity
+- `currencies` for denomination support
+
+### 2. The callback endpoint
+
+```
+GET https://yourdomain.com/lnurlp/{username}/callback?amount={msats}
+```
+
+When called, generate a Lightning invoice for the requested amount and return:
+
+```json
+{
+  "pr": "lnbc...",
+  "routes": []
+}
+```
+
+## Implementation notes
+
+After a wallet resolves `user@domain.com` via the well-known endpoint, the rest of the flow is ordinary LNURL-pay. Lightning Address is mainly a friendlier discovery layer for LNURL-pay destinations.
+
+That means your implementation must still satisfy the LNURL-pay contract:
+
+- serve the expected JSON payload
+- accept the callback request with amount and optional fields
+- generate a valid BOLT11 invoice
+- return it fast enough for a normal wallet flow
+
+## Using LNbits
+
+[LNbits](https://lnbits.org) provides a ready-made LNURL-pay extension:
+
+1. Install LNbits on your server
+2. Enable the LNURLp extension
+3. Create a pay link for each user
+4. Point your `.well-known/lnurlp` to LNbits
+
+## Using BTCPay Server
+
+[BTCPay Server](https://btcpayserver.org) supports Lightning Address natively:
+
+1. Set up BTCPay Server with Lightning
+2. Enable LNURL in store settings
+3. Configure your domain's `.well-known` to point to BTCPay
+
+## Proxy setup
+
+If you just need to redirect to another provider, create a simple proxy:
+
+```javascript
+// Example: Cloudflare Worker
+export default {
+  async fetch(request) {
+    const url = new URL(request.url);
+    const username = url.pathname.split('/').pop();
+
+    // Proxy to your actual provider
+    const upstream = `https://provider.com/.well-known/lnurlp/${username}`;
+    return fetch(upstream);
+  }
+}
+```
+
+## Security considerations
+
+- Always use HTTPS — this flow handles payment-sensitive metadata
+- Validate usernames to prevent injection and path issues
+- Rate limit requests
+- Consider authentication and abuse controls around invoice generation
+- Treat MITM risks seriously when proxying or terminating traffic
+
+## Testing
+
+Use these tools to verify your setup:
+
+- [lnurl.fiatjaf.com](https://lnurl.fiatjaf.com) — LNURL decoder and tester
+- Any LNURL-compatible wallet — try sending yourself some sats
+- Your own HTTP client — verify `.well-known/lnurlp/{username}` and callback responses directly
+
+## Specs
+
+- [LNURL RFC](https://github.com/fiatjaf/lnurl-rfc)
+- [LUD-16 Internet Identifier metadata](https://github.com/fiatjaf/lnurl-rfc/blob/luds/16.md)
+- [LUD-12 comments](https://github.com/fiatjaf/lnurl-rfc/blob/luds/12.md)

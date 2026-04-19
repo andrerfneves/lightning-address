@@ -1,0 +1,133 @@
+# Currency Denomination (LUD-22)
+
+Currency Denomination allows payments to be expressed in any unit of account — USD, EUR, sats, or any other currency — while settling in Bitcoin.
+
+## Why It Matters
+
+Most people think in their local currency, not satoshis:
+
+- **Familiar pricing** — show prices in USD, EUR, or local currency
+- **Stable invoices** — lock in a fiat amount at payment time
+- **Global commerce** — accept payments from anywhere in local terms
+- **Accounting** — easier bookkeeping in your operating currency
+
+## How It Works
+
+### Server Response
+
+Include a `currencies` array in your LNURL response:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "tag": "payRequest",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "US Dollar",
+      "symbol": "$",
+      "decimals": 2,
+      "multiplier": 0.00000042,
+      "convertible": true
+    },
+    {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "decimals": 2,
+      "multiplier": 0.00000039,
+      "convertible": true
+    },
+    {
+      "code": "SAT",
+      "name": "Satoshi",
+      "symbol": "sats",
+      "decimals": 0,
+      "multiplier": 1,
+      "convertible": true
+    }
+  ]
+}
+```
+
+### Key Fields
+
+| Field | Description |
+|-------|-------------|
+| `code` | ISO currency code or "SAT" |
+| `name` | Human-readable name |
+| `symbol` | Currency symbol |
+| `decimals` | Decimal places for display |
+| `multiplier` | Conversion rate to millisatoshis |
+| `convertible` | Whether conversion is supported |
+
+### Callback with Currency
+
+When paying in a specific currency:
+
+```
+GET /callback?amount=5.00&currency=USD
+```
+
+Your server converts to millisatoshis at the current rate and generates the invoice.
+
+## Implementation Example
+
+```typescript
+app.get('/lnurlp/:username/callback', async (req, res) => {
+  const { amount, currency } = req.query;
+
+  let msats: number;
+
+  if (currency && currency !== 'SAT') {
+    // Convert from fiat to millisatoshis
+    const rate = await getExchangeRate(currency);
+    msats = Math.round(parseFloat(amount) / rate * 100000000000);
+  } else {
+    // Amount is already in millisatoshis
+    msats = parseInt(amount);
+  }
+
+  const invoice = await generateInvoice({
+    amount: msats,
+    description: `Payment of ${amount} ${currency || 'mSAT'}`
+  });
+
+  res.json({ pr: invoice });
+});
+```
+
+## Real-World Use Cases
+
+### E-commerce
+
+Display product prices in local currency:
+
+```
+Product: Widget Pro
+Price: $19.99 (≈ 47,500 sats)
+[Pay with Lightning]
+```
+
+### Subscriptions
+
+Monthly subscription at fixed USD rate:
+
+```
+Monthly Plan: $9.99/month
+Billed in Bitcoin at current rate
+```
+
+### Invoicing
+
+Send invoices denominated in your business currency while accepting Bitcoin payment.
+
+## Implementation Notes
+
+- Rates should be updated frequently (every few minutes)
+- Consider adding a rate lock window (e.g., 10 minutes)
+- Clearly display both the fiat amount and approximate sat amount
+- Handle rate refresh gracefully in the UI

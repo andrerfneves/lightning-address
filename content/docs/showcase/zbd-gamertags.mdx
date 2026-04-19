@@ -1,0 +1,106 @@
+# ZBD Gamertags
+
+ZBD pioneered the use of Lightning Address for gaming with "Gamertags" — Lightning Addresses that double as gaming identities.
+
+## The Concept
+
+Every ZBD user gets a Lightning Address in the format:
+
+```
+gamertag@zbd.gg
+```
+
+This address serves dual purposes:
+1. **Payment identifier** — receive Bitcoin from anywhere
+2. **Gaming identity** — recognized across ZBD-integrated games
+
+## How It Works
+
+### Instant In-Game Payments
+
+When you earn Bitcoin in a ZBD-powered game, it goes directly to your Lightning Address:
+
+1. Complete a challenge or achievement
+2. Game calls ZBD API with your gamertag
+3. Sats appear in your wallet instantly
+
+### Cross-Game Identity
+
+Your gamertag follows you across all ZBD-integrated games:
+
+- Same identity everywhere
+- Unified payment destination
+- Portable reputation
+
+### Social Tipping
+
+Players can tip each other using gamertags:
+
+```
+"Great game! Sending 100 sats to quickshot@zbd.gg"
+```
+
+## Technical Implementation
+
+ZBD's implementation showcases several Lightning Address capabilities:
+
+### Comments for Context
+
+Each payment includes game context:
+
+```json
+{
+  "comment": "Game: BitBounce | Achievement: First Win | Score: 1,250"
+}
+```
+
+### Sender Identity
+
+Games identify themselves when paying players:
+
+```json
+{
+  "payerData": {
+    "name": "BitBounce Game",
+    "identifier": "game@bitbounce.zbd.gg"
+  }
+}
+```
+
+### Success Actions
+
+After receiving a payment, players see:
+
+```json
+{
+  "successAction": {
+    "tag": "message",
+    "message": "You earned 50 sats in BitBounce! Keep playing to earn more."
+  }
+}
+```
+
+## Impact
+
+ZBD Gamertags demonstrate Lightning Address at scale:
+
+- **Millions of payments** processed through gamertags
+- **Real-time settlement** for gaming rewards
+- **Global accessibility** — play and earn from anywhere
+- **Seamless UX** — players don't think about "crypto," just earnings
+
+## For Game Developers
+
+Interested in adding Lightning Address to your game?
+
+1. Integrate the [ZBD API](https://zbd.dev)
+2. Let players link their Lightning Address (any provider)
+3. Send instant Bitcoin rewards
+
+The ZBD API supports paying any Lightning Address, not just ZBD gamertags.
+
+## Learn More
+
+- [ZBD Developer Portal](https://zbd.dev)
+- [ZBD App](https://zbd.gg)
+- [Games with Bitcoin Rewards](https://zbd.gg/games)

@@ -1,0 +1,123 @@
+# Reusable Requests (LUD-11)
+
+Reusable Requests define whether a payment link is persistent (can be used multiple times) or disposable (single-use).
+
+## Why It Matters
+
+Different payment scenarios need different behaviors:
+
+- **Tip jars** — reusable, accept unlimited payments
+- **Invoice links** — disposable, one payment only
+- **Donation pages** — reusable with tracking
+- **One-time purchases** — disposable to prevent double-payment
+
+## How It Works
+
+### Server Response
+
+Include `disposable` in your LNURL response:
+
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "tag": "payRequest",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user\"]]",
+  "disposable": false
+}
+```
+
+### Behavior
+
+| `disposable` | Behavior |
+|--------------|----------|
+| `false` (or omitted) | Can be paid multiple times |
+| `true` | Should only be used once |
+
+## Use Cases
+
+### Persistent Address (Default)
+
+Your Lightning Address is reusable by default:
+
+```json
+{
+  "callback": "https://zbd.gg/lnurlp/andre/callback",
+  "disposable": false,
+  "metadata": "[[\"text/plain\",\"Pay andre@zbd.gg\"]]"
+}
+```
+
+Anyone can pay `andre@zbd.gg` as many times as they want.
+
+### One-Time Payment Link
+
+For a specific invoice or purchase:
+
+```json
+{
+  "callback": "https://shop.example/pay/order-12345/callback",
+  "disposable": true,
+  "minSendable": 100000000,
+  "maxSendable": 100000000,
+  "metadata": "[[\"text/plain\",\"Order #12345 - Widget Pro\"]]"
+}
+```
+
+This link represents a specific $10 order and should only be paid once.
+
+## Implementation Example
+
+```typescript
+// Generate a one-time payment link for an order
+app.get('/pay/:orderId', async (req, res) => {
+  const order = await getOrder(req.params.orderId);
+
+  if (!order) {
+    return res.status(404).json({ status: 'ERROR', reason: 'Order not found' });
+  }
+
+  if (order.paid) {
+    return res.status(400).json({ status: 'ERROR', reason: 'Already paid' });
+  }
+
+  res.json({
+    callback: `https://shop.example/pay/${order.id}/callback`,
+    tag: 'payRequest',
+    minSendable: order.amountMsats,
+    maxSendable: order.amountMsats,
+    metadata: JSON.stringify([['text/plain', `Order #${order.id}`]]),
+    disposable: true
+  });
+});
+
+app.get('/pay/:orderId/callback', async (req, res) => {
+  const order = await getOrder(req.params.orderId);
+
+  if (order.paid) {
+    return res.status(400).json({
+      status: 'ERROR',
+      reason: 'Order already paid'
+    });
+  }
+
+  const invoice = await generateInvoice({
+    amount: order.amountMsats,
+    description: `Order #${order.id}`
+  });
+
+  // Mark as pending payment
+  await markOrderPending(order.id, invoice.paymentHash);
+
+  res.json({ pr: invoice.bolt11 });
+});
+```
+
+## Best Practices
+
+1. **Default to reusable** — most addresses should accept multiple payments
+2. **Use disposable for orders** — prevent accidental double-payments
+3. **Check state before generating** — reject callbacks for already-paid disposables
+4. **Clear UI indication** — show users whether a link is one-time
+5. **Handle edge cases** — what if someone tries to pay a disposed link?

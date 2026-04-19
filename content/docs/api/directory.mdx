@@ -1,0 +1,174 @@
+# /api/v1/directory
+
+The Directory API provides programmatic access to the Lightning Address provider directory.
+
+## Endpoint
+
+```
+GET https://lightningaddress.com/api/v1/directory
+```
+
+## Response Format
+
+```json
+{
+  "count": 42,
+  "wallets": [
+    {
+      "id": "zbd",
+      "name": "ZBD",
+      "url": "https://zbd.gg",
+      "logo": "zbd.svg",
+      "domain": "zbd.gg",
+      "type": ["wallet", "service"],
+      "platforms": ["ios", "android", "web", "api"],
+      "send": true,
+      "receive": true,
+      "features": ["lud-09", "lud-11", "lud-12", "lud-18", "lud-21", "lud-22", "lud-25"]
+    }
+  ]
+}
+```
+
+## Query Parameters
+
+### Filter by Feature
+
+```
+GET /api/v1/directory?feature=lud-21
+```
+
+Returns only providers that support Payment Verification.
+
+Available feature values:
+- `lud-09` — Success Actions
+- `lud-11` — Reusable Requests
+- `lud-12` — Comments
+- `lud-18` — Sender Identity
+- `lud-21` — Payment Verification
+- `lud-22` — Currency Denomination
+- `lud-25` — Payment Rail Discovery
+
+### Filter by Platform
+
+```
+GET /api/v1/directory?platform=ios
+```
+
+Returns only providers available on iOS.
+
+Available platform values:
+- `ios`
+- `android`
+- `web`
+- `desktop`
+- `api`
+
+### Filter by Type
+
+```
+GET /api/v1/directory?type=wallet
+```
+
+Returns only wallets (excluding services, exchanges, etc.).
+
+Available type values:
+- `wallet`
+- `service`
+- `exchange`
+- `developer-tool`
+
+### Combined Filters
+
+```
+GET /api/v1/directory?type=wallet&platform=ios&feature=lud-12
+```
+
+Returns iOS wallets that support comments.
+
+## Response Fields
+
+### Wallet Object
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Unique identifier |
+| `name` | string | Display name |
+| `url` | string | Website URL |
+| `logo` | string \| null | Logo filename |
+| `domain` | string | Lightning Address domain |
+| `type` | string[] | Provider types |
+| `platforms` | string[] | Available platforms |
+| `send` | boolean | Supports sending |
+| `receive` | boolean | Supports receiving |
+| `features` | string[] | Supported LUDs |
+
+## Caching
+
+Responses include cache headers:
+
+```
+Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
+```
+
+- Fresh for 1 hour
+- Stale-while-revalidate for 24 hours
+
+## Example Usage
+
+### JavaScript/TypeScript
+
+```typescript
+async function getWalletsWithFeature(feature: string) {
+  const response = await fetch(
+    `https://lightningaddress.com/api/v1/directory?feature=${feature}`
+  );
+  const data = await response.json();
+  return data.wallets;
+}
+
+// Get all wallets supporting payment verification
+const verified = await getWalletsWithFeature('lud-21');
+```
+
+### cURL
+
+```bash
+# Get all providers
+curl https://lightningaddress.com/api/v1/directory
+
+# Get iOS wallets
+curl "https://lightningaddress.com/api/v1/directory?platform=ios&type=wallet"
+```
+
+### Python
+
+```python
+import requests
+
+def get_directory(feature=None, platform=None, type=None):
+    params = {}
+    if feature:
+        params['feature'] = feature
+    if platform:
+        params['platform'] = platform
+    if type:
+        params['type'] = type
+
+    response = requests.get(
+        'https://lightningaddress.com/api/v1/directory',
+        params=params
+    )
+    return response.json()
+
+# Get all exchanges
+exchanges = get_directory(type='exchange')
+```
+
+## Rate Limiting
+
+The API is publicly accessible with generous rate limits. For high-volume use cases, consider caching responses locally.
+
+## Contributing
+
+To add your wallet or service to the directory, submit a pull request to the [Lightning Address repository](https://github.com/andrerfneves/lightning-address) updating `data/wallets.json`.

@@ -1,0 +1,264 @@
+# Lightning Address Protocol Specification
+# For LLMs and AI Agents
+# Version: 1.0
+# Last Updated: 2026-03-04
+
+## Overview
+
+Lightning Address (LUD-16) is an Internet Identifier for Bitcoin Lightning Network payments.
+Format: user@domain.com
+Example: andre@zbd.gg
+
+A Lightning Address works like an email address but for sending Bitcoin. It provides a
+human-readable, static identifier that can receive unlimited payments without expiration.
+
+## How It Works
+
+### Step 1: Parse the Address
+
+Given a Lightning Address like `user@domain.com`:
+- Username: user
+- Domain: domain.com
+
+### Step 2: Construct LNURL Endpoint
+
+Convert to HTTPS URL:
+```
+https://domain.com/.well-known/lnurlp/user
+```
+
+### Step 3: Fetch Payment Parameters
+
+GET https://domain.com/.well-known/lnurlp/user
+
+Response:
+```json
+{
+  "callback": "https://domain.com/lnurlp/user/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Pay user@domain.com\"]]",
+  "tag": "payRequest",
+  "commentAllowed": 255
+}
+```
+
+Fields:
+- callback: URL to request invoice from
+- minSendable: Minimum payment in millisatoshis
+- maxSendable: Maximum payment in millisatoshis
+- metadata: JSON-encoded array of [type, content] pairs
+- tag: Must be "payRequest"
+- commentAllowed: Optional, max comment length in chars
+
+### Step 4: Request Invoice
+
+GET {callback}?amount={millisatoshis}
+
+Optional parameters:
+- comment: Text message (if commentAllowed > 0)
+- payerdata: JSON object with sender info (if payerData supported)
+
+Response:
+```json
+{
+  "pr": "lnbc10n1p...",
+  "routes": []
+}
+```
+
+### Step 5: Pay the Invoice
+
+Use any Lightning wallet or library to pay the BOLT11 invoice in the "pr" field.
+
+## Capabilities Reference
+
+### LUD-12: Comments
+
+Attach a message to payments.
+
+Server declares: `"commentAllowed": 255`
+Client sends: `?amount=10000&comment=Thanks!`
+
+### LUD-09: Success Actions
+
+Server returns action to display after payment.
+
+Response:
+```json
+{
+  "pr": "lnbc...",
+  "successAction": {
+    "tag": "message",
+    "message": "Thank you for your payment!"
+  }
+}
+```
+
+Success action types:
+- message: Display text
+- url: Open URL
+- aes: Decrypt and display content
+
+### LUD-18: Sender Identity
+
+Sender shares optional identity information.
+
+Server declares:
+```json
+{
+  "payerData": {
+    "name": { "mandatory": false },
+    "email": { "mandatory": false },
+    "identifier": { "mandatory": false }
+  }
+}
+```
+
+Client sends:
+```
+?amount=10000&payerdata={"name":"Alice","identifier":"alice@wallet.com"}
+```
+
+### LUD-21: Payment Verification
+
+Cryptographic proof of settlement.
+
+After payment, query:
+GET /lnurlp/user/verify/{payment_hash}
+
+Response:
+```json
+{
+  "status": "OK",
+  "settled": true,
+  "preimage": "...",
+  "signature": "..."
+}
+```
+
+### LUD-22: Currency Denomination
+
+Pay in fiat currencies, settle in Bitcoin.
+
+Server declares:
+```json
+{
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "US Dollar",
+      "symbol": "$",
+      "decimals": 2,
+      "multiplier": 0.00000042
+    }
+  ]
+}
+```
+
+Client sends: `?amount=5.00&currency=USD`
+
+### LUD-11: Reusable Requests
+
+Distinguish persistent vs one-time payment links.
+
+Server declares: `"disposable": false` (reusable) or `"disposable": true` (one-time)
+
+### LUD-25: Payment Rail Discovery
+
+Discover alternative payment protocols.
+
+Endpoint: GET /.well-known/pay-options/user
+
+Response:
+```json
+{
+  "options": [
+    { "type": "bolt11", "callback": "..." },
+    { "type": "bolt12", "offer": "lno1..." },
+    { "type": "onchain", "address": "bc1q..." }
+  ]
+}
+```
+
+## Implementation Examples
+
+### TypeScript: Pay a Lightning Address
+
+```typescript
+async function payLightningAddress(
+  address: string,
+  amountMsats: number,
+  options?: { comment?: string; payerData?: object }
+): Promise<{ paymentHash: string }> {
+  const [username, domain] = address.split('@');
+
+  // Get payment parameters
+  const params = await fetch(
+    `https://${domain}/.well-known/lnurlp/${username}`
+  ).then(r => r.json());
+
+  // Build callback URL
+  let url = `${params.callback}?amount=${amountMsats}`;
+  if (options?.comment && params.commentAllowed) {
+    url += `&comment=${encodeURIComponent(options.comment)}`;
+  }
+  if (options?.payerData && params.payerData) {
+    url += `&payerdata=${encodeURIComponent(JSON.stringify(options.payerData))}`;
+  }
+
+  // Get invoice
+  const invoice = await fetch(url).then(r => r.json());
+
+  // Pay using your Lightning implementation
+  return payBolt11Invoice(invoice.pr);
+}
+```
+
+### Python: Resolve a Lightning Address
+
+```python
+import requests
+
+def resolve_lightning_address(address: str) -> dict:
+    username, domain = address.split('@')
+    url = f"https://{domain}/.well-known/lnurlp/{username}"
+    response = requests.get(url)
+    return response.json()
+
+# Usage
+params = resolve_lightning_address("user@zbd.gg")
+print(f"Min: {params['minSendable']} msats")
+print(f"Max: {params['maxSendable']} msats")
+```
+
+## Error Handling
+
+Errors return:
+```json
+{
+  "status": "ERROR",
+  "reason": "Human-readable error message"
+}
+```
+
+Common errors:
+- Invalid address format
+- User not found
+- Amount out of range
+- Comment too long
+
+## Security Considerations
+
+- Always use HTTPS
+- Validate SSL certificates
+- Sanitize comment content
+- Rate limit requests
+- Handle timeouts gracefully
+
+## Resources
+
+- Specification: https://github.com/andrerfneves/lightning-address
+- LNURL RFC: https://github.com/lnurl/luds
+- Website: https://lightningaddress.com
+- Directory API: https://lightningaddress.com/api/v1/directory
