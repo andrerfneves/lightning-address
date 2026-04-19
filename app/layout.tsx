@@ -101,7 +101,7 @@ export default function RootLayout({
             { name: "Directory", href: "/directory" },
             { name: "Docs", href: "/docs" },
             { name: "GitHub", href: "https://github.com/andrerfneves/lightning-address" },
-            { name: "LUD-25 Draft", href: "/docs" },
+            { name: "LUD-25 Draft", href: "/docs/capabilities/payment-rail-discovery" },
           ]}
           social={[
             { name: "GitHub", href: "https://github.com/andrerfneves/lightning-address" },

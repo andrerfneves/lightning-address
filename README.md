@@ -1,91 +1,55 @@
-![](https://i.imgur.com/uwHlWPC.png)
-
 # Lightning Address
 
-### **Like an email address, but for your Bitcoin.**
+Like an email address, but for your Bitcoin.
 
-## General Information
+Lightning Address is the open protocol and canonical website for human-readable Bitcoin payment identifiers built on LNURL-pay.
 
-The Lightning Address is an [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1) that allows anyone to send you Bitcoin over the Lightning Network. No scanning of QR codes or pasting invoices necessary.
+## What lives in this repo
 
-For more information check out the website: [lightningaddress.com](https://lightningaddress.com)
+This repository powers **lightningaddress.com** and now includes:
 
-## Developers
+- a modern Next.js site
+- a searchable wallet/service **directory**
+- MDX-based **documentation**
+- public JSON and helper APIs
+- `public/llms.txt` for agent-friendly protocol consumption
 
-If you are a developer aiming to introduce support for Lightning Addresses in your application, wallet, check the [DIY](./DIY.md) section.
+## Start here
 
-## Bridge Servers
+- **Website:** [lightningaddress.com](https://lightningaddress.com)
+- **Docs:** [lightningaddress.com/docs](https://lightningaddress.com/docs)
+- **Directory:** [lightningaddress.com/directory](https://lightningaddress.com/directory)
+- **LLMs / agents:** [lightningaddress.com/llms.txt](https://lightningaddress.com/llms.txt)
 
-If you don't want to roll out an entire HTTP / LNURL server on your own setup/infrastructure, but already have a Lightning node you want to use for your Lightning Address? You can use a Bridge Server to ensure your Lightning Node can properly receive payments from your Lightning Address. Check the [Bridge Server](./BRIDGE.md) instructions for a plug-n-play solution.
+## Where the legacy docs went
 
-## Wallets Supported
+The older root-level docs have been folded into the site:
 
-_Bitcoin Lightning wallets that support sending and receiving to **Lightning Addresses**_.
+- DIY / self-hosting guidance → `/docs/setup/self-hosted`
+- Bridge server guidance → `/docs/setup/bridge-servers`
+- Protocol overview → `/docs/getting-started`
+- Wallet/provider list → `/directory` and `data/wallets.json`
 
-| Wallet                                                            | Sending   | Receiving |
-| :---                                                              | :-------: | :-------: |
-| [Alby](https://getalby.com)                                       | ☑️        | ☑️        |
-| [BitBanana](https://bitbanana.app)                                | ☑️        | ----      |
-| [Bitnob](https://bitnob.com)                                      | ☑️        | ☑️        |
-| [Blink (Bitcoin Beach Wallet)](https://blink.sv/)                 | ☑️        | ☑️        |
-| [BitcoLi wallet](https://bitcoli.com/)                            | ☑️        | ☑️        |
-| [Blixt](https://blixtwallet.github.io/)                           | ☑️        | [WIP](https://github.com/hsjoberg/lightning-box/blob/master/README.md)     |
-| [BlueWallet](https://bluewallet.io/)                              | ☑️        | ----      |
-| [Bookmark.org](https://bookmark.org/)                             | ----      | ☑️        |
-| [Bottlepay](https://bottlepay.com/)                               | ☑️        | ☑️        |
-| [Breez](https://breez.technology/)                                | ☑️        | ----      |
-| [BTCPay](https://btcpayserver.org/)                               | ☑️        | ☑️        |
-| [Cash App](https://cash.app/)                                     | ☑️        | ☑️        |
-| [CoinCorner](https://www.coincorner.com/)                         | ☑️        | ☑️        |
-| [CoinKit](https://coinkit.de/)                                    | ☑️        | ☑️        |
-| [coinos](https://coinos.io/)                                      | ☑️        | ☑️        |
-| [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
-| [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
-| [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
-| [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
-| [Mash](https://getmash.com/)                                      | ----      | ☑️        |
-| [Muun](https://muun.com/)                                         | ----      | ----      |
-| [NOAH](https://app.noah.com/)                                     | ☑️        | ☑️        |
-| [Numeraire](https://numeraire.tech/)                              | ☑️         | ☑️         |
-| [Oak Node](https://oak-node.net)                                  | ☑️        | ----      |
-| [Phoenix](https://phoenix.acinq.co/)                              | ☑️        | ----      |
-| [Piggy](https://pig.gy/)                                          | ☑️        | ☑️        |
-| [Pouch.ph](https://pouch.ph/)                                     | ☑️        | ☑️        |
-| [Satoshi Lightning](https://vipsats.app)                          | ☑️        | ☑️        |
-| [SBW](https://sbw.app/)                                           | ☑️        | ----      |
-| [Spark Money Bot](https://sparkmoneybot.com/)                     | WIP       | ☑️        |
-| [Spark Wallet](https://sparkwallet.io/)                           | ☑️        | ☑️        |
-| [Speed Wallet](https://www.speed.app/)                            | ☑️        | ☑️        |
-| [Stacker News](https://stacker.news/)                             | ----      | ☑️        |
-| [Strike](https://strike.me/)                                      | ☑️        | ☑️        |
-| [ThunderHub](https://github.com/apotdevin/thunderhub)             | ☑️        | ----      |
-| [Voltpay App](https://voltpay.app)                                | ☑️        | ☑️        |
-| [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️        | ☑️        |
-| [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️        | ☑️        |
-| [Zeus](https://github.com/ZeusLN/zeus)                            | ☑️        | ----      |
-| [LaWallet](https://app.lawallet.ar)                               | ☑️        | ☑️        |
+## Development
 
-## TLDR
+```bash
+npm install
+npm run dev
+```
 
-Here's a quick primer on how Lightning Address works and how it relies on the [LNURL Pay protocol](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md).
+Then open `http://localhost:3000`.
 
-![](https://i.imgur.com/DIV5q8q.png)
+## Contributing
 
-### Diagrams
+Contributions are welcome for:
 
-All illustrative and informative diagrams are available under the [DIAGRAMS](./diagrams/README.md) folder.
+- protocol documentation
+- provider directory updates
+- showcase examples
+- site improvements
 
-### Videos & Podcasts
+If you are updating ecosystem support, prefer editing `data/wallets.json` instead of maintaining long markdown tables.
 
-- [Introducing The Lightning Address](https://www.youtube.com/watch?v=G97yzYcyoug) - a recorded presentation on the explanations of why Lightning Address was created and the problems this protocol aims to solve
-- [How To Set Up A Lightning Address Directly To Your Node](https://www.youtube.com/watch?v=15tFA9sZ-N0) - A quick video tutorial showing you how to set up a Lightning Address directly to your Umbrel or Citadel node, non-custodially (but not 100% trust-free)
+## License
 
-## Contributions
-
-Contributions are welcome, for both the lightningaddress.com website as well as the Lightning Address protocol itself. Please submit a PR here or on the core [LNURL RFC repository](https://github.com/fiatjaf/lnurl-rfc).
-
-## Donations
-
-If this project is important to you, consider donating to the contributors, creators, and developers pushing this initiative forward.
-
-**Lightning Address:** lnaddress@zbd.gg / foxp2zeb@ln.tips
+MIT — see [LICENSE.md](./LICENSE.md).

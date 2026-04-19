@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { docsNav, getDocBySlug, getPrevNextPages } from "@/lib/docs";
 import { DocsClientWrapper } from "./client";
@@ -49,6 +49,17 @@ export default async function DocsPage({
   params: Promise<{ slug?: string[] }>;
 }) {
   const { slug } = await params;
+
+  if (slug?.length === 1) {
+    const section = docsNav.find((candidate) => {
+      const firstItem = candidate.items[0];
+      return firstItem?.href.split("/")[2] === slug[0];
+    });
+
+    if (section?.items?.[0]) {
+      redirect(section.items[0].href);
+    }
+  }
 
   // Default to first doc if no slug
   const slugPath =

@@ -1,32 +1,48 @@
 # Bridge Servers
 
-If you already run a Lightning node but don't want to build your own LNURL server, bridge servers let you connect your node to get a Lightning Address.
+If you already run a Lightning node but don't want to build your own LNURL server, bridge servers let you connect your node and domain to a Lightning Address.
 
-## What is a Bridge Server?
+## What is a bridge server?
 
-A bridge server acts as an intermediary between:
-- Your Lightning node (which handles payments)
-- The LNURL protocol (which handles the address resolution)
+A bridge server is an HTTP service that serves the LNURL-pay payload needed to let `user@domain.com` resolve to a live Lightning payment flow.
 
-When someone pays your Lightning Address, the bridge server:
+In practice it sits between:
+
+- your Lightning node or wallet backend
+- the HTTP / LNURL discovery layer
+- the sender's wallet performing resolution
+
+When someone pays your Lightning Address, the bridge server typically:
+
 1. Receives the LNURL request
-2. Asks your node for an invoice
+2. Asks your node or backend for an invoice
 3. Returns the invoice to the sender
-4. Your node receives the payment directly
+4. Lets your node receive the payment directly
 
-## Available Bridge Solutions
+This is useful when you want your own domain and node-backed payments without building a full LNURL server from scratch.
 
-### Umbrel / Citadel
+## Hosted bridge option: bridgeaddr
 
-If you're running Umbrel or Citadel, you can use:
+[`bridgeaddr`](https://bridgeaddr.fiatjaf.com/) is a lightweight hosted bridge solution that can connect your domain to a Lightning node in a non-custodial way.
 
-- **Alby Hub** — Connect to get an `@getalby.com` address
-- **LNbits** — Self-host your own LNURL endpoints
-- **BTCPay Server** — Full payment processing with Lightning Address
+Historically it has supported backends such as:
 
-### Satdress
+- Sparko
+- LND
+- LNPay
+- LNbits
 
-[Satdress](https://github.com/nbd-wtf/satdress) is a lightweight bridge server:
+The bridge serves the required JSON and then talks to your Lightning backend to fetch invoices on demand. That means you can often get set up with just:
+
+- a domain
+- the right DNS records
+- working access to your Lightning backend
+
+## Self-hostable bridge: Satdress
+
+[Satdress](https://github.com/nbd-wtf/satdress) is a federated Lightning Address server that you can host yourself.
+
+It gives you a plug-and-play way to connect nodes to addresses and can be used both for your own setup and for multi-user deployments.
 
 ```bash
 # Clone and configure
@@ -37,40 +53,55 @@ cp .env.example .env
 ```
 
 Supports:
+
 - LND
 - c-lightning
 - Eclair
 - LNbits
 - LNPay
 
+Satdress also provides a simple web UI for connecting nodes to addresses.
+
+## Other bridge-style approaches
+
+### Umbrel / Citadel
+
+If you're running Umbrel or Citadel, you can use:
+
+- **Alby Hub** — Connect to get an `@getalby.com` address
+- **LNbits** — Self-host LNURL endpoints
+- **BTCPay Server** — Full payment processing with Lightning Address
+
 ### Lightning Box
 
-[Lightning Box](https://github.com/hsjoberg/lightning-box) provides Lightning Address for Blixt wallet users and other LND nodes.
+[Lightning Box](https://github.com/hsjoberg/lightning-box) provides Lightning Address support for Blixt wallet users and other LND-backed setups.
 
-## Setup Guide
+## Setup guide
 
 1. **Choose a bridge** — Pick one that supports your node type
-2. **Configure connection** — Usually REST API or gRPC credentials
-3. **Set up DNS** — Point your domain's `.well-known` to the bridge
-4. **Test** — Send yourself a small payment
+2. **Configure the connection** — Usually REST, gRPC, macaroon, or API credentials
+3. **Set up DNS** — Point your domain's `.well-known` flow to the bridge
+4. **Test end to end** — Resolve your address and send yourself a small payment
 
-## Important Notes
+## Important notes
 
-- **Not fully trustless** — The bridge sees your invoices (though not funds)
-- **Uptime dependent** — If the bridge is down, you can't receive
-- **Custom domains** — Most bridges support your own domain
+- **Not fully trustless** — the bridge can see invoice flow and metadata even if it doesn't custody funds
+- **Uptime matters** — if the bridge is down, your address may stop resolving
+- **HTTPS still matters** — payment metadata remains security-sensitive
+- **Custom domains are usually possible** — but DNS setup varies by bridge
 
-## Self-Hosting vs. Hosted
+## Self-hosted vs. hosted
 
-| Aspect | Self-Hosted Bridge | Hosted Service |
-|--------|-------------------|----------------|
+| Aspect | Self-hosted bridge | Hosted service |
+|--------|--------------------|----------------|
 | Trust | You control everything | Trust the provider |
 | Uptime | Your responsibility | Provider handles it |
-| Setup | More technical | Usually instant |
+| Setup | More technical | Usually faster |
 | Custom domain | Often supported | Usually supported |
-| Cost | Just hosting | May have fees |
+| Cost | Hosting + ops | May include service fees |
 
-For most users, a hosted wallet with Lightning Address is simpler. Bridge servers are best for:
-- Node operators who want sovereignty
-- Developers building custom setups
-- Users with specific privacy requirements
+For many users, a hosted wallet with built-in Lightning Address support is simpler. Bridge servers are best for:
+
+- node operators who want sovereignty
+- developers building custom setups
+- users with stronger privacy or infrastructure requirements
