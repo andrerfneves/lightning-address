@@ -39,6 +39,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [CoinCorner](https://www.coincorner.com/)                         | ☑️        | ☑️        |
 | [CoinKit](https://coinkit.de/)                                    | ☑️        | ☑️        |
 | [coinos](https://coinos.io/)                                      | ☑️        | ☑️        |
+| [Electrum](https://electrum.org/)                                 | ☑️        | [Plugin](https://plugins.electrum.org/plugin/lnurl-server/)       |
 | [Lexe](https://lexe.app/)                                         | ☑️        | ☑️        |
 | [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
 | [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
