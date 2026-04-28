@@ -404,6 +404,12 @@ const BRIDGE_SERVERS = [
     description:
       "Rust implementation of Federated Lightning Address (based on original satdress)",
   },
+  {
+    urlLink: "https://plugins.electrum.org/plugin/lnurl-server/",
+    urlText: "Electrum",
+    description:
+      "LNURL server plugin for Electrum Wallet. Allows to self-host a lightning address and receive payments non-custodially, with Nostr Zap support.",
+  },
 ];
 
 const WALLETS = [
@@ -555,6 +561,15 @@ const WALLETS = [
     imageStyle: {
       width: "115px",
       borderRadius: "5%",
+    },
+  },
+  {
+    name: "Electrum",
+    image: "/images/electrum.svg",
+    downloadText: "Download Wallet",
+    url: "https://electrum.org",
+    imageStyle: {
+      width: "115px",
     },
   },
 ];
