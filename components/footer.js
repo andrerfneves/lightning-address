@@ -100,6 +100,10 @@ const FOOTER = [
         link: "https://pig.gy",
         title: "Piggy",
       },
+      {
+        link: "https://lexe.app",
+        title: "Lexe",
+      },
     ],
   },
   {
@@ -168,6 +172,10 @@ const FOOTER = [
       {
         link: "https://pig.gy",
         title: "Piggy",
+      },
+      {
+        link: "https://lexe.app",
+        title: "Lexe",
       },
     ],
   },

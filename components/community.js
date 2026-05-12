@@ -557,6 +557,13 @@ const WALLETS = [
       borderRadius: "5%",
     },
   },
+  {
+    name: "Lexe",
+    image: "/images/lexe.svg",
+    downloadText: "Open Lexe",
+    url: "https://lexe.app",
+    imageStyle: { width: "160px" },
+  },
 ];
 
 export const Community = () => (
