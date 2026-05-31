@@ -320,11 +320,11 @@ export function Hero() {
         >
           <CTAWrapper>
             <CTAPrimary href="#providers">Get a Lightning Address</CTAPrimary>
-            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank">Read Documentation</CTASecondary>
+            <CTASecondary href="https://github.com/andrerfneves/lightning-address/blob/master/README.md" target="_blank" rel="noopener noreferrer">Read Documentation</CTASecondary>
           </CTAWrapper>
           <LicenseWrapper>
             <LicenseText>License: MIT</LicenseText>
-            <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank'>GitHub</LicenseLink>
+            <LicenseLink href='https://github.com/andrerfneves/lightning-address/blob/master/LICENSE.md' target='_blank' rel="noopener noreferrer">GitHub</LicenseLink>
           </LicenseWrapper>
         </HeroSection>
       )}

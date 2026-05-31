@@ -452,6 +452,7 @@ export const Providers = () => (
             <ProviderSignUpButton
               isDisabled={provider.comingSoon || false}
               target="_blank"
+              rel="noopener noreferrer"
               href={provider.url}
             >
               {provider.buttonText || `Open ${provider.name}`}
