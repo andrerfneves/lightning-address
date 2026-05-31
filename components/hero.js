@@ -113,18 +113,6 @@ const LoopedTextPart = styled.span`
   `}
 `;
 
-const Link = styled.a`
-  color: #666666;
-  font-weight: 400;
-  text-decoration: none;
-  letter-spacing: -0.5px;
-
-  &:hover {
-    color: #0070f3;
-    border-color: transparent;
-  }
-`;
-
 const CTAWrapper = styled.div`
   display: flex;
   flex-direction: column;
