@@ -597,6 +597,7 @@ export const Community = () => (
           <CTASecondary
             href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported"
             target="_blank"
+            rel="noopener noreferrer"
           >
             View list of supported Wallets
           </CTASecondary>
