@@ -230,6 +230,7 @@ const DOMAINS = [
   'lawallet.ar',
   'numeraire.tech',
   'pig.gy',
+  'lexe.app'
 ];
 
 const fadeUpVariants = {

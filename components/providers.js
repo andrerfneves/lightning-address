@@ -427,7 +427,15 @@ const PROVIDERS = [
     lightningAddressDomain: "pig.gy",
     url: "https://pig.gy",
     buttonText: "Get a Piggy",
-  }
+  },
+  {
+    name: "Lexe",
+    image: "/images/lexe.svg",
+    imageStyle: { width: "140px", marginTop: "5px" },
+    lightningAddressDomain: "lexe.app",
+    url: "https://lexe.app",
+    buttonText: "Download Lexe",
+  },
 ];
 
 export const Providers = () => (
