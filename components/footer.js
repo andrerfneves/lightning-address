@@ -276,7 +276,7 @@ export const Footer = () => (
           <Column key={col.title}>
             <ColumnTitle>{col.title}</ColumnTitle>
             {(col.items || []).map((item) => (
-              <ColumnItem key={item.link} href={item.link} target="_blank">
+              <ColumnItem key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </ColumnItem>
             ))}

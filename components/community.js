@@ -588,7 +588,7 @@ export const Community = () => (
                 style={wallet.imageStyle || {}}
               />
             </ImageWrapper>
-            <CommunitySignUpButton target="_blank" href={wallet.url}>
+            <CommunitySignUpButton target="_blank" rel="noopener noreferrer" href={wallet.url}>
               {wallet.downloadText}
             </CommunitySignUpButton>
           </CommunityCard>
@@ -597,6 +597,7 @@ export const Community = () => (
           <CTASecondary
             href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported"
             target="_blank"
+            rel="noopener noreferrer"
           >
             View list of supported Wallets
           </CTASecondary>
@@ -614,7 +615,7 @@ export const Community = () => (
           </CommunityDescriptionSmall>
           <CommunityListWrapper>
             {SATDRESS_SERVERS.map((item) => (
-              <Link key={item.urlText} href={item.urlLink} target="_blank">
+              <Link key={item.urlText} href={item.urlLink} target="_blank" rel="noopener noreferrer">
                 {item.urlText}
               </Link>
             ))}
@@ -626,7 +627,7 @@ export const Community = () => (
           <CommunityVerticalListWrapper>
             {BRIDGE_SERVERS.map((item) => (
               <VerticalLinkWrapper key={item.urlText}>
-                <VerticalLink href={item.urlLink} target="_blank">
+                <VerticalLink href={item.urlLink} target="_blank" rel="noopener noreferrer">
                   {item.urlText}
                 </VerticalLink>
                 <VerticalLinkDescription>
