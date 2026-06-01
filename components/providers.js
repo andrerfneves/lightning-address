@@ -391,7 +391,7 @@ const PROVIDERS = [
     imageStyle: {
       width: "125px",
     },
-    lightningAddressDomain: "nicehash.com",
+    lightningAddressDomain: "ln.nicehash.com",
     url: "https://nicehash.com",
   },
   {
