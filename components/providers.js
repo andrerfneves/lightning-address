@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { media } from "../utils";
+import { Card, SignUpButton, ImageWrapper, LeftColumn, RightColumn, RightColumnInner } from "./shared";
 
 const ProvidersModule = styled.div`
   display: flex;
@@ -26,28 +27,6 @@ const ProvidersInner = styled.div`
   ${media.largeTablet`
     max-width: 1000px;
     flex-direction: row;
-  `}
-`;
-
-const ProvidersLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const ProvidersRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const ProvidersRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
   `}
 `;
 
@@ -142,68 +121,6 @@ const ProvidersEmailButtonText = styled.div`
   ${media.tablet`
     padding-top: 0;
     padding-left: 0;
-  `}
-`;
-
-const ProviderCard = styled.div`
-  margin: 20px auto 20px auto;
-  display: flex;
-  padding: 16px;
-  min-height: 100px;
-  border-radius: 6px;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  justify-content: center;
-  box-shadow: 0px 30px 60px rgb(0 0 0 / 12%);
-
-  ${media.tablet`
-    width: 425px;
-    height: 42px;
-    margin: 20px 0;
-    min-height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-  `}
-`;
-
-const ProviderSignUpButton = styled.a`
-  color: #fff;
-  width: 140px;
-  height: 2.81rem;
-  cursor: pointer;
-  min-width: 220px;
-  padding: 0 0.5rem;
-  text-align: center;
-  border-radius: 7px;
-  margin: 15px 0 0 0;
-  line-height: 2.8rem;
-  text-decoration: none;
-  background-color: #0070f3;
-  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
-
-  &:hover {
-    background: ${({ isDisabled }) =>
-      isDisabled ? "#0070f3" : "rgba(0,118,255,0.9)"};
-    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-  }
-
-  ${media.tablet`
-    min-width: 220px;
-    margin: 0 15px 0 0;
-  `}
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  ${media.tablet`
-    padding-right: 15px;
   `}
 `;
 
@@ -441,14 +358,14 @@ const PROVIDERS = [
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
-      <ProvidersLeft>
+      <LeftColumn>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
           Get your own Lightning Address now by using one of the apps and
           services that already support it. You’ll be set up in seconds!
         </ProvidersDescription>
         {PROVIDERS.map((provider) => (
-          <ProviderCard key={provider.name}>
+          <Card key={provider.name}>
             <ImageWrapper>
               <img
                 src={provider.image}
@@ -457,19 +374,19 @@ export const Providers = () => (
               />
               <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
             </ImageWrapper>
-            <ProviderSignUpButton
+            <SignUpButton
               isDisabled={provider.comingSoon || false}
               target="_blank"
               rel="noopener noreferrer"
               href={provider.url}
             >
               {provider.buttonText || `Open ${provider.name}`}
-            </ProviderSignUpButton>
-          </ProviderCard>
+            </SignUpButton>
+          </Card>
         ))}
-      </ProvidersLeft>
-      <ProvidersRight>
-        <ProvidersRightInner>
+      </LeftColumn>
+      <RightColumn>
+        <RightColumnInner>
           <ProvidersTitle>
             Your app doesn't support Lightning Addresses yet?
           </ProvidersTitle>
@@ -492,8 +409,8 @@ export const Providers = () => (
             <ProvidersEmailButtonImage src={"/images/email.svg"} alt="Email" />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>
-        </ProvidersRightInner>
-      </ProvidersRight>
+        </RightColumnInner>
+      </RightColumn>
     </ProvidersInner>
   </ProvidersModule>
 );
