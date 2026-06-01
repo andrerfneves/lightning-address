@@ -100,7 +100,7 @@ const ProvidersDescriptionSmall = styled(ProvidersDescription)`
   `}
 `;
 
-const ProvidersEmailButton = styled.div`
+const ProvidersEmailButton = styled.a`
   width: 65%;
   display: flex;
   cursor: pointer;
@@ -112,6 +112,7 @@ const ProvidersEmailButton = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
 
   &:hover {
@@ -483,11 +484,7 @@ export const Providers = () => (
             with just a click.
           </ProvidersDescriptionSmall>
           <ProvidersEmailButton
-            onClick={() =>
-              window.open(
-                `mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`,
-              )
-            }
+            href={`mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`}
           >
             <ProvidersEmailButtonImage src={"/images/email.svg"} alt="Email" />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
