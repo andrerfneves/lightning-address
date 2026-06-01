@@ -192,9 +192,15 @@ export const Paths = () => (
           <PathsCardDescription>
             {benefit.description}
           </PathsCardDescription>
-          <PathsCardButton target={benefit.isInternal ? '' : '_blank'} href={benefit.link} isSecondary={benefit.isSecondary} rel={benefit.isInternal ? '' : 'noopener noreferrer'}>
-            {benefit.linkText}
-          </PathsCardButton>
+          {benefit.isInternal ? (
+            <PathsCardButton href={benefit.link} isSecondary={benefit.isSecondary}>
+              {benefit.linkText}
+            </PathsCardButton>
+          ) : (
+            <PathsCardButton href={benefit.link} isSecondary={benefit.isSecondary} target="_blank" rel="noopener noreferrer">
+              {benefit.linkText}
+            </PathsCardButton>
+          )}
         </PathsCard>
       ))}
     </PathsCardGrid>
