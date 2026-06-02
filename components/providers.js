@@ -439,7 +439,7 @@ const PROVIDERS = [
  {
     name: "Mixin",
     image: "/images/mixin.png",
-    imageStyle: { width: "115px" },
+    imageStyle: { width: "140px" },
     lightningAddressDomain: "mixin.id",
     url: "https://messenger.mixin.one/",
     buttonText: "Open Mixin",
