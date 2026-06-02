@@ -585,7 +585,7 @@ const WALLETS = [
     downloadText: "Open Mixin",
     url: "https://messenger.mixin.one/",
     imageStyle: {
-      width: "115px",
+      width: "140px",
       borderRadius: "5%",
     },
   }, 
