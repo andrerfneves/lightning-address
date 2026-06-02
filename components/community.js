@@ -579,6 +579,16 @@ const WALLETS = [
     url: "https://lexe.app",
     imageStyle: { width: "160px" },
   },
+  {
+    name: "Mixin",
+    image: "/images/mixin.png",
+    downloadText: "Open Mixin",
+    url: "https://messenger.mixin.one/",
+    imageStyle: {
+      width: "115px",
+      borderRadius: "5%",
+    },
+  }, 
 ];
 
 export const Community = () => (
