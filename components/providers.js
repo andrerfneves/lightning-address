@@ -436,6 +436,14 @@ const PROVIDERS = [
     url: "https://lexe.app",
     buttonText: "Download Lexe",
   },
+ {
+    name: "Mixin",
+    image: "/images/mixin.png",
+    imageStyle: { width: "140px" },
+    lightningAddressDomain: "mixin.id",
+    url: "https://messenger.mixin.one/",
+    buttonText: "Open Mixin",
+  },
 ];
 
 export const Providers = () => (
