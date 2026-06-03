@@ -12,7 +12,6 @@
     "next": "^16.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-is": "^19.0.0",
     "react-qr-code": "^2.0.15",
     "styled-components": "^6.1.0"
   },
