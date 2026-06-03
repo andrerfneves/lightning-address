@@ -15,5 +15,8 @@
     "react-qr-code": "^2.0.15",
     "styled-components": "^6.1.0"
   },
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
   "license": "MIT"
 }
