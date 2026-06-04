@@ -467,7 +467,7 @@ export const Providers = () => (
               <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
             </ImageWrapper>
             <ProviderSignUpButton
-              isDisabled={provider.comingSoon || false}
+              isDisabled={provider.comingSoon}
               target="_blank"
               rel="noopener noreferrer"
               href={provider.url}
