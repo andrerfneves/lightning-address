@@ -188,11 +188,7 @@ export const Benefits = () => (
             {benefit.title}
           </BenefitsCardTitle>
           <BenefitsCardDescription>
-            {(typeof benefit.description === 'string') ? (
-              benefit.description
-            ) : (
-              benefit.description()
-            )}
+            {benefit.description}
           </BenefitsCardDescription>
         </BenefitsCard>
       ))}
