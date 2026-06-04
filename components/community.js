@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media } from "../utils";
+import { media, CTASecondary as BaseCTASecondary } from "../utils";
 
 const CommunityModule = styled.div`
   display: flex;
@@ -268,28 +268,8 @@ const CTAWrapper = styled.div`
   `}
 `;
 
-const CTASecondary = styled.a`
-  color: #696969;
-  cursor: pointer;
-  height: 2.81rem;
-  background: #fff;
+const CTASecondary = styled(BaseCTASecondary)`
   width: 280px;
-  text-align: center;
-  padding: 0;
-  margin: 10px 0 0 0;
-  text-decoration: none;
-  line-height: 2.8rem;
-  border-radius: 7px;
-  box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
-  }
-
-  ${media.tablet`
-    margin: 0 0 0 15px;
-  `}
 `;
 
 const CommunityVerticalListWrapper = styled.div`
