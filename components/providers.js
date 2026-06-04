@@ -100,10 +100,11 @@ const ProvidersDescriptionSmall = styled(ProvidersDescription)`
   `}
 `;
 
-const ProvidersEmailButton = styled.div`
+const ProvidersEmailButton = styled.button`
   width: 65%;
   display: flex;
   cursor: pointer;
+  border: none;
   background: #fff;
   padding: 0 1.5rem;
   margin: 15px auto 0 auto;
@@ -130,7 +131,7 @@ const ProvidersEmailButtonImage = styled.img`
   margin-left: -10px;
 `;
 
-const ProvidersEmailButtonText = styled.div`
+const ProvidersEmailButtonText = styled.span`
   flex: 1;
   color: #696969;
   font-size: 20px;
@@ -491,6 +492,7 @@ export const Providers = () => (
             with just a click.
           </ProvidersDescriptionSmall>
           <ProvidersEmailButton
+            type="button"
             onClick={() =>
               window.open(
                 `mailto:DEVELOPER_EMAIL_HERE?subject=Have you considered support for Lightning Address?&body=Hi there, I just learned about the Lightning Address protocol and how awesome it is for sending and receiving payments over the Bitcoin Lightning Network. I was hoping you would take a look at the lightningaddress.com website and possibly implement support for it? \n\n Lightning Addresses provide a familiar user experience with sending Lightning payments to other people online, similar to sending an email. No more QR codes or invoices / addresses. "Just pay me at satoshi@website.com"\n\n Cheers!`,
