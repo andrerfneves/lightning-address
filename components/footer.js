@@ -108,6 +108,14 @@ const FOOTER = [
         link: "https://lexe.app",
         title: "Lexe",
       },
+      {
+        link: "https://bitcoli.com/",
+        title: "BitcoLi",
+      },
+      {
+        link: "https://rizful.com/",
+        title: "Rizful",
+      },
     ],
   },
   {
@@ -184,6 +192,14 @@ const FOOTER = [
       {
         link: "https://lexe.app",
         title: "Lexe",
+      },
+      {
+        link: "https://bitcoli.com/",
+        title: "BitcoLi",
+      },
+      {
+        link: "https://rizful.com/",
+        title: "Rizful",
       },
     ],
   },
