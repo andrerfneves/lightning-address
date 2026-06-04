@@ -121,7 +121,6 @@ const PathsCardButton = styled.a`
   color: ${({ isSecondary }) => isSecondary ? '#696969' : '#fff' };
   background-color: ${({ isSecondary }) => isSecondary ? '#fff' : '#0070f3' };
   box-shadow: ${({ isSecondary }) => isSecondary ? '0 4px 14px 0 rgb(0 0 0 / 10%)' : '0 4px 14px 0 rgb(0 118 255 / 39%)' };
-  ;
 
   &:hover {
     background-color: ${({ isSecondary }) => isSecondary ? 'rgba(255,255,255,0.9)' : 'rgba(0,118,255,0.9)' };
