@@ -182,6 +182,7 @@ const ProviderSignUpButton = styled.a`
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
   opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
+  pointer-events: ${({ isDisabled }) => (isDisabled ? "none" : "auto")};
 
   &:hover {
     background: ${({ isDisabled }) =>
