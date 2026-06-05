@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media } from "../utils";
+import { media, CTASignUpButton } from "../utils";
 
 const ProvidersModule = styled.div`
   display: flex;
@@ -164,34 +164,6 @@ const ProviderCard = styled.div`
     min-height: auto;
     flex-direction: row;
     justify-content: space-between;
-  `}
-`;
-
-const ProviderSignUpButton = styled.a`
-  color: #fff;
-  width: 140px;
-  height: 2.81rem;
-  cursor: pointer;
-  min-width: 220px;
-  padding: 0 0.5rem;
-  text-align: center;
-  border-radius: 7px;
-  margin: 15px 0 0 0;
-  line-height: 2.8rem;
-  text-decoration: none;
-  background-color: #0070f3;
-  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
-
-  &:hover {
-    background: ${({ isDisabled }) =>
-      isDisabled ? "#0070f3" : "rgba(0,118,255,0.9)"};
-    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-  }
-
-  ${media.tablet`
-    min-width: 220px;
-    margin: 0 15px 0 0;
   `}
 `;
 
@@ -465,14 +437,14 @@ export const Providers = () => (
               />
               <DomainURL>you@{provider.lightningAddressDomain}</DomainURL>
             </ImageWrapper>
-            <ProviderSignUpButton
+            <CTASignUpButton
               isDisabled={provider.comingSoon || false}
               target="_blank"
               rel="noopener noreferrer"
               href={provider.url}
             >
               {provider.buttonText || `Open ${provider.name}`}
-            </ProviderSignUpButton>
+            </CTASignUpButton>
           </ProviderCard>
         ))}
       </ProvidersLeft>
