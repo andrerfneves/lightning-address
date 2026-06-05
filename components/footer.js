@@ -108,6 +108,22 @@ const FOOTER = [
         link: "https://lexe.app",
         title: "Lexe",
       },
+      {
+        link: "https://www.walletofsatoshi.com/",
+        title: "Wallet of Satoshi",
+      },
+      {
+        link: "https://bitcoli.com/",
+        title: "BitcoLi wallet",
+      },
+      {
+        link: "https://rizful.com/",
+        title: "Rizful",
+      },
+      {
+        link: "https://coinkit.de/",
+        title: "CoinKit",
+      },
     ],
   },
   {
@@ -184,6 +200,22 @@ const FOOTER = [
       {
         link: "https://lexe.app",
         title: "Lexe",
+      },
+      {
+        link: "https://www.walletofsatoshi.com/",
+        title: "Wallet of Satoshi",
+      },
+      {
+        link: "https://bitcoli.com/",
+        title: "BitcoLi wallet",
+      },
+      {
+        link: "https://rizful.com/",
+        title: "Rizful",
+      },
+      {
+        link: "https://coinkit.de/",
+        title: "CoinKit",
       },
     ],
   },
