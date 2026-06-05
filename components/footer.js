@@ -302,7 +302,7 @@ export const Footer = () => (
       <Bottom>
         <BottomInner>
           <BottomQR>
-            <a href={`lightning:${DONATION_QR_CODE}`}>
+            <a href={`lightning:${DONATION_QR_CODE}`} aria-label="Donate via Lightning">
               <QRCode size={100} value={DONATION_QR_CODE} />
             </a>
           </BottomQR>
