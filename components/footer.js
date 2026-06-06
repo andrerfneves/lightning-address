@@ -116,6 +116,30 @@ const FOOTER = [
         link: "https://rizful.com/",
         title: "Rizful",
       },
+      {
+        link: "https://app.noah.com",
+        title: "NOAH",
+      },
+      {
+        link: "https://bitnob.com",
+        title: "Bitnob",
+      },
+      {
+        link: "https://btcpayserver.org/",
+        title: "BTCPay Server",
+      },
+      {
+        link: "https://coinos.io",
+        title: "coinos",
+      },
+      {
+        link: "https://electrum.org/",
+        title: "Electrum",
+      },
+      {
+        link: "https://blixtwallet.github.io/",
+        title: "Blixt",
+      },
     ],
   },
   {
@@ -200,6 +224,22 @@ const FOOTER = [
       {
         link: "https://rizful.com/",
         title: "Rizful",
+      },
+      {
+        link: "https://app.noah.com",
+        title: "NOAH",
+      },
+      {
+        link: "https://bitnob.com",
+        title: "Bitnob",
+      },
+      {
+        link: "https://btcpayserver.org/",
+        title: "BTCPay Server",
+      },
+      {
+        link: "https://electrum.org/",
+        title: "Electrum",
       },
     ],
   },
