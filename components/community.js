@@ -347,13 +347,13 @@ const SATDRESS_SERVERS = [
 
 const BRIDGE_SERVERS = [
   {
-    urlLink: "https://github.com/fiatjaf/satdress/",
+    urlLink: "https://github.com/nbd-wtf/satdress/",
     urlText: "Satdress",
     description:
       "Federated Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.",
   },
   {
-    urlLink: "https://bridgeaddr.fiatjaf.com/",
+    urlLink: "https://github.com/fiatjaf/bridgeaddr",
     urlText: "BridgeAddr",
     description:
       "Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.",
