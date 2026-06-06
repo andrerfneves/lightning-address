@@ -79,7 +79,6 @@ const PathsCard = styled.div`
 
   &:hover {
     border: 1px solid #ccc;
-    transition: box-shadow .2s ease;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   }
 
@@ -118,13 +117,13 @@ const PathsCardButton = styled.a`
   border-radius: 7px;
   line-height: 2.8rem;
   text-decoration: none;
-  color: ${({ isSecondary }) => isSecondary ? '#696969' : '#fff' };
-  background-color: ${({ isSecondary }) => isSecondary ? '#fff' : '#0070f3' };
-  box-shadow: ${({ isSecondary }) => isSecondary ? '0 4px 14px 0 rgb(0 0 0 / 10%)' : '0 4px 14px 0 rgb(0 118 255 / 39%)' };
+  color: ${({ $isSecondary }) => $isSecondary ? '#696969' : '#fff' };
+  background-color: ${({ $isSecondary }) => $isSecondary ? '#fff' : '#0070f3' };
+  box-shadow: ${({ $isSecondary }) => $isSecondary ? '0 4px 14px 0 rgb(0 0 0 / 10%)' : '0 4px 14px 0 rgb(0 118 255 / 39%)' };
 
   &:hover {
-    background-color: ${({ isSecondary }) => isSecondary ? 'rgba(255,255,255,0.9)' : 'rgba(0,118,255,0.9)' };
-    box-shadow: ${({ isSecondary }) => isSecondary ? '0 6px 20px rgb(93 93 93 / 23%)' : '0 6px 20px rgb(0 118 255 / 23%)' };
+    background-color: ${({ $isSecondary }) => $isSecondary ? 'rgba(255,255,255,0.9)' : 'rgba(0,118,255,0.9)' };
+    box-shadow: ${({ $isSecondary }) => $isSecondary ? '0 6px 20px rgb(93 93 93 / 23%)' : '0 6px 20px rgb(0 118 255 / 23%)' };
   }
 `;
 
@@ -182,7 +181,7 @@ export const Paths = () => (
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
     </PathsDescription>
     <PathsCardGrid>
-      {(IMPLEMENTATIONS || []).map((benefit) => (
+      {IMPLEMENTATIONS.map((benefit) => (
         <PathsCard key={benefit.title}>
           <PathsCardImage src={benefit.image} alt={benefit.title} />
           <PathsCardTitle>
@@ -191,7 +190,7 @@ export const Paths = () => (
           <PathsCardDescription>
             {benefit.description}
           </PathsCardDescription>
-          <PathsCardButton target={benefit.isInternal ? undefined : '_blank'} href={benefit.link} isSecondary={benefit.isSecondary} rel={benefit.isInternal ? undefined : 'noopener noreferrer'}>
+          <PathsCardButton target={benefit.isInternal ? undefined : '_blank'} href={benefit.link} $isSecondary={benefit.isSecondary} rel={benefit.isInternal ? undefined : 'noopener noreferrer'}>
             {benefit.linkText}
           </PathsCardButton>
         </PathsCard>
