@@ -490,7 +490,7 @@ const WALLETS = [
     },
   },
   {
-    name: "Satoshi Wallet",
+    name: "Satoshi Lightning",
     image: "https://vipsats.app/img/satoshi.png",
     downloadText: "Download Satoshi",
     url: "https://vipsats.app",
