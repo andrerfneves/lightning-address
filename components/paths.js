@@ -168,7 +168,7 @@ const IMPLEMENTATIONS = [
     description: 'Lightning Address is just a set of simple protocol instructions. Whether you are a Bitcoin service provider or simply an enthusiast interested in running your own setup, this is where you get started supporting this new standard.',
     image: '/images/data2.svg',
     linkText: 'Learn More',
-    link: 'https://github.com/andrerfneves/lightning-address/blob/master/DIY.md',
+    link: 'https://github.com/andrerfneves/lightning-address/blob/main/DIY.md',
     isSecondary: true,
     isInternal: false,
   },

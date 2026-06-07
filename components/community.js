@@ -605,7 +605,7 @@ export const Community = () => (
         ))}
         <CTAWrapper>
           <CTASecondary
-            href="https://github.com/andrerfneves/lightning-address/blob/master/README.md#wallets-supported"
+            href="https://github.com/andrerfneves/lightning-address/blob/main/README.md#wallets-supported"
             target="_blank"
             rel="noopener noreferrer"
           >
