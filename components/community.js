@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, ImageWrapper, Card } from "../utils";
 
 const CommunityModule = styled.div`
   display: flex;
@@ -104,28 +104,6 @@ const CommunityRightInner = styled.div`
   `}
 `;
 
-const CommunityCard = styled.div`
-  margin: 20px auto 20px auto;
-  display: flex;
-  padding: 16px;
-  min-height: 100px;
-  border-radius: 6px;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  justify-content: center;
-  box-shadow: 0px 30px 60px rgb(0 0 0 / 12%);
-
-  ${media.tablet`
-    width: 425px;
-    height: 42px;
-    margin: 20px 0;
-    min-height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-  `}
-`;
-
 const CommunitySignUpButton = styled.a`
   color: #fff;
   width: 140px;
@@ -155,18 +133,6 @@ const CommunitySignUpButton = styled.a`
 const Image = styled.img`
   width: 130px;
   align-self: center;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  ${media.tablet`
-    padding-right: 15px;
-  `}
 `;
 
 const CommunityListWrapper = styled.div`
@@ -590,7 +556,7 @@ export const Community = () => (
           easily as you send emails.
         </CommunityDescriptionSmall>
         {WALLETS.map((wallet) => (
-          <CommunityCard key={wallet.name}>
+          <Card key={wallet.name}>
             <ImageWrapper>
               <Image
                 src={wallet.image}
@@ -601,7 +567,7 @@ export const Community = () => (
             <CommunitySignUpButton target="_blank" rel="noopener noreferrer" href={wallet.url}>
               {wallet.downloadText}
             </CommunitySignUpButton>
-          </CommunityCard>
+          </Card>
         ))}
         <CTAWrapper>
           <CTASecondary
