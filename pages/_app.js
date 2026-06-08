@@ -1,8 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;900&display=swap');
-
   body {
     margin: 0;
     padding: 0;
