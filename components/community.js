@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionDescription } from "../utils";
 
 const CommunityModule = styled.div`
   display: flex;
@@ -31,24 +31,6 @@ const CommunityTitle = styled.div`
     padding: 0;
     font-size: 44px;
     letter-spacing: -1px;
-  `}
-`;
-
-const CommunityDescription = styled.div`
-  color: #666666;
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 0 30px;
-  font-weight: 400;
-  max-width: 800px;
-  text-align: center;
-  letter-spacing: -1px;
-  margin: 20px auto 0 auto;
-
-  ${media.tablet`
-    padding: 0;
-    font-size: 20px;
-    line-height: 1.6;
   `}
 `;
 
@@ -245,7 +227,7 @@ const VerticalLink = styled.a`
   }
 `;
 
-const CommunityDescriptionSmall = styled(CommunityDescription)`
+const CommunityDescriptionSmall = styled(SectionDescription)`
   text-align: center;
 
   ${media.tablet`
@@ -573,12 +555,12 @@ export const Community = () => (
   <CommunityModule id="community">
     <CommunityIntro>Community Efforts & Tools</CommunityIntro>
     <CommunityTitle>Noncustodial Bridge Servers</CommunityTitle>
-    <CommunityDescription>
+    <SectionDescription>
       The Lightning Address standard continues to be adopted by community
       participants and companies in the industry. From mobile and desktop wallet
       support, to federated Lightning Address bridge servers anyone can
       self-host, it's never been easier to transact Bitcoin.
-    </CommunityDescription>
+    </SectionDescription>
     <CommunityInner>
       <CommunityLeft>
         <CommunitySectionTitle>

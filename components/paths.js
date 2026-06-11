@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { media } from '../utils';
+import { media, SectionDescription } from '../utils';
 
 const PathsModule = styled.div`
   display: flex;
@@ -30,24 +30,6 @@ const PathsTitle = styled.div`
     padding: 0;
     font-size: 44px;
     letter-spacing: -1px;
-  `}
-`;
-
-const PathsDescription = styled.div`
-  color: #666666;
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 0 30px;
-  font-weight: 400;
-  max-width: 800px;
-  text-align: center;
-  letter-spacing: -1px;
-  margin: 20px auto 0 auto;
-
-  ${media.tablet`
-    padding: 0;
-    font-size: 20px;
-    line-height: 1.6;
   `}
 `;
 
@@ -178,9 +160,9 @@ export const Paths = () => (
   <PathsModule>
     <PathsIntro>Developers & Shadowy Coders</PathsIntro>
     <PathsTitle>Integrates as fast as Lightning</PathsTitle>
-    <PathsDescription>
+    <SectionDescription>
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
-    </PathsDescription>
+    </SectionDescription>
     <PathsCardGrid>
       {(IMPLEMENTATIONS || []).map((benefit) => (
         <PathsCard key={benefit.title}>

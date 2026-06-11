@@ -22,6 +22,24 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   return acc;
 }, {});
 
+export const SectionDescription = styled.div`
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 0 30px;
+  font-weight: 400;
+  max-width: 800px;
+  text-align: center;
+  letter-spacing: -1px;
+  margin: 20px auto 0 auto;
+
+  ${media.tablet`
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.6;
+  `}
+`;
+
 export const CTAPrimary = styled.a`
   color: #fff;
   height: 2.81rem;
