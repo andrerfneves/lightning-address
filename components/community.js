@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionTitle } from "../utils";
 
 const CommunityModule = styled.div`
   display: flex;
@@ -14,23 +14,6 @@ const CommunityModule = styled.div`
   ${media.tablet`
     min-height: 700px;
     padding: 120px 0 120px 0;
-  `}
-`;
-
-const CommunityTitle = styled.div`
-  margin: 0 auto;
-  font-size: 30px;
-  padding: 0 30px;
-  max-width: 500px;
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: center;
-  letter-spacing: -0.5px;
-
-  ${media.tablet`
-    padding: 0;
-    font-size: 44px;
-    letter-spacing: -1px;
   `}
 `;
 
@@ -572,7 +555,7 @@ const WALLETS = [
 export const Community = () => (
   <CommunityModule id="community">
     <CommunityIntro>Community Efforts & Tools</CommunityIntro>
-    <CommunityTitle>Noncustodial Bridge Servers</CommunityTitle>
+    <SectionTitle>Noncustodial Bridge Servers</SectionTitle>
     <CommunityDescription>
       The Lightning Address standard continues to be adopted by community
       participants and companies in the industry. From mobile and desktop wallet

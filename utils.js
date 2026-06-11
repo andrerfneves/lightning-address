@@ -46,6 +46,23 @@ export const CTAPrimary = styled.a`
   `}
 `;
 
+export const SectionTitle = styled.div`
+  margin: 0 auto;
+  font-size: 30px;
+  padding: 0 30px;
+  max-width: 500px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: -0.5px;
+
+  ${media.tablet`
+    padding: 0;
+    font-size: 44px;
+    letter-spacing: -1px;
+  `}
+`;
+
 export const CTASecondary = styled.a`
   color: #696969;
   cursor: pointer;
