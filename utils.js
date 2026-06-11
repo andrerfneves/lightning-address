@@ -22,6 +22,19 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   return acc;
 }, {});
 
+export const SectionBase = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+  justify-content: center;
+
+  ${media.tablet`
+    min-height: 700px;
+    padding: 120px 0 120px 0;
+  `}
+`;
+
 export const CTAPrimary = styled.a`
   color: #fff;
   height: 2.81rem;
