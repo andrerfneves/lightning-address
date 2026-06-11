@@ -501,7 +501,7 @@ const WALLETS = [
     },
   },
   {
-    name: "BitcoLi Wallet",
+    name: "BitcoLi wallet",
     image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
     downloadText: "Download BitcoLi",
     url: "https://bitcoli.com",
