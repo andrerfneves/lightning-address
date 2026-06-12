@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
-const CommunityModule = styled.div`
-  display: flex;
+const CommunityModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const CommunityTitle = styled.div`
@@ -200,27 +190,13 @@ const Link = styled.a`
   }
 `;
 
-const VerticalLink = styled.a`
-  color: #0070f3;
+const VerticalLink = styled(Link)`
   display: block;
-  font-size: 14px;
-  line-height: 1.6;
   max-height: 22px;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 7px;
-  text-decoration: none;
-  margin: 10px 10px 0 0;
-  background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
-    font-size: 14px;
-    line-height: 1.6;
+    max-width: none;
   `}
-
-  &:hover {
-    background: rgba(0, 118, 255, 0.2);
-  }
 `;
 
 const CommunityDescriptionSmall = styled(CommunityDescription)`
@@ -302,15 +278,15 @@ const SATDRESS_SERVERS = [
     urlText: "@lnaddress.me",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lnaddress.net/",
     urlText: "@lnaddress.net",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.by/",
     urlText: "@lightning.by",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.re/",
     urlText: "@lightning.re",
   },
   {
@@ -479,7 +455,7 @@ const WALLETS = [
     },
   },
   {
-    name: "BitcoLi Wallet",
+    name: "BitcoLi wallet",
     image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
     downloadText: "Download BitcoLi",
     url: "https://bitcoli.com",
