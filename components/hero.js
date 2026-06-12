@@ -76,11 +76,9 @@ const Description = styled.p`
   margin: 20px auto 0 auto;
 
   ${media.tablet`
-    padding: 0;
     font-size: 20px;
     padding: 0 30px;
     max-width: 500px;
-    line-height: 1.4;
     letter-spacing: -1px;
   `}
 `;
