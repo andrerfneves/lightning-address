@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionTitle } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner, SectionTitle } from "../utils";
 
-const CommunityModule = styled.div`
-  display: flex;
+const CommunityModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const CommunityDescription = styled.div`
@@ -62,28 +52,6 @@ const CommunityInner = styled.div`
     margin-top: 80px;
     max-width: 1000px;
     flex-direction: row;
-  `}
-`;
-
-const CommunityLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const CommunityRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const CommunityRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
   `}
 `;
 
@@ -205,27 +173,13 @@ const Link = styled.a`
   }
 `;
 
-const VerticalLink = styled.a`
-  color: #0070f3;
+const VerticalLink = styled(Link)`
   display: block;
-  font-size: 14px;
-  line-height: 1.6;
   max-height: 22px;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 7px;
-  text-decoration: none;
-  margin: 10px 10px 0 0;
-  background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
-    font-size: 14px;
-    line-height: 1.6;
+    max-width: none;
   `}
-
-  &:hover {
-    background: rgba(0, 118, 255, 0.2);
-  }
 `;
 
 const CommunityDescriptionSmall = styled(CommunityDescription)`
@@ -307,15 +261,15 @@ const SATDRESS_SERVERS = [
     urlText: "@lnaddress.me",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lnaddress.net/",
     urlText: "@lnaddress.net",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.by/",
     urlText: "@lightning.by",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.re/",
     urlText: "@lightning.re",
   },
   {
@@ -484,7 +438,7 @@ const WALLETS = [
     },
   },
   {
-    name: "BitcoLi Wallet",
+    name: "BitcoLi wallet",
     image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
     downloadText: "Download BitcoLi",
     url: "https://bitcoli.com",
@@ -563,7 +517,7 @@ export const Community = () => (
       self-host, it's never been easier to transact Bitcoin.
     </CommunityDescription>
     <CommunityInner>
-      <CommunityLeft>
+      <SectionLeft>
         <CommunitySectionTitle>
           Transact with a Lightning Address today!
         </CommunitySectionTitle>
@@ -595,9 +549,9 @@ export const Community = () => (
             View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
-      </CommunityLeft>
-      <CommunityRight>
-        <CommunityRightInner>
+      </SectionLeft>
+      <SectionRight>
+        <SectionRightInner>
           <CommunitySectionTitle>
             Want a different domain for your Lightning Address?
           </CommunitySectionTitle>
@@ -629,8 +583,8 @@ export const Community = () => (
               </VerticalLinkWrapper>
             ))}
           </CommunityVerticalListWrapper>
-        </CommunityRightInner>
-      </CommunityRight>
+        </SectionRightInner>
+      </SectionRight>
     </CommunityInner>
   </CommunityModule>
 );
