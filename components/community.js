@@ -324,15 +324,15 @@ const SATDRESS_SERVERS = [
     urlText: "@lnaddress.me",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lnaddress.net/",
     urlText: "@lnaddress.net",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.by/",
     urlText: "@lightning.by",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.re/",
     urlText: "@lightning.re",
   },
   {
