@@ -101,3 +101,37 @@ export const CTASecondary = styled.a`
     margin: 0 0 0 15px;
   `}
 `;
+
+export const Card = styled.div`
+  margin: 20px auto 20px auto;
+  display: flex;
+  padding: 16px;
+  min-height: 100px;
+  border-radius: 6px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  justify-content: center;
+  box-shadow: 0px 30px 60px rgb(0 0 0 / 12%);
+
+  ${media.tablet`
+    width: 425px;
+    height: 42px;
+    margin: 20px 0;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  ${media.tablet`
+    padding-right: 15px;
+  `}
+`;

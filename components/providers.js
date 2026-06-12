@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, Card, ImageWrapper, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
 const ProvidersModule = styled(SectionBase)`
   background: #fafafa;
@@ -114,28 +114,6 @@ const ProvidersEmailButtonText = styled.span`
   `}
 `;
 
-const ProviderCard = styled.div`
-  margin: 20px auto 20px auto;
-  display: flex;
-  padding: 16px;
-  min-height: 100px;
-  border-radius: 6px;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  justify-content: center;
-  box-shadow: 0px 30px 60px rgb(0 0 0 / 12%);
-
-  ${media.tablet`
-    width: 425px;
-    height: 42px;
-    margin: 20px 0;
-    min-height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-  `}
-`;
-
 const ProviderSignUpButton = styled.a`
   color: #fff;
   width: 140px;
@@ -161,18 +139,6 @@ const ProviderSignUpButton = styled.a`
   ${media.tablet`
     min-width: 220px;
     margin: 0 15px 0 0;
-  `}
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  ${media.tablet`
-    padding-right: 15px;
   `}
 `;
 
@@ -425,7 +391,7 @@ export const Providers = () => (
           services that already support it. You’ll be set up in seconds!
         </ProvidersDescription>
         {PROVIDERS.map((provider) => (
-          <ProviderCard key={provider.name}>
+          <Card key={provider.name}>
             <ImageWrapper>
               <img
                 src={provider.image}
@@ -442,7 +408,7 @@ export const Providers = () => (
             >
               {provider.buttonText || `Open ${provider.name}`}
             </ProviderSignUpButton>
-          </ProviderCard>
+          </Card>
         ))}
       </SectionLeft>
       <SectionRight>
