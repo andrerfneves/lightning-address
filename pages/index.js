@@ -20,6 +20,11 @@ export default function Home() {
         <title>
           The Lightning Address - Send and receive Bitcoin like you do emails
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Like an email address, but for your Bitcoin. An Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices."
+        />
         <link
           rel="icon"
           type="image/png"

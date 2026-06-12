@@ -72,7 +72,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 
 ## TLDR
 
-Here's a quick primer on how Lightning Address works and how it relies on the [LNURL Pay protocol](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md).
+Here's a quick primer on how Lightning Address works and how it relies on the [LNURL Pay protocol](https://github.com/lnurl/luds/blob/master/lnurl-pay.md).
 
 ![](https://i.imgur.com/DIV5q8q.png)
 
@@ -87,7 +87,7 @@ All illustrative and informative diagrams are available under the [DIAGRAMS](./d
 
 ## Contributions
 
-Contributions are welcome, for both the lightningaddress.com website as well as the Lightning Address protocol itself. Please submit a PR here or on the core [LNURL RFC repository](https://github.com/fiatjaf/lnurl-rfc).
+Contributions are welcome, for both the lightningaddress.com website as well as the Lightning Address protocol itself. Please submit a PR here or on the core [LNURL RFC repository](https://github.com/lnurl/luds).
 
 ## Donations
 

@@ -1,19 +1,9 @@
 import styled from 'styled-components';
 
-import { media } from '../utils';
+import { media, SectionBase } from '../utils';
 
-const PathsModule = styled.div`
-  display: flex;
+const PathsModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const PathsTitle = styled.div`
@@ -121,7 +111,6 @@ const PathsCardButton = styled.a`
   color: ${({ isSecondary }) => isSecondary ? '#696969' : '#fff' };
   background-color: ${({ isSecondary }) => isSecondary ? '#fff' : '#0070f3' };
   box-shadow: ${({ isSecondary }) => isSecondary ? '0 4px 14px 0 rgb(0 0 0 / 10%)' : '0 4px 14px 0 rgb(0 118 255 / 39%)' };
-  ;
 
   &:hover {
     background-color: ${({ isSecondary }) => isSecondary ? 'rgba(255,255,255,0.9)' : 'rgba(0,118,255,0.9)' };

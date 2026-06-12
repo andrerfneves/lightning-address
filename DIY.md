@@ -24,9 +24,9 @@ Requirement: HTTPS is expected to be used, since this is sensitive data, where M
 In order to support receiving to a Lightning Address on your own infrastructure/domain setup, you will need a  handful of things outlined below.
 
 * HTTP Server
-  * [LNURL Pay support](https://github.com/fiatjaf/lnurl-rfc/blob/master/lnurl-pay.md)
-    * [Internet Identifier metadata support](https://github.com/fiatjaf/lnurl-rfc/blob/luds/16.md)
-    * [Commenting support](https://github.com/fiatjaf/lnurl-rfc/blob/luds/12.md) (Optional)
+  * [LNURL Pay support](https://github.com/lnurl/luds/blob/master/lnurl-pay.md)
+    * [Internet Identifier metadata support](https://github.com/lnurl/luds/blob/luds/16.md)
+    * [Commenting support](https://github.com/lnurl/luds/blob/luds/12.md) (Optional)
   * HTTPS security
 * Lightning Network node
   * Used to create BOLT11 invoices for LNURL Pay flow
@@ -36,16 +36,16 @@ You will essentially need a RESTful HTTP API server that will handle GET request
 
 #### Internet Identifier
 
-The Lightning Address is nothing more than another [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1), it should look identical to an email address. For more details on how to set up the Internet Identifier metadata check [here](https://github.com/fiatjaf/lnurl-rfc/blob/luds/16.md).
+The Lightning Address is nothing more than another [Internet Identifier](https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1), it should look identical to an email address. For more details on how to set up the Internet Identifier metadata check [here](https://github.com/lnurl/luds/blob/luds/16.md).
 
 #### Comments
 
-In order to accept messages/comments alongside payments to your Lightning Address, you will have to support the optional `comment` feature outlined [here](https://github.com/fiatjaf/lnurl-rfc/blob/luds/12.md).
+In order to accept messages/comments alongside payments to your Lightning Address, you will have to support the optional `comment` feature outlined [here](https://github.com/lnurl/luds/blob/luds/12.md).
 
 ## LNURL Protocol
 
-[LNURL](https://github.com/fiatjaf/lnurl-rfc) is a UX protocol built for the Lightning Network that aims to facilitate the sending, receiving, and handling of Lightning invoices from wallets to services (and vice versa).
+[LNURL](https://github.com/lnurl/luds) is a UX protocol built for the Lightning Network that aims to facilitate the sending, receiving, and handling of Lightning invoices from wallets to services (and vice versa).
 
-[LNURL](https://github.com/fiatjaf/lnurl-rfc) is comprised of many sub-protocols, each with their own required, and optional, properties and features. Please refer to the [LNURL RFC documentation](https://github.com/fiatjaf/lnurl-rfc) for more details on how LNURL works. Specifically for the Lightning Address protocol, we are relying on the Internet Identifier metadata optional feature of the LNURL Pay sub-protocol.
+[LNURL](https://github.com/lnurl/luds) is comprised of many sub-protocols, each with their own required, and optional, properties and features. Please refer to the [LNURL RFC documentation](https://github.com/lnurl/luds) for more details on how LNURL works. Specifically for the Lightning Address protocol, we are relying on the Internet Identifier metadata optional feature of the LNURL Pay sub-protocol.
 
 
