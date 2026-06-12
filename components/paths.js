@@ -1,19 +1,9 @@
 import styled from 'styled-components';
 
-import { media, SectionDescription } from '../utils';
+import { media, SectionBase, SectionDescription } from '../utils';
 
-const PathsModule = styled.div`
-  display: flex;
+const PathsModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const PathsTitle = styled.div`
