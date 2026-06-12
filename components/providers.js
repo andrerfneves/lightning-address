@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media } from "../utils";
+import { media, SectionBase } from "../utils";
 
-const ProvidersModule = styled.div`
-  display: flex;
+const ProvidersModule = styled(SectionBase)`
   background: #fafafa;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px 0 60px 0;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const ProvidersInner = styled.div`

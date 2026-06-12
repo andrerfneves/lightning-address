@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase } from "../utils";
 
-const CommunityModule = styled.div`
-  display: flex;
+const CommunityModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const CommunityTitle = styled.div`
