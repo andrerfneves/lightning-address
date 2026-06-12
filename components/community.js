@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
-const CommunityModule = styled.div`
-  display: flex;
+const CommunityModule = styled(SectionBase)`
   background: #fff;
-  align-items: center;
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-  justify-content: center;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const CommunityTitle = styled.div`
@@ -82,28 +72,6 @@ const CommunityInner = styled.div`
   `}
 `;
 
-const CommunityLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const CommunityRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const CommunityRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
-  `}
-`;
-
 const CommunityCard = styled.div`
   margin: 20px auto 20px auto;
   display: flex;
@@ -140,11 +108,9 @@ const CommunitySignUpButton = styled.a`
   text-decoration: none;
   background-color: #0070f3;
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-  opacity: ${({ isDisabled }) => (isDisabled ? "0.5" : "1")};
 
   &:hover {
-    background: ${({ isDisabled }) =>
-      isDisabled ? "#0070f3" : "rgba(0,118,255,0.9)"};
+    background: rgba(0,118,255,0.9);
     box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
   }
 
@@ -224,27 +190,13 @@ const Link = styled.a`
   }
 `;
 
-const VerticalLink = styled.a`
-  color: #0070f3;
+const VerticalLink = styled(Link)`
   display: block;
-  font-size: 14px;
-  line-height: 1.6;
   max-height: 22px;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 7px;
-  text-decoration: none;
-  margin: 10px 10px 0 0;
-  background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
-    font-size: 14px;
-    line-height: 1.6;
+    max-width: none;
   `}
-
-  &:hover {
-    background: rgba(0, 118, 255, 0.2);
-  }
 `;
 
 const CommunityDescriptionSmall = styled(CommunityDescription)`
@@ -268,28 +220,8 @@ const CTAWrapper = styled.div`
   `}
 `;
 
-const CTASecondary = styled.a`
-  color: #696969;
-  cursor: pointer;
-  height: 2.81rem;
-  background: #fff;
+const CTASecondary = styled(BaseCTASecondary)`
   width: 280px;
-  text-align: center;
-  padding: 0;
-  margin: 10px 0 0 0;
-  text-decoration: none;
-  line-height: 2.8rem;
-  border-radius: 7px;
-  box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
-  }
-
-  ${media.tablet`
-    margin: 0 0 0 15px;
-  `}
 `;
 
 const CommunityVerticalListWrapper = styled.div`
@@ -346,15 +278,15 @@ const SATDRESS_SERVERS = [
     urlText: "@lnaddress.me",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lnaddress.net/",
     urlText: "@lnaddress.net",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.by/",
     urlText: "@lightning.by",
   },
   {
-    urlLink: "https://lnaddress.me/",
+    urlLink: "https://lightning.re/",
     urlText: "@lightning.re",
   },
   {
@@ -369,13 +301,13 @@ const SATDRESS_SERVERS = [
 
 const BRIDGE_SERVERS = [
   {
-    urlLink: "https://github.com/fiatjaf/satdress/",
+    urlLink: "https://github.com/nbd-wtf/satdress/",
     urlText: "Satdress",
     description:
       "Federated Lightning Address server anyone can self-host to receive Lightning payments at you@yourdomain.com noncustodially.",
   },
   {
-    urlLink: "https://bridgeaddr.fiatjaf.com/",
+    urlLink: "https://github.com/fiatjaf/bridgeaddr",
     urlText: "BridgeAddr",
     description:
       "Bridge Server that allows setting domain DNS configuration and receive payments at you@yourdomain.com noncustodially.",
@@ -523,7 +455,7 @@ const WALLETS = [
     },
   },
   {
-    name: "BitcoLi Wallet",
+    name: "BitcoLi wallet",
     image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
     downloadText: "Download BitcoLi",
     url: "https://bitcoli.com",
@@ -602,7 +534,7 @@ export const Community = () => (
       self-host, it's never been easier to transact Bitcoin.
     </CommunityDescription>
     <CommunityInner>
-      <CommunityLeft>
+      <SectionLeft>
         <CommunitySectionTitle>
           Transact with a Lightning Address today!
         </CommunitySectionTitle>
@@ -634,9 +566,9 @@ export const Community = () => (
             View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
-      </CommunityLeft>
-      <CommunityRight>
-        <CommunityRightInner>
+      </SectionLeft>
+      <SectionRight>
+        <SectionRightInner>
           <CommunitySectionTitle>
             Want a different domain for your Lightning Address?
           </CommunitySectionTitle>
@@ -668,8 +600,8 @@ export const Community = () => (
               </VerticalLinkWrapper>
             ))}
           </CommunityVerticalListWrapper>
-        </CommunityRightInner>
-      </CommunityRight>
+        </SectionRightInner>
+      </SectionRight>
     </CommunityInner>
   </CommunityModule>
 );

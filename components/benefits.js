@@ -1,20 +1,10 @@
 import styled from 'styled-components';
 
-import { media, CTAPrimary } from '../utils';
+import { media, CTAPrimary, SectionBase } from '../utils';
 
-const BenefitsModule = styled.div`
-  display: flex;
+const BenefitsModule = styled(SectionBase)`
   background: #fafafa;
-  align-items: center;
-  padding: 60px 0 60px 0;
-  flex-direction: column;
-  justify-content: center;
   border-bottom: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const BenefitsTitle = styled.div`
@@ -188,11 +178,7 @@ export const Benefits = () => (
             {benefit.title}
           </BenefitsCardTitle>
           <BenefitsCardDescription>
-            {(typeof benefit.description === 'string') ? (
-              benefit.description
-            ) : (
-              benefit.description()
-            )}
+            {benefit.description}
           </BenefitsCardDescription>
         </BenefitsCard>
       ))}

@@ -28,7 +28,7 @@ const FOOTER = [
         title: "Internet Identifier RFC",
       },
       {
-        link: "https://github.com/fiatjaf/lnurl-rfc",
+        link: "https://github.com/lnurl/luds",
         title: "LNURL RFC",
       },
     ],
@@ -114,7 +114,7 @@ const FOOTER = [
       },
       {
         link: "https://bitcoli.com/",
-        title: "BitcoLi wallet",
+        title: "BitcoLi",
       },
       {
         link: "https://rizful.com/",
@@ -142,7 +142,7 @@ const FOOTER = [
         title: "Spark Wallet",
       },
       {
-        link: "https://github.com/fiatjaf/satdress",
+        link: "https://github.com/nbd-wtf/satdress",
         title: "Satdress",
       },
       {
@@ -207,7 +207,7 @@ const FOOTER = [
       },
       {
         link: "https://bitcoli.com/",
-        title: "BitcoLi wallet",
+        title: "BitcoLi",
       },
       {
         link: "https://rizful.com/",
