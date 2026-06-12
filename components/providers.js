@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, SectionBase } from "../utils";
+import { media, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
 const ProvidersModule = styled(SectionBase)`
   background: #fafafa;
@@ -16,28 +16,6 @@ const ProvidersInner = styled.div`
   ${media.largeTablet`
     max-width: 1000px;
     flex-direction: row;
-  `}
-`;
-
-const ProvidersLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const ProvidersRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const ProvidersRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
   `}
 `;
 
@@ -440,7 +418,7 @@ const PROVIDERS = [
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
-      <ProvidersLeft>
+      <SectionLeft>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
           Get your own Lightning Address now by using one of the apps and
@@ -466,9 +444,9 @@ export const Providers = () => (
             </ProviderSignUpButton>
           </ProviderCard>
         ))}
-      </ProvidersLeft>
-      <ProvidersRight>
-        <ProvidersRightInner>
+      </SectionLeft>
+      <SectionRight>
+        <SectionRightInner>
           <ProvidersTitle>
             Your app doesn't support Lightning Addresses yet?
           </ProvidersTitle>
@@ -492,8 +470,8 @@ export const Providers = () => (
             <ProvidersEmailButtonImage src={"/images/email.svg"} alt="Email" />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>
-        </ProvidersRightInner>
-      </ProvidersRight>
+        </SectionRightInner>
+      </SectionRight>
     </ProvidersInner>
   </ProvidersModule>
 );

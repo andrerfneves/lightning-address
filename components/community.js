@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionBase } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
 const CommunityModule = styled(SectionBase)`
   background: #fff;
@@ -69,28 +69,6 @@ const CommunityInner = styled.div`
     margin-top: 80px;
     max-width: 1000px;
     flex-direction: row;
-  `}
-`;
-
-const CommunityLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const CommunityRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const CommunityRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
   `}
 `;
 
@@ -556,7 +534,7 @@ export const Community = () => (
       self-host, it's never been easier to transact Bitcoin.
     </CommunityDescription>
     <CommunityInner>
-      <CommunityLeft>
+      <SectionLeft>
         <CommunitySectionTitle>
           Transact with a Lightning Address today!
         </CommunitySectionTitle>
@@ -588,9 +566,9 @@ export const Community = () => (
             View list of supported Wallets
           </CTASecondary>
         </CTAWrapper>
-      </CommunityLeft>
-      <CommunityRight>
-        <CommunityRightInner>
+      </SectionLeft>
+      <SectionRight>
+        <SectionRightInner>
           <CommunitySectionTitle>
             Want a different domain for your Lightning Address?
           </CommunitySectionTitle>
@@ -622,8 +600,8 @@ export const Community = () => (
               </VerticalLinkWrapper>
             ))}
           </CommunityVerticalListWrapper>
-        </CommunityRightInner>
-      </CommunityRight>
+        </SectionRightInner>
+      </SectionRight>
     </CommunityInner>
   </CommunityModule>
 );

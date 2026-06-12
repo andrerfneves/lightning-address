@@ -32,6 +32,28 @@ export const SectionBase = styled.div`
   `}
 `;
 
+export const SectionLeft = styled.div`
+  padding-bottom: 60px;
+
+  ${media.largeTablet`
+    flex: 1;
+    padding-bottom: 0;
+    padding-right: 10px;
+  `}
+`;
+
+export const SectionRight = styled.div`
+  ${media.largeTablet`
+    flex: 1;
+  `}
+`;
+
+export const SectionRightInner = styled.div`
+  ${media.largeTablet`
+    padding-left: 100px;
+  `}
+`;
+
 export const CTAPrimary = styled.a`
   color: #fff;
   height: 2.81rem;
