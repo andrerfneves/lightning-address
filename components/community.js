@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionIntro, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
 const CommunityModule = styled(SectionBase)`
   background: #fff;
@@ -39,22 +39,6 @@ const CommunityDescription = styled.div`
     padding: 0;
     font-size: 20px;
     line-height: 1.6;
-  `}
-`;
-
-const CommunityIntro = styled.p`
-  color: #f38800;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 900px;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 7px;
-  margin: 0 auto 20px auto;
-  background: rgba(255, 97, 0, 0.1);
-
-  ${media.tablet`
-    font-size: 18px;
   `}
 `;
 
@@ -525,7 +509,7 @@ const WALLETS = [
 
 export const Community = () => (
   <CommunityModule id="community">
-    <CommunityIntro>Community Efforts & Tools</CommunityIntro>
+    <SectionIntro>Community Efforts & Tools</SectionIntro>
     <CommunityTitle>Noncustodial Bridge Servers</CommunityTitle>
     <CommunityDescription>
       The Lightning Address standard continues to be adopted by community
