@@ -109,12 +109,20 @@ const FOOTER = [
         title: "Lexe",
       },
       {
+        link: "https://www.walletofsatoshi.com/",
+        title: "Wallet of Satoshi",
+      },
+      {
         link: "https://bitcoli.com/",
         title: "BitcoLi",
       },
       {
         link: "https://rizful.com/",
         title: "Rizful",
+      },
+      {
+        link: "https://coinkit.de/",
+        title: "CoinKit",
       },
     ],
   },
@@ -194,12 +202,20 @@ const FOOTER = [
         title: "Lexe",
       },
       {
+        link: "https://www.walletofsatoshi.com/",
+        title: "Wallet of Satoshi",
+      },
+      {
         link: "https://bitcoli.com/",
         title: "BitcoLi",
       },
       {
         link: "https://rizful.com/",
         title: "Rizful",
+      },
+      {
+        link: "https://coinkit.de/",
+        title: "CoinKit",
       },
     ],
   },
