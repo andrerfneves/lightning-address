@@ -1,26 +1,9 @@
 import styled from 'styled-components';
 
-import { media, SectionBase } from '../utils';
+import { media, SectionBase, SectionTitle } from '../utils';
 
 const PathsModule = styled(SectionBase)`
   background: #fff;
-`;
-
-const PathsTitle = styled.div`
-  margin: 0 auto;
-  font-size: 30px;
-  padding: 0 30px;
-  max-width: 500px;
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: center;
-  letter-spacing: -0.5px;
-
-  ${media.tablet`
-    padding: 0;
-    font-size: 44px;
-    letter-spacing: -1px;
-  `}
 `;
 
 const PathsDescription = styled.div`
@@ -167,7 +150,7 @@ const IMPLEMENTATIONS = [
 export const Paths = () => (
   <PathsModule>
     <PathsIntro>Developers & Shadowy Coders</PathsIntro>
-    <PathsTitle>Integrates as fast as Lightning</PathsTitle>
+    <SectionTitle>Integrates as fast as Lightning</SectionTitle>
     <PathsDescription>
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
     </PathsDescription>
