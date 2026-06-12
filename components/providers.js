@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
-import { media, ImageWrapper, Card } from "../utils";
+import { media, Card, ImageWrapper, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
 
-const ProvidersModule = styled.div`
-  display: flex;
+const ProvidersModule = styled(SectionBase)`
   background: #fafafa;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px 0 60px 0;
   border-top: 1px solid #eaeaea;
-
-  ${media.tablet`
-    min-height: 700px;
-    padding: 120px 0 120px 0;
-  `}
 `;
 
 const ProvidersInner = styled.div`
@@ -26,28 +16,6 @@ const ProvidersInner = styled.div`
   ${media.largeTablet`
     max-width: 1000px;
     flex-direction: row;
-  `}
-`;
-
-const ProvidersLeft = styled.div`
-  padding-bottom: 60px;
-
-  ${media.largeTablet`
-    flex: 1;
-    padding-bottom: 0;
-    padding-right: 10px;
-  `}
-`;
-
-const ProvidersRight = styled.div`
-  ${media.largeTablet`
-    flex: 1;
-  `}
-`;
-
-const ProvidersRightInner = styled.div`
-  ${media.largeTablet`
-    padding-left: 100px;
   `}
 `;
 
@@ -416,7 +384,7 @@ const PROVIDERS = [
 export const Providers = () => (
   <ProvidersModule id="providers">
     <ProvidersInner>
-      <ProvidersLeft>
+      <SectionLeft>
         <ProvidersTitle>Get a Lightning Address now!</ProvidersTitle>
         <ProvidersDescription>
           Get your own Lightning Address now by using one of the apps and
@@ -442,9 +410,9 @@ export const Providers = () => (
             </ProviderSignUpButton>
           </Card>
         ))}
-      </ProvidersLeft>
-      <ProvidersRight>
-        <ProvidersRightInner>
+      </SectionLeft>
+      <SectionRight>
+        <SectionRightInner>
           <ProvidersTitle>
             Your app doesn't support Lightning Addresses yet?
           </ProvidersTitle>
@@ -468,8 +436,8 @@ export const Providers = () => (
             <ProvidersEmailButtonImage src={"/images/email.svg"} alt="Email" />
             <ProvidersEmailButtonText>Send Email</ProvidersEmailButtonText>
           </ProvidersEmailButton>
-        </ProvidersRightInner>
-      </ProvidersRight>
+        </SectionRightInner>
+      </SectionRight>
     </ProvidersInner>
   </ProvidersModule>
 );
