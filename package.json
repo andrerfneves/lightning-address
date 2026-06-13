@@ -1,7 +1,18 @@
 {
   "name": "lightning-address",
-  "description": "lightningaddress.com",
+  "version": "1.0.0",
+  "description": "Like an email address, but for your Bitcoin — an Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network.",
   "private": true,
+  "author": "andrerfneves",
+  "homepage": "https://lightningaddress.com",
+  "keywords": [
+    "lightning",
+    "bitcoin",
+    "lightning-network",
+    "lightning-address",
+    "lnurl",
+    "lnurl-pay"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
