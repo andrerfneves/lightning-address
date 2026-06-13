@@ -54,7 +54,6 @@ const Intro = styled.p`
   ${media.tablet`
     font-size: 18px;
     max-width: 900px;
-    line-height: 1.6;
   `}
 `;
 
