@@ -104,10 +104,6 @@ const BenefitsCardImage = styled.img`
   ${media.tablet`
     max-width: 50%;
   `}
-
-  ${media.largeTablet`
-    max-width: 100%;
-  `}
 `;
 
 const BenefitsCardDescription = styled.div`
