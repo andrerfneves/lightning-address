@@ -127,7 +127,7 @@ const FOOTER = [
       },
       {
         link: "https://coinos.io",
-        title: "CoinOS",
+        title: "coinos",
       },
       {
         link: "https://sparkwallet.io/",
