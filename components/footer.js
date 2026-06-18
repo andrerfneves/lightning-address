@@ -154,7 +154,7 @@ const FOOTER = [
         title: "LN Markets",
       },
       {
-        link: "https://getmash.com",
+        link: "https://mash.com/consumer-experience/",
         title: "Mash",
       },
       {
