@@ -11,7 +11,7 @@ The [`bridgeaddr`](https://github.com/fiatjaf/bridgeaddr) server tool is a simpl
 * Sparko
 * LND
 * LNPay
-* LNBits
+* LNbits
 
 This server will serve the necessary JSON and then use RPC calls to connect to your node and fetch invoices on demand. You don't have to do anything besides buying a domain and setting up some DNS records. HTTPS will be provided automatically for you.
 

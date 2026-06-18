@@ -408,9 +408,9 @@ const WALLETS = [
     url: "https://phoenix.acinq.co/",
   },
   {
-    name: "LNBits",
+    name: "LNbits",
     image: "/images/lnbits.png",
-    downloadText: "Open LNBits",
+    downloadText: "Open LNbits",
     url: "https://lnbits.com/",
   },
   {

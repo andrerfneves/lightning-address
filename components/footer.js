@@ -62,7 +62,7 @@ const FOOTER = [
       },
       {
         link: "https://lnbits.com",
-        title: "LNBits",
+        title: "LNbits",
       },
       {
         link: "https://getalby.com",
