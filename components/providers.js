@@ -207,7 +207,7 @@ const PROVIDERS = [
     url: "https://bitrefill.com/",
   },
   {
-    name: "LNMarkets",
+    name: "LN Markets",
     image: "/images/lnmarkets.png",
     imageStyle: { width: "125px" },
     lightningAddressDomain: "lnmarkets.com",
@@ -223,7 +223,7 @@ const PROVIDERS = [
     buttonText: "Download Strike",
   },
   {
-    name: "Coincorner",
+    name: "CoinCorner",
     image: "/images/coincorner.svg",
     imageStyle: { width: "130px" },
     lightningAddressDomain: "coincorner.io",
@@ -283,7 +283,7 @@ const PROVIDERS = [
     buttonText: "Download Wallet",
   },
   {
-    name: "Noah",
+    name: "NOAH",
     image: "/images/noah.png",
     imageStyle: { width: "115px" },
     lightningAddressDomain: "noah.me",
