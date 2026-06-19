@@ -45,7 +45,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
 | [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
-| [Mash](https://getmash.com/)                                      | ----      | ☑️        |
+| [Mash](https://mash.com/consumer-experience/)                     | ----      | ☑️        |
 | [Muun](https://muun.com/)                                         | ----      | ----      |
 | [NOAH](https://app.noah.com/)                                     | ☑️        | ☑️        |
 | [NiceHash](https://nicehash.com/)                                 | ----      | ☑️        |
