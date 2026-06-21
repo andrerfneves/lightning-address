@@ -172,17 +172,17 @@ export const Paths = () => (
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
     </PathsDescription>
     <PathsCardGrid>
-      {(IMPLEMENTATIONS || []).map((benefit) => (
-        <PathsCard key={benefit.title}>
-          <PathsCardImage src={benefit.image} alt={benefit.title} />
+      {(IMPLEMENTATIONS || []).map((implementation) => (
+        <PathsCard key={implementation.title}>
+          <PathsCardImage src={implementation.image} alt={implementation.title} />
           <PathsCardTitle>
-            {benefit.title}
+            {implementation.title}
           </PathsCardTitle>
           <PathsCardDescription>
-            {benefit.description}
+            {implementation.description}
           </PathsCardDescription>
-          <PathsCardButton target={benefit.isInternal ? undefined : '_blank'} href={benefit.link} isSecondary={benefit.isSecondary} rel={benefit.isInternal ? undefined : 'noopener noreferrer'}>
-            {benefit.linkText}
+          <PathsCardButton target={implementation.isInternal ? undefined : '_blank'} href={implementation.link} isSecondary={implementation.isSecondary} rel={implementation.isInternal ? undefined : 'noopener noreferrer'}>
+            {implementation.linkText}
           </PathsCardButton>
         </PathsCard>
       ))}
