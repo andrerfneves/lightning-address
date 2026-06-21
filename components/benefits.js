@@ -171,7 +171,7 @@ export const Benefits = () => (
     <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
     <BenefitsDescription>We created the Lightning Address protocol to empower everyone to send money like we send emails — instantly and abundantly. Coupled with the Lightning Network’s ability to send Bitcoin instantly and with (almost) no fees, we’re ushering in a new standard for how value moves around the world.</BenefitsDescription>
     <BenefitsCardGrid>
-      {(BENEFITS || []).map((benefit) => (
+      {BENEFITS.map((benefit) => (
         <BenefitsCard key={benefit.title}>
           <BenefitsCardImage src={benefit.image} alt={benefit.title} />
           <BenefitsCardTitle>
