@@ -338,7 +338,7 @@ const PROVIDERS = [
   },
   {
     name: "BitcoLi wallet",
-    image: "https://bitcoli.com/img/logo-40.png",
+    image: "https://bitcoli.com/img/lightningaddress-com/logo.png",
     imageStyle: { width: "45px", backgroundColor: "black", borderRadius: "5%" },
     lightningAddressDomain: "bitcoli.com",
     url: "https://bitcoli.com",
