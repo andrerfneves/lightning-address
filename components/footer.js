@@ -12,7 +12,7 @@ const FOOTER = [
     title: "Resources",
     items: [
       {
-        link: "https://github.com/andrerfneves/lightning-address/blob/master/README.md",
+        link: "https://github.com/andrerfneves/lightning-address/blob/main/README.md",
         title: "Dev Documentation",
       },
       {
