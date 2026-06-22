@@ -304,10 +304,10 @@ export const Footer = () => (
   <Wrapper>
     <InnerWrapper>
       <Menus>
-        {(FOOTER || []).map((col) => (
+        {FOOTER.map((col) => (
           <Column key={col.title}>
             <ColumnTitle>{col.title}</ColumnTitle>
-            {(col.items || []).map((item) => (
+            {col.items.map((item) => (
               <ColumnItem key={item.link} href={item.link} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </ColumnItem>
