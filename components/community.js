@@ -145,8 +145,6 @@ const CommunityListWrapper = styled.div`
   justify-content: center;
 
   ${media.tablet`
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: flex-start;
   `}
 `;
