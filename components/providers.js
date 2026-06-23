@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, SectionBase, SectionLeft, SectionRight, SectionRightInner, ImageWrapper } from "../utils";
 
 const ProvidersModule = styled(SectionBase)`
   background: #fafafa;
@@ -161,18 +161,6 @@ const ProviderSignUpButton = styled.a`
   ${media.tablet`
     min-width: 220px;
     margin: 0 15px 0 0;
-  `}
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  ${media.tablet`
-    padding-right: 15px;
   `}
 `;
 

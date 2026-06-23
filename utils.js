@@ -78,6 +78,18 @@ export const CTAPrimary = styled.a`
   `}
 `;
 
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  ${media.tablet`
+    padding-right: 15px;
+  `}
+`;
+
 export const CTASecondary = styled.a`
   color: #696969;
   cursor: pointer;

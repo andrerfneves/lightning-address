@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner, ImageWrapper } from "../utils";
 
 const CommunityModule = styled(SectionBase)`
   background: #fff;
@@ -123,18 +123,6 @@ const CommunitySignUpButton = styled.a`
 const Image = styled.img`
   width: 130px;
   align-self: center;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  ${media.tablet`
-    padding-right: 15px;
-  `}
 `;
 
 const CommunityListWrapper = styled.div`
