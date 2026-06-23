@@ -444,9 +444,9 @@ const WALLETS = [
     },
   },
   {
-    name: "Satoshi Wallet",
+    name: "Satoshi Lightning",
     image: "https://vipsats.app/img/satoshi.png",
-    downloadText: "Download Satoshi",
+    downloadText: "Download Satoshi Lightning",
     url: "https://vipsats.app",
     imageStyle: {
       width: "45px",
