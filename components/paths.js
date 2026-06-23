@@ -172,7 +172,7 @@ export const Paths = () => (
       We’ve made it exceedingly straightforward to start supporting Lightning Addresses on your own domain or integrate them with the apps you’re building. Set up support for this new standard today and join the era of total Lightning interoperability!
     </PathsDescription>
     <PathsCardGrid>
-      {(IMPLEMENTATIONS || []).map((benefit) => (
+      {IMPLEMENTATIONS.map((benefit) => (
         <PathsCard key={benefit.title}>
           <PathsCardImage src={benefit.image} alt={benefit.title} />
           <PathsCardTitle>
