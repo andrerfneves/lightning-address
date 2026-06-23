@@ -38,6 +38,7 @@ export default function Home() {
           content="Like an email address, but for your Bitcoin. An Internet Identifier that allows anyone to send you Bitcoin instantly over the Lightning Network. No scanning QR codes or pasting invoices."
         />
         <meta property="og:image" content="https://i.imgur.com/wL4cC1t.png" />
+        <link rel="canonical" href="https://lightningaddress.com" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@andreneves" />
