@@ -27,8 +27,8 @@ export default function Home() {
         />
         <link
           rel="icon"
-          type="image/png"
-          href="https://i.imgur.com/0m2Dk53.png"
+          type="image/svg+xml"
+          href="/favicon.svg"
         />
         <meta property="og:title" content="The Lightning Address" />
         <meta property="og:type" content="website" />
