@@ -48,6 +48,7 @@ export default function Home() {
           content="Like an email address, but for your Bitcoin. A massively simpler way for anyone to send you Bitcoin instantly on the Lightning Network. No scanning QR codes or pasting invoices."
         />
         <meta name="twitter:image" content="https://i.imgur.com/wL4cC1t.png" />
+        <meta name="twitter:image:alt" content="The Lightning Address — Send and receive Bitcoin like you do emails" />
 
         <script
           defer
