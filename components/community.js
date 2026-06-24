@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner, SectionDescription } from "../utils";
 
 const CommunityModule = styled(SectionBase)`
   background: #fff;
@@ -24,23 +24,7 @@ const CommunityTitle = styled.div`
   `}
 `;
 
-const CommunityDescription = styled.div`
-  color: #666666;
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 0 30px;
-  font-weight: 400;
-  max-width: 800px;
-  text-align: center;
-  letter-spacing: -1px;
-  margin: 20px auto 0 auto;
-
-  ${media.tablet`
-    padding: 0;
-    font-size: 20px;
-    line-height: 1.6;
-  `}
-`;
+const CommunityDescription = SectionDescription;
 
 const CommunityIntro = styled.p`
   color: #f38800;

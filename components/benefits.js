@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { media, CTAPrimary, SectionBase } from '../utils';
+import { media, CTAPrimary, SectionBase, SectionDescription } from '../utils';
 
 const BenefitsModule = styled(SectionBase)`
   background: #fafafa;
@@ -24,20 +24,9 @@ const BenefitsTitle = styled.div`
   `}
 `;
 
-const BenefitsDescription = styled.div`
-  color: #666666;
-  padding: 0 30px;
-  font-size: 16px;
-  line-height: 1.4;
-  font-weight: 400;
-  max-width: 800px;
-  text-align: center;
-  letter-spacing: -1px;
-  margin: 20px auto 0 auto;
-
+const BenefitsDescription = styled(SectionDescription)`
   ${media.tablet`
-    font-size: 20px;
-    line-height: 1.6;
+    padding: 0 30px;
   `}
 
   ${media.largeTablet`
