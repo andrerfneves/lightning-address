@@ -49,7 +49,7 @@ const FOOTER = [
         title: "BlueWallet",
       },
       {
-        link: "https://blixtwallet.com/",
+        link: "https://blixtwallet.github.io/",
         title: "Blixt Wallet",
       },
       {
