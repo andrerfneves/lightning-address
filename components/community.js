@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner } from "../utils";
+import { media, CTASecondary as BaseCTASecondary, SectionBase, SectionLeft, SectionRight, SectionRightInner, SignUpButton } from "../utils";
 
 const CommunityModule = styled(SectionBase)`
   background: #fff;
@@ -94,31 +94,6 @@ const CommunityCard = styled.div`
   `}
 `;
 
-const CommunitySignUpButton = styled.a`
-  color: #fff;
-  width: 140px;
-  height: 2.81rem;
-  cursor: pointer;
-  min-width: 220px;
-  padding: 0 0.5rem;
-  text-align: center;
-  border-radius: 7px;
-  margin: 15px 0 0 0;
-  line-height: 2.8rem;
-  text-decoration: none;
-  background-color: #0070f3;
-  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
-
-  &:hover {
-    background: rgba(0,118,255,0.9);
-    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-  }
-
-  ${media.tablet`
-    min-width: 220px;
-    margin: 0 15px 0 0;
-  `}
-`;
 
 const Image = styled.img`
   width: 130px;
@@ -552,9 +527,9 @@ export const Community = () => (
                 style={wallet.imageStyle || {}}
               />
             </ImageWrapper>
-            <CommunitySignUpButton target="_blank" rel="noopener noreferrer" href={wallet.url}>
+            <SignUpButton target="_blank" rel="noopener noreferrer" href={wallet.url}>
               {wallet.downloadText}
-            </CommunitySignUpButton>
+            </SignUpButton>
           </CommunityCard>
         ))}
         <CTAWrapper>
