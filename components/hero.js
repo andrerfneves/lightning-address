@@ -32,8 +32,6 @@ const Title = styled.h1`
   ${media.tablet`
     padding: 0 20px;
     font-size: 84px;
-    max-width: 900px;
-    font-weight: 800;
     letter-spacing: -4px;
   `}
 `;
@@ -54,7 +52,6 @@ const Intro = styled.p`
   ${media.tablet`
     font-size: 18px;
     max-width: 900px;
-    line-height: 1.6;
   `}
 `;
 
