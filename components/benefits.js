@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { media, CTAPrimary, SectionBase } from '../utils';
+import { media, CTAPrimary, SectionBase, SectionIntro } from '../utils';
 
 const BenefitsModule = styled(SectionBase)`
   background: #fafafa;
@@ -119,23 +119,6 @@ const BenefitsCardDescription = styled.div`
   text-align: center;
 `;
 
-const BenefitsIntro = styled.p`
-  color: #26a717;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 900px;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 7px;
-  margin: 0 auto 20px auto;
-  background: rgba(10,117,14,0.12);
-
-  ${media.tablet`
-    font-size: 18px;
-  `}
-`;
-
-
 const CTAWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -167,7 +150,7 @@ const BENEFITS = [
 
 export const Benefits = () => (
   <BenefitsModule>
-    <BenefitsIntro>Users & Enthusiasts</BenefitsIntro>
+    <SectionIntro color="#26a717" bg="rgba(10,117,14,0.12)">Users & Enthusiasts</SectionIntro>
     <BenefitsTitle>Why do I need a Lightning Address?</BenefitsTitle>
     <BenefitsDescription>We created the Lightning Address protocol to empower everyone to send money like we send emails — instantly and abundantly. Coupled with the Lightning Network’s ability to send Bitcoin instantly and with (almost) no fees, we’re ushering in a new standard for how value moves around the world.</BenefitsDescription>
     <BenefitsCardGrid>

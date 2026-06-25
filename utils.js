@@ -78,6 +78,22 @@ export const CTAPrimary = styled.a`
   `}
 `;
 
+export const SectionIntro = styled.p`
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 900px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 7px;
+  margin: 0 auto 20px auto;
+  color: ${({ color }) => color || '#f38800'};
+  background: ${({ bg }) => bg || 'rgba(255,97,0,0.1)'};
+
+  ${media.tablet`
+    font-size: 18px;
+  `}
+`;
+
 export const CTASecondary = styled.a`
   color: #696969;
   cursor: pointer;
