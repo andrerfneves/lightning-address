@@ -289,7 +289,6 @@ const PROVIDERS = [
     lightningAddressDomain: "noah.me",
     url: "https://app.noah.com",
     buttonText: "Claim Address",
-    comingSoon: false,
   },
   {
     name: "Bitnob",
@@ -306,7 +305,6 @@ const PROVIDERS = [
     lightningAddressDomain: "8333.mobi",
     url: "https://8333.mobi",
     buttonText: "Dial Machankura",
-    comingSoon: false,
   },
   {
     name: "Mash",
