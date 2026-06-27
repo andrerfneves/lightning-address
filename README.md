@@ -43,6 +43,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Lexe](https://lexe.app/)                                         | ☑️        | ☑️        |
 | [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
 | [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
+| [LNMarkets](https://lnmarkets.com/)                               | ☑️        | ☑️        |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
 | [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
 | [Mash](https://getmash.com/)                                      | ----      | ☑️        |
