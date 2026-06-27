@@ -200,8 +200,6 @@ const VerticalLink = styled(Link)`
 `;
 
 const CommunityDescriptionSmall = styled(CommunityDescription)`
-  text-align: center;
-
   ${media.tablet`
     text-align: left;
     font-size: 18px;
