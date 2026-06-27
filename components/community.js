@@ -180,9 +180,7 @@ const Link = styled.a`
   background: rgba(0, 118, 255, 0.1);
 
   ${media.tablet`
-    font-size: 14px;
     max-width: 900px;
-    line-height: 1.6;
   `}
 
   &:hover {
