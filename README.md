@@ -40,12 +40,14 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [CoinKit](https://coinkit.de/)                                    | ☑️        | ☑️        |
 | [coinos](https://coinos.io/)                                      | ☑️        | ☑️        |
 | [Electrum](https://electrum.org/)                                 | ☑️        | [Plugin](https://plugins.electrum.org/plugin/lnurl-server/)       |
+| [LaWallet](https://app.lawallet.ar)                               | ☑️        | ☑️        |
 | [Lexe](https://lexe.app/)                                         | ☑️        | ☑️        |
 | [LifPay](https://lifpay.me/)                                      | ☑️        | ☑️        |
 | [LNbits](https://lnbits.org/)                                     | ☑️        | WIP       |
 | [@lntxbot](https://lntxbot.com/)                                  | ☑️        | ☑️        |
 | [Machankura](https://8333.mobi/)                                  | ☑️        | ☑️        |
 | [Mash](https://getmash.com/)                                      | ----      | ☑️        |
+| [Mixin](https://messenger.mixin.one/)                             | ☑️        | ☑️        |
 | [Muun](https://muun.com/)                                         | ----      | ----      |
 | [NOAH](https://app.noah.com/)                                     | ☑️        | ☑️        |
 | [NiceHash](https://nicehash.com/)                                 | ----      | ☑️        |
@@ -67,8 +69,6 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Wallet of Satoshi](https://www.walletofsatoshi.com/)             | ☑️        | ☑️        |
 | [ZEBEDEE App](https://zbd.gg) (and [Bots](https://zbd.gg), and [Extensions](https://zbd.gg))  | ☑️        | ☑️        |
 | [Zeus](https://github.com/ZeusLN/zeus)                            | ☑️        | ----      |
-| [LaWallet](https://app.lawallet.ar)                               | ☑️        | ☑️        |
-| [Mixin](https://messenger.mixin.one/)                             | ☑️        | ☑️        |
 
 ## TLDR
 
