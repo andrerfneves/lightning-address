@@ -115,7 +115,6 @@ const CommunitySignUpButton = styled.a`
   }
 
   ${media.tablet`
-    min-width: 220px;
     margin: 0 15px 0 0;
   `}
 `;
