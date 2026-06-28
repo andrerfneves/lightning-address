@@ -147,7 +147,6 @@ const LicenseLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #0070f3;
     background: rgba(0,118,255,0.1);
   }
 `;
