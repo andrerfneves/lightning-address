@@ -141,7 +141,6 @@ const IMPLEMENTATIONS = [
     image: '/images/data4.svg',
     linkText: 'Get Started',
     link: '#providers',
-    isSecondary: false,
     isInternal: true,
   },
   {
