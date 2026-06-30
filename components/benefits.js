@@ -80,7 +80,6 @@ const BenefitsCard = styled.div`
 
   &:hover {
     border: 1px solid #ccc;
-    transition: box-shadow .2s ease;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   }
 `;
