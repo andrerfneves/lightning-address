@@ -64,12 +64,11 @@ const BenefitsCard = styled.div`
   width: 70%;
   padding: 20px;
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   background: #fff;
   min-height: 300px;
   border-radius: 7px;
   align-items: center;
-  margin-bottom: 20px;
   flex-direction: column;
   border: 1px solid #eaeaea;
   transition: box-shadow .2s ease;
