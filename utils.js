@@ -23,12 +23,12 @@ export const SectionBase = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 60px 0 60px 0;
+  padding: 60px 0;
   justify-content: center;
 
   ${media.tablet`
     min-height: 700px;
-    padding: 120px 0 120px 0;
+    padding: 120px 0;
   `}
 `;
 
