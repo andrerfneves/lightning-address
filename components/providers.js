@@ -413,6 +413,14 @@ const PROVIDERS = [
     url: "https://messenger.mixin.one/",
     buttonText: "Open Mixin",
   },
+  {
+    name: "Corisco",
+    image: "/images/corisco.png",
+    imageStyle: { width: "50px", backgroundColor: "black", borderRadius: "5%" },
+    lightningAddressDomain: "corisco.org",
+    url: "https://github.com/corisco-wallet",
+    buttonText: "Get Corisco",
+  },
 ];
 
 export const Providers = () => (

@@ -520,7 +520,18 @@ const WALLETS = [
       width: "140px",
       borderRadius: "5%",
     },
-  }, 
+  },
+  {
+    name: "Corisco wallet",
+    image: "/images/corisco.png",
+    downloadText: "Get Corisco",
+    url: "https://github.com/corisco-wallet",
+    imageStyle: {
+      width: "50px",
+      backgroundColor: "black",
+      borderRadius: "5%",
+    },
+  },
 ];
 
 export const Community = () => (

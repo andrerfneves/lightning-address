@@ -69,6 +69,7 @@ _Bitcoin Lightning wallets that support sending and receiving to **Lightning Add
 | [Zeus](https://github.com/ZeusLN/zeus)                            | ☑️        | ----      |
 | [LaWallet](https://app.lawallet.ar)                               | ☑️        | ☑️        |
 | [Mixin](https://messenger.mixin.one/)                             | ☑️        | ☑️        |
+| [Corisco](https://github.com/corisco-wallet)                      | ☑️        | ☑️        |
 
 ## TLDR
 

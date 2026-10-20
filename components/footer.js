@@ -116,6 +116,10 @@ const FOOTER = [
         link: "https://rizful.com/",
         title: "Rizful",
       },
+      {
+        link: "https://github.com/corisco-wallet",
+        title: "Corisco",
+      },
     ],
   },
   {
@@ -200,6 +204,10 @@ const FOOTER = [
       {
         link: "https://rizful.com/",
         title: "Rizful",
+      },
+      {
+        link: "https://github.com/corisco-wallet",
+        title: "Corisco",
       },
     ],
   },
