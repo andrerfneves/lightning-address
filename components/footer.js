@@ -116,6 +116,10 @@ const FOOTER = [
         link: "https://rizful.com/",
         title: "Rizful",
       },
+      {
+        link: "https://home.mybuho.de/buhogo",
+        title: "BuhoGO",
+      },
     ],
   },
   {
@@ -200,6 +204,10 @@ const FOOTER = [
       {
         link: "https://rizful.com/",
         title: "Rizful",
+      },
+      {
+        link: "https://home.mybuho.de/buhogo",
+        title: "BuhoGO",
       },
     ],
   },
